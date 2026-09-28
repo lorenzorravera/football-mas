@@ -1,0 +1,55 @@
+{
+  "question_id": "P18",
+  "question": "Predict the outcome of West Ham United vs Fulham on 2025-01-14 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**West Ham United vs Fulham \u2014 2025-01-14 prediction**\n\n| Outcome | Probability |\n|---|---|\n| Home win (West Ham) | **25.3%** |\n| Draw | **26.9%** |\n| Away win (Fulham) | **47.8%** |\n\nThe model favours a **Fulham away win** as the most likely result (47.8%), with the home win and draw roughly even behind it. Model confidence is 0.478.",
+  "tool_sequence": [
+    "predict_match_outcome",
+    "run_sql",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('West Ham United','Fulham');"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 2,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team_id": 26,
+        "away_team_id": 10,
+        "match_date": "2025-01-14",
+        "home_team": "West Ham United",
+        "away_team": "Fulham"
+      },
+      "result": "{'home_team': 'West Ham United', 'away_team': 'Fulham', 'home_win': 0.253, 'draw': 0.269, 'away_win': 0.478, 'confidence"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.253,
+    "draw": 0.269,
+    "away_win": 0.478
+  },
+  "latency_s": 10.02,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P18|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 38847,
+    "output": 462,
+    "total": 39309,
+    "calls": 4
+  }
+}

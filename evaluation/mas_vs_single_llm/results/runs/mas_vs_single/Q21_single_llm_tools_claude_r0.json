@@ -1,0 +1,23 @@
+{
+  "question_id": "Q21",
+  "question": "Which team received the most yellow cards in 2023-2024?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "In the **2023-2024** season, **Chelsea** received the most yellow cards with **109**.\n\nTop 5 for context:\n1. Chelsea \u2014 109\n2. Wolves \u2014 102\n3. Sheffield United \u2014 101\n4. Aston Villa \u2014 94\n5. Tottenham Hotspur \u2014 92",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tssf_team, tssf_yellow_cards\nFROM team_season_stats_for tf\nJOIN seasons s ON tf.season_id = s.season_id\nWHERE s.season = '2023-2024'\nORDER BY tssf_yellow_cards DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['tssf_team', 'tssf_yellow_cards']"
+    }
+  ],
+  "latency_s": 6.34,
+  "experiment": "mas_vs_single",
+  "repeat": 0
+}

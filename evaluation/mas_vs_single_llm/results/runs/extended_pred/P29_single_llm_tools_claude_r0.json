@@ -1,0 +1,55 @@
+{
+  "question_id": "P29",
+  "question": "Predict the outcome of Newcastle United vs Chelsea on 2025-05-11 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "## Prediction: Newcastle United vs Chelsea (2025-05-11)\n\n| Outcome | Probability |\n|---|---|\n| \ud83c\udfe0 **Newcastle United win** | **44.7%** |\n| \ud83e\udd1d **Draw** | **26.2%** |\n| \u2708\ufe0f **Chelsea win** | **29.1%** |\n\nThe model favors **Newcastle United** as the most likely outcome (home win, ~44.7%), with a Chelsea away win second (~29.1%) and a draw least likely (~26.2%). Model confidence is 0.447.\n\n*Note: the model is causal \u2014 it uses only data available before 2025-05-11.*",
+  "tool_sequence": [
+    "predict_match_outcome",
+    "run_sql",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('Newcastle United','Chelsea')"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 1,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team": "Newcastle United",
+        "away_team": "Chelsea",
+        "match_date": "2025-05-11",
+        "home_team_id": 18,
+        "away_team_id": 7
+      },
+      "result": "{'home_team': 'Newcastle United', 'away_team': 'Chelsea', 'home_win': 0.447, 'draw': 0.262, 'away_win': 0.291, 'confiden"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.447,
+    "draw": 0.262,
+    "away_win": 0.291
+  },
+  "latency_s": 9.83,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P29|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 29393,
+    "output": 552,
+    "total": 29945,
+    "calls": 3
+  }
+}

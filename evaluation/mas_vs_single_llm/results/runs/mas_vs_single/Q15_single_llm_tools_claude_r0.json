@@ -1,0 +1,31 @@
+{
+  "question_id": "Q15",
+  "question": "Which players scored at least 20 league goals in 2024-2025?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "In the 2024-2025 Premier League season, **5 players** scored at least 20 league goals:\n\n| Player | Team | Goals |\n|--------|------|-------|\n| Mohamed Salah | Liverpool | 29 |\n| Alexander Isak | Newcastle United | 23 |\n| Erling Haaland | Manchester City | 22 |\n| Bryan Mbeumo | Brentford | 20 |\n| Chris Wood | Nottingham Forest | 20 |\n\nMohamed Salah led the way with 29 goals.",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT player_name, team, goals_pss\nFROM vw_player_season_summary\nWHERE season = '2024-2025' AND league_code = 'ENG-PL' AND goals_pss >= 20\nORDER BY goals_pss DESC;"
+      },
+      "result": "5 rows, cols=['player_name', 'team', 'goals_pss']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 6.22,
+  "experiment": "mas_vs_single",
+  "langfuse_trace_id": "mas_vs_single|single_llm_tools|claude|Q15|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 16958,
+    "output": 345,
+    "total": 17303,
+    "calls": 2
+  }
+}

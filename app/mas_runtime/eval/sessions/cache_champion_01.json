@@ -1,0 +1,20 @@
+{
+  "session_id": "cache_champion_01",
+  "sub_experiment": "cache",
+  "variant": "no_control",
+  "description": "Near-repeat (rank 1 tss_team), reworded.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "Who won the 2021-2022 Premier League title?",
+      "ground_truth_sql": "SELECT tss_team FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND tss_rank = 1;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "Which club were crowned 2021-2022 Premier League champions?",
+      "ground_truth_sql": "SELECT tss_team FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND tss_rank = 1;"
+    }
+  ]
+}

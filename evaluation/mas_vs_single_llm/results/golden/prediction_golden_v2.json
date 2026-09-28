@@ -1,0 +1,884 @@
+{
+  "frozen": true,
+  "phase": "7b",
+  "artifact": "prediction_golden_v2",
+  "scope": "ENG-PL (competition_id=1), seasons 2020-2021..2024-2025",
+  "basis": "extended v2 \u2014 30 DA (re-scoped) + 30 prediction; multi-league DB",
+  "generated_at": "2026-07-24T11:58:57+00:00",
+  "git_commit": "b000fb5eaab1e1af5de8da1ca367466a287917bc",
+  "git_dirty": true,
+  "n_items": 30,
+  "sha256": "9bf47dc47ada427606f555b044a807b82e4b73b2b2b357c30cc7e284cedbb2bf",
+  "items": [
+    {
+      "id": "P01",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Manchester United vs Fulham on 2024-08-16 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Manchester United",
+      "away_team": "Fulham",
+      "match_date": "2024-08-16",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "Manchester United",
+        "away_team": "Fulham",
+        "home_win": 0.557,
+        "draw": 0.178,
+        "away_win": 0.265,
+        "confidence": 0.557,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P02",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Arsenal vs Wolves on 2024-08-17 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Arsenal",
+      "away_team": "Wolves",
+      "match_date": "2024-08-17",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "Arsenal",
+        "away_team": "Wolves",
+        "home_win": 0.8,
+        "draw": 0.184,
+        "away_win": 0.016,
+        "confidence": 0.8,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P03",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Everton vs Brighton on 2024-08-17 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Everton",
+      "away_team": "Brighton",
+      "match_date": "2024-08-17",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Everton",
+        "away_team": "Brighton",
+        "home_win": 0.239,
+        "draw": 0.224,
+        "away_win": 0.538,
+        "confidence": 0.538,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P04",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Nottingham Forest vs Bournemouth on 2024-08-17 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Nottingham Forest",
+      "away_team": "Bournemouth",
+      "match_date": "2024-08-17",
+      "actual": "D",
+      "model_gt": {
+        "home_team": "Nottingham Forest",
+        "away_team": "Bournemouth",
+        "home_win": 0.322,
+        "draw": 0.249,
+        "away_win": 0.429,
+        "confidence": 0.429,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        1,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P05",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Chelsea vs Crystal Palace on 2024-09-01 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Chelsea",
+      "away_team": "Crystal Palace",
+      "match_date": "2024-09-01",
+      "actual": "D",
+      "model_gt": {
+        "home_team": "Chelsea",
+        "away_team": "Crystal Palace",
+        "home_win": 0.46,
+        "draw": 0.2,
+        "away_win": 0.341,
+        "confidence": 0.46,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        1,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P06",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Southampton vs Manchester United on 2024-09-14 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Southampton",
+      "away_team": "Manchester United",
+      "match_date": "2024-09-14",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Southampton",
+        "away_team": "Manchester United",
+        "home_win": 0.214,
+        "draw": 0.191,
+        "away_win": 0.595,
+        "confidence": 0.595,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P07",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Brentford vs West Ham United on 2024-09-28 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Brentford",
+      "away_team": "West Ham United",
+      "match_date": "2024-09-28",
+      "actual": "D",
+      "model_gt": {
+        "home_team": "Brentford",
+        "away_team": "West Ham United",
+        "home_win": 0.454,
+        "draw": 0.278,
+        "away_win": 0.268,
+        "confidence": 0.454,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        1,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P08",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Leicester City vs Bournemouth on 2024-10-05 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Leicester City",
+      "away_team": "Bournemouth",
+      "match_date": "2024-10-05",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "Leicester City",
+        "away_team": "Bournemouth",
+        "home_win": 0.278,
+        "draw": 0.217,
+        "away_win": 0.505,
+        "confidence": 0.505,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P09",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Fulham vs Aston Villa on 2024-10-19 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Fulham",
+      "away_team": "Aston Villa",
+      "match_date": "2024-10-19",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Fulham",
+        "away_team": "Aston Villa",
+        "home_win": 0.319,
+        "draw": 0.317,
+        "away_win": 0.364,
+        "confidence": 0.364,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P10",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Wolves vs Manchester City on 2024-10-20 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Wolves",
+      "away_team": "Manchester City",
+      "match_date": "2024-10-20",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Wolves",
+        "away_team": "Manchester City",
+        "home_win": 0.049,
+        "draw": 0.261,
+        "away_win": 0.69,
+        "confidence": 0.69,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P11",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Ipswich Town vs Leicester City on 2024-11-02 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Ipswich Town",
+      "away_team": "Leicester City",
+      "match_date": "2024-11-02",
+      "actual": "D",
+      "model_gt": {
+        "home_team": "Ipswich Town",
+        "away_team": "Leicester City",
+        "home_win": 0.462,
+        "draw": 0.31,
+        "away_win": 0.229,
+        "confidence": 0.462,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        1,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P12",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Arsenal vs Nottingham Forest on 2024-11-23 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Arsenal",
+      "away_team": "Nottingham Forest",
+      "match_date": "2024-11-23",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "Arsenal",
+        "away_team": "Nottingham Forest",
+        "home_win": 0.655,
+        "draw": 0.212,
+        "away_win": 0.132,
+        "confidence": 0.655,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P13",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Newcastle United vs West Ham United on 2024-11-25 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Newcastle United",
+      "away_team": "West Ham United",
+      "match_date": "2024-11-25",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Newcastle United",
+        "away_team": "West Ham United",
+        "home_win": 0.627,
+        "draw": 0.2,
+        "away_win": 0.174,
+        "confidence": 0.627,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P14",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Newcastle United vs Liverpool on 2024-12-04 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Newcastle United",
+      "away_team": "Liverpool",
+      "match_date": "2024-12-04",
+      "actual": "D",
+      "model_gt": {
+        "home_team": "Newcastle United",
+        "away_team": "Liverpool",
+        "home_win": 0.244,
+        "draw": 0.234,
+        "away_win": 0.522,
+        "confidence": 0.522,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        1,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P15",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Aston Villa vs Manchester City on 2024-12-21 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Aston Villa",
+      "away_team": "Manchester City",
+      "match_date": "2024-12-21",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "Aston Villa",
+        "away_team": "Manchester City",
+        "home_win": 0.426,
+        "draw": 0.19,
+        "away_win": 0.384,
+        "confidence": 0.426,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P16",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Tottenham Hotspur vs Liverpool on 2024-12-22 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Tottenham Hotspur",
+      "away_team": "Liverpool",
+      "match_date": "2024-12-22",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Tottenham Hotspur",
+        "away_team": "Liverpool",
+        "home_win": 0.349,
+        "draw": 0.245,
+        "away_win": 0.406,
+        "confidence": 0.406,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P17",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Brighton vs Brentford on 2024-12-27 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Brighton",
+      "away_team": "Brentford",
+      "match_date": "2024-12-27",
+      "actual": "D",
+      "model_gt": {
+        "home_team": "Brighton",
+        "away_team": "Brentford",
+        "home_win": 0.549,
+        "draw": 0.206,
+        "away_win": 0.245,
+        "confidence": 0.549,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        1,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P18",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of West Ham United vs Fulham on 2025-01-14 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "West Ham United",
+      "away_team": "Fulham",
+      "match_date": "2025-01-14",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "West Ham United",
+        "away_team": "Fulham",
+        "home_win": 0.253,
+        "draw": 0.269,
+        "away_win": 0.478,
+        "confidence": 0.478,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P19",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Ipswich Town vs Brighton on 2025-01-16 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Ipswich Town",
+      "away_team": "Brighton",
+      "match_date": "2025-01-16",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Ipswich Town",
+        "away_team": "Brighton",
+        "home_win": 0.257,
+        "draw": 0.243,
+        "away_win": 0.5,
+        "confidence": 0.5,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P20",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Manchester City vs Chelsea on 2025-01-25 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Manchester City",
+      "away_team": "Chelsea",
+      "match_date": "2025-01-25",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "Manchester City",
+        "away_team": "Chelsea",
+        "home_win": 0.605,
+        "draw": 0.211,
+        "away_win": 0.184,
+        "confidence": 0.605,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P21",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Crystal Palace vs Everton on 2025-02-15 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Crystal Palace",
+      "away_team": "Everton",
+      "match_date": "2025-02-15",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Crystal Palace",
+        "away_team": "Everton",
+        "home_win": 0.434,
+        "draw": 0.225,
+        "away_win": 0.342,
+        "confidence": 0.434,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P22",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Everton vs Manchester United on 2025-02-22 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Everton",
+      "away_team": "Manchester United",
+      "match_date": "2025-02-22",
+      "actual": "D",
+      "model_gt": {
+        "home_team": "Everton",
+        "away_team": "Manchester United",
+        "home_win": 0.415,
+        "draw": 0.249,
+        "away_win": 0.336,
+        "confidence": 0.415,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        1,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P23",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Nottingham Forest vs Arsenal on 2025-02-26 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Nottingham Forest",
+      "away_team": "Arsenal",
+      "match_date": "2025-02-26",
+      "actual": "D",
+      "model_gt": {
+        "home_team": "Nottingham Forest",
+        "away_team": "Arsenal",
+        "home_win": 0.247,
+        "draw": 0.234,
+        "away_win": 0.519,
+        "confidence": 0.519,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        1,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P24",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Fulham vs Tottenham Hotspur on 2025-03-16 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Fulham",
+      "away_team": "Tottenham Hotspur",
+      "match_date": "2025-03-16",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "Fulham",
+        "away_team": "Tottenham Hotspur",
+        "home_win": 0.555,
+        "draw": 0.219,
+        "away_win": 0.226,
+        "confidence": 0.555,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P25",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Southampton vs Crystal Palace on 2025-04-02 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Southampton",
+      "away_team": "Crystal Palace",
+      "match_date": "2025-04-02",
+      "actual": "D",
+      "model_gt": {
+        "home_team": "Southampton",
+        "away_team": "Crystal Palace",
+        "home_win": 0.049,
+        "draw": 0.222,
+        "away_win": 0.729,
+        "confidence": 0.729,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        1,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P26",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Southampton vs Aston Villa on 2025-04-12 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Southampton",
+      "away_team": "Aston Villa",
+      "match_date": "2025-04-12",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Southampton",
+        "away_team": "Aston Villa",
+        "home_win": 0.233,
+        "draw": 0.194,
+        "away_win": 0.573,
+        "confidence": 0.573,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P27",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Tottenham Hotspur vs Nottingham Forest on 2025-04-21 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Tottenham Hotspur",
+      "away_team": "Nottingham Forest",
+      "match_date": "2025-04-21",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Tottenham Hotspur",
+        "away_team": "Nottingham Forest",
+        "home_win": 0.557,
+        "draw": 0.21,
+        "away_win": 0.233,
+        "confidence": 0.557,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P28",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Wolves vs Leicester City on 2025-04-26 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Wolves",
+      "away_team": "Leicester City",
+      "match_date": "2025-04-26",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "Wolves",
+        "away_team": "Leicester City",
+        "home_win": 0.673,
+        "draw": 0.19,
+        "away_win": 0.137,
+        "confidence": 0.673,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P29",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Newcastle United vs Chelsea on 2025-05-11 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Newcastle United",
+      "away_team": "Chelsea",
+      "match_date": "2025-05-11",
+      "actual": "H",
+      "model_gt": {
+        "home_team": "Newcastle United",
+        "away_team": "Chelsea",
+        "home_win": 0.447,
+        "draw": 0.262,
+        "away_win": 0.291,
+        "confidence": 0.447,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        1,
+        0,
+        0
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    },
+    {
+      "id": "P30",
+      "category": "prediction",
+      "difficulty": "medium",
+      "gt_type": "prediction",
+      "answer_type": "probability_vector",
+      "question": "Predict the outcome of Ipswich Town vs West Ham United on 2025-05-25 \u2014 give the home win, draw and away win probabilities.",
+      "home_team": "Ipswich Town",
+      "away_team": "West Ham United",
+      "match_date": "2025-05-25",
+      "actual": "A",
+      "model_gt": {
+        "home_team": "Ipswich Town",
+        "away_team": "West Ham United",
+        "home_win": 0.301,
+        "draw": 0.229,
+        "away_win": 0.469,
+        "confidence": 0.469,
+        "model_version": "v1"
+      },
+      "actual_onehot": [
+        0,
+        0,
+        1
+      ],
+      "tags": [
+        "extended_v2"
+      ]
+    }
+  ]
+}

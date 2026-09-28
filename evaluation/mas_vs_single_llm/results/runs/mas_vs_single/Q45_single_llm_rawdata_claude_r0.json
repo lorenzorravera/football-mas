@@ -1,0 +1,26 @@
+{
+  "question_id": "Q45",
+  "question": "How many points did Norwich City get in the 2024-2025 Premier League season?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Based on the data, Norwich City does not appear in the 2024-2025 standings. They were not in the Premier League that season (they were in the EFL Championship), so there is no points total for them in the 2024-2025 data.\n\nFor reference, Norwich City last appears in this dataset in the 2021-2022 season, where they finished 20th with 22 points before being relegated.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q45|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229574,
+    "output": 118,
+    "total": 229692,
+    "calls": 1
+  },
+  "latency_s": 4.3,
+  "experiment": "mas_vs_single"
+}

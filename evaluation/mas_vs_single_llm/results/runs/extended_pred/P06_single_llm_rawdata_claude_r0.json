@@ -1,0 +1,26 @@
+{
+  "question_id": "P06",
+  "question": "Predict the outcome of Southampton vs Manchester United on 2024-09-14 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "**Form analysis:**\n\nSouthampton (newly promoted): lost all 3 opening 2024-25 matches, scoring just 1 goal and conceding 5. Poor defensively and struggling to create. No wins in recent form.\n\nManchester United: mixed start \u2014 a win vs Fulham, but losses to Brighton and a heavy 0-3 home defeat to Liverpool. Still clearly the stronger squad with more attacking quality, despite inconsistency.\n\n**Assessment:**\nUnited are away but are heavy favorites given Southampton's weak start and defensive frailty. United's inconsistency and Southampton's home advantage keep some upside for the hosts, but the quality gap dominates.\n\nPROBABILITIES: home=0.25, draw=0.27, away=0.48",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.25,
+    "draw": 0.27,
+    "away_win": 0.48
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P06|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 962,
+  "token_usage": {
+    "input": 826,
+    "output": 256,
+    "total": 1082,
+    "calls": 1
+  },
+  "latency_s": 5.21
+}

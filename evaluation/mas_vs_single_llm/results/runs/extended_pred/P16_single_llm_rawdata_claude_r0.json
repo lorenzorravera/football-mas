@@ -1,0 +1,26 @@
+{
+  "question_id": "P16",
+  "question": "Predict the outcome of Tottenham Hotspur vs Liverpool on 2024-12-22 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Analysis:\n\n**Tottenham form:** Very inconsistent. Capable of big away wins (5-0 Southampton, 4-0 Man City) but leaky defensively and prone to shock home losses (Ipswich, Chelsea). Their home record is a concern \u2014 lost to Ipswich, drew Fulham, lost the shootout to Chelsea. High-scoring, high-variance side.\n\n**Liverpool form:** League leaders, very strong. Only one loss avoided across last 10 (unbeaten run), including a 2-0 win over Man City. Recent draws (Fulham, Newcastle) show slight defensive vulnerability but overall excellent and consistent.\n\n**Assessment:** Liverpool are the clear favorites \u2014 better form, better squad, top of the table. Spurs' attacking threat and home advantage give them a puncher's chance, and their leaky defense combined with Liverpool's attack points toward an open, high-scoring game. Given Spurs' shaky home form and Liverpool's superiority, away win is most likely.\n\nPROBABILITIES: home=0.28, draw=0.22, away=0.50",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.28,
+    "draw": 0.22,
+    "away_win": 0.5
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P16|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 933,
+  "token_usage": {
+    "input": 900,
+    "output": 370,
+    "total": 1270,
+    "calls": 1
+  },
+  "latency_s": 7.39
+}

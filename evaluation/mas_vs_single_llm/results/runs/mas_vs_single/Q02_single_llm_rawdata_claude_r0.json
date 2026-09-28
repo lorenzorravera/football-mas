@@ -1,0 +1,26 @@
+{
+  "question_id": "Q02",
+  "question": "How many points did Arsenal finish with in the 2023-2024 season?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Arsenal finished the 2023-2024 Premier League season with **89 points** (2nd place).",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q02|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229572,
+    "output": 34,
+    "total": 229606,
+    "calls": 1
+  },
+  "latency_s": 5.07,
+  "experiment": "mas_vs_single"
+}

@@ -1,0 +1,31 @@
+{
+  "question_id": "Q02",
+  "question": "How many points did Arsenal finish with in the 2023-2024 season?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "Arsenal finished the 2023-2024 Premier League season with **89 points**, placing them **2nd** in the table.",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tss.tss_team, tss.tss_points, tss.tss_rank\nFROM team_season_standings tss\nJOIN seasons s ON tss.season_id = s.season_id\nWHERE s.competition_id = 1 AND s.season = '2023-2024'\nAND tss.tss_team = 'Arsenal';"
+      },
+      "result": "1 rows, cols=['tss_team', 'tss_points', 'tss_rank']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 6.62,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q02|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19225,
+    "output": 227,
+    "total": 19452,
+    "calls": 2
+  }
+}

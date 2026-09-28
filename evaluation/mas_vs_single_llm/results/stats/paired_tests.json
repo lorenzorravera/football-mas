@@ -1,0 +1,306 @@
+{
+  "model": "claude",
+  "comparisons": [
+    {
+      "A": "mas",
+      "B": "single_llm_tools",
+      "overall": {
+        "n": 46,
+        "acc_a": 0.891,
+        "acc_b": 0.913,
+        "delta": -0.022,
+        "ci95": [
+          -0.13,
+          0.087
+        ],
+        "discordant_a_gt_b": 3,
+        "discordant_b_gt_a": 4,
+        "mcnemar_p": 1.0
+      },
+      "in_coverage": {
+        "n": 28,
+        "acc_a": 0.857,
+        "acc_b": 0.893,
+        "delta": -0.036,
+        "ci95": [
+          -0.214,
+          0.107
+        ],
+        "discordant_a_gt_b": 2,
+        "discordant_b_gt_a": 3,
+        "mcnemar_p": 1.0
+      },
+      "out_of_coverage": {
+        "n": 18,
+        "acc_a": 0.944,
+        "acc_b": 0.944,
+        "delta": 0.0,
+        "ci95": [
+          -0.167,
+          0.167
+        ],
+        "discordant_a_gt_b": 1,
+        "discordant_b_gt_a": 1,
+        "mcnemar_p": 1.0
+      }
+    },
+    {
+      "A": "single_llm_tools",
+      "B": "single_llm_rawdata",
+      "overall": {
+        "n": 46,
+        "acc_a": 0.913,
+        "acc_b": 0.587,
+        "delta": 0.326,
+        "ci95": [
+          0.174,
+          0.478
+        ],
+        "discordant_a_gt_b": 16,
+        "discordant_b_gt_a": 1,
+        "mcnemar_p": 0.0003
+      },
+      "in_coverage": {
+        "n": 28,
+        "acc_a": 0.893,
+        "acc_b": 0.714,
+        "delta": 0.179,
+        "ci95": [
+          0.0,
+          0.357
+        ],
+        "discordant_a_gt_b": 6,
+        "discordant_b_gt_a": 1,
+        "mcnemar_p": 0.125
+      },
+      "out_of_coverage": {
+        "n": 18,
+        "acc_a": 0.944,
+        "acc_b": 0.389,
+        "delta": 0.556,
+        "ci95": [
+          0.333,
+          0.778
+        ],
+        "discordant_a_gt_b": 10,
+        "discordant_b_gt_a": 0,
+        "mcnemar_p": 0.002
+      }
+    },
+    {
+      "A": "mas",
+      "B": "single_llm_rawdata",
+      "overall": {
+        "n": 46,
+        "acc_a": 0.891,
+        "acc_b": 0.587,
+        "delta": 0.304,
+        "ci95": [
+          0.174,
+          0.457
+        ],
+        "discordant_a_gt_b": 15,
+        "discordant_b_gt_a": 1,
+        "mcnemar_p": 0.0005
+      },
+      "in_coverage": {
+        "n": 28,
+        "acc_a": 0.857,
+        "acc_b": 0.714,
+        "delta": 0.143,
+        "ci95": [
+          0.0,
+          0.321
+        ],
+        "discordant_a_gt_b": 5,
+        "discordant_b_gt_a": 1,
+        "mcnemar_p": 0.2188
+      },
+      "out_of_coverage": {
+        "n": 18,
+        "acc_a": 0.944,
+        "acc_b": 0.389,
+        "delta": 0.556,
+        "ci95": [
+          0.333,
+          0.778
+        ],
+        "discordant_a_gt_b": 10,
+        "discordant_b_gt_a": 0,
+        "mcnemar_p": 0.002
+      }
+    },
+    {
+      "A": "MAS-semi",
+      "B": "single_llm_tools",
+      "overall": {
+        "n": 46,
+        "acc_a": 0.913,
+        "acc_b": 0.913,
+        "delta": 0.0,
+        "ci95": [
+          -0.109,
+          0.109
+        ],
+        "discordant_a_gt_b": 3,
+        "discordant_b_gt_a": 3,
+        "mcnemar_p": 1.0
+      },
+      "in_coverage": {
+        "n": 28,
+        "acc_a": 0.929,
+        "acc_b": 0.893,
+        "delta": 0.036,
+        "ci95": [
+          -0.071,
+          0.143
+        ],
+        "discordant_a_gt_b": 2,
+        "discordant_b_gt_a": 1,
+        "mcnemar_p": 1.0
+      },
+      "out_of_coverage": {
+        "n": 18,
+        "acc_a": 0.889,
+        "acc_b": 0.944,
+        "delta": -0.056,
+        "ci95": [
+          -0.278,
+          0.111
+        ],
+        "discordant_a_gt_b": 1,
+        "discordant_b_gt_a": 2,
+        "mcnemar_p": 1.0
+      }
+    },
+    {
+      "A": "MAS-autonomous",
+      "B": "MAS-controlled",
+      "overall": {
+        "n": 46,
+        "acc_a": 0.87,
+        "acc_b": 0.587,
+        "delta": 0.283,
+        "ci95": [
+          0.109,
+          0.457
+        ],
+        "discordant_a_gt_b": 17,
+        "discordant_b_gt_a": 4,
+        "mcnemar_p": 0.0072
+      },
+      "in_coverage": {
+        "n": 28,
+        "acc_a": 0.821,
+        "acc_b": 0.929,
+        "delta": -0.107,
+        "ci95": [
+          -0.25,
+          0.036
+        ],
+        "discordant_a_gt_b": 1,
+        "discordant_b_gt_a": 4,
+        "mcnemar_p": 0.375
+      },
+      "out_of_coverage": {
+        "n": 18,
+        "acc_a": 0.944,
+        "acc_b": 0.056,
+        "delta": 0.889,
+        "ci95": [
+          0.722,
+          1.0
+        ],
+        "discordant_a_gt_b": 16,
+        "discordant_b_gt_a": 0,
+        "mcnemar_p": 0.0
+      }
+    },
+    {
+      "A": "MAS-semi",
+      "B": "MAS-controlled",
+      "overall": {
+        "n": 46,
+        "acc_a": 0.913,
+        "acc_b": 0.587,
+        "delta": 0.326,
+        "ci95": [
+          0.196,
+          0.457
+        ],
+        "discordant_a_gt_b": 15,
+        "discordant_b_gt_a": 0,
+        "mcnemar_p": 0.0001
+      },
+      "in_coverage": {
+        "n": 28,
+        "acc_a": 0.929,
+        "acc_b": 0.929,
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "discordant_a_gt_b": 0,
+        "discordant_b_gt_a": 0,
+        "mcnemar_p": 1.0
+      },
+      "out_of_coverage": {
+        "n": 18,
+        "acc_a": 0.889,
+        "acc_b": 0.056,
+        "delta": 0.833,
+        "ci95": [
+          0.667,
+          1.0
+        ],
+        "discordant_a_gt_b": 15,
+        "discordant_b_gt_a": 0,
+        "mcnemar_p": 0.0001
+      }
+    },
+    {
+      "A": "MAS-autonomous",
+      "B": "MAS-semi",
+      "overall": {
+        "n": 46,
+        "acc_a": 0.87,
+        "acc_b": 0.913,
+        "delta": -0.043,
+        "ci95": [
+          -0.152,
+          0.065
+        ],
+        "discordant_a_gt_b": 2,
+        "discordant_b_gt_a": 4,
+        "mcnemar_p": 0.6875
+      },
+      "in_coverage": {
+        "n": 28,
+        "acc_a": 0.821,
+        "acc_b": 0.929,
+        "delta": -0.107,
+        "ci95": [
+          -0.286,
+          0.036
+        ],
+        "discordant_a_gt_b": 1,
+        "discordant_b_gt_a": 4,
+        "mcnemar_p": 0.375
+      },
+      "out_of_coverage": {
+        "n": 18,
+        "acc_a": 0.944,
+        "acc_b": 0.889,
+        "delta": 0.056,
+        "ci95": [
+          0.0,
+          0.167
+        ],
+        "discordant_a_gt_b": 1,
+        "discordant_b_gt_a": 0,
+        "mcnemar_p": 1.0
+      }
+    }
+  ]
+}

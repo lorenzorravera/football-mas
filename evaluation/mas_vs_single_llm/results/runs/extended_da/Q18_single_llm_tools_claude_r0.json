@@ -1,0 +1,31 @@
+{
+  "question_id": "Q18",
+  "question": "Which team had the biggest gap between home points and away points in 2023-2024?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**Newcastle United** had the biggest gap between home and away points in the 2023-2024 Premier League season.\n\n- **Home points:** 40\n- **Away points:** 20\n- **Gap:** 20 points\n\nNewcastle were dominant at St. James' Park but roughly half as effective on the road. Liverpool were next with a 14-point gap (48 home / 34 away). At the other extreme, Burnley were the only team to earn more points away (14) than at home (10).",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT h.tshas_team,\n       h.tshas_home_points,\n       h.tshas_away_points,\n       (h.tshas_home_points - h.tshas_away_points) AS gap\nFROM team_season_home_away_standings h\nJOIN seasons s ON h.season_id = s.season_id\nWHERE s.competition_id = 1 AND s.season = '2023-2024'\nORDER BY gap DESC;"
+      },
+      "result": "20 rows, cols=['tshas_team', 'tshas_home_points', 'tshas_away_points', 'gap']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 9.31,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q18|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19609,
+    "output": 376,
+    "total": 19985,
+    "calls": 2
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "question_id": "Q24",
+  "question": "How many red cards were shown in total across the league in 2023-2024?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "A total of **58 red cards** were shown across the Premier League in the 2023-2024 season.",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT SUM(m.home_red_cards + m.away_red_cards) AS total_red_cards\nFROM matches m\nJOIN seasons s ON m.season_id = s.season_id\nWHERE s.competition_id = 1 AND s.season = '2023-2024';"
+      },
+      "result": "1 rows, cols=['total_red_cards']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 6.17,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q24|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19180,
+    "output": 198,
+    "total": 19378,
+    "calls": 2
+  }
+}

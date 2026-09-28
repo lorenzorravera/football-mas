@@ -1,0 +1,26 @@
+{
+  "question_id": "Q05",
+  "question": "Which team had the best goal difference in 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "From the 2024-2025 standings, **Liverpool** had the best goal difference: **+45** (86 goals for, 41 against), winning the title with 84 points.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q05|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 171528,
+  "token_usage": {
+    "input": 121521,
+    "output": 55,
+    "total": 121576,
+    "calls": 1
+  },
+  "latency_s": 2.57,
+  "experiment": "extended_da"
+}

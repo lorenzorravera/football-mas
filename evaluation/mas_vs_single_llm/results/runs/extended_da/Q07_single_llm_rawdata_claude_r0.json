@@ -1,0 +1,26 @@
+{
+  "question_id": "Q07",
+  "question": "What is the highest points total achieved by any team in a single season across 2020-2021 to 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "The highest points total was **93 points**, achieved by **Manchester City in the 2021-2022 season**.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q07|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 171528,
+  "token_usage": {
+    "input": 121536,
+    "output": 36,
+    "total": 121572,
+    "calls": 1
+  },
+  "latency_s": 2.13,
+  "experiment": "extended_da"
+}

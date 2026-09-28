@@ -1,0 +1,49 @@
+{
+  "question_id": "Q20",
+  "question": "Which team scored the most home goals in 2024-2025?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "Both the home/away standings and the raw match data agree.\n\n**Bayern Munich scored the most home goals in 2024-2025, with 53.**\n\n(Note: a data caveat \u2014 although the schema describes this as a Premier League\u2013only database, the 2024-2025 records actually contain non\u2013Premier League clubs like Bayern Munich, Barcelona, and PSG. Based on the data as stored, Bayern Munich tops the list. The closest contender is Barcelona with 52.)",
+  "tool_sequence": [
+    "run_sql",
+    "run_sql",
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tshas_team, tshas_home_goals_for\nFROM team_season_home_away_standings h\nJOIN seasons s ON h.season_id = s.season_id\nWHERE s.season = '2024-2025'\nORDER BY tshas_home_goals_for DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['tshas_team', 'tshas_home_goals_for']"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT t.team_name, h.tshas_home_goals_for\nFROM team_season_home_away_standings h\nJOIN seasons s ON h.season_id = s.season_id\nJOIN teams t ON h.team_id = t.team_id\nWHERE s.season = '2024-2025'\nORDER BY h.tshas_home_goals_for DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['team_name', 'tshas_home_goals_for']"
+    },
+    {
+      "step": 2,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT t.team_name, SUM(m.home_score) AS home_goals\nFROM matches m\nJOIN seasons s ON m.season_id = s.season_id\nJOIN teams t ON m.home_team_id = t.team_id\nWHERE s.season = '2024-2025'\nGROUP BY t.team_name\nORDER BY home_goals DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['team_name', 'home_goals']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 18.22,
+  "experiment": "mas_vs_single",
+  "langfuse_trace_id": "mas_vs_single|single_llm_tools|claude|Q20|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 35161,
+    "output": 809,
+    "total": 35970,
+    "calls": 4
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "session_id": "conversation_runnerup_02",
+  "sub_experiment": "conversation",
+  "variant": "no_control",
+  "description": "Reference carry: rank 2 team named in turn 0; follow-ups say 'they'.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "Who finished second in the 2022-2023 Premier League?",
+      "ground_truth_sql": "SELECT tss_team FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_rank = 2;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "How many goals did they score across the season?",
+      "ground_truth_sql": "SELECT tss_goals_for FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_rank = 2;"
+    },
+    {
+      "turn_index": 2,
+      "role": "beneficiary",
+      "query": "How many games did they lose that season?",
+      "ground_truth_sql": "SELECT tss_losses FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_rank = 2;"
+    }
+  ]
+}

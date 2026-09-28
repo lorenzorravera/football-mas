@@ -1,0 +1,21 @@
+{
+  "session_id": "correction_referee_02",
+  "sub_experiment": "correction",
+  "variant": "no_control",
+  "correction_lesson": "Referee names in the matches table are stored with a NON-BREAKING SPACE (Unicode chr(160)) between first and last name, not a normal space. A filter like WHERE m.referee = 'First Last' (normal space) matches 0 rows and silently returns NULL/0. Always normalize first: WHERE REPLACE(m.referee, chr(160), chr(32)) = 'First Last'.",
+  "description": "Referee non-breaking-space pitfall (variant 2): yellow then red cards, different referees/seasons. Same fix as referee_01 should transmit.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "How many yellow cards in total were shown in matches refereed by Paul Tierney in the 2023-2024 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(m.home_yellow_cards + m.away_yellow_cards) AS total FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' AND REPLACE(m.referee, chr(160), chr(32)) = 'Paul Tierney';"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "How many total red cards were shown in matches refereed by Simon Hooper in the 2024-2025 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(m.home_red_cards + m.away_red_cards) AS total FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND REPLACE(m.referee, chr(160), chr(32)) = 'Simon Hooper';"
+    }
+  ]
+}

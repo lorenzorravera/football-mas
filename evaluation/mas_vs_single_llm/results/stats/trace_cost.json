@@ -1,0 +1,1842 @@
+{
+  "dof|dof_autonomous|gemini|Q46|r0": {
+    "cost": 0.046338799998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q45|r0": {
+    "cost": 0.043157799998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q44|r0": {
+    "cost": 0.0541388,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q43|r0": {
+    "cost": 0.046774799999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q42|r0": {
+    "cost": 0.087096799999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q41|r0": {
+    "cost": 0.0609266,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q40|r0": {
+    "cost": 0.036233599999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q39|r0": {
+    "cost": 0.036633599999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q38|r0": {
+    "cost": 0.034707599998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q37|r0": {
+    "cost": 0.074758799997,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q36|r0": {
+    "cost": 0.036007599999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q35|r0": {
+    "cost": 0.034997599999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q34|r0": {
+    "cost": 0.043246799998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q33|r0": {
+    "cost": 0.095502399999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q32|r0": {
+    "cost": 0.107124799997,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q31|r0": {
+    "cost": 0.056663999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q30|r0": {
+    "cost": 0.036521799999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q29|r0": {
+    "cost": 0.112375799998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q28|r0": {
+    "cost": 0.046237999998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q27|r0": {
+    "cost": 0.057642,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q26|r0": {
+    "cost": 0.057789999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q25|r0": {
+    "cost": 0.042088799999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q24|r0": {
+    "cost": 0.050178799999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q23|r0": {
+    "cost": 0.042507599999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q22|r0": {
+    "cost": 0.089771999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q21|r0": {
+    "cost": 0.087585999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q20|r0": {
+    "cost": 0.0510308,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q19|r0": {
+    "cost": 0.053671,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q18|r0": {
+    "cost": 0.0520908,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q17|r0": {
+    "cost": 0.073627999998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q16|r0": {
+    "cost": 0.057537999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q15|r0": {
+    "cost": 0.089255999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q14|r0": {
+    "cost": 0.058431999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q13|r0": {
+    "cost": 0.052269999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q12|r0": {
+    "cost": 0.055619999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q11|r0": {
+    "cost": 0.097784799998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q10|r0": {
+    "cost": 0.05931,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q09|r0": {
+    "cost": 0.054286999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q08|r0": {
+    "cost": 0.041824799998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q07|r0": {
+    "cost": 0.043272999998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q06|r0": {
+    "cost": 0.055881999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q05|r0": {
+    "cost": 0.039548799999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q04|r0": {
+    "cost": 0.057357999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q03|r0": {
+    "cost": 0.038465799999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q01|r0": {
+    "cost": 0.056506,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q46|r0": {
+    "cost": 0.051156799999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q45|r0": {
+    "cost": 0.023332,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q44|r0": {
+    "cost": 0.025862,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q43|r0": {
+    "cost": 0.047274799998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q42|r0": {
+    "cost": 0.088441999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q41|r0": {
+    "cost": 0.028377999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q40|r0": {
+    "cost": 0.026341999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q39|r0": {
+    "cost": 0.054019999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q38|r0": {
+    "cost": 0.0395756,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q37|r0": {
+    "cost": 0.082359999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q36|r0": {
+    "cost": 0.075640799996,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q35|r0": {
+    "cost": 0.029652,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q34|r0": {
+    "cost": 0.043382799997,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q33|r0": {
+    "cost": 0.121720799998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q32|r0": {
+    "cost": 0.032735999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q31|r0": {
+    "cost": 0.026601999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q30|r0": {
+    "cost": 0.060072,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q29|r0": {
+    "cost": 0.095939999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q28|r0": {
+    "cost": 0.062134,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q27|r0": {
+    "cost": 0.093405999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q26|r0": {
+    "cost": 0.057717999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q25|r0": {
+    "cost": 0.055029999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q24|r0": {
+    "cost": 0.058301999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q23|r0": {
+    "cost": 0.027779999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q22|r0": {
+    "cost": 0.026931999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q21|r0": {
+    "cost": 0.030226,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q20|r0": {
+    "cost": 0.030575999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q19|r0": {
+    "cost": 0.031741999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q18|r0": {
+    "cost": 0.099379999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q17|r0": {
+    "cost": 0.029532,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q16|r0": {
+    "cost": 0.02552,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q15|r0": {
+    "cost": 0.046584799997,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q14|r0": {
+    "cost": 0.045783999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q13|r0": {
+    "cost": 0.027622,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q12|r0": {
+    "cost": 0.063504,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q11|r0": {
+    "cost": 0.027947999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q10|r0": {
+    "cost": 0.027303999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q09|r0": {
+    "cost": 0.026752,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q08|r0": {
+    "cost": 0.024695999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q07|r0": {
+    "cost": 0.060172,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q06|r0": {
+    "cost": 0.067745999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q05|r0": {
+    "cost": 0.063009999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q04|r0": {
+    "cost": 0.026111999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q03|r0": {
+    "cost": 0.033259999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q02|r0": {
+    "cost": 0.026136,
+    "tokens": null
+  },
+  "dof|dof_semi|gemini|Q01|r0": {
+    "cost": 0.026741999998,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q46|r0": {
+    "cost": 0.027707999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q45|r0": {
+    "cost": 0.018576799999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q44|r0": {
+    "cost": 0.02868,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q43|r0": {
+    "cost": 0.038455999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q42|r0": {
+    "cost": 0.041073999998,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q41|r0": {
+    "cost": 0.027608,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q40|r0": {
+    "cost": 0.028428,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q39|r0": {
+    "cost": 0.042819999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q38|r0": {
+    "cost": 0.053513999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q37|r0": {
+    "cost": 0.0440588,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q36|r0": {
+    "cost": 0.039278,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q35|r0": {
+    "cost": 0.032858,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q34|r0": {
+    "cost": 0.036419999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q33|r0": {
+    "cost": 0.032902,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q32|r0": {
+    "cost": 0.033916,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q31|r0": {
+    "cost": 0.029019999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q30|r0": {
+    "cost": 0.038629999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q29|r0": {
+    "cost": 0.033975999998,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q28|r0": {
+    "cost": 0.036694,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q27|r0": {
+    "cost": 0.03979,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q26|r0": {
+    "cost": 0.026216799999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q25|r0": {
+    "cost": 0.03269,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q24|r0": {
+    "cost": 0.031154,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q23|r0": {
+    "cost": 0.027637999998,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q22|r0": {
+    "cost": 0.024397999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q21|r0": {
+    "cost": 0.027018,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q20|r0": {
+    "cost": 0.028389999997,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q19|r0": {
+    "cost": 0.028581999998,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q18|r0": {
+    "cost": 0.035678,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q17|r0": {
+    "cost": 0.031258,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q16|r0": {
+    "cost": 0.025961999998,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q15|r0": {
+    "cost": 0.02763,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q14|r0": {
+    "cost": 0.030546,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q13|r0": {
+    "cost": 0.026468,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q12|r0": {
+    "cost": 0.027021999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q11|r0": {
+    "cost": 0.025173999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q10|r0": {
+    "cost": 0.029916,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q09|r0": {
+    "cost": 0.030994,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q08|r0": {
+    "cost": 0.026589999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q07|r0": {
+    "cost": 0.032501999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q06|r0": {
+    "cost": 0.029975999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q05|r0": {
+    "cost": 0.028417999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q04|r0": {
+    "cost": 0.027813999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q03|r0": {
+    "cost": 0.034554,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q02|r0": {
+    "cost": 0.024862,
+    "tokens": null
+  },
+  "dof|dof_controlled|gemini|Q01|r0": {
+    "cost": 0.028648,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q46|r0": {
+    "cost": 0.033176,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q45|r0": {
+    "cost": 0.088175,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q44|r0": {
+    "cost": 0.108375,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q43|r0": {
+    "cost": 0.041110999998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q42|r0": {
+    "cost": 0.081214999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q41|r0": {
+    "cost": 0.15334,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q40|r0": {
+    "cost": 0.089125,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q39|r0": {
+    "cost": 0.038386,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q38|r0": {
+    "cost": 0.063726,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q37|r0": {
+    "cost": 0.041815999998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q36|r0": {
+    "cost": 0.093014999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q35|r0": {
+    "cost": 0.058141,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q34|r0": {
+    "cost": 0.057851,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q33|r0": {
+    "cost": 0.126475,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q32|r0": {
+    "cost": 0.213568999997,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q31|r0": {
+    "cost": 0.101495,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q30|r0": {
+    "cost": 0.040671,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q29|r0": {
+    "cost": 0.117635,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q28|r0": {
+    "cost": 0.070721,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q27|r0": {
+    "cost": 0.126105,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q26|r0": {
+    "cost": 0.046345999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q25|r0": {
+    "cost": 0.057906,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q24|r0": {
+    "cost": 0.041166,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q23|r0": {
+    "cost": 0.036590999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q22|r0": {
+    "cost": 0.054456,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q21|r0": {
+    "cost": 0.034096,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q20|r0": {
+    "cost": 0.042351,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q19|r0": {
+    "cost": 0.037776,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q18|r0": {
+    "cost": 0.053930999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q17|r0": {
+    "cost": 0.042656,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q16|r0": {
+    "cost": 0.050960999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q15|r0": {
+    "cost": 0.11588,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q14|r0": {
+    "cost": 0.035016,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q13|r0": {
+    "cost": 0.147203999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q12|r0": {
+    "cost": 0.043691,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q11|r0": {
+    "cost": 0.1052,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q10|r0": {
+    "cost": 0.046696,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q09|r0": {
+    "cost": 0.040621,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q08|r0": {
+    "cost": 0.043421,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q07|r0": {
+    "cost": 0.065151,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q06|r0": {
+    "cost": 0.138903999998,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q05|r0": {
+    "cost": 0.060544,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q04|r0": {
+    "cost": 0.045260999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q03|r0": {
+    "cost": 0.095235,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q01|r0": {
+    "cost": 0.034785999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q46|r0": {
+    "cost": 0.047236,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q45|r0": {
+    "cost": 0.035267,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q44|r0": {
+    "cost": 0.029752,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q43|r0": {
+    "cost": 0.045671,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q42|r0": {
+    "cost": 0.138569,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q41|r0": {
+    "cost": 0.033352,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q40|r0": {
+    "cost": 0.025347,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q39|r0": {
+    "cost": 0.045996,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q38|r0": {
+    "cost": 0.147799,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q37|r0": {
+    "cost": 0.044311,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q36|r0": {
+    "cost": 0.053300999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q35|r0": {
+    "cost": 0.027431999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q34|r0": {
+    "cost": 0.057066,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q33|r0": {
+    "cost": 0.046747,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q32|r0": {
+    "cost": 0.037346999998,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q31|r0": {
+    "cost": 0.029037,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q30|r0": {
+    "cost": 0.055796,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q29|r0": {
+    "cost": 0.072411,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q28|r0": {
+    "cost": 0.087666,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q27|r0": {
+    "cost": 0.094710999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q26|r0": {
+    "cost": 0.221329,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q25|r0": {
+    "cost": 0.045741,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q24|r0": {
+    "cost": 0.044111,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q23|r0": {
+    "cost": 0.024742,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q22|r0": {
+    "cost": 0.028242,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q21|r0": {
+    "cost": 0.024422,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q20|r0": {
+    "cost": 0.029106999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q19|r0": {
+    "cost": 0.026751999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q18|r0": {
+    "cost": 0.085521,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q17|r0": {
+    "cost": 0.031502,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q16|r0": {
+    "cost": 0.020672,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q15|r0": {
+    "cost": 0.115795,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q14|r0": {
+    "cost": 0.030542,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q13|r0": {
+    "cost": 0.028726999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q12|r0": {
+    "cost": 0.057960999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q11|r0": {
+    "cost": 0.021297,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q10|r0": {
+    "cost": 0.036787,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q09|r0": {
+    "cost": 0.029477,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q08|r0": {
+    "cost": 0.034057,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q07|r0": {
+    "cost": 0.065705999999,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q06|r0": {
+    "cost": 0.058931,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q05|r0": {
+    "cost": 0.032447,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q04|r0": {
+    "cost": 0.032277,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q03|r0": {
+    "cost": 0.041782,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q02|r0": {
+    "cost": 0.023997,
+    "tokens": null
+  },
+  "dof|dof_semi|gpt|Q01|r0": {
+    "cost": 0.025172,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q46|r0": {
+    "cost": 0.051257,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q45|r0": {
+    "cost": 0.032407,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q44|r0": {
+    "cost": 0.026807,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q43|r0": {
+    "cost": 0.039471999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q42|r0": {
+    "cost": 0.057832,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q41|r0": {
+    "cost": 0.032147,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q40|r0": {
+    "cost": 0.029552,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q39|r0": {
+    "cost": 0.046171999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q38|r0": {
+    "cost": 0.059237,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q37|r0": {
+    "cost": 0.066041999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q36|r0": {
+    "cost": 0.070357,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q35|r0": {
+    "cost": 0.043027,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q34|r0": {
+    "cost": 0.043326999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q33|r0": {
+    "cost": 0.049392,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q32|r0": {
+    "cost": 0.042482,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q31|r0": {
+    "cost": 0.028496999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q30|r0": {
+    "cost": 0.041867,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q29|r0": {
+    "cost": 0.051362,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q28|r0": {
+    "cost": 0.065352,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q27|r0": {
+    "cost": 0.055292,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q26|r0": {
+    "cost": 0.050527,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q25|r0": {
+    "cost": 0.077072,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q24|r0": {
+    "cost": 0.039402,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q23|r0": {
+    "cost": 0.032262,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q22|r0": {
+    "cost": 0.026422,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q21|r0": {
+    "cost": 0.030727,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q20|r0": {
+    "cost": 0.033716999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q19|r0": {
+    "cost": 0.024942,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q18|r0": {
+    "cost": 0.070642,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q17|r0": {
+    "cost": 0.039222,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q16|r0": {
+    "cost": 0.026002,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q15|r0": {
+    "cost": 0.043887,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q14|r0": {
+    "cost": 0.029272,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q13|r0": {
+    "cost": 0.030066999998,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q12|r0": {
+    "cost": 0.06429,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q11|r0": {
+    "cost": 0.032627,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q10|r0": {
+    "cost": 0.041822,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q09|r0": {
+    "cost": 0.033932,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q08|r0": {
+    "cost": 0.034767,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q07|r0": {
+    "cost": 0.044072,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q06|r0": {
+    "cost": 0.034542,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q05|r0": {
+    "cost": 0.057205,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q04|r0": {
+    "cost": 0.027856999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q03|r0": {
+    "cost": 0.034992,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q02|r0": {
+    "cost": 0.021406999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|gpt|Q01|r0": {
+    "cost": 0.04903,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q46|r0": {
+    "cost": 0.130535,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q45|r0": {
+    "cost": 0.131625,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q44|r0": {
+    "cost": 0.23249,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q43|r0": {
+    "cost": 0.12973,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q42|r0": {
+    "cost": 0.136355,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q41|r0": {
+    "cost": 0.22026,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q40|r0": {
+    "cost": 0.13321,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q39|r0": {
+    "cost": 0.12956,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q38|r0": {
+    "cost": 0.13152,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q37|r0": {
+    "cost": 0.132395,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q36|r0": {
+    "cost": 0.223745,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q35|r0": {
+    "cost": 0.147345,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q34|r0": {
+    "cost": 0.130245,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q33|r0": {
+    "cost": 0.23424,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q32|r0": {
+    "cost": 0.24452,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q31|r0": {
+    "cost": 0.137155,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q30|r0": {
+    "cost": 0.13486,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q29|r0": {
+    "cost": 0.144915,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q28|r0": {
+    "cost": 0.22592,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q27|r0": {
+    "cost": 0.146305,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q26|r0": {
+    "cost": 0.339215,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q25|r0": {
+    "cost": 0.13062,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q23|r0": {
+    "cost": 0.132575,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q22|r0": {
+    "cost": 0.135735,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q21|r0": {
+    "cost": 0.13524,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q20|r0": {
+    "cost": 0.132124999999,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q19|r0": {
+    "cost": 0.13101,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q18|r0": {
+    "cost": 0.13634,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q17|r0": {
+    "cost": 0.131115,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q16|r0": {
+    "cost": 0.130805,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q15|r0": {
+    "cost": 0.2294,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q14|r0": {
+    "cost": 0.132575,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q13|r0": {
+    "cost": 0.22713,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q12|r0": {
+    "cost": 0.13321,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q11|r0": {
+    "cost": 0.224,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q10|r0": {
+    "cost": 0.136305,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q08|r0": {
+    "cost": 0.224235,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q07|r0": {
+    "cost": 0.13194,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q06|r0": {
+    "cost": 0.13766,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q05|r0": {
+    "cost": 0.12947,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q04|r0": {
+    "cost": 0.134765,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q03|r0": {
+    "cost": 0.1411,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q01|r0": {
+    "cost": 0.21722,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q46|r0": {
+    "cost": 0.13527,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q45|r0": {
+    "cost": 0.056064999999,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q44|r0": {
+    "cost": 0.057395,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q43|r0": {
+    "cost": 0.133685,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q42|r0": {
+    "cost": 0.32624,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q41|r0": {
+    "cost": 0.058285,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q40|r0": {
+    "cost": 0.056015,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q39|r0": {
+    "cost": 0.13305,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q38|r0": {
+    "cost": 0.135845,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q37|r0": {
+    "cost": 0.137195,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q36|r0": {
+    "cost": 0.137055,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q35|r0": {
+    "cost": 0.05806,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q34|r0": {
+    "cost": 0.135485,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q33|r0": {
+    "cost": 0.060985,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q32|r0": {
+    "cost": 0.06728,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q31|r0": {
+    "cost": 0.05576,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q30|r0": {
+    "cost": 0.139735,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q29|r0": {
+    "cost": 0.14838,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q28|r0": {
+    "cost": 0.235685,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q27|r0": {
+    "cost": 0.152155,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q26|r0": {
+    "cost": 0.150195,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q25|r0": {
+    "cost": 0.136305,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q23|r0": {
+    "cost": 0.05445,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q22|r0": {
+    "cost": 0.05674,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q21|r0": {
+    "cost": 0.053305,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q20|r0": {
+    "cost": 0.054454999999,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q19|r0": {
+    "cost": 0.054345,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q18|r0": {
+    "cost": 0.140095,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q17|r0": {
+    "cost": 0.05532,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q16|r0": {
+    "cost": 0.05448,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q15|r0": {
+    "cost": 0.143325,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q14|r0": {
+    "cost": 0.057205,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q13|r0": {
+    "cost": 0.056705,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q12|r0": {
+    "cost": 0.137515,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q11|r0": {
+    "cost": 0.057,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q10|r0": {
+    "cost": 0.059015,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q08|r0": {
+    "cost": 0.05813,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q07|r0": {
+    "cost": 0.135805,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q06|r0": {
+    "cost": 0.230795,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q05|r0": {
+    "cost": 0.05598,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q04|r0": {
+    "cost": 0.05758,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q03|r0": {
+    "cost": 0.06531,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q01|r0": {
+    "cost": 0.057335,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q46|r0": {
+    "cost": 0.069085,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q45|r0": {
+    "cost": 0.054935,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q44|r0": {
+    "cost": 0.05824,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q43|r0": {
+    "cost": 0.11667,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q42|r0": {
+    "cost": 0.06,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q41|r0": {
+    "cost": 0.05391,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q40|r0": {
+    "cost": 0.053035,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q39|r0": {
+    "cost": 0.05556,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q38|r0": {
+    "cost": 0.056805,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q37|r0": {
+    "cost": 0.05886,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gemini|Q02|r0": {
+    "cost": 0.102418799999,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q36|r0": {
+    "cost": 0.057715,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q35|r0": {
+    "cost": 0.056645,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q34|r0": {
+    "cost": 0.06354,
+    "tokens": null
+  },
+  "dof|dof_autonomous|gpt|Q02|r0": {
+    "cost": 0.0937,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q33|r0": {
+    "cost": 0.05598,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q32|r0": {
+    "cost": 0.06559,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q31|r0": {
+    "cost": 0.054075,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q30|r0": {
+    "cost": 0.058375,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q29|r0": {
+    "cost": 0.06382,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q28|r0": {
+    "cost": 0.061915,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q27|r0": {
+    "cost": 0.07498,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q26|r0": {
+    "cost": 0.06353,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q25|r0": {
+    "cost": 0.059845,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q23|r0": {
+    "cost": 0.053585,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q22|r0": {
+    "cost": 0.05379,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q21|r0": {
+    "cost": 0.053395,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q20|r0": {
+    "cost": 0.054799999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q19|r0": {
+    "cost": 0.05222,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q18|r0": {
+    "cost": 0.056885,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q17|r0": {
+    "cost": 0.054715,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q16|r0": {
+    "cost": 0.053015,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q15|r0": {
+    "cost": 0.05803,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q14|r0": {
+    "cost": 0.05354,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q13|r0": {
+    "cost": 0.053155,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q12|r0": {
+    "cost": 0.054725,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q11|r0": {
+    "cost": 0.052555,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q10|r0": {
+    "cost": 0.056205,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q08|r0": {
+    "cost": 0.056254999999,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q07|r0": {
+    "cost": 0.06212,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q06|r0": {
+    "cost": 0.05605,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q05|r0": {
+    "cost": 0.055,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q04|r0": {
+    "cost": 0.056985,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q03|r0": {
+    "cost": 0.06468,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q01|r0": {
+    "cost": 0.05658,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q24|r0": {
+    "cost": 0.132275,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q09|r0": {
+    "cost": 0.136175,
+    "tokens": null
+  },
+  "dof|dof_autonomous|claude|Q02|r0": {
+    "cost": 0.13004,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q24|r0": {
+    "cost": 0.136995,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q09|r0": {
+    "cost": 0.05791,
+    "tokens": null
+  },
+  "dof|dof_semi|claude|Q02|r0": {
+    "cost": 0.052875,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q24|r0": {
+    "cost": 0.05993,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q09|r0": {
+    "cost": 0.05451,
+    "tokens": null
+  },
+  "dof|dof_controlled|claude|Q02|r0": {
+    "cost": 0.05267,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q46|r0": {
+    "cost": 0.130925,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q45|r0": {
+    "cost": 0.13226,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q44|r0": {
+    "cost": 0.226695,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q43|r0": {
+    "cost": 0.130285,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q42|r0": {
+    "cost": 0.22764,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q41|r0": {
+    "cost": 0.1341,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q40|r0": {
+    "cost": 0.13344,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q39|r0": {
+    "cost": 0.129005,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q38|r0": {
+    "cost": 0.30942,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q37|r0": {
+    "cost": 0.13265,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q36|r0": {
+    "cost": 0.21904,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q35|r0": {
+    "cost": 0.135865,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q34|r0": {
+    "cost": 0.13102,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q33|r0": {
+    "cost": 0.33069,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q32|r0": {
+    "cost": 0.144445,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q31|r0": {
+    "cost": 0.13653,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q30|r0": {
+    "cost": 0.13474,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q29|r0": {
+    "cost": 0.24088,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q28|r0": {
+    "cost": 0.31983,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q27|r0": {
+    "cost": 0.1464,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q26|r0": {
+    "cost": 0.14537,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q25|r0": {
+    "cost": 0.13174,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q24|r0": {
+    "cost": 0.131815,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q23|r0": {
+    "cost": 0.132045,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q22|r0": {
+    "cost": 0.22498,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q21|r0": {
+    "cost": 0.13283,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q20|r0": {
+    "cost": 0.131504999999,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q19|r0": {
+    "cost": 0.13057,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q18|r0": {
+    "cost": 0.135565,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q17|r0": {
+    "cost": 0.130235,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q16|r0": {
+    "cost": 0.131745,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q15|r0": {
+    "cost": 0.139865,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q14|r0": {
+    "cost": 0.134725,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q13|r0": {
+    "cost": 0.22313,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q12|r0": {
+    "cost": 0.1333,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q11|r0": {
+    "cost": 0.315085,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q10|r0": {
+    "cost": 0.13656,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q09|r0": {
+    "cost": 0.134795,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q08|r0": {
+    "cost": 0.132115,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q07|r0": {
+    "cost": 0.132165,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q06|r0": {
+    "cost": 0.221945,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q05|r0": {
+    "cost": 0.1294,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q04|r0": {
+    "cost": 0.133045,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q03|r0": {
+    "cost": 0.231315,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q02|r0": {
+    "cost": 0.129935,
+    "tokens": null
+  },
+  "mas_vs_single|mas|claude|Q01|r0": {
+    "cost": 0.12953,
+    "tokens": null
+  }
+}

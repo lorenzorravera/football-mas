@@ -1,0 +1,40 @@
+{
+  "question_id": "Q17",
+  "question": "Which team recorded the most away wins in 2023-2024?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**Manchester City** recorded the most away wins in the 2023-2024 Premier League season, with **14 away wins** \u2014 just ahead of Arsenal (13).",
+  "tool_sequence": [
+    "run_sql",
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tshas_team, tshas_away_wins\nFROM team_season_home_away_standings t\nJOIN seasons s ON t.season_id = s.season_id\nWHERE s.season = '2023-2024'\nORDER BY tshas_away_wins DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['tshas_team', 'tshas_away_wins']"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tshas_team, tshas_away_wins\nFROM team_season_home_away_standings t\nJOIN seasons s ON t.season_id = s.season_id\nJOIN competitions c ON s.competition_id = c.competition_id\nWHERE s.season = '2023-2024' AND c.league_code = 'ENG-PL'\nORDER BY tshas_away_wins DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['tshas_team', 'tshas_away_wins']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 10.01,
+  "experiment": "mas_vs_single",
+  "langfuse_trace_id": "mas_vs_single|single_llm_tools|claude|Q17|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 25822,
+    "output": 439,
+    "total": 26261,
+    "calls": 3
+  }
+}

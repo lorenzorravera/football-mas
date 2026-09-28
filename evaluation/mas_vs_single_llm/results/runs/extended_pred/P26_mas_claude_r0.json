@@ -1,0 +1,79 @@
+{
+  "question_id": "P26",
+  "question": "Predict the outcome of Southampton vs Aston Villa on 2025-04-12 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "mas",
+  "analyst_mode": "autonomous",
+  "model": "claude",
+  "repeat": 0,
+  "memory_enabled": false,
+  "langfuse_enabled": true,
+  "langfuse_trace_id": "extended_pred|mas|claude|P26|r0",
+  "answer": "**Southampton vs Aston Villa \u2014 2025-04-12 (Prediction)**\n\nBased on the match-outcome model (v1):\n\n- **Home win (Southampton): 23.3%**\n- **Draw: 19.4%**\n- **Away win (Aston Villa): 57.3%**\n\n**Most likely outcome:** Away win \u2014 Aston Villa (57.3%), with the model's confidence at 0.573.",
+  "tool_sequence": [
+    "predict_match_outcome"
+  ],
+  "sql": null,
+  "template": null,
+  "low_confidence": false,
+  "intent": "prediction_match",
+  "prediction_vector": {
+    "home_win": 0.233,
+    "draw": 0.194,
+    "away_win": 0.573
+  },
+  "result_columns": null,
+  "result_rows": null,
+  "result_row_count": null,
+  "trace": [
+    {
+      "node": "manager",
+      "out": {
+        "intent": "prediction_match",
+        "seasons": [
+          "2024-2025"
+        ],
+        "teams": [
+          "Southampton",
+          "Aston Villa"
+        ],
+        "metrics": [
+          "home_win_probability",
+          "draw_probability",
+          "away_win_probability"
+        ],
+        "home_team": "Southampton",
+        "away_team": "Aston Villa",
+        "match_date": "2025-04-12"
+      }
+    },
+    {
+      "node": "prediction_agent",
+      "fixture": [
+        "Southampton",
+        "Aston Villa",
+        "2025-04-12"
+      ],
+      "prediction": {
+        "home_team": "Southampton",
+        "away_team": "Aston Villa",
+        "home_win": 0.233,
+        "draw": 0.194,
+        "away_win": 0.573,
+        "confidence": 0.573,
+        "model_version": "v1"
+      }
+    },
+    {
+      "node": "synthesizer",
+      "answer": "**Southampton vs Aston Villa \u2014 2025-04-12 (Prediction)**\n\nBased on the match-outcome model (v1):\n\n- **Home win (Southampton): 23.3%**\n- **Draw: 19.4%**\n- **Away"
+    }
+  ],
+  "token_usage": {
+    "input": 710,
+    "output": 253,
+    "total": 963,
+    "calls": 2
+  },
+  "latency_s": 5.73
+}

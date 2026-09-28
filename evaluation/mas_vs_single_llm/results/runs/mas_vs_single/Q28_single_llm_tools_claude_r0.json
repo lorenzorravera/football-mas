@@ -1,0 +1,31 @@
+{
+  "question_id": "Q28",
+  "question": "How many goals did Erling Haaland score in 2023-2024 versus his xG, and what was the difference?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "In 2023-2024, **Erling Haaland** (Manchester City):\n\n- **Goals scored:** 27\n- **Expected goals (xG):** 31.65\n- **Difference:** \u22124.65 (he *underperformed* his xG by about 4.65 goals)\n\nSo despite his big tally, Haaland actually scored roughly 4.7 fewer goals than the quality of his chances suggested he \"should\" have \u2014 pointing to either some finishing inefficiency or unusually high-value chances that didn't convert that season.",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT player_name, season, team, goals_pss, xg_pss, ROUND((goals_pss - xg_pss)::numeric, 2) AS goals_minus_xg\nFROM vw_player_season_summary\nWHERE player_name = 'Erling Haaland' AND season = '2023-2024';"
+      },
+      "result": "1 rows, cols=['player_name', 'season', 'team', 'goals_pss', 'xg_pss', 'goals_minus_xg']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 7.83,
+  "experiment": "mas_vs_single",
+  "langfuse_trace_id": "mas_vs_single|single_llm_tools|claude|Q28|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 16950,
+    "output": 348,
+    "total": 17298,
+    "calls": 2
+  }
+}

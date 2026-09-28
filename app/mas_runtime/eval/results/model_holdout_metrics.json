@@ -1,0 +1,14 @@
+{
+  "_about": "Leakage-free MODEL-LEVEL holdout metrics, captured from prediction_agent/scripts/eval_tasks.py and backtest_match_outcome.py (temporal holdout: train seasons < 2023-2024 test 2023-2024 for tasks; match-outcome holdout season 2024-2025). These are the authoritative accuracy numbers; the end-to-end prediction eval scores routing+plausibility only (deployed artefacts are all-data refit, so end-to-end accuracy would be leaked).",
+  "captured": "2026-07-21",
+  "tasks": {
+    "match_outcome":  {"metric": "accuracy/brier", "n_test": 379, "accuracy": 0.533, "brier": 0.1985, "baseline_base_rate": {"accuracy": 0.409, "brier": 0.2181}, "baseline_bookmaker": {"accuracy": 0.541, "brier": 0.1934}, "verdict": "beats base rate, ~parity with bookmaker"},
+    "season_class":   {"metric": "accuracy/brier", "n_train": 56, "n_test": 17, "accuracy": 0.471, "logloss": 1.208, "brier": 0.708, "verdict": "weak (tiny sample)"},
+    "position_movement": {"metric": "accuracy/brier", "n_train": 56, "n_test": 17, "accuracy": 0.647, "logloss": 0.651, "brier": 0.411, "verdict": "modest"},
+    "turnaround":     {"metric": "mae/r2", "n_train": 56, "n_test": 17, "mae": 12.877, "r2": -0.214, "verdict": "poor (r2<0, worse than mean)"},
+    "player_decline": {"metric": "accuracy/brier", "n_train": 970, "n_test": 305, "accuracy": 0.777, "logloss": 0.47, "brier": 0.317, "base_rate": 0.177, "verdict": "below majority-class accuracy (0.823); calibrated but weak signal"},
+    "cross_league_translation": {"metric": "mae/r2", "n_train": 501, "n_test": 143, "mae": 0.522, "baseline_mae": 0.613, "r2": 0.273, "verdict": "beats mean-retention baseline"},
+    "event_impact":   {"metric": "lookup", "n_matches": 1900, "n_scenarios": 9, "base_rates": {"H": 0.4321, "D": 0.2279, "A": 0.34}, "verdict": "empirical frequency table, not a fitted model"}
+  },
+  "not_realised_scoreable": ["player_value", "player_team_impact", "transfer_fit", "squad_availability", "stakeholder_value", "home_away_dependency", "explain"]
+}

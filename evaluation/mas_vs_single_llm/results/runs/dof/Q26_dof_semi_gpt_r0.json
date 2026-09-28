@@ -1,0 +1,108 @@
+{
+  "question_id": "Q26",
+  "question": "Among players with at least 10 goals in 2023-2024, who overperformed their xG by the most (goals minus xG)?",
+  "experiment": "dof",
+  "condition": "dof_semi",
+  "analyst_mode": "semi",
+  "model": "gpt",
+  "repeat": 0,
+  "memory_enabled": false,
+  "langfuse_enabled": true,
+  "langfuse_trace_id": "dof|dof_semi|gpt|Q26|r0",
+  "answer": "Phil Foden (Manchester City) overperformed his xG by the most among players with at least 10 goals in 2023-2024: 19 goals vs 11.308 xG, for a goals-minus-xG of 7.692.",
+  "tool_sequence": [
+    "run_sql",
+    "run_sql",
+    "run_sql",
+    "run_sql",
+    "run_sql",
+    "run_sql"
+  ],
+  "sql": "SELECT\n  player_id,\n  player_name,\n  team,\n  goals_pss AS goals,\n  xg_pss AS xg,\n  goals_pss - xg_pss AS goals_minus_xg\nFROM vw_player_season_summary\nWHERE season = '2023-2024'\n  AND league_code = 'ENG-PL'\n  AND goals_pss >= 10\n  AND xg_pss IS NOT NULL\nORDER BY goals_minus_xg DESC NULLS LAST, goals_pss DESC, player_id\nLIMIT 1;",
+  "template": null,
+  "low_confidence": false,
+  "intent": "data_request",
+  "result_columns": [
+    "player_id",
+    "player_name",
+    "team",
+    "goals",
+    "xg",
+    "goals_minus_xg"
+  ],
+  "result_rows": [
+    [
+      6055,
+      "Phil Foden",
+      "Manchester City",
+      19,
+      11.308,
+      7.692
+    ]
+  ],
+  "result_row_count": 1,
+  "trace": [
+    {
+      "node": "manager",
+      "out": {
+        "intent": "data_request",
+        "seasons": [
+          "2023-2024"
+        ],
+        "teams": [],
+        "metrics": [
+          "goals",
+          "xG",
+          "goals_minus_xG",
+          "players_with_at_least_10_goals"
+        ]
+      }
+    },
+    {
+      "node": "data_discovery",
+      "out": {
+        "relevant_tables": [
+          "vw_player_season_summary"
+        ],
+        "notes": "Use player-season grain. Filter season = '2023-2024' and league_code = 'ENG-PL', require goals_pss >= 10, compute goals_minus_xG = goals_pss - xg_pss, then order descending and take the top player."
+      }
+    },
+    {
+      "node": "data_analyst",
+      "mode": "semi",
+      "route": {
+        "approach": "sql"
+      }
+    },
+    {
+      "step": "self_debate[0]",
+      "agreed": false,
+      "sql_a": "SELECT\n  player_id,\n  player_name,\n  team,\n  goals_pss,\n  xg_pss,\n  goals_pss - xg_pss AS goals_minus_xg\nFROM vw_player_season_summary\nWHERE season = '2023-2024'\n  AND league_code = 'ENG-PL'\n  AND goa",
+      "sql_b": "SELECT\n  p.player_name,\n  t.team_name,\n  s.season,\n  pss.goals_pss AS goals,\n  pss.xg_pss AS xg,\n  (pss.goals_pss - pss.xg_pss) AS goals_minus_xg\nFROM player_season_stats AS pss\nJOIN players AS p\n  ON"
+    },
+    {
+      "step": "self_debate[1]",
+      "agreed": false,
+      "sql_a": "SELECT\n  player_id,\n  player_name,\n  team,\n  goals_psss AS goals,\n  xg_pss AS xg,\n  goals_pss - xg_pss AS goals_minus_xg\nFROM vw_player_season_summary\nWHERE season = '2023-2024'\n  AND league_code = 'E",
+      "sql_b": "SELECT\n  agg.player_id,\n  p.player_name,\n  agg.teams AS team,\n  agg.goals,\n  agg.xg,\n  agg.goals - agg.xg AS goals_minus_xg\nFROM (\n  SELECT\n    pss.player_id,\n    pss.season_id,\n    STRING_AGG(DISTINC"
+    },
+    {
+      "step": "self_debate[2]",
+      "agreed": true,
+      "sql_a": "SELECT\n  player_id,\n  player_name,\n  team,\n  goals_pss AS goals,\n  xg_pss AS xg,\n  goals_pss - xg_pss AS goals_minus_xg\nFROM vw_player_season_summary\nWHERE season = '2023-2024'\n  AND league_code = 'EN",
+      "sql_b": "SELECT\n  p.player_id,\n  p.player_name,\n  STRING_AGG(DISTINCT t.team_name, ' / ' ORDER BY t.team_name) AS team,\n  SUM(pss.goals_pss) AS goals,\n  SUM(pss.xg_pss) AS xg,\n  SUM(pss.goals_pss) - SUM(pss.xg"
+    },
+    {
+      "node": "data_analyst",
+      "mode": "semi",
+      "sql": "SELECT\n  player_id,\n  player_name,\n  team,\n  goals_pss AS goals,\n  xg_pss AS xg,\n  goals_pss - xg_pss AS goals_minus_xg\nFROM vw_player_season_summary\nWHERE season = '2023-2024'\n  AND league_code = 'EN",
+      "template": null,
+      "low_confidence": false
+    },
+    {
+      "node": "synthesizer",
+      "answer": "Phil Foden (Manchester City) overperformed his xG by the most among players with at least 10 goals in 2023-2024: 19 goals vs 11.308 xG, for a goals-minus-xG of "
+    }
+  ],
+  "latency_s": 120.27
+}

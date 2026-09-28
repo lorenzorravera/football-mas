@@ -1,0 +1,26 @@
+{
+  "question_id": "Q10",
+  "question": "List the top five goalscorers in 2024-2025 with their goal totals.",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Based on the 2024-2025 player season data (ENG-PL):\n\n| Rank | Player | Team | Goals |\n|------|--------|------|-------|\n| 1 | Mohamed Salah | Liverpool | 29 |\n| 2 | Alexander Isak | Newcastle United | 23 |\n| 3 | Erling Haaland | Manchester City | 22 |\n| 4 | Chris Wood | Nottingham Forest | 20 |\n| 4 | Bryan Mbeumo | Brentford | 20 |\n\nNote: Chris Wood and Bryan Mbeumo are tied for 4th with 20 goals each, so this list of five includes both of them at that position.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q10|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 171528,
+  "token_usage": {
+    "input": 121527,
+    "output": 228,
+    "total": 121755,
+    "calls": 1
+  },
+  "latency_s": 3.95,
+  "experiment": "extended_da"
+}

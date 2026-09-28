@@ -1,0 +1,26 @@
+{
+  "question_id": "Q21",
+  "question": "Which team received the most yellow cards in 2023-2024?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Based on the team_discipline data for 2023-2024, **Getafe** received the most yellow cards with **135**.\n\n(Note: this includes all leagues in the dataset. If you mean specifically the Premier League, the leader was **Chelsea** with **109** yellow cards in 2023-2024.)",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q21|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229568,
+    "output": 99,
+    "total": 229667,
+    "calls": 1
+  },
+  "latency_s": 3.37,
+  "experiment": "mas_vs_single"
+}

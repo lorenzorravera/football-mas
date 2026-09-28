@@ -1,0 +1,40 @@
+{
+  "question_id": "Q25",
+  "question": "How many Premier League matches did referee Anthony Taylor officiate in 2023-2024?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**Anthony Taylor officiated 27 Premier League matches in 2023-2024.**\n\n(Note: the referee name in the database is stored with a non-breaking space \u2014 `Anthony Taylor` \u2014 which is why an exact match on a normal space returned zero.)",
+  "tool_sequence": [
+    "run_sql",
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT COUNT(*) AS matches_officiated\nFROM matches m\nJOIN seasons s ON m.season_id = s.season_id\nWHERE s.competition_id = 1\n  AND s.season = '2023-2024'\n  AND m.referee = 'Anthony Taylor';"
+      },
+      "result": "1 rows, cols=['matches_officiated']"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT m.referee, COUNT(*) AS n\nFROM matches m\nJOIN seasons s ON m.season_id = s.season_id\nWHERE s.competition_id = 1\n  AND s.season = '2023-2024'\n  AND m.referee ILIKE '%taylor%'\nGROUP BY m.referee;"
+      },
+      "result": "1 rows, cols=['referee', 'n']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 8.75,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q25|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 29160,
+    "output": 439,
+    "total": 29599,
+    "calls": 3
+  }
+}

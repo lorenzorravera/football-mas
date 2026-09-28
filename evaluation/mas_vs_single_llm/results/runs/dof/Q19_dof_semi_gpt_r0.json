@@ -1,0 +1,106 @@
+{
+  "question_id": "Q19",
+  "question": "How many home points did Arsenal earn in 2023-2024?",
+  "experiment": "dof",
+  "condition": "dof_semi",
+  "analyst_mode": "semi",
+  "model": "gpt",
+  "repeat": 0,
+  "memory_enabled": false,
+  "langfuse_enabled": true,
+  "langfuse_trace_id": "dof|dof_semi|gpt|Q19|r0",
+  "answer": "Arsenal earned 47 home points in 2023-2024.",
+  "tool_sequence": [
+    "use_template"
+  ],
+  "sql": null,
+  "template": "team_season_summary",
+  "low_confidence": false,
+  "intent": "data_request",
+  "result_columns": [
+    "team_name",
+    "vwtss_rank",
+    "vwtss_points",
+    "vwtss_goals_for",
+    "vwtss_goals_against",
+    "vwtss_goal_difference",
+    "vwtss_home_points",
+    "vwtss_away_points",
+    "vwtss_home_goals_for",
+    "vwtss_away_goals_for",
+    "vwtss_possession_percentage_for"
+  ],
+  "result_rows": [
+    [
+      "Arsenal",
+      2,
+      89,
+      91,
+      29,
+      62,
+      47,
+      42,
+      48,
+      43,
+      58.2
+    ]
+  ],
+  "result_row_count": 1,
+  "trace": [
+    {
+      "node": "manager",
+      "out": {
+        "intent": "data_request",
+        "seasons": [
+          "2023-2024"
+        ],
+        "teams": [
+          "Arsenal"
+        ],
+        "metrics": [
+          "home points"
+        ]
+      }
+    },
+    {
+      "node": "data_discovery",
+      "out": {
+        "relevant_tables": [
+          "team_season_home_away_standings",
+          "teams",
+          "seasons"
+        ],
+        "answer": {
+          "team": "Arsenal",
+          "season": "2023-2024",
+          "home_points": 47
+        },
+        "notes": "Use team_id and season_id to join teams/seasons to team_season_home_away_standings; grain is one row per team-season with home/away standings splits."
+      }
+    },
+    {
+      "node": "data_analyst",
+      "mode": "semi",
+      "route": {
+        "approach": "template",
+        "template_name": "team_season_summary",
+        "params": {
+          "team": "Arsenal",
+          "season": "2023-2024"
+        }
+      }
+    },
+    {
+      "node": "data_analyst",
+      "mode": "semi",
+      "sql": "",
+      "template": "team_season_summary",
+      "low_confidence": false
+    },
+    {
+      "node": "synthesizer",
+      "answer": "Arsenal earned 47 home points in 2023-2024."
+    }
+  ],
+  "latency_s": 12.65
+}

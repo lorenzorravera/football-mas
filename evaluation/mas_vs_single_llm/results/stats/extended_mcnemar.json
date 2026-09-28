@@ -1,0 +1,58 @@
+{
+  "comparison": "mas vs single_llm_tools",
+  "test": "McNemar exact (binomial), two-sided",
+  "overall": {
+    "n": 30,
+    "contingency": {
+      "both_right": 24,
+      "mas_only_right": 2,
+      "single_only_right": 2,
+      "both_wrong": 2
+    },
+    "b_mas_only": 2,
+    "c_single_only": 2,
+    "n_discordant": 4,
+    "mcnemar_exact_p": 1.0,
+    "mcnemar_odds_ratio": 1.0,
+    "acc_mas": 0.867,
+    "acc_single_tools": 0.867,
+    "acc_delta": 0.0,
+    "significant_at_0.05": false
+  },
+  "in_coverage": {
+    "n": 18,
+    "contingency": {
+      "both_right": 14,
+      "mas_only_right": 2,
+      "single_only_right": 0,
+      "both_wrong": 2
+    },
+    "b_mas_only": 2,
+    "c_single_only": 0,
+    "n_discordant": 2,
+    "mcnemar_exact_p": 0.5,
+    "mcnemar_odds_ratio": Infinity,
+    "acc_mas": 0.889,
+    "acc_single_tools": 0.778,
+    "acc_delta": 0.111,
+    "significant_at_0.05": false
+  },
+  "out_of_coverage": {
+    "n": 12,
+    "contingency": {
+      "both_right": 10,
+      "mas_only_right": 0,
+      "single_only_right": 2,
+      "both_wrong": 0
+    },
+    "b_mas_only": 0,
+    "c_single_only": 2,
+    "n_discordant": 2,
+    "mcnemar_exact_p": 0.5,
+    "mcnemar_odds_ratio": 0.0,
+    "acc_mas": 0.833,
+    "acc_single_tools": 1.0,
+    "acc_delta": -0.167,
+    "significant_at_0.05": false
+  }
+}

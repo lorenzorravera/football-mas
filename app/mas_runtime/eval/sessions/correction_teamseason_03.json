@@ -1,0 +1,21 @@
+{
+  "session_id": "correction_teamseason_03",
+  "sub_experiment": "correction",
+  "variant": "no_control",
+  "correction_lesson": "A team's per-match stat lives in EITHER the home_* column (when it played at home) OR the away_* column (when away) of the wide matches table. Summing only one side undercounts. Union both: SUM of home_<metric> WHERE home_team_id=team plus away_<metric> WHERE away_team_id=team.",
+  "description": "Team home+away summation pitfall (variant 3): red cards then yellow cards.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "How many red cards did Chelsea receive in total during the 2023-2024 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(v) AS total FROM (SELECT m.home_red_cards AS v FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.home_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' AND t.team_name = 'Chelsea' UNION ALL SELECT m.away_red_cards AS v FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.away_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' AND t.team_name = 'Chelsea') x;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "How many yellow cards did Liverpool pick up across the 2024-2025 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(v) AS total FROM (SELECT m.home_yellow_cards AS v FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.home_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND t.team_name = 'Liverpool' UNION ALL SELECT m.away_yellow_cards AS v FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.away_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND t.team_name = 'Liverpool') x;"
+    }
+  ]
+}

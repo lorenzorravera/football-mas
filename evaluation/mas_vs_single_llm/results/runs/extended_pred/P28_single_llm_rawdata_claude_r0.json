@@ -1,0 +1,26 @@
+{
+  "question_id": "P28",
+  "question": "Predict the outcome of Wolves vs Leicester City on 2025-04-26 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Form analysis:\n\n**Wolves (home):** Excellent recent form. Won 7 of last 10, including a strong run: beat Man United, Tottenham (4-2), Ipswich, West Ham, Southampton, Bournemouth, Aston Villa. Only losses to Fulham and Liverpool. Scoring well and defending solidly at home.\n\n**Leicester City:** Dreadful form. Lost 8 of last 10, with just 1 point (draw at Brighton). Failed to score in 8 of 10 matches \u2014 no goals against Liverpool, Man City, Man United, Chelsea, West Ham, Brentford, Arsenal, Everton. Conceding heavily.\n\n**Conclusion:** This is a heavy mismatch. Wolves in strong form at home against a Leicester side in freefall, likely already relegation-bound and struggling to score. Home win is strongly favored.\n\nPROBABILITIES: home=0.72, draw=0.18, away=0.10",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.72,
+    "draw": 0.18,
+    "away_win": 0.1
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P28|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 882,
+  "token_usage": {
+    "input": 821,
+    "output": 324,
+    "total": 1145,
+    "calls": 1
+  },
+  "latency_s": 6.39
+}

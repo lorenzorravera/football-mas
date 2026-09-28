@@ -1,0 +1,20 @@
+{
+  "session_id": "cache_wins_02",
+  "sub_experiment": "cache",
+  "variant": "no_control",
+  "description": "Near-repeat (tss_wins), reworded. Accuracy unchanged; win is cache reuse.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "How many matches did Arsenal win in the 2024-2025 Premier League season?",
+      "ground_truth_sql": "SELECT tss_wins FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND tss_team = 'Arsenal';"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "What was Arsenal's win count in the 2024-2025 Premier League?",
+      "ground_truth_sql": "SELECT tss_wins FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND tss_team = 'Arsenal';"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "session_id": "correction_cleansheet_01",
+  "sub_experiment": "correction",
+  "variant": "no_control",
+  "correction_lesson": "A clean sheet = the opponent scored 0. In the wide matches table that is away_score=0 in the team's HOME games and home_score=0 in its AWAY games \u2014 count across BOTH sides.",
+  "description": "Clean-sheet pitfall: clean sheet = opponent scored 0, counted across both home and away fixtures (away_score=0 at home, home_score=0 away).",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "How many clean sheets did Arsenal keep in the 2023-2024 Premier League season?",
+      "ground_truth_sql": "SELECT COUNT(*) AS clean_sheets FROM (SELECT 1 FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.home_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' AND t.team_name = 'Arsenal' AND m.away_score = 0 UNION ALL SELECT 1 FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.away_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' AND t.team_name = 'Arsenal' AND m.home_score = 0) x;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "How many clean sheets did Liverpool manage in the 2024-2025 Premier League season?",
+      "ground_truth_sql": "SELECT COUNT(*) AS clean_sheets FROM (SELECT 1 FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.home_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND t.team_name = 'Liverpool' AND m.away_score = 0 UNION ALL SELECT 1 FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.away_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND t.team_name = 'Liverpool' AND m.home_score = 0) x;"
+    }
+  ]
+}

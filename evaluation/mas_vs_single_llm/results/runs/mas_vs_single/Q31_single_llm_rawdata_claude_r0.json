@@ -1,0 +1,26 @@
+{
+  "question_id": "Q31",
+  "question": "Which player has the highest market value (most recent valuation on record)?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "I can't answer that from the data provided.\n\nThe inlined tables here cover standings, home/away splits, team discipline, and player-season stats (goals, assists, minutes, xG, cards, shots). None of these include market values.\n\nWhile the schema describes a `player_market_values` table (and `vw_player_season_summary` has a `market_value` column), **no market-value data has been inlined** in this prompt, so I have no values to compare. I'd need that table populated to identify the player with the highest most-recent valuation.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q31|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229569,
+    "output": 161,
+    "total": 229730,
+    "calls": 1
+  },
+  "latency_s": 6.23,
+  "experiment": "mas_vs_single"
+}

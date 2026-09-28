@@ -1,0 +1,26 @@
+{
+  "question_id": "P22",
+  "question": "Predict the outcome of Everton vs Manchester United on 2025-02-22 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Everton form: strong recently \u2014 unbeaten in last 5 (4W 1D), including wins over Brighton, Tottenham, and a draw with Liverpool. Good momentum, solid at home.\n\nManchester United form: poor \u2014 lost 4 of last 6, including recent losses to Tottenham and Crystal Palace. Only one clear win (Southampton). Away form especially weak.\n\nGiven Everton's excellent form and United's struggles, Everton are favored at home. However, United retain individual quality, so away win remains plausible.\n\nPROBABILITIES: home=0.45, draw=0.28, away=0.27",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.45,
+    "draw": 0.28,
+    "away_win": 0.27
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P22|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 936,
+  "token_usage": {
+    "input": 822,
+    "output": 201,
+    "total": 1023,
+    "calls": 1
+  },
+  "latency_s": 5.19
+}

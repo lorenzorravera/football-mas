@@ -1,0 +1,1984 @@
+{
+  "scores": [
+    {
+      "id": "P01",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.557,
+        "draw": 0.178,
+        "away_win": 0.265
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0994,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.557,
+        "draw": 0.178,
+        "away_win": 0.265
+      },
+      "tokens": 1019,
+      "latency_s": 10.73,
+      "error": null,
+      "file": "P01_mas_claude_r0.json"
+    },
+    {
+      "id": "P01",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.5,
+        "draw": 0.27,
+        "away_win": 0.23
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1253,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.557,
+        "draw": 0.178,
+        "away_win": 0.265
+      },
+      "tokens": 1251,
+      "latency_s": 7.27,
+      "error": null,
+      "file": "P01_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P01",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.557,
+        "draw": 0.178,
+        "away_win": 0.265
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0994,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.557,
+        "draw": 0.178,
+        "away_win": 0.265
+      },
+      "tokens": 49454,
+      "latency_s": 14.69,
+      "error": null,
+      "file": "P01_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P02",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.8,
+        "draw": 0.184,
+        "away_win": 0.016
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0247,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.8,
+        "draw": 0.184,
+        "away_win": 0.016
+      },
+      "tokens": 954,
+      "latency_s": 7.28,
+      "error": null,
+      "file": "P02_mas_claude_r0.json"
+    },
+    {
+      "id": "P02",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.8,
+        "draw": 0.13,
+        "away_win": 0.07
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.0206,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.8,
+        "draw": 0.184,
+        "away_win": 0.016
+      },
+      "tokens": 1113,
+      "latency_s": 5.79,
+      "error": null,
+      "file": "P02_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P02",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.8,
+        "draw": 0.184,
+        "away_win": 0.016
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0247,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.8,
+        "draw": 0.184,
+        "away_win": 0.016
+      },
+      "tokens": 49415,
+      "latency_s": 16.11,
+      "error": null,
+      "file": "P02_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P03",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.239,
+        "draw": 0.224,
+        "away_win": 0.538
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.1069,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.239,
+        "draw": 0.224,
+        "away_win": 0.538
+      },
+      "tokens": 986,
+      "latency_s": 5.42,
+      "error": null,
+      "file": "P03_mas_claude_r0.json"
+    },
+    {
+      "id": "P03",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.42,
+        "draw": 0.28,
+        "away_win": 0.3
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2483,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.239,
+        "draw": 0.224,
+        "away_win": 0.538
+      },
+      "tokens": 1152,
+      "latency_s": 9.16,
+      "error": null,
+      "file": "P03_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P03",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.239,
+        "draw": 0.224,
+        "away_win": 0.538
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.1069,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.239,
+        "draw": 0.224,
+        "away_win": 0.538
+      },
+      "tokens": 49434,
+      "latency_s": 16.35,
+      "error": null,
+      "file": "P03_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P04",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.322,
+        "draw": 0.249,
+        "away_win": 0.429
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2839,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.322,
+        "draw": 0.249,
+        "away_win": 0.429
+      },
+      "tokens": 996,
+      "latency_s": 4.6,
+      "error": null,
+      "file": "P04_mas_claude_r0.json"
+    },
+    {
+      "id": "P04",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.37,
+        "draw": 0.29,
+        "away_win": 0.34
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2522,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.322,
+        "draw": 0.249,
+        "away_win": 0.429
+      },
+      "tokens": 1178,
+      "latency_s": 5.92,
+      "error": null,
+      "file": "P04_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P04",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.322,
+        "draw": 0.249,
+        "away_win": 0.429
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2839,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.322,
+        "draw": 0.249,
+        "away_win": 0.429
+      },
+      "tokens": 49545,
+      "latency_s": 12.8,
+      "error": null,
+      "file": "P04_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P05",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.46,
+        "draw": 0.2,
+        "away_win": 0.341
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3226,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.46,
+        "draw": 0.2,
+        "away_win": 0.341
+      },
+      "tokens": 1016,
+      "latency_s": 5.63,
+      "error": null,
+      "file": "P05_mas_claude_r0.json"
+    },
+    {
+      "id": "P05",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.55,
+        "draw": 0.24,
+        "away_win": 0.21
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.3081,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.46,
+        "draw": 0.2,
+        "away_win": 0.341
+      },
+      "tokens": 1182,
+      "latency_s": 6.2,
+      "error": null,
+      "file": "P05_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P05",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.46,
+        "draw": 0.2,
+        "away_win": 0.341
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3226,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.46,
+        "draw": 0.2,
+        "away_win": 0.341
+      },
+      "tokens": 49466,
+      "latency_s": 14.06,
+      "error": null,
+      "file": "P05_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P06",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.214,
+        "draw": 0.191,
+        "away_win": 0.595
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0821,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.214,
+        "draw": 0.191,
+        "away_win": 0.595
+      },
+      "tokens": 948,
+      "latency_s": 6.05,
+      "error": null,
+      "file": "P06_mas_claude_r0.json"
+    },
+    {
+      "id": "P06",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.25,
+        "draw": 0.27,
+        "away_win": 0.48
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1353,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.214,
+        "draw": 0.191,
+        "away_win": 0.595
+      },
+      "tokens": 1082,
+      "latency_s": 5.21,
+      "error": null,
+      "file": "P06_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P06",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.214,
+        "draw": 0.191,
+        "away_win": 0.595
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0821,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.214,
+        "draw": 0.191,
+        "away_win": 0.595
+      },
+      "tokens": 49422,
+      "latency_s": 12.84,
+      "error": null,
+      "file": "P06_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P07",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.454,
+        "draw": 0.278,
+        "away_win": 0.268
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2664,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.454,
+        "draw": 0.278,
+        "away_win": 0.268
+      },
+      "tokens": 1012,
+      "latency_s": 6.08,
+      "error": null,
+      "file": "P07_mas_claude_r0.json"
+    },
+    {
+      "id": "P07",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.48,
+        "draw": 0.26,
+        "away_win": 0.26
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2819,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.454,
+        "draw": 0.278,
+        "away_win": 0.268
+      },
+      "tokens": 1205,
+      "latency_s": 10.34,
+      "error": null,
+      "file": "P07_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P07",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.454,
+        "draw": 0.278,
+        "away_win": 0.268
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2664,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.454,
+        "draw": 0.278,
+        "away_win": 0.268
+      },
+      "tokens": 49465,
+      "latency_s": 13.71,
+      "error": null,
+      "file": "P07_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P08",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.278,
+        "draw": 0.217,
+        "away_win": 0.505
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2745,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.278,
+        "draw": 0.217,
+        "away_win": 0.505
+      },
+      "tokens": 1047,
+      "latency_s": 8.97,
+      "error": null,
+      "file": "P08_mas_claude_r0.json"
+    },
+    {
+      "id": "P08",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.3,
+        "draw": 0.28,
+        "away_win": 0.42
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2483,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.278,
+        "draw": 0.217,
+        "away_win": 0.505
+      },
+      "tokens": 1189,
+      "latency_s": 17.13,
+      "error": null,
+      "file": "P08_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P08",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.278,
+        "draw": 0.217,
+        "away_win": 0.505
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2745,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.278,
+        "draw": 0.217,
+        "away_win": 0.505
+      },
+      "tokens": 49470,
+      "latency_s": 17.7,
+      "error": null,
+      "file": "P08_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P09",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.319,
+        "draw": 0.317,
+        "away_win": 0.364
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2022,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.319,
+        "draw": 0.317,
+        "away_win": 0.364
+      },
+      "tokens": 1062,
+      "latency_s": 7.03,
+      "error": null,
+      "file": "P09_mas_claude_r0.json"
+    },
+    {
+      "id": "P09",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.33,
+        "draw": 0.28,
+        "away_win": 0.39
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1865,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.319,
+        "draw": 0.317,
+        "away_win": 0.364
+      },
+      "tokens": 1236,
+      "latency_s": 8.0,
+      "error": null,
+      "file": "P09_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P09",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.319,
+        "draw": 0.317,
+        "away_win": 0.364
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2022,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.319,
+        "draw": 0.317,
+        "away_win": 0.364
+      },
+      "tokens": 49486,
+      "latency_s": 13.01,
+      "error": null,
+      "file": "P09_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P10",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.049,
+        "draw": 0.261,
+        "away_win": 0.69
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0555,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.049,
+        "draw": 0.261,
+        "away_win": 0.69
+      },
+      "tokens": 952,
+      "latency_s": 6.16,
+      "error": null,
+      "file": "P10_mas_claude_r0.json"
+    },
+    {
+      "id": "P10",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.06,
+        "draw": 0.15,
+        "away_win": 0.79
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.0234,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.049,
+        "draw": 0.261,
+        "away_win": 0.69
+      },
+      "tokens": 1138,
+      "latency_s": 6.39,
+      "error": null,
+      "file": "P10_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P10",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.049,
+        "draw": 0.261,
+        "away_win": 0.69
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0555,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.049,
+        "draw": 0.261,
+        "away_win": 0.69
+      },
+      "tokens": 30083,
+      "latency_s": 9.84,
+      "error": null,
+      "file": "P10_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P11",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.462,
+        "draw": 0.31,
+        "away_win": 0.229
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2473,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.462,
+        "draw": 0.31,
+        "away_win": 0.229
+      },
+      "tokens": 1018,
+      "latency_s": 5.59,
+      "error": null,
+      "file": "P11_mas_claude_r0.json"
+    },
+    {
+      "id": "P11",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.36,
+        "draw": 0.29,
+        "away_win": 0.35
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2521,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.462,
+        "draw": 0.31,
+        "away_win": 0.229
+      },
+      "tokens": 1160,
+      "latency_s": 7.25,
+      "error": null,
+      "file": "P11_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P11",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.462,
+        "draw": 0.31,
+        "away_win": 0.229
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2473,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.462,
+        "draw": 0.31,
+        "away_win": 0.229
+      },
+      "tokens": 19582,
+      "latency_s": 7.11,
+      "error": null,
+      "file": "P11_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P12",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.655,
+        "draw": 0.212,
+        "away_win": 0.132
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0605,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.655,
+        "draw": 0.212,
+        "away_win": 0.132
+      },
+      "tokens": 984,
+      "latency_s": 4.83,
+      "error": null,
+      "file": "P12_mas_claude_r0.json"
+    },
+    {
+      "id": "P12",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.55,
+        "draw": 0.25,
+        "away_win": 0.2
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1017,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.655,
+        "draw": 0.212,
+        "away_win": 0.132
+      },
+      "tokens": 1241,
+      "latency_s": 9.94,
+      "error": null,
+      "file": "P12_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P12",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.655,
+        "draw": 0.212,
+        "away_win": 0.132
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0605,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.655,
+        "draw": 0.212,
+        "away_win": 0.132
+      },
+      "tokens": 49441,
+      "latency_s": 17.89,
+      "error": null,
+      "file": "P12_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P13",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.627,
+        "draw": 0.2,
+        "away_win": 0.174
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3718,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.627,
+        "draw": 0.2,
+        "away_win": 0.174
+      },
+      "tokens": 1010,
+      "latency_s": 6.14,
+      "error": null,
+      "file": "P13_mas_claude_r0.json"
+    },
+    {
+      "id": "P13",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.55,
+        "draw": 0.25,
+        "away_win": 0.2
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.335,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.627,
+        "draw": 0.2,
+        "away_win": 0.174
+      },
+      "tokens": 1166,
+      "latency_s": 6.33,
+      "error": null,
+      "file": "P13_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P13",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.627,
+        "draw": 0.2,
+        "away_win": 0.174
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3718,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.627,
+        "draw": 0.2,
+        "away_win": 0.174
+      },
+      "tokens": 49477,
+      "latency_s": 14.12,
+      "error": null,
+      "file": "P13_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P14",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.244,
+        "draw": 0.234,
+        "away_win": 0.522
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3063,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.244,
+        "draw": 0.234,
+        "away_win": 0.522
+      },
+      "tokens": 1056,
+      "latency_s": 6.34,
+      "error": null,
+      "file": "P14_mas_claude_r0.json"
+    },
+    {
+      "id": "P14",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.27,
+        "draw": 0.25,
+        "away_win": 0.48
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2886,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.244,
+        "draw": 0.234,
+        "away_win": 0.522
+      },
+      "tokens": 1247,
+      "latency_s": 9.12,
+      "error": null,
+      "file": "P14_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P14",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.244,
+        "draw": 0.234,
+        "away_win": 0.522
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3063,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.244,
+        "draw": 0.234,
+        "away_win": 0.522
+      },
+      "tokens": 30380,
+      "latency_s": 10.32,
+      "error": null,
+      "file": "P14_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P15",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.426,
+        "draw": 0.19,
+        "away_win": 0.384
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.171,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.426,
+        "draw": 0.19,
+        "away_win": 0.384
+      },
+      "tokens": 1026,
+      "latency_s": 7.88,
+      "error": null,
+      "file": "P15_mas_claude_r0.json"
+    },
+    {
+      "id": "P15",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.38,
+        "draw": 0.27,
+        "away_win": 0.35
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1933,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.426,
+        "draw": 0.19,
+        "away_win": 0.384
+      },
+      "tokens": 1274,
+      "latency_s": 8.48,
+      "error": null,
+      "file": "P15_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P15",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.426,
+        "draw": 0.19,
+        "away_win": 0.384
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.171,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.426,
+        "draw": 0.19,
+        "away_win": 0.384
+      },
+      "tokens": 30405,
+      "latency_s": 11.24,
+      "error": null,
+      "file": "P15_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P16",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.349,
+        "draw": 0.245,
+        "away_win": 0.406
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.1782,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.349,
+        "draw": 0.245,
+        "away_win": 0.406
+      },
+      "tokens": 1109,
+      "latency_s": 6.24,
+      "error": null,
+      "file": "P16_mas_claude_r0.json"
+    },
+    {
+      "id": "P16",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.28,
+        "draw": 0.22,
+        "away_win": 0.5
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1256,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.349,
+        "draw": 0.245,
+        "away_win": 0.406
+      },
+      "tokens": 1270,
+      "latency_s": 7.39,
+      "error": null,
+      "file": "P16_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P16",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.349,
+        "draw": 0.245,
+        "away_win": 0.406
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.1782,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.349,
+        "draw": 0.245,
+        "away_win": 0.406
+      },
+      "tokens": 49500,
+      "latency_s": 14.43,
+      "error": null,
+      "file": "P16_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P17",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.549,
+        "draw": 0.206,
+        "away_win": 0.245
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3306,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.549,
+        "draw": 0.206,
+        "away_win": 0.245
+      },
+      "tokens": 991,
+      "latency_s": 6.21,
+      "error": null,
+      "file": "P17_mas_claude_r0.json"
+    },
+    {
+      "id": "P17",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.45,
+        "draw": 0.28,
+        "away_win": 0.27
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2646,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.549,
+        "draw": 0.206,
+        "away_win": 0.245
+      },
+      "tokens": 1290,
+      "latency_s": 7.95,
+      "error": null,
+      "file": "P17_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P17",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.549,
+        "draw": 0.206,
+        "away_win": 0.245
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3306,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.549,
+        "draw": 0.206,
+        "away_win": 0.245
+      },
+      "tokens": 49532,
+      "latency_s": 13.3,
+      "error": null,
+      "file": "P17_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P18",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.253,
+        "draw": 0.269,
+        "away_win": 0.478
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2863,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.253,
+        "draw": 0.269,
+        "away_win": 0.478
+      },
+      "tokens": 985,
+      "latency_s": 5.76,
+      "error": null,
+      "file": "P18_mas_claude_r0.json"
+    },
+    {
+      "id": "P18",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.34,
+        "draw": 0.3,
+        "away_win": 0.36
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2184,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.253,
+        "draw": 0.269,
+        "away_win": 0.478
+      },
+      "tokens": 1232,
+      "latency_s": 11.29,
+      "error": null,
+      "file": "P18_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P18",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.253,
+        "draw": 0.269,
+        "away_win": 0.478
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.2863,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.253,
+        "draw": 0.269,
+        "away_win": 0.478
+      },
+      "tokens": 39309,
+      "latency_s": 10.02,
+      "error": null,
+      "file": "P18_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P19",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.257,
+        "draw": 0.243,
+        "away_win": 0.5
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.125,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.257,
+        "draw": 0.243,
+        "away_win": 0.5
+      },
+      "tokens": 995,
+      "latency_s": 5.79,
+      "error": null,
+      "file": "P19_mas_claude_r0.json"
+    },
+    {
+      "id": "P19",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.3,
+        "draw": 0.31,
+        "away_win": 0.39
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1861,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.257,
+        "draw": 0.243,
+        "away_win": 0.5
+      },
+      "tokens": 1264,
+      "latency_s": 7.65,
+      "error": null,
+      "file": "P19_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P19",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.257,
+        "draw": 0.243,
+        "away_win": 0.5
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.125,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.257,
+        "draw": 0.243,
+        "away_win": 0.5
+      },
+      "tokens": 49435,
+      "latency_s": 15.57,
+      "error": null,
+      "file": "P19_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P20",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.605,
+        "draw": 0.211,
+        "away_win": 0.184
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0781,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.605,
+        "draw": 0.211,
+        "away_win": 0.184
+      },
+      "tokens": 961,
+      "latency_s": 7.31,
+      "error": null,
+      "file": "P20_mas_claude_r0.json"
+    },
+    {
+      "id": "P20",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.5,
+        "draw": 0.26,
+        "away_win": 0.24
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1251,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.605,
+        "draw": 0.211,
+        "away_win": 0.184
+      },
+      "tokens": 1348,
+      "latency_s": 8.99,
+      "error": null,
+      "file": "P20_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P20",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.605,
+        "draw": 0.211,
+        "away_win": 0.184
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0781,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.605,
+        "draw": 0.211,
+        "away_win": 0.184
+      },
+      "tokens": 49534,
+      "latency_s": 12.69,
+      "error": null,
+      "file": "P20_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P21",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.434,
+        "draw": 0.225,
+        "away_win": 0.342
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.224,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.434,
+        "draw": 0.225,
+        "away_win": 0.342
+      },
+      "tokens": 1003,
+      "latency_s": 5.93,
+      "error": null,
+      "file": "P21_mas_claude_r0.json"
+    },
+    {
+      "id": "P21",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.45,
+        "draw": 0.3,
+        "away_win": 0.25
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.285,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.434,
+        "draw": 0.225,
+        "away_win": 0.342
+      },
+      "tokens": 1223,
+      "latency_s": 7.8,
+      "error": null,
+      "file": "P21_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P21",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.434,
+        "draw": 0.225,
+        "away_win": 0.342
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.224,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.434,
+        "draw": 0.225,
+        "away_win": 0.342
+      },
+      "tokens": 49375,
+      "latency_s": 20.23,
+      "error": null,
+      "file": "P21_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P22",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.415,
+        "draw": 0.249,
+        "away_win": 0.336
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.283,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.415,
+        "draw": 0.249,
+        "away_win": 0.336
+      },
+      "tokens": 975,
+      "latency_s": 10.54,
+      "error": null,
+      "file": "P22_mas_claude_r0.json"
+    },
+    {
+      "id": "P22",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.45,
+        "draw": 0.28,
+        "away_win": 0.27
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2646,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.415,
+        "draw": 0.249,
+        "away_win": 0.336
+      },
+      "tokens": 1023,
+      "latency_s": 5.19,
+      "error": null,
+      "file": "P22_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P22",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.415,
+        "draw": 0.249,
+        "away_win": 0.336
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.283,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.415,
+        "draw": 0.249,
+        "away_win": 0.336
+      },
+      "tokens": 49368,
+      "latency_s": 11.86,
+      "error": null,
+      "file": "P22_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P23",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.247,
+        "draw": 0.234,
+        "away_win": 0.519
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3057,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.247,
+        "draw": 0.234,
+        "away_win": 0.519
+      },
+      "tokens": 1059,
+      "latency_s": 9.52,
+      "error": null,
+      "file": "P23_mas_claude_r0.json"
+    },
+    {
+      "id": "P23",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.3,
+        "draw": 0.24,
+        "away_win": 0.46
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2931,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.247,
+        "draw": 0.234,
+        "away_win": 0.519
+      },
+      "tokens": 1331,
+      "latency_s": 7.9,
+      "error": null,
+      "file": "P23_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P23",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.247,
+        "draw": 0.234,
+        "away_win": 0.519
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3057,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.247,
+        "draw": 0.234,
+        "away_win": 0.519
+      },
+      "tokens": 19572,
+      "latency_s": 7.46,
+      "error": null,
+      "file": "P23_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P24",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.555,
+        "draw": 0.219,
+        "away_win": 0.226
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.099,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.555,
+        "draw": 0.219,
+        "away_win": 0.226
+      },
+      "tokens": 1026,
+      "latency_s": 5.52,
+      "error": null,
+      "file": "P24_mas_claude_r0.json"
+    },
+    {
+      "id": "P24",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.42,
+        "draw": 0.26,
+        "away_win": 0.32
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1688,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.555,
+        "draw": 0.219,
+        "away_win": 0.226
+      },
+      "tokens": 1190,
+      "latency_s": 5.71,
+      "error": null,
+      "file": "P24_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P24",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.555,
+        "draw": 0.219,
+        "away_win": 0.226
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.099,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.555,
+        "draw": 0.219,
+        "away_win": 0.226
+      },
+      "tokens": 49547,
+      "latency_s": 13.81,
+      "error": null,
+      "file": "P24_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P25",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.049,
+        "draw": 0.222,
+        "away_win": 0.729
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3797,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.049,
+        "draw": 0.222,
+        "away_win": 0.729
+      },
+      "tokens": 988,
+      "latency_s": 5.83,
+      "error": null,
+      "file": "P25_mas_claude_r0.json"
+    },
+    {
+      "id": "P25",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.17,
+        "draw": 0.23,
+        "away_win": 0.6
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.3273,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.049,
+        "draw": 0.222,
+        "away_win": 0.729
+      },
+      "tokens": 1122,
+      "latency_s": 5.73,
+      "error": null,
+      "file": "P25_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P25",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.049,
+        "draw": 0.222,
+        "away_win": 0.729
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3797,
+      "actual": "D",
+      "model_gt": {
+        "home_win": 0.049,
+        "draw": 0.222,
+        "away_win": 0.729
+      },
+      "tokens": 29969,
+      "latency_s": 10.55,
+      "error": null,
+      "file": "P25_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P26",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.233,
+        "draw": 0.194,
+        "away_win": 0.573
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0914,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.233,
+        "draw": 0.194,
+        "away_win": 0.573
+      },
+      "tokens": 963,
+      "latency_s": 5.73,
+      "error": null,
+      "file": "P26_mas_claude_r0.json"
+    },
+    {
+      "id": "P26",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.13,
+        "draw": 0.2,
+        "away_win": 0.67
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.0553,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.233,
+        "draw": 0.194,
+        "away_win": 0.573
+      },
+      "tokens": 1061,
+      "latency_s": 4.81,
+      "error": null,
+      "file": "P26_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P26",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.233,
+        "draw": 0.194,
+        "away_win": 0.573
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0914,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.233,
+        "draw": 0.194,
+        "away_win": 0.573
+      },
+      "tokens": 49401,
+      "latency_s": 15.33,
+      "error": null,
+      "file": "P26_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P27",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.557,
+        "draw": 0.21,
+        "away_win": 0.233
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3142,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.557,
+        "draw": 0.21,
+        "away_win": 0.233
+      },
+      "tokens": 1035,
+      "latency_s": 5.73,
+      "error": null,
+      "file": "P27_mas_claude_r0.json"
+    },
+    {
+      "id": "P27",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.4,
+        "draw": 0.26,
+        "away_win": 0.34
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.2211,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.557,
+        "draw": 0.21,
+        "away_win": 0.233
+      },
+      "tokens": 1362,
+      "latency_s": 7.45,
+      "error": null,
+      "file": "P27_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P27",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.557,
+        "draw": 0.21,
+        "away_win": 0.233
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.3142,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.557,
+        "draw": 0.21,
+        "away_win": 0.233
+      },
+      "tokens": 19550,
+      "latency_s": 7.15,
+      "error": null,
+      "file": "P27_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P28",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.673,
+        "draw": 0.19,
+        "away_win": 0.137
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0539,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.673,
+        "draw": 0.19,
+        "away_win": 0.137
+      },
+      "tokens": 931,
+      "latency_s": 6.24,
+      "error": null,
+      "file": "P28_mas_claude_r0.json"
+    },
+    {
+      "id": "P28",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.72,
+        "draw": 0.18,
+        "away_win": 0.1
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.0403,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.673,
+        "draw": 0.19,
+        "away_win": 0.137
+      },
+      "tokens": 1145,
+      "latency_s": 6.39,
+      "error": null,
+      "file": "P28_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P28",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.673,
+        "draw": 0.19,
+        "away_win": 0.137
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.0539,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.673,
+        "draw": 0.19,
+        "away_win": 0.137
+      },
+      "tokens": 49405,
+      "latency_s": 12.37,
+      "error": null,
+      "file": "P28_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P29",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.447,
+        "draw": 0.262,
+        "away_win": 0.291
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.153,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.447,
+        "draw": 0.262,
+        "away_win": 0.291
+      },
+      "tokens": 1097,
+      "latency_s": 11.89,
+      "error": null,
+      "file": "P29_mas_claude_r0.json"
+    },
+    {
+      "id": "P29",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.48,
+        "draw": 0.24,
+        "away_win": 0.28
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1355,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.447,
+        "draw": 0.262,
+        "away_win": 0.291
+      },
+      "tokens": 1194,
+      "latency_s": 7.08,
+      "error": null,
+      "file": "P29_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P29",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.447,
+        "draw": 0.262,
+        "away_win": 0.291
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.153,
+      "actual": "H",
+      "model_gt": {
+        "home_win": 0.447,
+        "draw": 0.262,
+        "away_win": 0.291
+      },
+      "tokens": 29945,
+      "latency_s": 9.83,
+      "error": null,
+      "file": "P29_single_llm_tools_claude_r0.json"
+    },
+    {
+      "id": "P30",
+      "condition": "mas",
+      "prediction_vector": {
+        "home_win": 0.301,
+        "draw": 0.229,
+        "away_win": 0.469
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.1417,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.301,
+        "draw": 0.229,
+        "away_win": 0.469
+      },
+      "tokens": 1022,
+      "latency_s": 5.94,
+      "error": null,
+      "file": "P30_mas_claude_r0.json"
+    },
+    {
+      "id": "P30",
+      "condition": "single_llm_rawdata",
+      "prediction_vector": {
+        "home_win": 0.3,
+        "draw": 0.28,
+        "away_win": 0.42
+      },
+      "delegated": false,
+      "fidelity": null,
+      "brier": 0.1683,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.301,
+        "draw": 0.229,
+        "away_win": 0.469
+      },
+      "tokens": 1237,
+      "latency_s": 6.77,
+      "error": null,
+      "file": "P30_single_llm_rawdata_claude_r0.json"
+    },
+    {
+      "id": "P30",
+      "condition": "single_llm_tools",
+      "prediction_vector": {
+        "home_win": 0.301,
+        "draw": 0.229,
+        "away_win": 0.469
+      },
+      "delegated": true,
+      "fidelity": true,
+      "brier": 0.1417,
+      "actual": "A",
+      "model_gt": {
+        "home_win": 0.301,
+        "draw": 0.229,
+        "away_win": 0.469
+      },
+      "tokens": 49396,
+      "latency_s": 14.62,
+      "error": null,
+      "file": "P30_single_llm_tools_claude_r0.json"
+    }
+  ]
+}

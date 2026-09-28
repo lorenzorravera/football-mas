@@ -1,0 +1,26 @@
+{
+  "question_id": "P18",
+  "question": "Predict the outcome of West Ham United vs Fulham on 2025-01-14 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "**Form analysis:**\n\n**West Ham (home):** Mixed and inconsistent. Recent record: W3, D3, L4 in last 10. Heavy defeats to Man City (4-1), Liverpool (0-5), Arsenal (2-5), Leicester (3-1) show defensive fragility. But they've picked up decent results too (beat Newcastle away, Southampton). Losing 2 of last 3.\n\n**Fulham (away):** Strong form, hard to beat. Record: W3, D6, L1 in last 10. Only one loss (to Wolves). Very draw-heavy but consistently competitive, including a 2-1 win at Chelsea and draws with Liverpool, Arsenal, Spurs. Excellent away form (won at Chelsea, Palace, Newcastle-type sides).\n\n**Assessment:**\n- Fulham are in better form and more solid.\n- West Ham have home advantage but shaky defense.\n- Fulham's tendency to draw is notable.\n\nGiven Fulham's superior form and West Ham's leaky defense, I lean slightly toward Fulham, with a significant draw probability given Fulham's pattern.\n\nPROBABILITIES: home=0.34, draw=0.30, away=0.36",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.34,
+    "draw": 0.3,
+    "away_win": 0.36
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P18|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 873,
+  "token_usage": {
+    "input": 823,
+    "output": 409,
+    "total": 1232,
+    "calls": 1
+  },
+  "latency_s": 11.29
+}

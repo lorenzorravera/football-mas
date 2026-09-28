@@ -1,0 +1,83 @@
+{
+  "question_id": "Q30",
+  "question": "Which team had the most non-penalty expected goals (npxG) from its players combined in 2023-2024?",
+  "experiment": "dof",
+  "condition": "dof_semi",
+  "analyst_mode": "semi",
+  "model": "gpt",
+  "repeat": 0,
+  "memory_enabled": false,
+  "langfuse_enabled": true,
+  "langfuse_trace_id": "dof|dof_semi|gpt|Q30|r0",
+  "answer": "Liverpool had the most combined player non-penalty expected goals (npxG) in 2023-2024, with 90.261.",
+  "tool_sequence": [
+    "run_sql",
+    "run_sql"
+  ],
+  "sql": "SELECT\n  t.team_name,\n  SUM(pss.npxg_pss) AS total_npxg\nFROM player_season_stats pss\nJOIN seasons s\n  ON s.season_id = pss.season_id\nJOIN teams t\n  ON t.team_id = pss.team_id\nWHERE s.season = '2023-2024'\nGROUP BY\n  pss.team_id,\n  t.team_name\nORDER BY total_npxg DESC\nLIMIT 1;",
+  "template": null,
+  "low_confidence": false,
+  "intent": "data_request",
+  "result_columns": [
+    "team_name",
+    "total_npxg"
+  ],
+  "result_rows": [
+    [
+      "Liverpool",
+      90.261
+    ]
+  ],
+  "result_row_count": 1,
+  "trace": [
+    {
+      "node": "manager",
+      "out": {
+        "intent": "data_request",
+        "seasons": [
+          "2023-2024"
+        ],
+        "teams": [],
+        "metrics": [
+          "npxG"
+        ]
+      }
+    },
+    {
+      "node": "data_discovery",
+      "out": {
+        "relevant_tables": [
+          "player_season_stats",
+          "seasons",
+          "teams"
+        ],
+        "notes": "Use player_season_stats at player-season-team grain. Join seasons on season_id and filter seasons.season = '2023-2024'. Group by team_id, join teams for canonical team_name, SUM(npxg_pss), order descending, LIMIT 1."
+      }
+    },
+    {
+      "node": "data_analyst",
+      "mode": "semi",
+      "route": {
+        "approach": "sql"
+      }
+    },
+    {
+      "step": "self_debate[0]",
+      "agreed": true,
+      "sql_a": "SELECT\n  t.team_name,\n  SUM(pss.npxg_pss) AS total_npxg\nFROM player_season_stats pss\nJOIN seasons s\n  ON s.season_id = pss.season_id\nJOIN teams t\n  ON t.team_id = pss.team_id\nWHERE s.season = '2023-20",
+      "sql_b": "SELECT\n  t.team_name,\n  ROUND(SUM(pss.npxg_pss)::numeric, 2) AS combined_npxg\nFROM player_season_stats AS pss\nJOIN teams AS t\n  ON t.team_id = pss.team_id\nWHERE pss.season_id = (\n  SELECT s.season_id\n"
+    },
+    {
+      "node": "data_analyst",
+      "mode": "semi",
+      "sql": "SELECT\n  t.team_name,\n  SUM(pss.npxg_pss) AS total_npxg\nFROM player_season_stats pss\nJOIN seasons s\n  ON s.season_id = pss.season_id\nJOIN teams t\n  ON t.team_id = pss.team_id\nWHERE s.season = '2023-20",
+      "template": null,
+      "low_confidence": false
+    },
+    {
+      "node": "synthesizer",
+      "answer": "Liverpool had the most combined player non-penalty expected goals (npxG) in 2023-2024, with 90.261."
+    }
+  ],
+  "latency_s": 32.16
+}

@@ -1,0 +1,26 @@
+{
+  "question_id": "Q41",
+  "question": "What is the most goals scored by a single player in one match in 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "I cannot answer this from the inlined data.\n\nThe `player_season` data provided only includes the **2020-2021** and **2021-2022** seasons \u2014 it cuts off in 2021-2022 and does not contain 2024-2025 player records. Even if it did, season-level aggregates (`goals_pss`) would not tell us per-match goal counts.\n\nThe per-match data needed to answer this lives in `player_match_performance` / `vw_player_match_summary` (the `match_goals` column), which is **not inlined here**. So there is no data present to determine the most goals by a single player in one 2024-2025 match.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q41|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229572,
+    "output": 195,
+    "total": 229767,
+    "calls": 1
+  },
+  "latency_s": 4.89,
+  "experiment": "mas_vs_single"
+}

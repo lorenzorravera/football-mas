@@ -1,0 +1,26 @@
+{
+  "question_id": "Q37",
+  "question": "Which player missed the most total days to injury across all spells in 2023-2024?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "I don't have the data to answer this question.\n\nThe inlined dataset does not include the `player_injury_spells` table (or the `vw_player_availability` view), which contains the `days_missed` field needed to determine total injury days per player. The tables provided cover standings, home/away splits, team discipline, and player-season stats \u2014 but no injury-spell data.\n\nTo answer this, I would need the injury spells data filtered to season = '2023-2024' and league_code = 'ENG-PL', summing `days_missed` per player.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q37|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 171528,
+  "token_usage": {
+    "input": 121527,
+    "output": 163,
+    "total": 121690,
+    "calls": 1
+  },
+  "latency_s": 3.79,
+  "experiment": "extended_da"
+}

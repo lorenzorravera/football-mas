@@ -1,0 +1,113 @@
+{
+  "by_model": {
+    "gpt": {
+      "B_chose_wrong_template_or_params": 3,
+      "D_sql_generation_wrong": 2
+    },
+    "claude": {
+      "B_chose_wrong_template_or_params": 2,
+      "D_sql_generation_wrong": 2
+    },
+    "gemini": {
+      "B_chose_wrong_template_or_params": 2,
+      "D_sql_generation_wrong": 2
+    }
+  },
+  "total": {
+    "B_chose_wrong_template_or_params": 7,
+    "D_sql_generation_wrong": 6
+  },
+  "failures": [
+    {
+      "id": "Q45",
+      "model": "gpt",
+      "coverage": "in_coverage",
+      "route": "template",
+      "bucket": "B_chose_wrong_template_or_params"
+    },
+    {
+      "id": "Q41",
+      "model": "claude",
+      "coverage": "in_coverage",
+      "route": "template",
+      "bucket": "B_chose_wrong_template_or_params"
+    },
+    {
+      "id": "Q41",
+      "model": "gemini",
+      "coverage": "in_coverage",
+      "route": "template",
+      "bucket": "B_chose_wrong_template_or_params"
+    },
+    {
+      "id": "Q32",
+      "model": "gpt",
+      "coverage": "in_coverage",
+      "route": "template",
+      "bucket": "B_chose_wrong_template_or_params"
+    },
+    {
+      "id": "Q41",
+      "model": "gpt",
+      "coverage": "in_coverage",
+      "route": "template",
+      "bucket": "B_chose_wrong_template_or_params"
+    },
+    {
+      "id": "Q25",
+      "model": "gpt",
+      "coverage": "out_of_coverage",
+      "route": "sql",
+      "bucket": "D_sql_generation_wrong"
+    },
+    {
+      "id": "Q42",
+      "model": "claude",
+      "coverage": "out_of_coverage",
+      "route": "sql",
+      "bucket": "D_sql_generation_wrong"
+    },
+    {
+      "id": "Q26",
+      "model": "gemini",
+      "coverage": "out_of_coverage",
+      "route": "sql",
+      "bucket": "D_sql_generation_wrong"
+    },
+    {
+      "id": "Q34",
+      "model": "gpt",
+      "coverage": "out_of_coverage",
+      "route": "sql",
+      "bucket": "D_sql_generation_wrong"
+    },
+    {
+      "id": "Q32",
+      "model": "claude",
+      "coverage": "in_coverage",
+      "route": "template",
+      "bucket": "B_chose_wrong_template_or_params"
+    },
+    {
+      "id": "Q25",
+      "model": "gemini",
+      "coverage": "out_of_coverage",
+      "route": "sql",
+      "bucket": "D_sql_generation_wrong"
+    },
+    {
+      "id": "Q32",
+      "model": "gemini",
+      "coverage": "in_coverage",
+      "route": "template",
+      "bucket": "B_chose_wrong_template_or_params"
+    },
+    {
+      "id": "Q25",
+      "model": "claude",
+      "coverage": "out_of_coverage",
+      "route": "sql",
+      "bucket": "D_sql_generation_wrong"
+    }
+  ]
+}

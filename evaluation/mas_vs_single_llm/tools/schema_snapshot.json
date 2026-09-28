@@ -1,0 +1,2664 @@
+{
+  "tables": {
+    "competitions": [
+      {
+        "name": "competition_id",
+        "type": "integer"
+      },
+      {
+        "name": "league_code",
+        "type": "character varying"
+      },
+      {
+        "name": "league_name",
+        "type": "character varying"
+      },
+      {
+        "name": "country",
+        "type": "character varying"
+      },
+      {
+        "name": "tier",
+        "type": "smallint"
+      }
+    ],
+    "seasons": [
+      {
+        "name": "season_id",
+        "type": "integer"
+      },
+      {
+        "name": "competition_id",
+        "type": "integer"
+      },
+      {
+        "name": "season",
+        "type": "character varying"
+      },
+      {
+        "name": "start_date",
+        "type": "date"
+      },
+      {
+        "name": "end_date",
+        "type": "date"
+      }
+    ],
+    "teams": [
+      {
+        "name": "team_id",
+        "type": "integer"
+      },
+      {
+        "name": "team_name",
+        "type": "character varying"
+      }
+    ],
+    "players": [
+      {
+        "name": "player_id",
+        "type": "integer"
+      },
+      {
+        "name": "player_name",
+        "type": "character varying"
+      },
+      {
+        "name": "nationality",
+        "type": "character varying"
+      },
+      {
+        "name": "birth_year",
+        "type": "smallint"
+      },
+      {
+        "name": "height",
+        "type": "smallint"
+      },
+      {
+        "name": "foot",
+        "type": "character varying"
+      }
+    ],
+    "matches": [
+      {
+        "name": "game_id",
+        "type": "integer"
+      },
+      {
+        "name": "season_id",
+        "type": "integer"
+      },
+      {
+        "name": "matchweek",
+        "type": "smallint"
+      },
+      {
+        "name": "match_date",
+        "type": "date"
+      },
+      {
+        "name": "kickoff_time",
+        "type": "time without time zone"
+      },
+      {
+        "name": "home_team_id",
+        "type": "integer"
+      },
+      {
+        "name": "away_team_id",
+        "type": "integer"
+      },
+      {
+        "name": "home_score",
+        "type": "smallint"
+      },
+      {
+        "name": "away_score",
+        "type": "smallint"
+      },
+      {
+        "name": "ft_result",
+        "type": "character"
+      },
+      {
+        "name": "ht_home_score",
+        "type": "smallint"
+      },
+      {
+        "name": "ht_away_score",
+        "type": "smallint"
+      },
+      {
+        "name": "ht_result",
+        "type": "character"
+      },
+      {
+        "name": "home_formation",
+        "type": "character varying"
+      },
+      {
+        "name": "away_formation",
+        "type": "character varying"
+      },
+      {
+        "name": "venue",
+        "type": "character varying"
+      },
+      {
+        "name": "attendance_m",
+        "type": "integer"
+      },
+      {
+        "name": "referee",
+        "type": "character varying"
+      },
+      {
+        "name": "home_shots",
+        "type": "smallint"
+      },
+      {
+        "name": "away_shots",
+        "type": "smallint"
+      },
+      {
+        "name": "home_shots_on_target",
+        "type": "smallint"
+      },
+      {
+        "name": "away_shots_on_target",
+        "type": "smallint"
+      },
+      {
+        "name": "home_corners",
+        "type": "smallint"
+      },
+      {
+        "name": "away_corners",
+        "type": "smallint"
+      },
+      {
+        "name": "home_fouls",
+        "type": "smallint"
+      },
+      {
+        "name": "away_fouls",
+        "type": "smallint"
+      },
+      {
+        "name": "home_yellow_cards",
+        "type": "smallint"
+      },
+      {
+        "name": "away_yellow_cards",
+        "type": "smallint"
+      },
+      {
+        "name": "home_red_cards",
+        "type": "smallint"
+      },
+      {
+        "name": "away_red_cards",
+        "type": "smallint"
+      },
+      {
+        "name": "home_touches",
+        "type": "smallint"
+      },
+      {
+        "name": "away_touches",
+        "type": "smallint"
+      },
+      {
+        "name": "home_tackles",
+        "type": "smallint"
+      },
+      {
+        "name": "away_tackles",
+        "type": "smallint"
+      },
+      {
+        "name": "home_interceptions",
+        "type": "smallint"
+      },
+      {
+        "name": "away_interceptions",
+        "type": "smallint"
+      },
+      {
+        "name": "home_clearances",
+        "type": "smallint"
+      },
+      {
+        "name": "away_clearances",
+        "type": "smallint"
+      },
+      {
+        "name": "home_aerials_won",
+        "type": "smallint"
+      },
+      {
+        "name": "away_aerials_won",
+        "type": "smallint"
+      },
+      {
+        "name": "home_long_balls",
+        "type": "smallint"
+      },
+      {
+        "name": "away_long_balls",
+        "type": "smallint"
+      },
+      {
+        "name": "home_crosses",
+        "type": "smallint"
+      },
+      {
+        "name": "away_crosses",
+        "type": "smallint"
+      },
+      {
+        "name": "home_goal_kicks",
+        "type": "smallint"
+      },
+      {
+        "name": "away_goal_kicks",
+        "type": "smallint"
+      },
+      {
+        "name": "home_throw_ins",
+        "type": "smallint"
+      },
+      {
+        "name": "away_throw_ins",
+        "type": "smallint"
+      },
+      {
+        "name": "avg_home_odds",
+        "type": "numeric"
+      },
+      {
+        "name": "avg_draw_odds",
+        "type": "numeric"
+      },
+      {
+        "name": "avg_away_odds",
+        "type": "numeric"
+      },
+      {
+        "name": "avg_over25_odds",
+        "type": "numeric"
+      },
+      {
+        "name": "avg_under25_odds",
+        "type": "numeric"
+      }
+    ],
+    "team_season_standings": [
+      {
+        "name": "team_id",
+        "type": "integer"
+      },
+      {
+        "name": "season_id",
+        "type": "integer"
+      },
+      {
+        "name": "tss_team",
+        "type": "character varying"
+      },
+      {
+        "name": "tss_season",
+        "type": "character varying"
+      },
+      {
+        "name": "tss_rank",
+        "type": "integer"
+      },
+      {
+        "name": "tss_matches_played",
+        "type": "integer"
+      },
+      {
+        "name": "tss_wins",
+        "type": "integer"
+      },
+      {
+        "name": "tss_draws",
+        "type": "integer"
+      },
+      {
+        "name": "tss_losses",
+        "type": "integer"
+      },
+      {
+        "name": "tss_goals_for",
+        "type": "integer"
+      },
+      {
+        "name": "tss_goals_against",
+        "type": "integer"
+      },
+      {
+        "name": "tss_goal_difference",
+        "type": "integer"
+      },
+      {
+        "name": "tss_points",
+        "type": "integer"
+      },
+      {
+        "name": "tss_attendance",
+        "type": "integer"
+      },
+      {
+        "name": "tss_goalkeeper_name",
+        "type": "character varying"
+      },
+      {
+        "name": "tss_notes",
+        "type": "text"
+      },
+      {
+        "name": "tss_top_scorer_name",
+        "type": "character varying"
+      },
+      {
+        "name": "tss_top_scorer_goals",
+        "type": "integer"
+      }
+    ],
+    "team_season_home_away_standings": [
+      {
+        "name": "team_id",
+        "type": "integer"
+      },
+      {
+        "name": "season_id",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_team",
+        "type": "character varying"
+      },
+      {
+        "name": "tshas_season",
+        "type": "character varying"
+      },
+      {
+        "name": "tshas_rank",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_home_matches_played",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_home_wins",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_home_draws",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_home_losses",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_home_goals_for",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_home_goals_against",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_home_goal_difference",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_home_points",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_away_matches_played",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_away_wins",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_away_draws",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_away_losses",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_away_goals_for",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_away_goals_against",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_away_goal_difference",
+        "type": "integer"
+      },
+      {
+        "name": "tshas_away_points",
+        "type": "integer"
+      }
+    ],
+    "team_season_stats_for": [
+      {
+        "name": "team_id",
+        "type": "integer"
+      },
+      {
+        "name": "season_id",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_team",
+        "type": "character varying"
+      },
+      {
+        "name": "tssf_season",
+        "type": "character varying"
+      },
+      {
+        "name": "tssf_players_used",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_average_age",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_possession_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_matches_played",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_starts",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_minutes",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_goals",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_assists",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_goals_assists",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_non_penalty_goals",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_penalty_goals",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_penalties_attempted",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_yellow_cards",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_red_cards",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_goals_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_assists_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_goals_assists_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_non_penalty_goals_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_non_penalty_goals_assists_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_goals_allowed",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_goals_allowed_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_shots_on_target_against",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_saves",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_save_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_wins",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_draws",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_losses",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_clean_sheets",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_clean_sheet_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_penalties_faced",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_penalty_goals_allowed",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_penalty_saves",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_penalty_misses",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_penalty_save_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_nineties",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_shots",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_shots_on_target",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_shots_on_target_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_shots_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_shots_on_target_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_goals_per_shot",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_goals_per_shot_on_target",
+        "type": "numeric"
+      },
+      {
+        "name": "tssf_standard_penalty_goals",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_second_yellow_red_cards",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_fouls_committed",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_fouls_drawn",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_offsides",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_crosses",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_interceptions",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_tackles_won",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_penalties_won",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_penalties_conceded",
+        "type": "integer"
+      },
+      {
+        "name": "tssf_own_goals",
+        "type": "integer"
+      }
+    ],
+    "team_season_stats_against": [
+      {
+        "name": "team_id",
+        "type": "integer"
+      },
+      {
+        "name": "season_id",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_team",
+        "type": "character varying"
+      },
+      {
+        "name": "tssa_season",
+        "type": "character varying"
+      },
+      {
+        "name": "tssa_players_used",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_average_age",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_possession_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_matches_played",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_starts",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_minutes",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_goals",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_assists",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_goals_assists",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_non_penalty_goals",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_penalty_goals",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_penalties_attempted",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_yellow_cards",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_red_cards",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_goals_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_assists_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_goals_assists_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_non_penalty_goals_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_non_penalty_goals_assists_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_goals_allowed",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_goals_allowed_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_shots_on_target_against",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_saves",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_save_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_wins",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_draws",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_losses",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_clean_sheets",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_clean_sheet_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_penalties_faced",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_penalty_goals_allowed",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_penalty_saves",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_penalty_misses",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_penalty_save_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_nineties",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_shots",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_shots_on_target",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_shots_on_target_percentage",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_shots_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_shots_on_target_per90",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_goals_per_shot",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_goals_per_shot_on_target",
+        "type": "numeric"
+      },
+      {
+        "name": "tssa_standard_penalty_goals",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_second_yellow_red_cards",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_fouls_committed",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_fouls_drawn",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_offsides",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_crosses",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_interceptions",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_tackles_won",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_penalties_won",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_penalties_conceded",
+        "type": "integer"
+      },
+      {
+        "name": "tssa_own_goals",
+        "type": "integer"
+      }
+    ],
+    "player_season_stats": [
+      {
+        "name": "id",
+        "type": "integer"
+      },
+      {
+        "name": "player_id",
+        "type": "integer"
+      },
+      {
+        "name": "season_id",
+        "type": "integer"
+      },
+      {
+        "name": "team_id",
+        "type": "integer"
+      },
+      {
+        "name": "age",
+        "type": "smallint"
+      },
+      {
+        "name": "matches_played_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "starts",
+        "type": "smallint"
+      },
+      {
+        "name": "minutes_pss",
+        "type": "integer"
+      },
+      {
+        "name": "goals_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "assists_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "yellow_cards_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "red_cards_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "shots_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "shots_on_target_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "xg_pss",
+        "type": "numeric"
+      },
+      {
+        "name": "xa_pss",
+        "type": "numeric"
+      },
+      {
+        "name": "npxg_pss",
+        "type": "numeric"
+      },
+      {
+        "name": "xgchain_pss",
+        "type": "numeric"
+      },
+      {
+        "name": "xgbuildup_pss",
+        "type": "numeric"
+      },
+      {
+        "name": "key_passes_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "non_penalty_goals_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "fouls_committed",
+        "type": "smallint"
+      },
+      {
+        "name": "fouls_drawn_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "interceptions_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "tackles_won",
+        "type": "smallint"
+      },
+      {
+        "name": "offsides_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "crosses",
+        "type": "smallint"
+      },
+      {
+        "name": "saves_pss",
+        "type": "smallint"
+      },
+      {
+        "name": "clean_sheet",
+        "type": "smallint"
+      },
+      {
+        "name": "shots_on_tgt_against",
+        "type": "smallint"
+      },
+      {
+        "name": "save_pct_pss",
+        "type": "numeric"
+      },
+      {
+        "name": "penalties_faced",
+        "type": "smallint"
+      },
+      {
+        "name": "penalty_saves",
+        "type": "smallint"
+      }
+    ],
+    "player_season_splits": [
+      {
+        "name": "id",
+        "type": "integer"
+      },
+      {
+        "name": "player_id",
+        "type": "integer"
+      },
+      {
+        "name": "season_id",
+        "type": "integer"
+      },
+      {
+        "name": "group_type",
+        "type": "character varying"
+      },
+      {
+        "name": "group_name",
+        "type": "character varying"
+      },
+      {
+        "name": "matches_played_pssp",
+        "type": "smallint"
+      },
+      {
+        "name": "minutes_pssp",
+        "type": "integer"
+      },
+      {
+        "name": "goals_pssp",
+        "type": "smallint"
+      },
+      {
+        "name": "assists_pssp",
+        "type": "smallint"
+      },
+      {
+        "name": "yellow_cards_pssp",
+        "type": "smallint"
+      },
+      {
+        "name": "red_cards_pssp",
+        "type": "smallint"
+      },
+      {
+        "name": "shots_pssp",
+        "type": "smallint"
+      },
+      {
+        "name": "xg_pssp",
+        "type": "numeric"
+      },
+      {
+        "name": "xa_pssp",
+        "type": "numeric"
+      },
+      {
+        "name": "npxg_pssp",
+        "type": "numeric"
+      },
+      {
+        "name": "xgchain_pssp",
+        "type": "numeric"
+      },
+      {
+        "name": "xgbuildup_pssp",
+        "type": "numeric"
+      },
+      {
+        "name": "key_passes_pssp",
+        "type": "smallint"
+      },
+      {
+        "name": "non_penalty_goals_pssp",
+        "type": "smallint"
+      }
+    ],
+    "player_match_performance": [
+      {
+        "name": "player_id",
+        "type": "integer"
+      },
+      {
+        "name": "game_id",
+        "type": "integer"
+      },
+      {
+        "name": "season",
+        "type": "character varying"
+      },
+      {
+        "name": "league_code",
+        "type": "character varying"
+      },
+      {
+        "name": "position",
+        "type": "character varying"
+      },
+      {
+        "name": "minutes_played",
+        "type": "smallint"
+      },
+      {
+        "name": "match_goals",
+        "type": "smallint"
+      },
+      {
+        "name": "match_assists",
+        "type": "smallint"
+      },
+      {
+        "name": "match_shots",
+        "type": "smallint"
+      },
+      {
+        "name": "shots_on_target_pmp",
+        "type": "smallint"
+      },
+      {
+        "name": "xg_pmp",
+        "type": "numeric"
+      },
+      {
+        "name": "xa_pmp",
+        "type": "numeric"
+      },
+      {
+        "name": "npxg_pmp",
+        "type": "numeric"
+      },
+      {
+        "name": "xgchain_pmp",
+        "type": "numeric"
+      },
+      {
+        "name": "xgbuildup_pmp",
+        "type": "numeric"
+      },
+      {
+        "name": "key_passes_pmp",
+        "type": "smallint"
+      },
+      {
+        "name": "non_penalty_goals_pmp",
+        "type": "smallint"
+      },
+      {
+        "name": "yellow_cards_pmp",
+        "type": "smallint"
+      },
+      {
+        "name": "red_cards_pmp",
+        "type": "smallint"
+      },
+      {
+        "name": "fouls",
+        "type": "smallint"
+      },
+      {
+        "name": "fouls_drawn_pmp",
+        "type": "smallint"
+      },
+      {
+        "name": "tackles_won",
+        "type": "smallint"
+      },
+      {
+        "name": "interceptions_pmp",
+        "type": "smallint"
+      },
+      {
+        "name": "crosses",
+        "type": "smallint"
+      },
+      {
+        "name": "offsides_pmp",
+        "type": "smallint"
+      },
+      {
+        "name": "own_goals",
+        "type": "smallint"
+      },
+      {
+        "name": "pens_made",
+        "type": "smallint"
+      },
+      {
+        "name": "pens_att",
+        "type": "smallint"
+      },
+      {
+        "name": "pens_won",
+        "type": "smallint"
+      },
+      {
+        "name": "pens_conceded",
+        "type": "smallint"
+      },
+      {
+        "name": "gk_saves",
+        "type": "smallint"
+      },
+      {
+        "name": "gk_goals_against",
+        "type": "smallint"
+      },
+      {
+        "name": "gk_save_pct",
+        "type": "numeric"
+      },
+      {
+        "name": "gk_shots_on_tgt_against",
+        "type": "smallint"
+      }
+    ],
+    "match_events": [
+      {
+        "name": "event_id",
+        "type": "bigint"
+      },
+      {
+        "name": "season",
+        "type": "character varying"
+      },
+      {
+        "name": "league_code",
+        "type": "character varying"
+      },
+      {
+        "name": "game_id",
+        "type": "integer"
+      },
+      {
+        "name": "period",
+        "type": "character varying"
+      },
+      {
+        "name": "minute",
+        "type": "integer"
+      },
+      {
+        "name": "second",
+        "type": "numeric"
+      },
+      {
+        "name": "expanded_minute",
+        "type": "integer"
+      },
+      {
+        "name": "type",
+        "type": "character varying"
+      },
+      {
+        "name": "outcome_type",
+        "type": "character varying"
+      },
+      {
+        "name": "team_id",
+        "type": "integer"
+      },
+      {
+        "name": "team",
+        "type": "character varying"
+      },
+      {
+        "name": "player_id",
+        "type": "integer"
+      },
+      {
+        "name": "player_name",
+        "type": "character varying"
+      },
+      {
+        "name": "x",
+        "type": "numeric"
+      },
+      {
+        "name": "y",
+        "type": "numeric"
+      },
+      {
+        "name": "end_x",
+        "type": "numeric"
+      },
+      {
+        "name": "end_y",
+        "type": "numeric"
+      },
+      {
+        "name": "goal_mouth_y",
+        "type": "numeric"
+      },
+      {
+        "name": "goal_mouth_z",
+        "type": "numeric"
+      },
+      {
+        "name": "blocked_x",
+        "type": "numeric"
+      },
+      {
+        "name": "blocked_y",
+        "type": "numeric"
+      },
+      {
+        "name": "is_touch",
+        "type": "boolean"
+      },
+      {
+        "name": "is_shot",
+        "type": "boolean"
+      },
+      {
+        "name": "is_goal",
+        "type": "boolean"
+      },
+      {
+        "name": "related_event_id",
+        "type": "bigint"
+      },
+      {
+        "name": "related_player_id",
+        "type": "integer"
+      },
+      {
+        "name": "pass_length",
+        "type": "numeric"
+      },
+      {
+        "name": "pass_angle",
+        "type": "numeric"
+      },
+      {
+        "name": "pass_end_x",
+        "type": "numeric"
+      },
+      {
+        "name": "pass_end_y",
+        "type": "numeric"
+      },
+      {
+        "name": "zone",
+        "type": "character varying"
+      },
+      {
+        "name": "player_caught_offside",
+        "type": "boolean"
+      },
+      {
+        "name": "blocked_cross",
+        "type": "boolean"
+      },
+      {
+        "name": "body_part_1",
+        "type": "character varying"
+      },
+      {
+        "name": "body_part_2",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_type_1",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_type_2",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_type_3",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_type_4",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_type_5",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_quality_1",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_quality_2",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_quality_3",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_quality_4",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_quality_5",
+        "type": "character varying"
+      },
+      {
+        "name": "pass_quality_6",
+        "type": "character varying"
+      },
+      {
+        "name": "shot_zone_1",
+        "type": "character varying"
+      },
+      {
+        "name": "shot_direction_1",
+        "type": "character varying"
+      },
+      {
+        "name": "shot_qualifier_1",
+        "type": "character varying"
+      },
+      {
+        "name": "shot_qualifier_2",
+        "type": "character varying"
+      },
+      {
+        "name": "shot_qualifier_3",
+        "type": "character varying"
+      },
+      {
+        "name": "shot_qualifier_4",
+        "type": "character varying"
+      },
+      {
+        "name": "shot_qualifier_5",
+        "type": "character varying"
+      },
+      {
+        "name": "keeper_save_type_1",
+        "type": "character varying"
+      },
+      {
+        "name": "keeper_save_type_2",
+        "type": "character varying"
+      },
+      {
+        "name": "keeper_save_type_3",
+        "type": "character varying"
+      },
+      {
+        "name": "keeper_save_type_4",
+        "type": "character varying"
+      },
+      {
+        "name": "foul_type_1",
+        "type": "character varying"
+      },
+      {
+        "name": "situation",
+        "type": "character varying"
+      },
+      {
+        "name": "shot_type",
+        "type": "character varying"
+      },
+      {
+        "name": "player_assisted",
+        "type": "character varying"
+      },
+      {
+        "name": "last_action",
+        "type": "character varying"
+      }
+    ],
+    "player_market_values": [
+      {
+        "name": "player_id",
+        "type": "integer"
+      },
+      {
+        "name": "date_unix",
+        "type": "bigint"
+      },
+      {
+        "name": "market_value",
+        "type": "numeric"
+      }
+    ],
+    "player_transfers": [
+      {
+        "name": "transfer_id",
+        "type": "integer"
+      },
+      {
+        "name": "player_id",
+        "type": "integer"
+      },
+      {
+        "name": "season",
+        "type": "character varying"
+      },
+      {
+        "name": "transfer_date",
+        "type": "date"
+      },
+      {
+        "name": "from_team",
+        "type": "character varying"
+      },
+      {
+        "name": "to_team",
+        "type": "character varying"
+      },
+      {
+        "name": "transfer_type",
+        "type": "character varying"
+      },
+      {
+        "name": "transfer_fee",
+        "type": "numeric"
+      }
+    ],
+    "player_injury_spells": [
+      {
+        "name": "spell_id",
+        "type": "integer"
+      },
+      {
+        "name": "player_id",
+        "type": "integer"
+      },
+      {
+        "name": "player_name",
+        "type": "character varying"
+      },
+      {
+        "name": "season",
+        "type": "character varying"
+      },
+      {
+        "name": "league_code",
+        "type": "character varying"
+      },
+      {
+        "name": "team",
+        "type": "character varying"
+      },
+      {
+        "name": "from_matchweek",
+        "type": "smallint"
+      },
+      {
+        "name": "to_matchweek",
+        "type": "smallint"
+      },
+      {
+        "name": "from_date",
+        "type": "date"
+      },
+      {
+        "name": "end_date",
+        "type": "date"
+      },
+      {
+        "name": "games_missed",
+        "type": "smallint"
+      },
+      {
+        "name": "days_missed",
+        "type": "smallint"
+      },
+      {
+        "name": "injury_reason",
+        "type": "character varying"
+      }
+    ],
+    "computed_metrics": [
+      {
+        "name": "metric_id",
+        "type": "uuid"
+      },
+      {
+        "name": "entity_type",
+        "type": "character varying"
+      },
+      {
+        "name": "entity_id",
+        "type": "integer"
+      },
+      {
+        "name": "metric_name",
+        "type": "character varying"
+      },
+      {
+        "name": "metric_value",
+        "type": "jsonb"
+      },
+      {
+        "name": "parameters",
+        "type": "jsonb"
+      },
+      {
+        "name": "computed_at",
+        "type": "timestamp with time zone"
+      },
+      {
+        "name": "source_query",
+        "type": "text"
+      }
+    ],
+    "intl_tournaments": [
+      {
+        "name": "intl_tournament_id",
+        "type": "integer"
+      },
+      {
+        "name": "tournament_name",
+        "type": "character varying"
+      }
+    ],
+    "intl_teams": [
+      {
+        "name": "intl_team_id",
+        "type": "integer"
+      },
+      {
+        "name": "team_name",
+        "type": "character varying"
+      }
+    ],
+    "intl_matches": [
+      {
+        "name": "intl_match_id",
+        "type": "integer"
+      },
+      {
+        "name": "match_date",
+        "type": "date"
+      },
+      {
+        "name": "home_team_id",
+        "type": "integer"
+      },
+      {
+        "name": "away_team_id",
+        "type": "integer"
+      },
+      {
+        "name": "home_score",
+        "type": "smallint"
+      },
+      {
+        "name": "away_score",
+        "type": "smallint"
+      },
+      {
+        "name": "ft_result",
+        "type": "character"
+      },
+      {
+        "name": "intl_tournament_id",
+        "type": "integer"
+      },
+      {
+        "name": "city",
+        "type": "character varying"
+      },
+      {
+        "name": "country",
+        "type": "character varying"
+      },
+      {
+        "name": "neutral",
+        "type": "boolean"
+      }
+    ],
+    "intl_goalscorers": [
+      {
+        "name": "intl_goal_id",
+        "type": "integer"
+      },
+      {
+        "name": "intl_match_id",
+        "type": "integer"
+      },
+      {
+        "name": "scoring_team_id",
+        "type": "integer"
+      },
+      {
+        "name": "scorer",
+        "type": "character varying"
+      },
+      {
+        "name": "minute",
+        "type": "smallint"
+      },
+      {
+        "name": "own_goal",
+        "type": "boolean"
+      },
+      {
+        "name": "penalty",
+        "type": "boolean"
+      }
+    ],
+    "intl_shootouts": [
+      {
+        "name": "intl_match_id",
+        "type": "integer"
+      },
+      {
+        "name": "winner_team_id",
+        "type": "integer"
+      },
+      {
+        "name": "first_shooter_team_id",
+        "type": "integer"
+      }
+    ]
+  },
+  "views": {
+    "vw_match_summary": [
+      {
+        "name": "game_id"
+      },
+      {
+        "name": "season"
+      },
+      {
+        "name": "league_name"
+      },
+      {
+        "name": "league_code"
+      },
+      {
+        "name": "matchweek"
+      },
+      {
+        "name": "match_date"
+      },
+      {
+        "name": "kickoff_time"
+      },
+      {
+        "name": "home_team"
+      },
+      {
+        "name": "away_team"
+      },
+      {
+        "name": "home_score"
+      },
+      {
+        "name": "away_score"
+      },
+      {
+        "name": "ft_result"
+      },
+      {
+        "name": "ht_home_score"
+      },
+      {
+        "name": "ht_away_score"
+      },
+      {
+        "name": "ht_result"
+      },
+      {
+        "name": "home_formation"
+      },
+      {
+        "name": "away_formation"
+      },
+      {
+        "name": "home_shots"
+      },
+      {
+        "name": "away_shots"
+      },
+      {
+        "name": "home_shots_on_target"
+      },
+      {
+        "name": "away_shots_on_target"
+      },
+      {
+        "name": "home_corners"
+      },
+      {
+        "name": "away_corners"
+      },
+      {
+        "name": "home_fouls"
+      },
+      {
+        "name": "away_fouls"
+      },
+      {
+        "name": "home_yellow_cards"
+      },
+      {
+        "name": "away_yellow_cards"
+      },
+      {
+        "name": "home_red_cards"
+      },
+      {
+        "name": "away_red_cards"
+      },
+      {
+        "name": "home_touches"
+      },
+      {
+        "name": "away_touches"
+      },
+      {
+        "name": "home_tackles"
+      },
+      {
+        "name": "away_tackles"
+      },
+      {
+        "name": "home_interceptions"
+      },
+      {
+        "name": "away_interceptions"
+      },
+      {
+        "name": "home_clearances"
+      },
+      {
+        "name": "away_clearances"
+      },
+      {
+        "name": "home_aerials_won"
+      },
+      {
+        "name": "away_aerials_won"
+      },
+      {
+        "name": "home_long_balls"
+      },
+      {
+        "name": "away_long_balls"
+      },
+      {
+        "name": "attendance_m"
+      },
+      {
+        "name": "venue"
+      },
+      {
+        "name": "referee"
+      },
+      {
+        "name": "avg_home_odds"
+      },
+      {
+        "name": "avg_draw_odds"
+      },
+      {
+        "name": "avg_away_odds"
+      },
+      {
+        "name": "avg_over25_odds"
+      },
+      {
+        "name": "avg_under25_odds"
+      }
+    ],
+    "vw_team_season_summary": [
+      {
+        "name": "vwtss_team_id"
+      },
+      {
+        "name": "vwtss_team_name"
+      },
+      {
+        "name": "vwtss_season_id"
+      },
+      {
+        "name": "vwtss_season"
+      },
+      {
+        "name": "vwtss_competition_id"
+      },
+      {
+        "name": "vwtss_league_name"
+      },
+      {
+        "name": "vwtss_league_code"
+      },
+      {
+        "name": "vwtss_rank"
+      },
+      {
+        "name": "vwtss_matches_played"
+      },
+      {
+        "name": "vwtss_wins"
+      },
+      {
+        "name": "vwtss_draws"
+      },
+      {
+        "name": "vwtss_losses"
+      },
+      {
+        "name": "vwtss_points"
+      },
+      {
+        "name": "vwtss_goals_for"
+      },
+      {
+        "name": "vwtss_goals_against"
+      },
+      {
+        "name": "vwtss_goal_difference"
+      },
+      {
+        "name": "vwtss_attendance"
+      },
+      {
+        "name": "vwtss_goalkeeper_name"
+      },
+      {
+        "name": "vwtss_notes"
+      },
+      {
+        "name": "vwtss_top_scorer_name"
+      },
+      {
+        "name": "vwtss_top_scorer_goals"
+      },
+      {
+        "name": "vwtss_home_matches_played"
+      },
+      {
+        "name": "vwtss_home_wins"
+      },
+      {
+        "name": "vwtss_home_draws"
+      },
+      {
+        "name": "vwtss_home_losses"
+      },
+      {
+        "name": "vwtss_home_goals_for"
+      },
+      {
+        "name": "vwtss_home_goals_against"
+      },
+      {
+        "name": "vwtss_home_goal_difference"
+      },
+      {
+        "name": "vwtss_home_points"
+      },
+      {
+        "name": "vwtss_away_matches_played"
+      },
+      {
+        "name": "vwtss_away_wins"
+      },
+      {
+        "name": "vwtss_away_draws"
+      },
+      {
+        "name": "vwtss_away_losses"
+      },
+      {
+        "name": "vwtss_away_goals_for"
+      },
+      {
+        "name": "vwtss_away_goals_against"
+      },
+      {
+        "name": "vwtss_away_goal_difference"
+      },
+      {
+        "name": "vwtss_away_points"
+      },
+      {
+        "name": "vwtss_players_used_for"
+      },
+      {
+        "name": "vwtss_average_age_for"
+      },
+      {
+        "name": "vwtss_possession_percentage_for"
+      },
+      {
+        "name": "vwtss_matches_played_for"
+      },
+      {
+        "name": "vwtss_starts_for"
+      },
+      {
+        "name": "vwtss_minutes_for"
+      },
+      {
+        "name": "vwtss_goals_stat_for"
+      },
+      {
+        "name": "vwtss_assists_for"
+      },
+      {
+        "name": "vwtss_goals_assists_for"
+      },
+      {
+        "name": "vwtss_non_penalty_goals_for"
+      },
+      {
+        "name": "vwtss_penalty_goals_for"
+      },
+      {
+        "name": "vwtss_penalties_attempted_for"
+      },
+      {
+        "name": "vwtss_yellow_cards_for"
+      },
+      {
+        "name": "vwtss_red_cards_for"
+      },
+      {
+        "name": "vwtss_goals_per90_for"
+      },
+      {
+        "name": "vwtss_assists_per90_for"
+      },
+      {
+        "name": "vwtss_goals_assists_per90_for"
+      },
+      {
+        "name": "vwtss_non_penalty_goals_per90_for"
+      },
+      {
+        "name": "vwtss_non_penalty_goals_assists_per90_for"
+      },
+      {
+        "name": "vwtss_goals_allowed_for"
+      },
+      {
+        "name": "vwtss_goals_allowed_per90_for"
+      },
+      {
+        "name": "vwtss_shots_on_target_against_for"
+      },
+      {
+        "name": "vwtss_saves_for"
+      },
+      {
+        "name": "vwtss_save_percentage_for"
+      },
+      {
+        "name": "vwtss_wins_for"
+      },
+      {
+        "name": "vwtss_draws_for"
+      },
+      {
+        "name": "vwtss_losses_for"
+      },
+      {
+        "name": "vwtss_clean_sheets_for"
+      },
+      {
+        "name": "vwtss_clean_sheet_percentage_for"
+      },
+      {
+        "name": "vwtss_penalties_faced_for"
+      },
+      {
+        "name": "vwtss_penalty_goals_allowed_for"
+      },
+      {
+        "name": "vwtss_penalty_saves_for"
+      },
+      {
+        "name": "vwtss_penalty_misses_for"
+      },
+      {
+        "name": "vwtss_penalty_save_percentage_for"
+      },
+      {
+        "name": "vwtss_nineties_for"
+      },
+      {
+        "name": "vwtss_shots_for"
+      },
+      {
+        "name": "vwtss_shots_on_target_for"
+      },
+      {
+        "name": "vwtss_shots_on_target_percentage_for"
+      },
+      {
+        "name": "vwtss_shots_per90_for"
+      },
+      {
+        "name": "vwtss_shots_on_target_per90_for"
+      },
+      {
+        "name": "vwtss_goals_per_shot_for"
+      },
+      {
+        "name": "vwtss_goals_per_shot_on_target_for"
+      },
+      {
+        "name": "vwtss_standard_penalty_goals_for"
+      },
+      {
+        "name": "vwtss_second_yellow_red_cards_for"
+      },
+      {
+        "name": "vwtss_fouls_committed_for"
+      },
+      {
+        "name": "vwtss_fouls_drawn_for"
+      },
+      {
+        "name": "vwtss_offsides_for"
+      },
+      {
+        "name": "vwtss_crosses_for"
+      },
+      {
+        "name": "vwtss_interceptions_for"
+      },
+      {
+        "name": "vwtss_tackles_won_for"
+      },
+      {
+        "name": "vwtss_penalties_won_for"
+      },
+      {
+        "name": "vwtss_penalties_conceded_for"
+      },
+      {
+        "name": "vwtss_own_goals_for"
+      },
+      {
+        "name": "vwtss_players_used_against"
+      },
+      {
+        "name": "vwtss_average_age_against"
+      },
+      {
+        "name": "vwtss_possession_percentage_against"
+      },
+      {
+        "name": "vwtss_matches_played_against"
+      },
+      {
+        "name": "vwtss_starts_against"
+      },
+      {
+        "name": "vwtss_minutes_against"
+      },
+      {
+        "name": "vwtss_goals_stat_against"
+      },
+      {
+        "name": "vwtss_assists_against"
+      },
+      {
+        "name": "vwtss_goals_assists_against"
+      },
+      {
+        "name": "vwtss_non_penalty_goals_against"
+      },
+      {
+        "name": "vwtss_penalty_goals_against"
+      },
+      {
+        "name": "vwtss_penalties_attempted_against"
+      },
+      {
+        "name": "vwtss_yellow_cards_against"
+      },
+      {
+        "name": "vwtss_red_cards_against"
+      },
+      {
+        "name": "vwtss_goals_per90_against"
+      },
+      {
+        "name": "vwtss_assists_per90_against"
+      },
+      {
+        "name": "vwtss_goals_assists_per90_against"
+      },
+      {
+        "name": "vwtss_non_penalty_goals_per90_against"
+      },
+      {
+        "name": "vwtss_non_penalty_goals_assists_per90_against"
+      },
+      {
+        "name": "vwtss_goals_allowed_against"
+      },
+      {
+        "name": "vwtss_goals_allowed_per90_against"
+      },
+      {
+        "name": "vwtss_shots_on_target_against_stat"
+      },
+      {
+        "name": "vwtss_saves_against"
+      },
+      {
+        "name": "vwtss_save_percentage_against"
+      },
+      {
+        "name": "vwtss_wins_against"
+      },
+      {
+        "name": "vwtss_draws_against"
+      },
+      {
+        "name": "vwtss_losses_against"
+      },
+      {
+        "name": "vwtss_clean_sheets_against"
+      },
+      {
+        "name": "vwtss_clean_sheet_percentage_against"
+      },
+      {
+        "name": "vwtss_penalties_faced_against"
+      },
+      {
+        "name": "vwtss_penalty_goals_allowed_against"
+      },
+      {
+        "name": "vwtss_penalty_saves_against"
+      },
+      {
+        "name": "vwtss_penalty_misses_against"
+      },
+      {
+        "name": "vwtss_penalty_save_percentage_against"
+      },
+      {
+        "name": "vwtss_nineties_against"
+      },
+      {
+        "name": "vwtss_shots_against"
+      },
+      {
+        "name": "vwtss_shots_on_target_against"
+      },
+      {
+        "name": "vwtss_shots_on_target_percentage_against"
+      },
+      {
+        "name": "vwtss_shots_per90_against"
+      },
+      {
+        "name": "vwtss_shots_on_target_per90_against"
+      },
+      {
+        "name": "vwtss_goals_per_shot_against"
+      },
+      {
+        "name": "vwtss_goals_per_shot_on_target_against"
+      },
+      {
+        "name": "vwtss_standard_penalty_goals_against"
+      },
+      {
+        "name": "vwtss_second_yellow_red_cards_against"
+      },
+      {
+        "name": "vwtss_fouls_committed_against"
+      },
+      {
+        "name": "vwtss_fouls_drawn_against"
+      },
+      {
+        "name": "vwtss_offsides_against"
+      },
+      {
+        "name": "vwtss_crosses_against"
+      },
+      {
+        "name": "vwtss_interceptions_against"
+      },
+      {
+        "name": "vwtss_tackles_won_against"
+      },
+      {
+        "name": "vwtss_penalties_won_against"
+      },
+      {
+        "name": "vwtss_penalties_conceded_against"
+      },
+      {
+        "name": "vwtss_own_goals_against"
+      }
+    ],
+    "vw_player_season_summary": [
+      {
+        "name": "player_id"
+      },
+      {
+        "name": "player_name"
+      },
+      {
+        "name": "nationality"
+      },
+      {
+        "name": "birth_year"
+      },
+      {
+        "name": "season"
+      },
+      {
+        "name": "league_name"
+      },
+      {
+        "name": "league_code"
+      },
+      {
+        "name": "team"
+      },
+      {
+        "name": "age"
+      },
+      {
+        "name": "matches_played_pss"
+      },
+      {
+        "name": "starts"
+      },
+      {
+        "name": "minutes_pss"
+      },
+      {
+        "name": "goals_pss"
+      },
+      {
+        "name": "assists_pss"
+      },
+      {
+        "name": "yellow_cards_pss"
+      },
+      {
+        "name": "red_cards_pss"
+      },
+      {
+        "name": "shots_pss"
+      },
+      {
+        "name": "shots_on_target_pss"
+      },
+      {
+        "name": "xg_pss"
+      },
+      {
+        "name": "xa_pss"
+      },
+      {
+        "name": "npxg_pss"
+      },
+      {
+        "name": "xgchain_pss"
+      },
+      {
+        "name": "xgbuildup_pss"
+      },
+      {
+        "name": "key_passes_pss"
+      },
+      {
+        "name": "non_penalty_goals_pss"
+      },
+      {
+        "name": "fouls_committed"
+      },
+      {
+        "name": "fouls_drawn_pss"
+      },
+      {
+        "name": "interceptions_pss"
+      },
+      {
+        "name": "tackles_won"
+      },
+      {
+        "name": "saves_pss"
+      },
+      {
+        "name": "clean_sheet"
+      },
+      {
+        "name": "save_pct_pss"
+      },
+      {
+        "name": "market_value"
+      }
+    ],
+    "vw_player_match_summary": [
+      {
+        "name": "player_id"
+      },
+      {
+        "name": "player_name"
+      },
+      {
+        "name": "season"
+      },
+      {
+        "name": "league_code"
+      },
+      {
+        "name": "game_id"
+      },
+      {
+        "name": "matchweek"
+      },
+      {
+        "name": "match_date"
+      },
+      {
+        "name": "home_team"
+      },
+      {
+        "name": "away_team"
+      },
+      {
+        "name": "home_score"
+      },
+      {
+        "name": "away_score"
+      },
+      {
+        "name": "ft_result"
+      },
+      {
+        "name": "position"
+      },
+      {
+        "name": "minutes_played"
+      },
+      {
+        "name": "match_goals"
+      },
+      {
+        "name": "match_assists"
+      },
+      {
+        "name": "match_shots"
+      },
+      {
+        "name": "shots_on_target_pmp"
+      },
+      {
+        "name": "xg_pmp"
+      },
+      {
+        "name": "xa_pmp"
+      },
+      {
+        "name": "npxg_pmp"
+      },
+      {
+        "name": "xgchain_pmp"
+      },
+      {
+        "name": "xgbuildup_pmp"
+      },
+      {
+        "name": "key_passes_pmp"
+      },
+      {
+        "name": "yellow_cards_pmp"
+      },
+      {
+        "name": "red_cards_pmp"
+      },
+      {
+        "name": "fouls"
+      },
+      {
+        "name": "fouls_drawn_pmp"
+      },
+      {
+        "name": "tackles_won"
+      },
+      {
+        "name": "interceptions_pmp"
+      },
+      {
+        "name": "crosses"
+      },
+      {
+        "name": "gk_saves"
+      },
+      {
+        "name": "gk_goals_against"
+      },
+      {
+        "name": "gk_save_pct"
+      }
+    ],
+    "vw_player_shooting_profile": [
+      {
+        "name": "player_id"
+      },
+      {
+        "name": "player_name"
+      },
+      {
+        "name": "season"
+      },
+      {
+        "name": "league_code"
+      },
+      {
+        "name": "game_id"
+      },
+      {
+        "name": "minute"
+      },
+      {
+        "name": "team"
+      },
+      {
+        "name": "home_team"
+      },
+      {
+        "name": "away_team"
+      },
+      {
+        "name": "x"
+      },
+      {
+        "name": "y"
+      },
+      {
+        "name": "end_x"
+      },
+      {
+        "name": "end_y"
+      },
+      {
+        "name": "is_goal"
+      },
+      {
+        "name": "situation"
+      },
+      {
+        "name": "shot_type"
+      },
+      {
+        "name": "body_part"
+      },
+      {
+        "name": "shot_zone"
+      },
+      {
+        "name": "shot_direction"
+      },
+      {
+        "name": "player_assisted"
+      },
+      {
+        "name": "last_action"
+      },
+      {
+        "name": "goal_mouth_y"
+      },
+      {
+        "name": "goal_mouth_z"
+      }
+    ],
+    "vw_player_availability": [
+      {
+        "name": "player_id"
+      },
+      {
+        "name": "player_name"
+      },
+      {
+        "name": "season"
+      },
+      {
+        "name": "league_code"
+      },
+      {
+        "name": "team"
+      },
+      {
+        "name": "from_matchweek"
+      },
+      {
+        "name": "to_matchweek"
+      },
+      {
+        "name": "from_date"
+      },
+      {
+        "name": "end_date"
+      },
+      {
+        "name": "games_missed"
+      },
+      {
+        "name": "days_missed"
+      },
+      {
+        "name": "injury_reason"
+      }
+    ]
+  }
+}

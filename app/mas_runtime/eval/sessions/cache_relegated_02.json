@@ -1,0 +1,20 @@
+{
+  "session_id": "cache_relegated_02",
+  "sub_experiment": "cache",
+  "variant": "no_control",
+  "description": "Near-repeat (rank 20 tss_team), reworded.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "Which team finished bottom of the 2023-2024 Premier League?",
+      "ground_truth_sql": "SELECT tss_team FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' AND tss_rank = 20;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "Who came last in the 2023-2024 Premier League table?",
+      "ground_truth_sql": "SELECT tss_team FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' AND tss_rank = 20;"
+    }
+  ]
+}

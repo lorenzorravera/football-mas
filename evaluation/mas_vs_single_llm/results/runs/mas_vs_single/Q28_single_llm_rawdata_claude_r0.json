@@ -1,0 +1,26 @@
+{
+  "question_id": "Q28",
+  "question": "How many goals did Erling Haaland score in 2023-2024 versus his xG, and what was the difference?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Based on the inlined data provided, I cannot answer this question.\n\nThe player_season table data covers the 2020-2021 and 2021-2022 seasons only (the data ends partway through the 2021-2022 listings). There are no Erling Haaland rows for 2023-2024 in the inlined data.\n\nFor reference, the Haaland rows present in the data are:\n- **2020-2021, Dortmund**: 27 goals, but xg_pss is blank/null\n- **2021-2022, Dortmund**: 22 goals, xg_pss also blank/null\n\nSo even for the seasons that are present, his xG values are not populated, and 2023-2024 is not in the inlined data at all. I'm unable to provide the goals, xG, or the difference for 2023-2024.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q28|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229583,
+    "output": 247,
+    "total": 229830,
+    "calls": 1
+  },
+  "latency_s": 5.53,
+  "experiment": "mas_vs_single"
+}

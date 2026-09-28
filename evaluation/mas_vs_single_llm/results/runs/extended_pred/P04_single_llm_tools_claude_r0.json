@@ -1,0 +1,64 @@
+{
+  "question_id": "P04",
+  "question": "Predict the outcome of Nottingham Forest vs Bournemouth on 2024-08-17 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**Prediction: Nottingham Forest vs Bournemouth \u2014 17 Aug 2024**\n\n| Outcome | Probability |\n|---|---|\n| Home win (Nottingham Forest) | **32.2%** |\n| Draw | **24.9%** |\n| Away win (Bournemouth) | **42.9%** |\n\nThe model favours a **Bournemouth away win** as the most likely outcome (42.9%), edging out a Forest home win (32.2%), with a draw least likely (24.9%). Model confidence: 0.429.",
+  "tool_sequence": [
+    "predict_match_outcome",
+    "run_sql",
+    "predict_match_outcome",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('Nottingham Forest','Bournemouth');"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 2,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team_id": 20,
+        "away_team_id": 3,
+        "match_date": "2024-08-17"
+      },
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 3,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team": "Nottingham Forest",
+        "away_team": "Bournemouth",
+        "match_date": "2024-08-17"
+      },
+      "result": "{'home_team': 'Nottingham Forest', 'away_team': 'Bournemouth', 'home_win': 0.322, 'draw': 0.249, 'away_win': 0.429, 'con"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.322,
+    "draw": 0.249,
+    "away_win": 0.429
+  },
+  "latency_s": 12.8,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P04|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 48965,
+    "output": 580,
+    "total": 49545,
+    "calls": 5
+  }
+}

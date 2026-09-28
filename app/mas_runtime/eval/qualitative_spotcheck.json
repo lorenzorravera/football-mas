@@ -1,0 +1,17 @@
+{
+  "note": "Light spot-check for the qualitative-reasoning arm (NOT a formal golden set). These are open-ended narrative questions with no single correct answer; they are graded ad hoc for GROUNDEDNESS (is every claim supported by the retrieved passages?) and hallucination, not for exact-match accuracy. The deterministic 46+4 benchmark is separate and untouched. Requires the documents table to be seeded (see data_prep/ingest_wikipedia.py).",
+  "questions": [
+    {"id": "QL01", "question": "What was the story of Liverpool's 2024-25 season?", "expects": "season_narrative"},
+    {"id": "QL02", "question": "Describe Mohamed Salah's playing style.", "expects": "player_bio"},
+    {"id": "QL03", "question": "How would you characterise Arsenal's 2024-25 campaign?", "expects": "season_narrative"},
+    {"id": "QL04", "question": "What kind of player is Erling Haaland?", "expects": "player_bio"},
+    {"id": "QL05", "question": "Give me the narrative of Manchester City's 2024-25 season.", "expects": "season_narrative"},
+    {"id": "QL06", "question": "What is Cole Palmer known for?", "expects": "player_bio"},
+    {"id": "QL07", "question": "Tell me about Chelsea's 2024-25 season.", "expects": "season_narrative"},
+    {"id": "QL08", "question": "How is Virgil van Dijk described as a defender?", "expects": "player_bio"},
+    {"id": "QL09", "question": "What happened in the 2024-25 Premier League title race?", "expects": "season_narrative"},
+    {"id": "QL10", "question": "Describe Bukayo Saka as a footballer.", "expects": "player_bio"},
+    {"id": "QL11", "question": "What was notable about Manchester United's 2024-25 season?", "expects": "season_narrative"},
+    {"id": "QL12", "question": "Tell me about a completely fictional player named Zxqv Nobodyson.", "expects": "no_narrative_available"}
+  ]
+}

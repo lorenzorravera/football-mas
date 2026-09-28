@@ -1,0 +1,26 @@
+{
+  "question_id": "P15",
+  "question": "Predict the outcome of Aston Villa vs Manchester City on 2024-12-21 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Looking at recent form:\n\n**Aston Villa (home):** Mixed form. Recent record W3 D2 L5 in last 10. They've won at home (Southampton, Brentford) but suffered heavy away losses (Chelsea, Liverpool, Spurs). At home they've been decent but inconsistent.\n\n**Manchester City:** In a serious slump. Last 10: W3 D1 L6. They've lost 5 of their last 7, including heavy defeats (0-4 to Spurs, 2-0 Liverpool) and losses to Bournemouth, Brighton, Man United. This is a historically poor run for City.\n\n**Analysis:** Normally City would be strong favorites, but their current form is dreadful, and this is a home game for Villa. Villa's home form is reasonable. However, City still has elite quality and can turn form around against a mid-table side. This looks like a genuine toss-up with a slight edge given City's collapse balanced against their inherent quality.\n\nGiven City's poor away results and general slump, plus Villa's home advantage, I'll lean toward a fairly even contest with a modest Villa edge, and a solid draw probability given both defenses have wobbled.\n\nPROBABILITIES: home=0.38, draw=0.27, away=0.35",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.38,
+    "draw": 0.27,
+    "away_win": 0.35
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P15|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 956,
+  "token_usage": {
+    "input": 860,
+    "output": 414,
+    "total": 1274,
+    "calls": 1
+  },
+  "latency_s": 8.48
+}

@@ -1,0 +1,31 @@
+{
+  "question_id": "Q06",
+  "question": "How many points did Everton actually finish 2023-2024 with, and how many would they have had without the points deduction?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "Everton finished the **2023-2024 season with 40 points** (13 W, 9 D, 16 L).\n\nThat total already reflects an **8-point deduction**. Without it, they would have had **48 points** (13\u00d73 + 9 = 48).\n\n- **Actual points:** 40\n- **Points without deduction:** 48 (a difference of 8)",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tss.tss_team, tss.tss_points, tss.tss_wins, tss.tss_draws, tss.tss_losses, tss.tss_notes\nFROM team_season_standings tss\nJOIN seasons s ON s.season_id = tss.season_id\nWHERE s.competition_id = 1 AND s.season = '2023-2024' AND tss.tss_team = 'Everton';"
+      },
+      "result": "1 rows, cols=['tss_team', 'tss_points', 'tss_wins', 'tss_draws', 'tss_losses', 'tss_notes']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 6.33,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q06|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19309,
+    "output": 325,
+    "total": 19634,
+    "calls": 2
+  }
+}

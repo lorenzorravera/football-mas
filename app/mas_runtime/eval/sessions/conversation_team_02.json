@@ -1,0 +1,26 @@
+{
+  "session_id": "conversation_team_02",
+  "sub_experiment": "conversation",
+  "variant": "no_control",
+  "description": "Reference carry across a named team (West Ham United) set in turn 0.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "Where did West Ham United finish in the 2021-2022 Premier League table?",
+      "ground_truth_sql": "SELECT tss_rank FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND tss_team = 'West Ham United';"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "And how many points did they finish on?",
+      "ground_truth_sql": "SELECT tss_points FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND tss_team = 'West Ham United';"
+    },
+    {
+      "turn_index": 2,
+      "role": "beneficiary",
+      "query": "How many goals did they concede that season?",
+      "ground_truth_sql": "SELECT tss_goals_against FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND tss_team = 'West Ham United';"
+    }
+  ]
+}

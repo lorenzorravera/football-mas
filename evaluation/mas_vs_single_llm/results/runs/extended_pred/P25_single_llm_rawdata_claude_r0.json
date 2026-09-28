@@ -1,0 +1,26 @@
+{
+  "question_id": "P25",
+  "question": "Predict the outcome of Southampton vs Crystal Palace on 2025-04-02 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Looking at the form:\n\n**Southampton** are in dreadful form \u2014 bottom of the table quality, with just one win in their last 10 (against fellow strugglers Ipswich). They've conceded heavily (4, 4, 3, 5 in several games) and lost 8 of 10.\n\n**Crystal Palace** are in excellent form \u2014 7 wins in their last 10, including strong away performances (won at Man United, West Ham, Leicester, Fulham). They also beat Southampton 2-1 in the reverse fixture. Solid defensively and scoring freely.\n\nThis is a clear mismatch: an in-form Palace side against a Southampton team that has largely given up. Palace are strong favourites, though home advantage and football's unpredictability warrant some allowance.\n\nPROBABILITIES: home=0.17, draw=0.23, away=0.60",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.17,
+    "draw": 0.23,
+    "away_win": 0.6
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P25|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 932,
+  "token_usage": {
+    "input": 847,
+    "output": 275,
+    "total": 1122,
+    "calls": 1
+  },
+  "latency_s": 5.73
+}

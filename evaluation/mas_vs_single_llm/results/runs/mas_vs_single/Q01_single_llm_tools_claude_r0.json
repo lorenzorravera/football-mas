@@ -1,0 +1,40 @@
+{
+  "question_id": "Q01",
+  "question": "Which team won the Premier League in 2024-2025?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**Liverpool** won the Premier League in 2024-2025, finishing top of the table with **84 points** (25 wins, 9 draws, 4 losses) and a goal difference of +45.",
+  "tool_sequence": [
+    "run_sql",
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tss_team, tss_points, tss_wins, tss_draws, tss_losses, tss_goal_difference FROM team_season_standings ts JOIN seasons s ON ts.season_id = s.season_id WHERE s.season = '2024-2025' AND ts.tss_rank = 1;"
+      },
+      "result": "5 rows, cols=['tss_team', 'tss_points', 'tss_wins', 'tss_draws', 'tss_losses', 'tss_goal_difference']"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT vwtss_team_name, vwtss_points, vwtss_wins, vwtss_draws, vwtss_losses, vwtss_goal_difference FROM vw_team_season_summary WHERE vwtss_season = '2024-2025' AND vwtss_league_code = 'ENG-PL' AND vwtss_rank = 1;"
+      },
+      "result": "1 rows, cols=['vwtss_team_name', 'vwtss_points', 'vwtss_wins', 'vwtss_draws', 'vwtss_losses', 'vwtss_goal_difference']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 10.45,
+  "experiment": "mas_vs_single",
+  "langfuse_trace_id": "mas_vs_single|single_llm_tools|claude|Q01|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 25944,
+    "output": 406,
+    "total": 26350,
+    "calls": 3
+  }
+}

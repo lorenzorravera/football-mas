@@ -1,0 +1,20 @@
+{
+  "session_id": "cache_table_01",
+  "sub_experiment": "cache",
+  "variant": "no_control",
+  "description": "sql_cache near-repeat: the beneficiary is a reworded version of the trigger (same season/answer), expected to hit the 0.88 cache and skip SQL generation. Accuracy should be unchanged; the win is latency/token savings (trajectory_log).",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "Show me the final Premier League table for the 2023-2024 season with points.",
+      "ground_truth_sql": "SELECT tss_rank, tss_team, tss_points FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' ORDER BY tss_rank;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "What was the 2023-2024 Premier League final standings table by points?",
+      "ground_truth_sql": "SELECT tss_rank, tss_team, tss_points FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' ORDER BY tss_rank;"
+    }
+  ]
+}

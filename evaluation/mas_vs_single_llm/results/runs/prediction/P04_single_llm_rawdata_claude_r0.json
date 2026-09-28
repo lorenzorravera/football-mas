@@ -1,0 +1,26 @@
+{
+  "question_id": "P04",
+  "question": "What probability does the model assign to a draw between Nottingham Forest and Bournemouth on 2024-08-17?",
+  "experiment": "prediction",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Looking at recent form for both sides:\n\n**Nottingham Forest** (last 10): 4W-3D-3L (W vs Burnley, Sheff Utd, Fulham; D vs Wolves, Palace, Luton; L vs Chelsea, Man City, Everton, Spurs). Decent home record with several draws.\n\n**Bournemouth** (last 10): 5W-1D-4L. Slightly stronger win rate but inconsistent, with notable away losses.\n\nThis is the season opener (2024-08-17), so prior form is from the end of last season. Forest showed a tendency to draw (3 of 10), while Bournemouth had fewer draws (1 of 10). Home advantage favors Forest slightly, but Bournemouth's win rate is marginally better.\n\nGiven the relatively even matchup and Forest's home advantage, I'd assign a fairly typical distribution with a slightly elevated draw chance given Forest's drawing tendency.\n\nPROBABILITIES: home=0.37, draw=0.28, away=0.35",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.37,
+    "draw": 0.28,
+    "away_win": 0.35
+  },
+  "langfuse_trace_id": "prediction|single_llm_rawdata|claude|P04|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 945,
+  "token_usage": {
+    "input": 873,
+    "output": 341,
+    "total": 1214,
+    "calls": 1
+  },
+  "latency_s": 6.67
+}

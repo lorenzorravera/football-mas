@@ -1,0 +1,64 @@
+{
+  "question_id": "P24",
+  "question": "Predict the outcome of Fulham vs Tottenham Hotspur on 2025-03-16 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "## Prediction: Fulham vs Tottenham Hotspur (2025-03-16)\n\n| Outcome | Probability |\n|---|---|\n| **Fulham win (home)** | **55.5%** |\n| Draw | 21.9% |\n| Tottenham win (away) | 22.6% |\n\nThe model favors a **Fulham home win** as the most likely outcome (55.5%), with a draw and a Tottenham win roughly equally likely (~22% each). Model confidence: 0.555 (v1).\n\n*Note: this is a causal forecast using only data available before the match date.*",
+  "tool_sequence": [
+    "predict_match_outcome",
+    "run_sql",
+    "predict_match_outcome",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('Fulham','Tottenham Hotspur');"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 2,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team_id": 10,
+        "away_team_id": 23,
+        "match_date": "2025-03-16"
+      },
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 3,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team": "Fulham",
+        "away_team": "Tottenham Hotspur",
+        "match_date": "2025-03-16"
+      },
+      "result": "{'home_team': 'Fulham', 'away_team': 'Tottenham Hotspur', 'home_win': 0.555, 'draw': 0.219, 'away_win': 0.226, 'confiden"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.555,
+    "draw": 0.219,
+    "away_win": 0.226
+  },
+  "latency_s": 13.81,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P24|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 48959,
+    "output": 588,
+    "total": 49547,
+    "calls": 5
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "question_id": "P25",
+  "question": "Predict the outcome of Southampton vs Crystal Palace on 2025-04-02 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "## Prediction: Southampton vs Crystal Palace \u2014 2025-04-02\n\n| Outcome | Probability |\n|---|---|\n| **Home win** (Southampton) | **4.9%** |\n| **Draw** | **22.2%** |\n| **Away win** (Crystal Palace) | **72.9%** |\n\nThe model strongly favours a **Crystal Palace away win** (~73%), with a draw as the second most likely result (~22%). A Southampton home win is deemed very unlikely (~5%). The model's confidence is **0.729**.\n\nThis reflects Southampton's dismal 2024-2025 campaign (they finished bottom / were relegated) against a mid-table Crystal Palace side.",
+  "tool_sequence": [
+    "run_sql",
+    "predict_match_outcome",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('Southampton','Crystal Palace');"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 1,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team_id": 22,
+        "away_team_id": 8,
+        "home_team": "Southampton",
+        "away_team": "Crystal Palace",
+        "match_date": "2025-04-02"
+      },
+      "result": "{'home_team': 'Southampton', 'away_team': 'Crystal Palace', 'home_win': 0.049, 'draw': 0.222, 'away_win': 0.729, 'confid"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.049,
+    "draw": 0.222,
+    "away_win": 0.729
+  },
+  "latency_s": 10.55,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P25|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 29399,
+    "output": 570,
+    "total": 29969,
+    "calls": 3
+  }
+}

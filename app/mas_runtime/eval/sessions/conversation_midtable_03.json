@@ -1,0 +1,26 @@
+{
+  "session_id": "conversation_midtable_03",
+  "sub_experiment": "conversation",
+  "variant": "no_control",
+  "description": "Reference carry across a named team (Brentford) set in turn 0.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "Where did Brentford finish in the 2022-2023 Premier League table?",
+      "ground_truth_sql": "SELECT tss_rank FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_team = 'Brentford';"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "And how many points did they finish on?",
+      "ground_truth_sql": "SELECT tss_points FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_team = 'Brentford';"
+    },
+    {
+      "turn_index": 2,
+      "role": "beneficiary",
+      "query": "And how many matches did they win?",
+      "ground_truth_sql": "SELECT tss_wins FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_team = 'Brentford';"
+    }
+  ]
+}

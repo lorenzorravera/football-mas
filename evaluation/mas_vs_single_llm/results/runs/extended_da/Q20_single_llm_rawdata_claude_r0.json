@@ -1,0 +1,26 @@
+{
+  "question_id": "Q20",
+  "question": "Which team scored the most home goals in 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Looking at the home_away table for 2024-2025, filtering by `tshas_home_goals_for`:\n\n- **Liverpool: 42**\n- Manchester City: 43\n- Newcastle United: 40\n- Brentford: 40\n\nWait \u2014 let me recheck. Manchester City has **43** home goals, edging out Liverpool's 42.\n\n**Manchester City** scored the most home goals in 2024-2025 with **43**.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q20|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 171528,
+  "token_usage": {
+    "input": 121521,
+    "output": 142,
+    "total": 121663,
+    "calls": 1
+  },
+  "latency_s": 3.18,
+  "experiment": "extended_da"
+}

@@ -1,0 +1,64 @@
+{
+  "question_id": "P20",
+  "question": "Predict the outcome of Manchester City vs Chelsea on 2025-01-25 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "## Prediction: Manchester City vs Chelsea (2025-01-25)\n\n| Outcome | Probability |\n|---|---|\n| **Home win (Man City)** | **60.5%** |\n| Draw | 21.1% |\n| **Away win (Chelsea)** | **18.4%** |\n\nThe model strongly favors a **Manchester City home win** (~60.5%), with a draw the next most likely result and a Chelsea away win the least likely outcome. Model confidence: 0.605 (v1).\n\n*Note: this is a causal forecast using only data available before the match date (2025-01-25).*",
+  "tool_sequence": [
+    "predict_match_outcome",
+    "run_sql",
+    "predict_match_outcome",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('Manchester City','Chelsea');"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 2,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team_id": 16,
+        "away_team_id": 7,
+        "match_date": "2025-01-25"
+      },
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 3,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team": "Manchester City",
+        "away_team": "Chelsea",
+        "match_date": "2025-01-25"
+      },
+      "result": "{'home_team': 'Manchester City', 'away_team': 'Chelsea', 'home_win': 0.605, 'draw': 0.211, 'away_win': 0.184, 'confidenc"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.605,
+    "draw": 0.211,
+    "away_win": 0.184
+  },
+  "latency_s": 12.69,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P20|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 48932,
+    "output": 602,
+    "total": 49534,
+    "calls": 5
+  }
+}

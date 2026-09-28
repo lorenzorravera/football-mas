@@ -1,0 +1,64 @@
+{
+  "question_id": "P17",
+  "question": "Predict the outcome of Brighton vs Brentford on 2024-12-27 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "## Prediction: Brighton vs Brentford (27 Dec 2024)\n\n| Outcome | Probability |\n|---------|------------|\n| **Brighton win (home)** | **54.9%** |\n| Draw | 20.6% |\n| Brentford win (away) | 24.5% |\n\nThe model favors **Brighton** as home favorites (confidence 0.549), with a draw being the least likely result. An away win for Brentford is slightly more probable than a draw.\n\n*(Model version v1; probabilities sum to 1.0 and are computed causally using only data before 2024-12-27.)*",
+  "tool_sequence": [
+    "predict_match_outcome",
+    "run_sql",
+    "predict_match_outcome",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('Brighton','Brentford','Brighton & Hove Albion');"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 2,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team_id": 5,
+        "away_team_id": 4,
+        "match_date": "2024-12-27"
+      },
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 3,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team": "Brighton",
+        "away_team": "Brentford",
+        "match_date": "2024-12-27"
+      },
+      "result": "{'home_team': 'Brighton', 'away_team': 'Brentford', 'home_win': 0.549, 'draw': 0.206, 'away_win': 0.245, 'confidence': 0"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.549,
+    "draw": 0.206,
+    "away_win": 0.245
+  },
+  "latency_s": 13.3,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P17|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 48935,
+    "output": 597,
+    "total": 49532,
+    "calls": 5
+  }
+}

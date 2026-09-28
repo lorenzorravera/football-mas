@@ -1,0 +1,26 @@
+{
+  "question_id": "P30",
+  "question": "Predict the outcome of Ipswich Town vs West Ham United on 2025-05-25 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Looking at recent form:\n\n**Ipswich Town:** Already relegated, poor form. In last 10: 1 win, 3 draws, 6 losses. Leaking goals heavily (conceded in nearly every match), scoring sparingly. Weak defensively, especially in recent matches (0-4 Arsenal, 3-0 Newcastle, 2-0 Leicester).\n\n**West Ham United:** Mid-table safety, inconsistent but slightly better form. Last 10: 2 wins, 4 draws, 4 losses. Notable 2-0 win at Man United. More draws suggest a team that doesn't lose heavily often.\n\n**Assessment:** West Ham are the stronger side on form and quality, though they've been inconsistent and may lack motivation (mid-table, season ending). Ipswich have little to play for. Home advantage gives Ipswich a modest boost, but West Ham's superior form tilts the balance toward the visitors. A draw is plausible given West Ham's tendency to draw and both teams' low stakes.\n\nPROBABILITIES: home=0.30, draw=0.28, away=0.42",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.3,
+    "draw": 0.28,
+    "away_win": 0.42
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P30|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 960,
+  "token_usage": {
+    "input": 866,
+    "output": 371,
+    "total": 1237,
+    "calls": 1
+  },
+  "latency_s": 6.77
+}

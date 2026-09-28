@@ -1,0 +1,56 @@
+Holdout ['2024-2025']: 379 fixtures
+/Users/ethanbensadoun/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/Users/ethanbensadoun/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/Users/ethanbensadoun/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[no_odds (C)] wrote 379 rows -> backtest_results/backtest_no_odds.csv
+[no_odds (C)] saved-at-train brier=0.1985 acc=0.533  |  backtest brier=0.1985 acc=0.533
+/Users/ethanbensadoun/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/Users/ethanbensadoun/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/Users/ethanbensadoun/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[with_odds (B)] wrote 379 rows -> backtest_results/backtest_with_odds.csv
+[with_odds (B)] saved-at-train brier=0.1941 acc=0.536  |  backtest brier=0.1941 acc=0.536
+/Users/ethanbensadoun/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/Users/ethanbensadoun/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/Users/ethanbensadoun/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+
+========================================================================
+BACKTEST — holdout ['2024-2025'] (out-of-sample)
+========================================================================
+model                n   accuracy     brier  brier/fix   log_loss
+------------------------------------------------------------------------
+base rate          379      0.409    0.2181     0.6543     1.0795
+bookmaker          379      0.541    0.1934     0.5801     0.9722
+no_odds (C)        379      0.533    0.1985     0.5956     1.0874
+with_odds (B)      379      0.536    0.1941     0.5822     0.9730
+========================================================================
+Odds effect (B - C):  accuracy +0.003   brier +0.0045 (odds help)
+Note: C serves live; B is backtest-only (needs pre-match odds).
+
+Per-fixture CSVs + summary written to backtest_results/
+
+DRAW-BOOST SWEEP (no-odds model)
+--------------------------------------------------------
+  boost   accuracy  draw_recall   %pred draw
+--------------------------------------------------------
+    1.0      0.533        0.000        0.000
+    1.2      0.533        0.011        0.008
+    1.4      0.533        0.032        0.024
+    1.6      0.536        0.118        0.074
+    1.8      0.507        0.183        0.158
+    2.0      0.478        0.301        0.277
+    2.5      0.441        0.591        0.522
+    3.0      0.361        0.763        0.720
+--------------------------------------------------------
+CAUTION: sweep is on the TEST holdout, so the best boost here is
+optimistic. For the paper, pick the boost on a validation season
+(e.g. 2023-2024) and report the chosen value on 2024-2025.
+

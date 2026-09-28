@@ -1,0 +1,26 @@
+{
+  "question_id": "P03",
+  "question": "Predict the outcome of Everton vs Brighton on 2024-08-17 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Looking at recent form:\n\n**Everton (home):** Mixed but solid at home late in the season. Won several home games (Sheffield Utd, Brentford, Liverpool, Forest, Burnley) with clean sheets, showing defensive resilience at Goodison. Some heavy away defeats (Chelsea 6-0), but home form was notably strong.\n\n**Brighton:** Poor end to the previous season \u2014 losing to Man Utd, Chelsea, Bournemouth (3-0), Man City (0-4), Arsenal (0-3). Only one win in their last 10 (vs Aston Villa). Struggled defensively and offensively away from home.\n\n**Assessment:** Everton's strong home record and clean-sheet habit contrasts with Brighton's poor late-season slump. However, this is the opening game of a new season (fresh start, new manager for Brighton under H\u00fcrzeler), so form carries less weight. I'll lean modestly toward Everton at home while keeping uncertainty high.\n\nPROBABILITIES: home=0.42, draw=0.28, away=0.30",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.42,
+    "draw": 0.28,
+    "away_win": 0.3
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P03|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 819,
+  "token_usage": {
+    "input": 798,
+    "output": 354,
+    "total": 1152,
+    "calls": 1
+  },
+  "latency_s": 9.16
+}

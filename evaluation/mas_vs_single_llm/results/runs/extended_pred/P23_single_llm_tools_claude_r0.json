@@ -1,0 +1,37 @@
+{
+  "question_id": "P23",
+  "question": "Predict the outcome of Nottingham Forest vs Arsenal on 2025-02-26 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "Here's the model's prediction for **Nottingham Forest vs Arsenal on 2025-02-26**:\n\n| Outcome | Probability |\n|---|---|\n| \ud83c\udfe0 Nottingham Forest win | **24.7%** |\n| \ud83e\udd1d Draw | **23.4%** |\n| \u2708\ufe0f Arsenal win | **51.9%** |\n\n**Arsenal are the favourites** (~52%), with the model's confidence at 0.519. A Nottingham Forest home win and a draw are roughly equally likely (around 24% each).\n\n*(Prediction is causal \u2014 based only on data available before 2025-02-26.)*",
+  "tool_sequence": [
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team": "Nottingham Forest",
+        "away_team": "Arsenal",
+        "match_date": "2025-02-26"
+      },
+      "result": "{'home_team': 'Nottingham Forest', 'away_team': 'Arsenal', 'home_win': 0.247, 'draw': 0.234, 'away_win': 0.519, 'confide"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.247,
+    "draw": 0.234,
+    "away_win": 0.519
+  },
+  "latency_s": 7.46,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P23|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19236,
+    "output": 336,
+    "total": 19572,
+    "calls": 2
+  }
+}

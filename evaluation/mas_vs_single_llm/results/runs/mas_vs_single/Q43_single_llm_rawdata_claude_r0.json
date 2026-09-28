@@ -1,0 +1,26 @@
+{
+  "question_id": "Q43",
+  "question": "How many shot events resulted in a goal (is_goal) in 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "I can't answer this from the data provided.\n\nThe question requires querying the `match_events` table (filtering on `is_goal` for season 2024-2025), but that table's row-level data is not inlined here. The inlined datasets only cover standings, home/away splits, team discipline, and player-season stats \u2014 none of which contain shot-event-level `is_goal` counts.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q43|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229575,
+    "output": 114,
+    "total": 229689,
+    "calls": 1
+  },
+  "latency_s": 3.42,
+  "experiment": "mas_vs_single"
+}

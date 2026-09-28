@@ -1,0 +1,409 @@
+# =============================================================================
+# Football Analytics Database — Schema Context
+# =============================================================================
+# This file describes the PostgreSQL database schema for football match-level
+# data. Currently contains Premier League data, with the schema designed to
+# support additional leagues in the future.
+# It is intended as a reference for agents that query or analyse this data.
+#
+# Database: Aiven PostgreSQL
+# Current data: Premier League, 5 seasons (2021-22 through 2025-26)
+# Normalisation: Third Normal Form (3NF)
+# =============================================================================
+
+database:
+  description: >
+    Match-level football data stored in a normalised relational schema.
+    Currently contains Premier League data, with the leagues table designed
+    to support future expansion to other competitions (e.g. La Liga,
+    Bundesliga, Serie A). The core design splits per-team stats into a
+    separate table (match_team_stats) with two rows per match — one per
+    team — to eliminate the need for home/away branching in queries.
+  total_matches: 1759
+  total_seasons: 5
+  total_teams: 27
+  total_teams_note: >
+    27 is higher than 20 teams per season because of promotion and
+    relegation — different teams move in and out of the Premier League
+    each year. For example, Norwich appeared in 2021-22 but not in
+    later seasons after being relegated.
+
+# -----------------------------------------------------------------------------
+# Tables
+# -----------------------------------------------------------------------------
+
+tables:
+
+  leagues:
+    description: >
+      Dimension table for football leagues. Currently only contains the
+      Premier League (E0). Designed to support future expansion to other
+      leagues (e.g. La Liga, Bundesliga).
+    primary_key: league_id
+    columns:
+      league_id:
+        type: SERIAL
+        description: Auto-incrementing primary key
+      league_code:
+        type: VARCHAR(10)
+        description: Short code identifying the league
+        unique: true
+        valid_values: ["E0"]
+      league_name:
+        type: VARCHAR(100)
+        description: Full display name of the league
+        valid_values: ["Premier League"]
+
+  teams:
+    description: >
+      Dimension table for all teams that have appeared in the dataset.
+      Includes teams across all seasons — some teams are only present in
+      certain seasons due to promotion/relegation.
+    primary_key: team_id
+    columns:
+      team_id:
+        type: SERIAL
+        description: Auto-incrementing primary key
+      team_name:
+        type: VARCHAR(50)
+        description: Display name of the team
+        unique: true
+        valid_values:
+          - "Arsenal"
+          - "Aston Villa"
+          - "Bournemouth"
+          - "Brentford"
+          - "Brighton"
+          - "Burnley"
+          - "Chelsea"
+          - "Crystal Palace"
+          - "Everton"
+          - "Fulham"
+          - "Ipswich"
+          - "Leeds"
+          - "Leicester"
+          - "Liverpool"
+          - "Luton"
+          - "Man City"
+          - "Man United"
+          - "Newcastle"
+          - "Norwich"
+          - "Nott'm Forest"
+          - "Sheffield United"
+          - "Southampton"
+          - "Sunderland"
+          - "Tottenham"
+          - "Watford"
+          - "West Ham"
+          - "Wolves"
+    notes:
+      - "When constructing SQL queries, team names must match these values exactly"
+      - "Users may type variations (e.g. 'Nottingham Forest', 'Manchester City', 'Spurs') — the agent should map these to the correct database values before querying"
+      - "Key mappings to watch: 'Nott'm Forest' (not 'Nottingham Forest'), 'Man City' (not 'Manchester City'), 'Man United' (not 'Manchester United'), 'Tottenham' (not 'Spurs')"
+      - "Not every team appears in every season due to promotion/relegation — a query returning zero rows for a team in a given season may be valid"
+
+  referees:
+    description: Dimension table for match referees.
+    primary_key: referee_id
+    columns:
+      referee_id:
+        type: SERIAL
+        description: Auto-incrementing primary key
+      referee_name:
+        type: VARCHAR(100)
+        description: "Referee name in format 'Initial Surname' (e.g. 'M Oliver')"
+        unique: true
+    total_referees: 40
+
+  seasons:
+    description: >
+      Dimension table for seasons. Each row represents one season within one
+      league. Start and end dates are derived from actual match dates in the
+      data.
+    primary_key: season_id
+    columns:
+      season_id:
+        type: SERIAL
+        description: Auto-incrementing primary key
+      season:
+        type: VARCHAR(9)
+        description: "Season identifier in 'YYYY_YYYY' format"
+        valid_values:
+          - "2021_2022"
+          - "2022_2023"
+          - "2023_2024"
+          - "2024_2025"
+          - "2025_2026"
+      league_id:
+        type: INT
+        description: Foreign key → leagues.league_id
+      start_date:
+        type: DATE
+        description: Date of the first match in the season
+      end_date:
+        type: DATE
+        description: Date of the last match in the season
+    foreign_keys:
+      league_id: leagues.league_id
+    notes:
+      - "Season format is 'YYYY_YYYY' with underscore — not 'YYYY-YY' or 'YYYY/YYYY'"
+      - "2025_2026 is incomplete (239 of 380 matches as of 2026-02-01)"
+      - "Complete seasons have 380 matches (20 teams × 38 games each)"
+      - "Seasons run approximately August to May"
+
+  matches:
+    description: >
+      Fact table with one row per match. Stores match-level information:
+      date, teams, referee, and scoreline. Team-level stats (shots, fouls,
+      corners, cards) are in match_team_stats, not here.
+    primary_key: match_id
+    columns:
+      match_id:
+        type: SERIAL
+        description: Auto-incrementing primary key
+      season_id:
+        type: INT
+        description: Foreign key → seasons.season_id
+      match_date:
+        type: DATE
+        description: Date the match was played
+      kickoff_time:
+        type: TIME
+        description: "Kickoff time (e.g. '15:00', '20:00')"
+      home_team_id:
+        type: INT
+        description: Foreign key → teams.team_id (home team)
+      away_team_id:
+        type: INT
+        description: Foreign key → teams.team_id (away team)
+      referee_id:
+        type: INT
+        description: Foreign key → referees.referee_id
+      ft_home_goals:
+        type: SMALLINT
+        description: Full-time goals scored by the home team
+      ft_away_goals:
+        type: SMALLINT
+        description: Full-time goals scored by the away team
+      ft_result:
+        type: "CHAR(1)"
+        description: "Full-time result from the home team's perspective"
+        valid_values:
+          H: Home win
+          D: Draw
+          A: Away win
+      ht_home_goals:
+        type: SMALLINT
+        description: Half-time goals scored by the home team
+      ht_away_goals:
+        type: SMALLINT
+        description: Half-time goals scored by the away team
+      ht_result:
+        type: "CHAR(1)"
+        description: "Half-time result from the home team's perspective"
+        valid_values:
+          H: Home leading
+          D: Level at half-time
+          A: Away leading
+    foreign_keys:
+      season_id: seasons.season_id
+      home_team_id: teams.team_id
+      away_team_id: teams.team_id
+      referee_id: referees.referee_id
+    notes:
+      - "League is accessible via matches → seasons → leagues (not stored directly)"
+      - "Goals appear here AND in match_team_stats — here for match identity, there for per-team queries"
+
+  match_team_stats:
+    description: >
+      Fact table with two rows per match — one for each team. This is the
+      key design choice: by unpivoting home/away stats into per-team rows,
+      queries like 'How many goals did Arsenal score?' become a simple
+      filter instead of requiring home/away branching logic. The 'is_home'
+      column preserves home/away context when needed.
+    primary_key: match_team_stat_id
+    columns:
+      match_team_stat_id:
+        type: SERIAL
+        description: Auto-incrementing primary key
+      match_id:
+        type: INT
+        description: Foreign key → matches.match_id
+      team_id:
+        type: INT
+        description: Foreign key → teams.team_id (the team this row describes)
+      opponent_id:
+        type: INT
+        description: Foreign key → teams.team_id (the opposing team)
+      is_home:
+        type: BOOLEAN
+        description: "true = this team was the home team, false = away"
+      goals_scored:
+        type: SMALLINT
+        description: Goals scored by this team in this match
+      goals_conceded:
+        type: SMALLINT
+        description: Goals conceded by this team in this match
+      shots:
+        type: SMALLINT
+        description: Total shots taken by this team
+      shots_on_target:
+        type: SMALLINT
+        description: Shots on target by this team
+      fouls:
+        type: SMALLINT
+        description: Fouls committed by this team
+      corners:
+        type: SMALLINT
+        description: Corners won by this team
+      yellow_cards:
+        type: SMALLINT
+        description: Yellow cards received by this team
+      red_cards:
+        type: SMALLINT
+        description: Red cards received by this team
+      points:
+        type: SMALLINT
+        description: "Points earned in this match (pre-computed: 3 = win, 1 = draw, 0 = loss)"
+        valid_values:
+          3: Win (goals_scored > goals_conceded)
+          1: Draw (goals_scored = goals_conceded)
+          0: Loss (goals_scored < goals_conceded)
+    foreign_keys:
+      match_id: matches.match_id
+      team_id: teams.team_id
+      opponent_id: teams.team_id
+    unique_constraints:
+      - [match_id, team_id]
+    notes:
+      - "Always 2 rows per match — one per team"
+      - "Total rows = 2 × total matches (3518 = 2 × 1759)"
+      - "Points are pre-computed from the match result, not from any league adjustment"
+
+  points_adjustments:
+    description: >
+      Records league-imposed points deductions (or theoretically additions).
+      These are applied at the season level and are separate from match-level
+      points. The league_table view incorporates these automatically.
+    primary_key: adjustment_id
+    columns:
+      adjustment_id:
+        type: SERIAL
+        description: Auto-incrementing primary key
+      team_id:
+        type: INT
+        description: Foreign key → teams.team_id
+      season_id:
+        type: INT
+        description: Foreign key → seasons.season_id
+      adjustment:
+        type: INT
+        description: "Points adjustment (negative = deduction)"
+      reason:
+        type: VARCHAR(255)
+        description: Explanation of why the adjustment was applied
+    foreign_keys:
+      team_id: teams.team_id
+      season_id: seasons.season_id
+    current_data:
+      - team: "Everton"
+        season: "2023_2024"
+        adjustment: -6
+        reason: "PSR breach (2021-22 assessment period) — original -10, reduced to -6 on appeal"
+      - team: "Everton"
+        season: "2023_2024"
+        adjustment: -2
+        reason: "PSR breach (2022-23 assessment period) — second charge"
+      - team: "Nott'm Forest"
+        season: "2023_2024"
+        adjustment: -4
+        reason: "PSR breach (2022-23 assessment period) — exceeded £61m threshold by £34.5m"
+
+# -----------------------------------------------------------------------------
+# Views
+# -----------------------------------------------------------------------------
+
+views:
+
+  league_table:
+    description: >
+      Pre-built view that computes full league standings per season. Applies
+      Premier League tiebreaker ordering (points → goal difference → goals
+      scored) and incorporates points adjustments automatically.
+    columns:
+      season: Season identifier
+      team_name: Team display name
+      played: Matches played
+      won: Matches won
+      drawn: Matches drawn
+      lost: Matches lost
+      gf: Goals for (scored)
+      ga: Goals against (conceded)
+      gd: Goal difference (gf - ga)
+      points: "Total points (match points + any adjustments)"
+      points_adjustment: "Sum of adjustments applied (0 if none)"
+    ordering: "points DESC, gd DESC, gf DESC"
+    notes:
+      - "For full-season tables, query with: WHERE season = '2023_2024'"
+      - "For mid-season / 'as of date' tables, do NOT use this view — instead replicate the aggregation logic with an added match_date filter"
+      - "Tiebreaker covers steps 1-3 of PL rules (points, GD, GF). Head-to-head (step 4) is not computed"
+
+# -----------------------------------------------------------------------------
+# Indexes
+# -----------------------------------------------------------------------------
+
+indexes:
+  - name: idx_matches_season
+    table: matches
+    columns: [season_id]
+  - name: idx_matches_date
+    table: matches
+    columns: [match_date]
+  - name: idx_matches_home_team
+    table: matches
+    columns: [home_team_id]
+  - name: idx_matches_away_team
+    table: matches
+    columns: [away_team_id]
+  - name: idx_mts_match
+    table: match_team_stats
+    columns: [match_id]
+  - name: idx_mts_team
+    table: match_team_stats
+    columns: [team_id]
+  - name: idx_mts_team_match
+    table: match_team_stats
+    columns: [team_id, match_id]
+
+# -----------------------------------------------------------------------------
+# Data coverage
+# -----------------------------------------------------------------------------
+
+data_coverage:
+  seasons:
+    "2021_2022":
+      matches: 380
+      teams: 20
+      status: complete
+      date_range: "2021-08-13 to 2022-05-22"
+    "2022_2023":
+      matches: 380
+      teams: 20
+      status: complete
+      date_range: "2022-08-05 to 2023-05-28"
+    "2023_2024":
+      matches: 380
+      teams: 20
+      status: complete
+      date_range: "2023-08-11 to 2024-05-19"
+    "2024_2025":
+      matches: 380
+      teams: 20
+      status: complete
+      date_range: "2024-08-16 to 2025-05-25"
+    "2025_2026":
+      matches: 239
+      teams: 20
+      status: incomplete
+      date_range: "2025-08-15 to 2026-02-01"
+      note: "Season in progress — 239 of 380 matches played"

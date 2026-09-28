@@ -1,0 +1,1086 @@
+{
+  "frozen": true,
+  "phase": "2b",
+  "artifact": "ground_truth_v2",
+  "scope": "ENG-PL (competition_id=1), seasons 2020-2021..2024-2025",
+  "basis": "extended v2 \u2014 30 DA (re-scoped) + 30 prediction; multi-league DB",
+  "generated_at": "2026-07-24T11:58:57+00:00",
+  "git_commit": "b000fb5eaab1e1af5de8da1ca367466a287917bc",
+  "git_dirty": true,
+  "n_items": 30,
+  "sha256": "ea0e26fe736ce2935a9e94695d462040a32e99630ec50ed191eec859518eabf8",
+  "validation": {
+    "reproduced_v1": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q05",
+      "Q06",
+      "Q07",
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q12",
+      "Q16",
+      "Q18",
+      "Q19",
+      "Q20",
+      "Q21",
+      "Q23",
+      "Q24",
+      "Q25",
+      "Q26",
+      "Q27",
+      "Q29",
+      "Q33",
+      "Q37",
+      "Q39",
+      "Q41",
+      "Q42",
+      "Q44",
+      "Q45",
+      "Q46"
+    ],
+    "changed_vs_v1": [
+      {
+        "id": "Q32",
+        "v1_rows": 5,
+        "v2_rows": 5
+      }
+    ],
+    "errors": []
+  },
+  "items": [
+    {
+      "id": "Q01",
+      "question": "Which team won the Premier League in 2024-2025?",
+      "category": "team_league_outcomes",
+      "difficulty": "simple",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT t.team_name FROM team_season_standings st JOIN teams t ON t.team_id=st.team_id JOIN seasons s ON s.season_id=st.season_id WHERE s.season='2024-2025' AND s.competition_id = 1 AND st.tss_rank=1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "team_name"
+        ],
+        "rows": [
+          [
+            "Liverpool"
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q02",
+      "question": "How many points did Arsenal finish with in the 2023-2024 season?",
+      "category": "team_league_outcomes",
+      "difficulty": "simple",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT st.tss_points FROM team_season_standings st JOIN teams t ON t.team_id=st.team_id JOIN seasons s ON s.season_id=st.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 AND t.team_name='Arsenal'",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "tss_points"
+        ],
+        "rows": [
+          [
+            89
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q03",
+      "question": "Give the full 2022-2023 Premier League final table (rank, team, points).",
+      "category": "team_league_outcomes",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "ranking",
+      "canonical_sql": "SELECT st.tss_rank, t.team_name, st.tss_points FROM team_season_standings st JOIN teams t ON t.team_id=st.team_id JOIN seasons s ON s.season_id=st.season_id WHERE s.season='2022-2023' AND s.competition_id = 1 ORDER BY st.tss_rank",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "tss_rank",
+          "team_name",
+          "tss_points"
+        ],
+        "rows": [
+          [
+            1,
+            "Manchester City",
+            89
+          ],
+          [
+            2,
+            "Arsenal",
+            84
+          ],
+          [
+            3,
+            "Manchester United",
+            75
+          ],
+          [
+            4,
+            "Newcastle United",
+            71
+          ],
+          [
+            5,
+            "Liverpool",
+            67
+          ],
+          [
+            6,
+            "Brighton",
+            62
+          ],
+          [
+            7,
+            "Aston Villa",
+            61
+          ],
+          [
+            8,
+            "Tottenham Hotspur",
+            60
+          ],
+          [
+            9,
+            "Brentford",
+            59
+          ],
+          [
+            10,
+            "Fulham",
+            52
+          ],
+          [
+            11,
+            "Crystal Palace",
+            45
+          ],
+          [
+            12,
+            "Chelsea",
+            44
+          ],
+          [
+            13,
+            "Wolves",
+            41
+          ],
+          [
+            14,
+            "West Ham United",
+            40
+          ],
+          [
+            15,
+            "Bournemouth",
+            39
+          ],
+          [
+            16,
+            "Nottingham Forest",
+            38
+          ],
+          [
+            17,
+            "Everton",
+            36
+          ],
+          [
+            18,
+            "Leicester City",
+            34
+          ],
+          [
+            19,
+            "Leeds United",
+            31
+          ],
+          [
+            20,
+            "Southampton",
+            25
+          ]
+        ],
+        "row_count": 20,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q05",
+      "question": "Which team had the best goal difference in 2024-2025?",
+      "category": "team_league_outcomes",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT t.team_name FROM team_season_standings st JOIN teams t ON t.team_id=st.team_id JOIN seasons s ON s.season_id=st.season_id WHERE s.season='2024-2025' AND s.competition_id = 1 ORDER BY st.tss_goal_difference DESC, t.team_name LIMIT 1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "team_name"
+        ],
+        "rows": [
+          [
+            "Liverpool"
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q06",
+      "question": "How many points did Everton actually finish 2023-2024 with, and how many would they have had without the points deduction?",
+      "category": "team_league_outcomes",
+      "difficulty": "edge_case",
+      "gt_type": "multi_step",
+      "answer_type": "table",
+      "canonical_sql": "SELECT st.tss_points AS actual_points, (3*st.tss_wins + st.tss_draws) AS points_without_deduction FROM team_season_standings st JOIN teams t ON t.team_id=st.team_id JOIN seasons s ON s.season_id=st.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 AND t.team_name='Everton'",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "actual_points",
+          "points_without_deduction"
+        ],
+        "rows": [
+          [
+            40,
+            48
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q07",
+      "question": "What is the highest points total achieved by any team in a single season across 2020-2021 to 2024-2025?",
+      "category": "team_league_outcomes",
+      "difficulty": "hard",
+      "gt_type": "deterministic_sql",
+      "answer_type": "table",
+      "canonical_sql": "SELECT t.team_name, s.season, st.tss_points FROM team_season_standings st JOIN teams t ON t.team_id=st.team_id JOIN seasons s ON s.season_id=st.season_id WHERE 1=1 AND s.competition_id = 1 ORDER BY st.tss_points DESC, t.team_name LIMIT 1",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "team_name",
+          "season",
+          "tss_points"
+        ],
+        "rows": [
+          [
+            "Manchester City",
+            "2021-2022",
+            93
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q09",
+      "question": "Who was the top goalscorer in the 2023-2024 Premier League season, and how many goals did they score?",
+      "category": "player_season_aggregates",
+      "difficulty": "simple",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT p.player_name, SUM(pss.goals_pss) AS goals FROM player_season_stats pss JOIN players p ON p.player_id=pss.player_id JOIN seasons s ON s.season_id=pss.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 GROUP BY p.player_id, p.player_name ORDER BY goals DESC, p.player_name LIMIT 1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "goals"
+        ],
+        "rows": [
+          [
+            "Erling Haaland",
+            27
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q10",
+      "question": "List the top five goalscorers in 2024-2025 with their goal totals.",
+      "category": "player_season_aggregates",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "ranking",
+      "canonical_sql": "SELECT p.player_name, SUM(pss.goals_pss) AS goals FROM player_season_stats pss JOIN players p ON p.player_id=pss.player_id JOIN seasons s ON s.season_id=pss.season_id WHERE s.season='2024-2025' AND s.competition_id = 1 GROUP BY p.player_id, p.player_name ORDER BY goals DESC, p.player_name LIMIT 5",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "goals"
+        ],
+        "rows": [
+          [
+            "Mohamed Salah",
+            29
+          ],
+          [
+            "Alexander Isak",
+            23
+          ],
+          [
+            "Erling Haaland",
+            22
+          ],
+          [
+            "Bryan Mbeumo",
+            20
+          ],
+          [
+            "Chris Wood",
+            20
+          ]
+        ],
+        "row_count": 5,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q11",
+      "question": "Who provided the most assists in 2023-2024?",
+      "category": "player_season_aggregates",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT p.player_name, SUM(pss.assists_pss) AS assists FROM player_season_stats pss JOIN players p ON p.player_id=pss.player_id JOIN seasons s ON s.season_id=pss.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 GROUP BY p.player_id, p.player_name ORDER BY assists DESC, p.player_name LIMIT 1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "assists"
+        ],
+        "rows": [
+          [
+            "Ollie Watkins",
+            13
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q12",
+      "question": "How many league goals did Cole Palmer score in total in 2023-2024 (across all clubs he played for that season)?",
+      "category": "player_season_aggregates",
+      "difficulty": "edge_case",
+      "gt_type": "multi_step",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT p.player_name, SUM(pss.goals_pss) AS total_goals FROM player_season_stats pss JOIN players p ON p.player_id=pss.player_id JOIN seasons s ON s.season_id=pss.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 AND p.player_name='Cole Palmer' GROUP BY p.player_id, p.player_name",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "total_goals"
+        ],
+        "rows": [
+          [
+            "Cole Palmer",
+            22
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q16",
+      "question": "Which team earned the most home points in 2024-2025?",
+      "category": "home_away_splits",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT t.team_name, ha.tshas_home_points AS home_points FROM team_season_home_away_standings ha JOIN teams t ON t.team_id=ha.team_id JOIN seasons s ON s.season_id=ha.season_id WHERE s.season='2024-2025' AND s.competition_id = 1 ORDER BY home_points DESC, t.team_name LIMIT 1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "team_name",
+          "home_points"
+        ],
+        "rows": [
+          [
+            "Liverpool",
+            46
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q18",
+      "question": "Which team had the biggest gap between home points and away points in 2023-2024?",
+      "category": "home_away_splits",
+      "difficulty": "hard",
+      "gt_type": "multi_step",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT t.team_name, (ha.tshas_home_points - ha.tshas_away_points) AS home_away_gap FROM team_season_home_away_standings ha JOIN teams t ON t.team_id=ha.team_id JOIN seasons s ON s.season_id=ha.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 ORDER BY home_away_gap DESC, t.team_name LIMIT 1",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "team_name",
+          "home_away_gap"
+        ],
+        "rows": [
+          [
+            "Newcastle United",
+            20
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q19",
+      "question": "How many home points did Arsenal earn in 2023-2024?",
+      "category": "home_away_splits",
+      "difficulty": "simple",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT ha.tshas_home_points FROM team_season_home_away_standings ha JOIN teams t ON t.team_id=ha.team_id JOIN seasons s ON s.season_id=ha.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 AND t.team_name='Arsenal'",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "tshas_home_points"
+        ],
+        "rows": [
+          [
+            47
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q20",
+      "question": "Which team scored the most home goals in 2024-2025?",
+      "category": "home_away_splits",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT t.team_name, ha.tshas_home_goals_for AS home_goals FROM team_season_home_away_standings ha JOIN teams t ON t.team_id=ha.team_id JOIN seasons s ON s.season_id=ha.season_id WHERE s.season='2024-2025' AND s.competition_id = 1 ORDER BY home_goals DESC, t.team_name LIMIT 1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "team_name",
+          "home_goals"
+        ],
+        "rows": [
+          [
+            "Manchester City",
+            43
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q21",
+      "question": "Which team received the most yellow cards in 2023-2024?",
+      "category": "disciplinary",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT t.team_name, sf.tssf_yellow_cards AS yellows FROM team_season_stats_for sf JOIN teams t ON t.team_id=sf.team_id JOIN seasons s ON s.season_id=sf.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 ORDER BY yellows DESC, t.team_name LIMIT 1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "team_name",
+          "yellows"
+        ],
+        "rows": [
+          [
+            "Chelsea",
+            109
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q23",
+      "question": "Which team picked up the most red cards in 2024-2025?",
+      "category": "disciplinary",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT t.team_name, sf.tssf_red_cards AS reds FROM team_season_stats_for sf JOIN teams t ON t.team_id=sf.team_id JOIN seasons s ON s.season_id=sf.season_id WHERE s.season='2024-2025' AND s.competition_id = 1 ORDER BY reds DESC, t.team_name LIMIT 1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "team_name",
+          "reds"
+        ],
+        "rows": [
+          [
+            "Arsenal",
+            6
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q24",
+      "question": "How many red cards were shown in total across the league in 2023-2024?",
+      "category": "disciplinary",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT SUM(sf.tssf_red_cards) AS total_red_cards FROM team_season_stats_for sf JOIN seasons s ON s.season_id=sf.season_id WHERE s.season='2023-2024' AND s.competition_id = 1",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "total_red_cards"
+        ],
+        "rows": [
+          [
+            58
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q25",
+      "question": "How many Premier League matches did referee Anthony Taylor officiate in 2023-2024?",
+      "category": "disciplinary",
+      "difficulty": "edge_case",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT COUNT(*) AS matches_officiated FROM matches m JOIN seasons s ON s.season_id=m.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 AND replace(m.referee, chr(160), ' ') = 'Anthony Taylor'",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "matches_officiated"
+        ],
+        "rows": [
+          [
+            27
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q26",
+      "question": "Among players with at least 10 goals in 2023-2024, who overperformed their xG by the most (goals minus xG)?",
+      "category": "xg_performance",
+      "difficulty": "hard",
+      "gt_type": "multi_step",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT p.player_name, SUM(pss.goals_pss) AS goals, ROUND(SUM(pss.xg_pss),2) AS xg, ROUND(SUM(pss.goals_pss) - SUM(pss.xg_pss),2) AS overperformance FROM player_season_stats pss JOIN players p ON p.player_id=pss.player_id JOIN seasons s ON s.season_id=pss.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 GROUP BY p.player_id, p.player_name HAVING SUM(pss.goals_pss) >= 10 ORDER BY overperformance DESC, p.player_name LIMIT 1",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "goals",
+          "xg",
+          "overperformance"
+        ],
+        "rows": [
+          [
+            "Phil Foden",
+            19,
+            11.31,
+            7.69
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q27",
+      "question": "Among players with at least 10 goals in 2023-2024, who underperformed their xG by the most (xG minus goals)?",
+      "category": "xg_performance",
+      "difficulty": "hard",
+      "gt_type": "multi_step",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT p.player_name, SUM(pss.goals_pss) AS goals, ROUND(SUM(pss.xg_pss),2) AS xg, ROUND(SUM(pss.xg_pss) - SUM(pss.goals_pss),2) AS underperformance FROM player_season_stats pss JOIN players p ON p.player_id=pss.player_id JOIN seasons s ON s.season_id=pss.season_id WHERE s.season='2023-2024' AND s.competition_id = 1 GROUP BY p.player_id, p.player_name HAVING SUM(pss.goals_pss) >= 10 ORDER BY underperformance DESC, p.player_name LIMIT 1",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "goals",
+          "xg",
+          "underperformance"
+        ],
+        "rows": [
+          [
+            "Darwin N\u00fa\u00f1ez",
+            11,
+            19.19,
+            8.19
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q29",
+      "question": "Among players with at least 15 xG in 2024-2025, who had the highest goals-to-xG ratio?",
+      "category": "xg_performance",
+      "difficulty": "hard",
+      "gt_type": "multi_step",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT p.player_name, SUM(pss.goals_pss) AS goals, ROUND(SUM(pss.xg_pss),2) AS xg, ROUND(SUM(pss.goals_pss)/NULLIF(SUM(pss.xg_pss),0),3) AS goals_per_xg FROM player_season_stats pss JOIN players p ON p.player_id=pss.player_id JOIN seasons s ON s.season_id=pss.season_id WHERE s.season='2024-2025' AND s.competition_id = 1 GROUP BY p.player_id, p.player_name HAVING SUM(pss.xg_pss) >= 15 ORDER BY goals_per_xg DESC, p.player_name LIMIT 1",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "goals",
+          "xg",
+          "goals_per_xg"
+        ],
+        "rows": [
+          [
+            "Chris Wood",
+            20,
+            15.64,
+            1.279
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q32",
+      "question": "What are the five largest transfer fees paid by a Premier League club (incoming transfers) in the data?",
+      "category": "market_transfers",
+      "difficulty": "hard",
+      "gt_type": "deterministic_sql",
+      "answer_type": "table",
+      "canonical_sql": "SELECT p.player_name, MAX(tr.to_team) AS to_team, tr.season, tr.transfer_fee FROM player_transfers tr JOIN players p ON p.player_id=tr.player_id WHERE tr.to_team IN (SELECT DISTINCT t.team_name FROM teams t JOIN team_season_standings st2 ON st2.team_id = t.team_id JOIN seasons s2 ON s2.season_id = st2.season_id WHERE s2.competition_id = 1) AND tr.transfer_fee IS NOT NULL GROUP BY p.player_id, p.player_name, tr.season, tr.transfer_fee ORDER BY tr.transfer_fee DESC, p.player_name LIMIT 5",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "to_team",
+          "season",
+          "transfer_fee"
+        ],
+        "rows": [
+          [
+            "Alexander Isak",
+            "Liverpool",
+            "2025-2026",
+            145000000
+          ],
+          [
+            "Florian Wirtz",
+            "Liverpool",
+            "2025-2026",
+            125000000
+          ],
+          [
+            "Enzo Fern\u00e1ndez",
+            "Chelsea",
+            "2022-2023",
+            121000000
+          ],
+          [
+            "Jack Grealish",
+            "Manchester City",
+            "2021-2022",
+            117500000
+          ],
+          [
+            "Declan Rice",
+            "Arsenal",
+            "2023-2024",
+            116600000
+          ]
+        ],
+        "row_count": 5,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q33",
+      "question": "What was the most expensive incoming transfer to a Premier League club in the 2023-2024 season window?",
+      "category": "market_transfers",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT p.player_name, tr.to_team, tr.transfer_fee FROM player_transfers tr JOIN players p ON p.player_id=tr.player_id WHERE tr.season='2023-2024' AND tr.to_team IN (SELECT DISTINCT t.team_name FROM teams t JOIN team_season_standings st2 ON st2.team_id = t.team_id JOIN seasons s2 ON s2.season_id = st2.season_id WHERE s2.competition_id = 1) AND tr.transfer_fee IS NOT NULL ORDER BY tr.transfer_fee DESC, p.player_name LIMIT 1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "to_team",
+          "transfer_fee"
+        ],
+        "rows": [
+          [
+            "Declan Rice",
+            "Arsenal",
+            116600000
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q37",
+      "question": "Which player missed the most total days to injury across all spells in 2023-2024?",
+      "category": "availability",
+      "difficulty": "hard",
+      "gt_type": "multi_step",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT p.player_name, SUM(pis.days_missed) AS total_days_missed FROM player_injury_spells pis JOIN players p ON p.player_id=pis.player_id WHERE pis.season='2023-2024' AND pis.team IN (SELECT DISTINCT t.team_name FROM teams t JOIN team_season_standings st2 ON st2.team_id = t.team_id JOIN seasons s2 ON s2.season_id = st2.season_id WHERE s2.competition_id = 1) GROUP BY p.player_id, p.player_name ORDER BY total_days_missed DESC NULLS LAST, p.player_name LIMIT 1",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "total_days_missed"
+        ],
+        "rows": [
+          [
+            "Jamaal Lascelles",
+            1132
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q39",
+      "question": "How many injury spells were recorded for Brentford players in 2023-2024?",
+      "category": "availability",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT COUNT(*) AS spells FROM player_injury_spells pis WHERE pis.season='2023-2024' AND pis.team='Brentford'",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "spells"
+        ],
+        "rows": [
+          [
+            34
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q41",
+      "question": "What is the most goals scored by a single player in one match in 2024-2025?",
+      "category": "event_player_match",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "table",
+      "canonical_sql": "SELECT p.player_name, pmp.game_id, pmp.match_goals FROM player_match_performance pmp JOIN players p ON p.player_id=pmp.player_id WHERE pmp.season='2024-2025' AND pmp.league_code='ENG-PL' ORDER BY pmp.match_goals DESC, p.player_name LIMIT 5",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "game_id",
+          "match_goals"
+        ],
+        "rows": [
+          [
+            "Cole Palmer",
+            1821102,
+            4
+          ],
+          [
+            "Alexander Isak",
+            1821236,
+            3
+          ],
+          [
+            "Amad Diallo",
+            1821316,
+            3
+          ],
+          [
+            "Chris Wood",
+            1821414,
+            3
+          ],
+          [
+            "Dango Ouattara",
+            1821389,
+            3
+          ]
+        ],
+        "row_count": 5,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q42",
+      "question": "Which player committed the most fouls in 2023-2024 (summed across matches)?",
+      "category": "event_player_match",
+      "difficulty": "hard",
+      "gt_type": "multi_step",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT p.player_name, SUM(pmp.fouls) AS fouls FROM player_match_performance pmp JOIN players p ON p.player_id=pmp.player_id WHERE pmp.season='2023-2024' AND pmp.league_code='ENG-PL' GROUP BY p.player_id, p.player_name HAVING SUM(pmp.fouls) IS NOT NULL ORDER BY fouls DESC, p.player_name LIMIT 1",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "player_name",
+          "fouls"
+        ],
+        "rows": [
+          [
+            "Conor Gallagher",
+            83
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q44",
+      "question": "What was the biggest home win (by goal margin) in 2024-2025?",
+      "category": "event_player_match",
+      "difficulty": "medium",
+      "gt_type": "deterministic_sql",
+      "answer_type": "table",
+      "canonical_sql": "SELECT ht.team_name AS home_team, at.team_name AS away_team, m.home_score, m.away_score FROM matches m JOIN seasons s ON s.season_id=m.season_id JOIN teams ht ON ht.team_id=m.home_team_id JOIN teams at ON at.team_id=m.away_team_id WHERE s.season='2024-2025' AND s.competition_id = 1 ORDER BY (m.home_score - m.away_score) DESC, m.home_score DESC LIMIT 1",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "home_team",
+          "away_team",
+          "home_score",
+          "away_score"
+        ],
+        "rows": [
+          [
+            "Nottingham Forest",
+            "Brighton",
+            7,
+            0
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    },
+    {
+      "id": "Q45",
+      "question": "How many points did Norwich City get in the 2024-2025 Premier League season?",
+      "category": "edge_case",
+      "difficulty": "edge_case",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT st.tss_points FROM team_season_standings st JOIN teams t ON t.team_id=st.team_id JOIN seasons s ON s.season_id=st.season_id WHERE s.season='2024-2025' AND s.competition_id = 1 AND t.team_name='Norwich City'",
+      "coverage_label": "in_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "tss_points"
+        ],
+        "rows": [],
+        "row_count": 0,
+        "truncated": false
+      },
+      "status": "empty_expected"
+    },
+    {
+      "id": "Q46",
+      "question": "How many matches in the 2020-2021 season have a recorded attendance figure?",
+      "category": "edge_case",
+      "difficulty": "edge_case",
+      "gt_type": "deterministic_sql",
+      "answer_type": "scalar",
+      "canonical_sql": "SELECT COUNT(*) AS matches_with_attendance FROM matches m JOIN seasons s ON s.season_id=m.season_id WHERE s.season='2020-2021' AND s.competition_id = 1 AND m.attendance_m IS NOT NULL",
+      "coverage_label": "out_of_coverage",
+      "notes": "ENG-PL re-scoped (competition_id=1) on the multi-league DB.",
+      "tags": [
+        "extended_v2"
+      ],
+      "ground_truth": {
+        "columns": [
+          "matches_with_attendance"
+        ],
+        "rows": [
+          [
+            32
+          ]
+        ],
+        "row_count": 1,
+        "truncated": false
+      },
+      "status": "ok"
+    }
+  ]
+}

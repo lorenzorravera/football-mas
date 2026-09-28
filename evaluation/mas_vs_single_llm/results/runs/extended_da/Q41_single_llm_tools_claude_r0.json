@@ -1,0 +1,31 @@
+{
+  "question_id": "Q41",
+  "question": "What is the most goals scored by a single player in one match in 2024-2025?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "The most goals scored by a single player in one match in the **2024-2025** Premier League season was **4 goals**, by **Cole Palmer** for **Chelsea** in their **4\u20132 home win over Brighton** on **28 September 2024**.\n\nHe was the only player to score four in a single match that season \u2014 the next-best tally was a hat-trick (3 goals), achieved by several players including Erling Haaland (twice), Chris Wood, and Amad Diallo.",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT player_name, match_goals, match_date, home_team, away_team, home_score, away_score\nFROM vw_player_match_summary\nWHERE season = '2024-2025' AND league_code = 'ENG-PL'\nORDER BY match_goals DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['player_name', 'match_goals', 'match_date', 'home_team', 'away_team', 'home_score', 'away_score']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 6.86,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q41|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19419,
+    "output": 320,
+    "total": 19739,
+    "calls": 2
+  }
+}

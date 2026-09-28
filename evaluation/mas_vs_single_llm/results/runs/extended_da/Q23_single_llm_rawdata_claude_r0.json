@@ -1,0 +1,26 @@
+{
+  "question_id": "Q23",
+  "question": "Which team picked up the most red cards in 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Looking at the team_discipline data for 2024-2025:\n\nThe team with the most red cards in **2024-2025** was **Arsenal** with **6 red cards**.\n\nFor reference, the next highest were:\n- Aston Villa & Crystal Palace: 4 each",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q23|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 171528,
+  "token_usage": {
+    "input": 121522,
+    "output": 87,
+    "total": 121609,
+    "calls": 1
+  },
+  "latency_s": 2.34,
+  "experiment": "extended_da"
+}

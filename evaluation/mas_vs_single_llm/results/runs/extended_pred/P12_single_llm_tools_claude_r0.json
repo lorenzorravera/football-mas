@@ -1,0 +1,64 @@
+{
+  "question_id": "P12",
+  "question": "Predict the outcome of Arsenal vs Nottingham Forest on 2024-11-23 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "## Prediction: Arsenal vs Nottingham Forest (2024-11-23)\n\n| Outcome | Probability |\n|---|---|\n| \ud83c\udfe0 **Arsenal win** | **65.5%** |\n| \ud83e\udd1d **Draw** | 21.2% |\n| \u2708\ufe0f **Nottingham Forest win** | 13.2% |\n\nThe model strongly favours a home win for Arsenal (confidence 0.655), with an away win the least likely result.",
+  "tool_sequence": [
+    "predict_match_outcome",
+    "run_sql",
+    "predict_match_outcome",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('Arsenal','Nottingham Forest');"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 2,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team_id": 1,
+        "away_team_id": 20,
+        "match_date": "2024-11-23"
+      },
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 3,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team": "Arsenal",
+        "away_team": "Nottingham Forest",
+        "match_date": "2024-11-23"
+      },
+      "result": "{'home_team': 'Arsenal', 'away_team': 'Nottingham Forest', 'home_win': 0.655, 'draw': 0.212, 'away_win': 0.132, 'confide"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.655,
+    "draw": 0.212,
+    "away_win": 0.132
+  },
+  "latency_s": 17.89,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P12|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 48904,
+    "output": 537,
+    "total": 49441,
+    "calls": 5
+  }
+}

@@ -1,0 +1,755 @@
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/prediction_agent/prediction_agent/data/aiven_loader.py:125: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn, params=params)
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/prediction_agent/prediction_agent/data/aiven_loader.py:228: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn, params=params)
+Dropping 388 team-match rows with unknown side (mid-season transfers?)
+5 matches have missing xG aggregations; filling with 0
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/base.py:525: InconsistentVersionWarning: Trying to unpickle estimator StandardScaler from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/base.py:525: InconsistentVersionWarning: Trying to unpickle estimator LogisticRegression from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/base.py:525: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/base.py:525: InconsistentVersionWarning: Trying to unpickle estimator StackingClassifier from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/base.py:525: InconsistentVersionWarning: Trying to unpickle estimator LabelEncoder from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/base.py:525: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/base.py:525: InconsistentVersionWarning: Trying to unpickle estimator CalibratedClassifierCV from version 1.8.0 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+
+========== CONDITION: mas  (DA 30 + pred 30) ==========
+
+[1/30] Q01  mas                  CACHED
+[2/30] Q02  mas                  (12.8s) tools=['run_sql', 'run_sql']
+        -> 'Arsenal finished the 2023-2024 season with **89 points**.'
+[3/30] Q03  mas                  (19.3s) tools=['run_sql', 'run_sql']
+        -> 'Here is the full 2022-2023 Premier League final table:\n\n| Rank | Team | Points |\n|------|------|----'
+[4/30] Q05  mas                  (13.4s) tools=['run_sql', 'run_sql']
+        -> 'Liverpool had the best goal difference in the 2024-2025 season, with a goal difference of **+45**.'
+[5/30] Q06  mas                  (15.9s) tools=['run_sql', 'run_sql']
+        -> 'Everton finished the 2023-2024 season with **40 points**. Without the points deduction, they would h'
+[6/30] Q07  mas                  (13.9s) tools=['run_sql', 'run_sql']
+        -> 'The highest points total achieved by any team in a single season from 2020-2021 to 2024-2025 was **9'
+[7/30] Q09  mas                  (14.4s) tools=['run_sql', 'run_sql']
+        -> 'The top goalscorer in the 2023-2024 Premier League season was **Erling Haaland** with **27 goals**.'
+[8/30] Q10  mas                  (17.1s) tools=['run_sql', 'run_sql']
+        -> 'Here are the top five goalscorers in the 2024-2025 season:\n\n1. **Mohamed Salah** – 29 goals\n2. **Ale'
+[9/30] Q11  mas                  (20.0s) tools=['run_sql', 'run_sql', 'run_sql', 'run_sql']
+        -> 'Ollie Watkins provided the most assists in the 2023-2024 season, with **13 assists**.'
+[10/30] Q12  mas                  (13.6s) tools=['run_sql', 'run_sql']
+        -> 'Cole Palmer scored **22 league goals** in total during the 2023-2024 season across all clubs he play'
+[11/30] Q16  mas                  (12.0s) tools=['run_sql', 'run_sql']
+        -> 'Liverpool earned the most home points in the 2024-2025 season, with **46 home points**.'
+[12/30] Q18  mas                  (17.1s) tools=['run_sql', 'run_sql']
+        -> 'In the 2023-2024 season, **Newcastle United** had the biggest gap between home and away points. They'
+[13/30] Q19  mas                  (12.9s) tools=['run_sql', 'run_sql']
+        -> 'Arsenal earned **47 home points** in the 2023-2024 season.'
+[14/30] Q20  mas                  (12.4s) tools=['run_sql', 'run_sql']
+        -> 'Manchester City scored the most home goals in the 2024-2025 season, with 43 home goals.'
+[15/30] Q21  mas                  (12.4s) tools=['run_sql', 'run_sql']
+        -> 'In the 2023-2024 season, **Chelsea** received the most yellow cards with **109**.'
+[16/30] Q23  mas                  (12.8s) tools=['run_sql', 'run_sql']
+        -> 'Arsenal picked up the most red cards in the 2024-2025 season, with 6.'
+[17/30] Q24  mas                  (13.8s) tools=['run_sql', 'run_sql']
+        -> 'A total of **58 red cards** were shown across the league in the 2023-2024 season.'
+[18/30] Q25  mas                  (14.8s) tools=['run_sql', 'run_sql']
+        -> 'Based on the database, referee Anthony Taylor officiated **0** Premier League matches in the 2023-20'
+[19/30] Q26  mas                  CACHED
+[20/30] Q27  mas                  (22.6s) tools=['run_sql', 'run_sql']
+        -> 'Among players with at least 10 goals in 2023-2024, **Darwin Núñez** underperformed his xG by the mos'
+[21/30] Q29  mas                  (16.8s) tools=['run_sql', 'run_sql']
+        -> 'Among players with at least 15 xG in the 2024-2025 season, **Chris Wood** had the highest goals-to-x'
+[22/30] Q32  mas                  (27.3s) tools=['run_sql', 'run_sql', 'run_sql', 'run_sql', 'run_sql', 'run_sql']
+        -> 'Unable to answer: (psycopg2.errors.UndefinedFunction) operator does not exist: numeric ~ unknown\nLIN'
+[23/30] Q33  mas                  (29.5s) tools=['run_sql', 'run_sql']
+        -> 'The most expensive incoming transfer to a Premier League club in the 2023-2024 season window was **D'
+[24/30] Q37  mas                  (18.1s) tools=['run_sql', 'run_sql', 'run_sql', 'run_sql']
+        -> 'In the 2023-2024 season, **Jamaal Lascelles** (player ID 766) missed the most total days to injury, '
+[25/30] Q39  mas                  (11.0s) tools=['run_sql', 'run_sql']
+        -> 'There were **34** injury spells recorded for Brentford players in the 2023-2024 season.'
+[26/30] Q41  mas                  (26.7s) tools=['run_sql', 'run_sql', 'run_sql', 'run_sql']
+        -> 'The most goals scored by a single player in one match in the 2024-2025 season was **4**, achieved by'
+[27/30] Q42  mas                  (15.5s) tools=['run_sql', 'run_sql']
+        -> 'Based on the query result, the data is inconsistent: while **Emerson Palmieri** is returned as the t'
+[28/30] Q44  mas                  (27.3s) tools=['run_sql', 'run_sql', 'run_sql', 'run_sql']
+        -> 'The biggest home win in the 2024-2025 season was **Nottingham Forest 7-0 Brighton** on 1 February 20'
+[29/30] Q45  mas                  (14.5s) tools=['run_sql', 'run_sql']
+        -> 'Norwich City did not play in the 2024-2025 Premier League season, so they have no points recorded fo'
+[30/30] Q46  mas                  (12.0s) tools=['run_sql', 'run_sql']
+        -> 'In the 2020-2021 season, **32 matches** have a recorded attendance figure.'
+
+Done extended_da: 30 cells, 0 errors.
+[1/30] P01  mas                  CACHED
+[2/30] P02  mas                  (7.3s) vec={'home_win': 0.8, 'draw': 0.184, 'away_win': 0.016}
+        -> '**Arsenal vs Wolves — 2024-08-17 — Match Outcome Prediction**\n\nBased on the match-outcome model (v1)'
+[3/30] P03  mas                  (5.4s) vec={'home_win': 0.239, 'draw': 0.224, 'away_win': 0.538}
+        -> '**Match Prediction: Everton vs Brighton — 2024-08-17**\n\nBased on the match-outcome model (v1):\n\n- **'
+[4/30] P04  mas                  (4.6s) vec={'home_win': 0.322, 'draw': 0.249, 'away_win': 0.429}
+        -> '**Match Prediction: Nottingham Forest vs Bournemouth — 2024-08-17**\n\nBased on the match-outcome mode'
+[5/30] P05  mas                  (5.6s) vec={'home_win': 0.46, 'draw': 0.2, 'away_win': 0.341}
+        -> '**Match Prediction: Chelsea vs Crystal Palace — 2024-09-01**\n\nBased on the match-outcome model (v1):'
+[6/30] P06  mas                  (6.0s) vec={'home_win': 0.214, 'draw': 0.191, 'away_win': 0.595}
+        -> '**Southampton vs Manchester United — 14 September 2024**\n\nPredicted match-outcome probabilities:\n\n- '
+[7/30] P07  mas                  (6.1s) vec={'home_win': 0.454, 'draw': 0.278, 'away_win': 0.268}
+        -> '**Brentford vs West Ham United — 28 September 2024**\n\nPredicted match-outcome probabilities:\n\n- **Ho'
+[8/30] P08  mas                  (9.0s) vec={'home_win': 0.278, 'draw': 0.217, 'away_win': 0.505}
+        -> '**Match Prediction: Leicester City vs Bournemouth — 2024-10-05**\n\nBased on the match-outcome model ('
+[9/30] P09  mas                  (7.0s) vec={'home_win': 0.319, 'draw': 0.317, 'away_win': 0.364}
+        -> '**Fulham vs Aston Villa — 2024-10-19 (Match Outcome Prediction)**\n\nBased on the match-outcome model '
+[10/30] P10  mas                  (6.2s) vec={'home_win': 0.049, 'draw': 0.261, 'away_win': 0.69}
+        -> '**Wolves vs Manchester City — 2024-10-20**\n\nPredicted outcome probabilities:\n\n- **Home win (Wolves):'
+[11/30] P11  mas                  (5.6s) vec={'home_win': 0.462, 'draw': 0.31, 'away_win': 0.229}
+        -> '**Match Prediction: Ipswich Town vs Leicester City — 2024-11-02**\n\nBased on the match-outcome model '
+[12/30] P12  mas                  (4.8s) vec={'home_win': 0.655, 'draw': 0.212, 'away_win': 0.132}
+        -> '**Match Prediction: Arsenal vs Nottingham Forest — 23 November 2024**\n\nBased on the match-outcome mo'
+[13/30] P13  mas                  (6.1s) vec={'home_win': 0.627, 'draw': 0.2, 'away_win': 0.174}
+        -> '**Match Prediction: Newcastle United vs West Ham United — 25 November 2024**\n\nBased on the match-out'
+[14/30] P14  mas                  (6.3s) vec={'home_win': 0.244, 'draw': 0.234, 'away_win': 0.522}
+        -> '**Match Prediction: Newcastle United vs Liverpool — 4 December 2024**\n\nBased on the match-outcome mo'
+[15/30] P15  mas                  (7.9s) vec={'home_win': 0.426, 'draw': 0.19, 'away_win': 0.384}/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+
+        -> '**Aston Villa vs Manchester City — 2024-12-21**\n\nPredicted outcome probabilities:\n\n- **Home win (Ast'
+[16/30] P16  mas                  (6.2s) vec={'home_win': 0.349, 'draw': 0.245, 'away_win': 0.406}
+        -> '**Match Prediction: Tottenham Hotspur vs Liverpool — 22 December 2024**\n\nBased on the match-outcome '
+[17/30] P17  mas                  (6.2s) vec={'home_win': 0.549, 'draw': 0.206, 'away_win': 0.245}
+        -> '**Match Prediction: Brighton vs Brentford — 27 December 2024**\n\nBased on the match-outcome model (v1'
+[18/30] P18  mas                  (5.8s) vec={'home_win': 0.253, 'draw': 0.269, 'away_win': 0.478}
+        -> '**West Ham United vs Fulham — 2025-01-14**\n\nPredicted probabilities:\n- **Home win (West Ham United):'
+[19/30] P19  mas                  (5.8s) vec={'home_win': 0.257, 'draw': 0.243, 'away_win': 0.5}
+        -> '**Ipswich Town vs Brighton — 16 January 2025**\n\nPredicted match outcome probabilities:\n\n- **Home win'
+[20/30] P20  mas                  (7.3s) vec={'home_win': 0.605, 'draw': 0.211, 'away_win': 0.184}
+        -> '**Manchester City vs Chelsea — 2025-01-25**\n\nPredicted probabilities:\n\n- **Home win (Manchester City'
+[21/30] P21  mas                  (5.9s) vec={'home_win': 0.434, 'draw': 0.225, 'away_win': 0.342}
+        -> '**Crystal Palace vs Everton — 2025-02-15**\n\nPredicted outcome probabilities:\n\n- **Home win (Crystal '
+[22/30] P22  mas                  (10.5s) vec={'home_win': 0.415, 'draw': 0.249, 'away_win': 0.336}
+        -> '**Everton vs Manchester United — 2025-02-22**\n\nBased on the match-outcome model (v1), the predicted '
+[23/30] P23  mas                  (9.5s) vec={'home_win': 0.247, 'draw': 0.234, 'away_win': 0.519}
+        -> '**Match Prediction: Nottingham Forest vs Arsenal — 2025-02-26**\n\nBased on the match-outcome model (v'
+[24/30] P24  mas                  (5.5s) vec={'home_win': 0.555, 'draw': 0.219, 'away_win': 0.226}
+        -> '**Match Prediction: Fulham vs Tottenham Hotspur — 2025-03-16**\n\nBased on the match-outcome model (v1'
+[25/30] P25  mas                  (5.8s) vec={'home_win': 0.049, 'draw': 0.222, 'away_win': 0.729}
+        -> '**Match Prediction: Southampton vs Crystal Palace — 2025-04-02**\n\nBased on the match-outcome model ('
+[26/30] P26  mas                  (5.7s) vec={'home_win': 0.233, 'draw': 0.194, 'away_win': 0.573}
+        -> '**Southampton vs Aston Villa — 2025-04-12 (Prediction)**\n\nBased on the match-outcome model (v1):\n\n- '
+[27/30] P27  mas                  (5.7s) vec={'home_win': 0.557, 'draw': 0.21, 'away_win': 0.233}
+        -> '**Match Prediction: Tottenham Hotspur vs Nottingham Forest (2025-04-21)**\n\nBased on the match-outcom'
+[28/30] P28  mas                  (6.2s) vec={'home_win': 0.673, 'draw': 0.19, 'away_win': 0.137}
+        -> '**Wolves vs Leicester City — 26 April 2025**\n\nBased on the match-outcome model (v1), the predicted p'
+[29/30] P29  mas                  (11.9s) vec={'home_win': 0.447, 'draw': 0.262, 'away_win': 0.291}
+        -> '**Match Prediction: Newcastle United vs Chelsea — 2025-05-11**\n\nBased on the match-outcome model (v1'
+[30/30] P30  mas                  (5.9s) vec={'home_win': 0.301, 'draw': 0.229, 'away_win': 0.469}
+        -> '**Match Prediction: Ipswich Town vs West Ham United (2025-05-25)**\n\nBased on the match-outcome model'
+
+Done extended_pred: 30 cells, 0 errors.
+
+########## CONDITION COMPLETE: mas ##########
+
+
+========== CONDITION: single_llm_tools  (DA 30 + pred 30) ==========
+
+[1/30] Q01  single_llm_tools     CACHED
+[2/30] Q02  single_llm_tools     (6.6s) tools=['run_sql']
+        -> 'Arsenal finished the 2023-2024 Premier League season with **89 points**, placing them **2nd** in the'
+[3/30] Q03  single_llm_tools     (8.6s) tools=['run_sql']
+        -> "Here's the full 2022-2023 Premier League final table:\n\n| Rank | Team | Points |\n|------|------|-----"
+[4/30] Q05  single_llm_tools     (7.4s) tools=['run_sql']
+        -> '**Liverpool** had the best goal difference in the 2024-2025 Premier League season: **+45** (86 goals'
+[5/30] Q06  single_llm_tools     (6.3s) tools=['run_sql']
+        -> 'Everton finished the **2023-2024 season with 40 points** (13 W, 9 D, 16 L).\n\nThat total already refl'
+[6/30] Q07  single_llm_tools     (5.7s) tools=['run_sql']
+        -> 'The highest points total achieved by any team in a single season from 2020-2021 to 2024-2025 is **93'
+[7/30] Q09  single_llm_tools     (5.9s) tools=['run_sql']
+        -> 'The top goalscorer in the **2023-2024 Premier League** season was **Erling Haaland** (Manchester Cit'
+[8/30] Q10  single_llm_tools     (6.1s) tools=['run_sql']
+        -> 'Here are the top five Premier League goalscorers in the 2024-2025 season:\n\n| Rank | Player | Team | '
+[9/30] Q11  single_llm_tools     (6.0s) tools=['run_sql']
+        -> '**Ollie Watkins** (Aston Villa) provided the most assists in the 2023-2024 Premier League season, wi'
+[10/30] Q12  single_llm_tools     (6.8s) tools=['run_sql']
+        -> 'Cole Palmer scored **22 Premier League goals** in total during the 2023-2024 season.\n\nBreakdown acro'
+[11/30] Q16  single_llm_tools     (5.6s) tools=['run_sql']
+        -> '**Liverpool** earned the most home points in 2024-2025 with **46 points** (14 wins, 4 draws, 1 loss '
+[12/30] Q18  single_llm_tools     (9.3s) tools=['run_sql']
+        -> '**Newcastle United** had the biggest gap between home and away points in the 2023-2024 Premier Leagu'
+[13/30] Q19  single_llm_tools     (7.0s) tools=['run_sql']
+        -> 'Arsenal earned **47 home points** in the 2023-2024 Premier League season.'
+[14/30] Q20  single_llm_tools     (6.3s) tools=['run_sql']
+        -> '**Manchester City** scored the most home goals in the 2024-2025 Premier League season with **43**, n'
+[15/30] Q21  single_llm_tools     (5.5s) tools=['run_sql']
+        -> '**Chelsea** received the most yellow cards in the 2023-2024 Premier League season with **109 yellow '
+[16/30] Q23  single_llm_tools     (5.8s) tools=['run_sql']
+        -> '**Arsenal** picked up the most red cards in the 2024-2025 Premier League season, with **6**.\n\nTop 5:'
+[17/30] Q24  single_llm_tools     (6.2s) tools=['run_sql']
+        -> 'A total of **58 red cards** were shown across the Premier League in the 2023-2024 season.'
+[18/30] Q25  single_llm_tools     (8.8s) tools=['run_sql', 'run_sql']
+        -> '**Anthony Taylor officiated 27 Premier League matches in 2023-2024.**\n\n(Note: the referee name in th'
+[19/30] Q26  single_llm_tools     CACHED
+[20/30] Q27  single_llm_tools     (25.2s) tools=['run_sql']
+        -> 'Among players with at least 10 goals in the 2023-2024 Premier League season, **Darwin Núñez (Liverpo'
+[21/30] Q29  single_llm_tools     (8.1s) tools=['run_sql']
+        -> 'Among Premier League players with at least 15 xG in 2024-2025, **Chris Wood (Nottingham Forest)** ha'
+[22/30] Q32  single_llm_tools     (62.1s) ERROR litellm.InternalServerError: AnthropicError - {"ty
+[23/30] Q33  single_llm_tools     (68.7s) tools=['run_sql', 'run_sql', 'run_sql']
+        -> '## Answer\n\nThe most expensive incoming transfer to a Premier League club in the **2023-2024 season w'
+[24/30] Q37  single_llm_tools     (7.6s) tools=['run_sql']
+        -> 'In the 2023-2024 Premier League season, **Jamaal Lascelles** (Newcastle United) missed the most tota'
+[25/30] Q39  single_llm_tools     (4.9s) tools=['run_sql']
+        -> 'There were **34 injury spells** recorded for Brentford players in the 2023-2024 season.'
+[26/30] Q41  single_llm_tools     (6.9s) tools=['run_sql']
+        -> 'The most goals scored by a single player in one match in the **2024-2025** Premier League season was'
+[27/30] Q42  single_llm_tools     (13.1s) tools=['run_sql', 'run_sql']
+        -> '**Conor Gallagher** committed the most fouls in the 2023-2024 Premier League season, with **83 fouls'
+[28/30] Q44  single_llm_tools     (6.1s) tools=['run_sql']
+        -> 'The biggest home win of the 2024-2025 Premier League season was **Nottingham Forest 7–0 Brighton** o'
+[29/30] Q45  single_llm_tools     (5.9s) tools=['run_sql']
+        -> 'Norwich City did **not** play in the Premier League in the 2024-2025 season — they were in the Champ'/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+/Users/tilltornieporth/15 Tech/P13_2025-26_LLMAgentForecastingFootball/.venv/lib/python3.13/site-packages/sklearn/utils/validation.py:2820: UserWarning: X has feature names, but StandardScaler was fitted without feature names
+  warnings.warn(
+
+[30/30] Q46  single_llm_tools     (5.9s) tools=['run_sql']
+        -> 'In the 2020-2021 Premier League season, **32 matches** have a recorded attendance figure. (This alig'
+
+Done extended_da: 30 cells, 1 errors.
+[1/30] P01  single_llm_tools     CACHED
+[2/30] P02  single_llm_tools     (16.1s) vec={'home_win': 0.8, 'draw': 0.184, 'away_win': 0.016}
+        -> '## Prediction: Arsenal vs Wolves (2024-08-17)\n\n| Outcome | Probability |\n|---|---|\n| **Arsenal win ('
+[3/30] P03  single_llm_tools     (16.4s) vec={'home_win': 0.239, 'draw': 0.224, 'away_win': 0.538}
+        -> '## Prediction: Everton vs Brighton (2024-08-17)\n\n| Outcome | Probability |\n|---|---|\n| **Everton win'
+[4/30] P04  single_llm_tools     (12.8s) vec={'home_win': 0.322, 'draw': 0.249, 'away_win': 0.429}
+        -> '**Prediction: Nottingham Forest vs Bournemouth — 17 Aug 2024**\n\n| Outcome | Probability |\n|---|---|\n'
+[5/30] P05  single_llm_tools     (14.1s) vec={'home_win': 0.46, 'draw': 0.2, 'away_win': 0.341}
+        -> '**Predicted outcome — Chelsea vs Crystal Palace (2024-09-01):**\n\n| Outcome | Probability |\n|---|---|'
+[6/30] P06  single_llm_tools     (12.8s) vec={'home_win': 0.214, 'draw': 0.191, 'away_win': 0.595}
+        -> '## Prediction: Southampton vs Manchester United (2024-09-14)\n\n| Outcome | Probability |\n|---|---|\n| '
+[7/30] P07  single_llm_tools     (13.7s) vec={'home_win': 0.454, 'draw': 0.278, 'away_win': 0.268}
+        -> "Here's the model's forecast for **Brentford vs West Ham United** on **2024-09-28**:\n\n| Outcome | Pro"
+[8/30] P08  single_llm_tools     (17.7s) vec={'home_win': 0.278, 'draw': 0.217, 'away_win': 0.505}
+        -> '## Prediction: Leicester City vs Bournemouth (2024-10-05)\n\n| Outcome | Probability |\n|---|---|\n| **L'
+[9/30] P09  single_llm_tools     (13.0s) vec={'home_win': 0.319, 'draw': 0.317, 'away_win': 0.364}
+        -> '## Prediction: Fulham vs Aston Villa (2024-10-19)\n\n| Outcome | Probability |\n|---|---|\n| **Home win '
+[10/30] P10  single_llm_tools     (9.9s) vec={'home_win': 0.049, 'draw': 0.261, 'away_win': 0.69}
+        -> '## Prediction: Wolves vs Manchester City (2024-10-20)\n\n| Outcome | Probability |\n|---|---|\n| **Home '
+[11/30] P11  single_llm_tools     (7.1s) vec={'home_win': 0.462, 'draw': 0.31, 'away_win': 0.229}
+        -> '**Predicted outcome — Ipswich Town vs Leicester City (2024-11-02):**\n\n| Outcome | Probability |\n|---'
+[12/30] P12  single_llm_tools     (17.9s) vec={'home_win': 0.655, 'draw': 0.212, 'away_win': 0.132}
+        -> '## Prediction: Arsenal vs Nottingham Forest (2024-11-23)\n\n| Outcome | Probability |\n|---|---|\n| 🏠 **'
+[13/30] P13  single_llm_tools     (14.1s) vec={'home_win': 0.627, 'draw': 0.2, 'away_win': 0.174}
+        -> '## Prediction: Newcastle United vs West Ham United (2024-11-25)\n\n| Outcome | Probability |\n|---|---|'
+[14/30] P14  single_llm_tools     (10.3s) vec={'home_win': 0.244, 'draw': 0.234, 'away_win': 0.522}
+        -> '## Prediction: Newcastle United vs Liverpool (2024-12-04)\n\n| Outcome | Probability |\n|---|---|\n| **H'
+[15/30] P15  single_llm_tools     (11.3s) vec={'home_win': 0.426, 'draw': 0.19, 'away_win': 0.384}
+        -> '## Prediction: Aston Villa vs Manchester City (2024-12-21)\n\n| Outcome | Probability |\n|---|---|\n| **'
+[16/30] P16  single_llm_tools     (14.4s) vec={'home_win': 0.349, 'draw': 0.245, 'away_win': 0.406}
+        -> '## Prediction: Tottenham Hotspur vs Liverpool (2024-12-22)\n\n| Outcome | Probability |\n|---|---|\n| **'
+[17/30] P17  single_llm_tools     (13.3s) vec={'home_win': 0.549, 'draw': 0.206, 'away_win': 0.245}
+        -> '## Prediction: Brighton vs Brentford (27 Dec 2024)\n\n| Outcome | Probability |\n|---------|-----------'
+[18/30] P18  single_llm_tools     (10.0s) vec={'home_win': 0.253, 'draw': 0.269, 'away_win': 0.478}
+        -> '**West Ham United vs Fulham — 2025-01-14 prediction**\n\n| Outcome | Probability |\n|---|---|\n| Home wi'
+[19/30] P19  single_llm_tools     (15.6s) vec={'home_win': 0.257, 'draw': 0.243, 'away_win': 0.5}
+        -> '**Prediction: Ipswich Town vs Brighton — 16 Jan 2025**\n\n| Outcome | Probability |\n|---|---|\n| Ipswic'
+[20/30] P20  single_llm_tools     (12.7s) vec={'home_win': 0.605, 'draw': 0.211, 'away_win': 0.184}
+        -> '## Prediction: Manchester City vs Chelsea (2025-01-25)\n\n| Outcome | Probability |\n|---|---|\n| **Home'
+[21/30] P21  single_llm_tools     (20.2s) vec={'home_win': 0.434, 'draw': 0.225, 'away_win': 0.342}
+        -> '## Prediction: Crystal Palace vs Everton (2025-02-15)\n\n| Outcome | Probability |\n|---|---|\n| **Cryst'
+[22/30] P22  single_llm_tools     (11.9s) vec={'home_win': 0.415, 'draw': 0.249, 'away_win': 0.336}
+        -> '**Prediction: Everton vs Manchester United (2025-02-22)**\n\n| Outcome | Probability |\n|---|---|\n| 🏠 E'
+[23/30] P23  single_llm_tools     (7.5s) vec={'home_win': 0.247, 'draw': 0.234, 'away_win': 0.519}
+        -> "Here's the model's prediction for **Nottingham Forest vs Arsenal on 2025-02-26**:\n\n| Outcome | Proba"
+[24/30] P24  single_llm_tools     (13.8s) vec={'home_win': 0.555, 'draw': 0.219, 'away_win': 0.226}
+        -> '## Prediction: Fulham vs Tottenham Hotspur (2025-03-16)\n\n| Outcome | Probability |\n|---|---|\n| **Ful'
+[25/30] P25  single_llm_tools     (10.6s) vec={'home_win': 0.049, 'draw': 0.222, 'away_win': 0.729}
+        -> '## Prediction: Southampton vs Crystal Palace — 2025-04-02\n\n| Outcome | Probability |\n|---|---|\n| **H'
+[26/30] P26  single_llm_tools     (15.4s) vec={'home_win': 0.233, 'draw': 0.194, 'away_win': 0.573}
+        -> '## Prediction: Southampton vs Aston Villa (2025-04-12)\n\n| Outcome | Probability |\n|---|---|\n| 🏠 Sout'
+[27/30] P27  single_llm_tools     (7.2s) vec={'home_win': 0.557, 'draw': 0.21, 'away_win': 0.233}
+        -> "Here's the model's forecast for **Tottenham Hotspur vs Nottingham Forest (2025-04-21)**:\n\n| Outcome "
+[28/30] P28  single_llm_tools     (12.4s) vec={'home_win': 0.673, 'draw': 0.19, 'away_win': 0.137}
+        -> '**Prediction: Wolves vs Leicester City (2025-04-26)**\n\n| Outcome | Probability |\n|---|---|\n| 🏠 Wolve'
+[29/30] P29  single_llm_tools     (9.8s) vec={'home_win': 0.447, 'draw': 0.262, 'away_win': 0.291}
+        -> '## Prediction: Newcastle United vs Chelsea (2025-05-11)\n\n| Outcome | Probability |\n|---|---|\n| 🏠 **N'
+[30/30] P30  single_llm_tools     (14.6s) vec={'home_win': 0.301, 'draw': 0.229, 'away_win': 0.469}
+        -> '**Predicted outcome — Ipswich Town vs West Ham United (2025-05-25):**\n\n| Outcome | Probability |\n|--'
+
+Done extended_pred: 30 cells, 0 errors.
+
+########## CONDITION COMPLETE: single_llm_tools ##########
+
+
+========== CONDITION: single_llm_rawdata  (DA 30 + pred 30) ==========
+
+[1/30] Q01  single_llm_rawdata   CACHED
+[2/30] Q02  single_llm_rawdata   (5.1s) tools=[]
+        -> 'Arsenal finished the 2023-2024 season with **89 points** (2nd place).'
+[3/30] Q03  single_llm_rawdata   (6.2s) tools=[]
+        -> 'Here is the full 2022-2023 Premier League final table:\n\n| Rank | Team | Points |\n|------|------|----'
+[4/30] Q05  single_llm_rawdata   (2.6s) tools=[]
+        -> 'From the 2024-2025 standings, **Liverpool** had the best goal difference: **+45** (86 goals for, 41 '
+[5/30] Q06  single_llm_rawdata   (6.1s) tools=[]
+        -> 'From the standings data:\n\n- **Everton finished 2023-2024 with 40 points** (15th place).\n- The 2023-2'
+[6/30] Q07  single_llm_rawdata   (2.1s) tools=[]
+        -> 'The highest points total was **93 points**, achieved by **Manchester City in the 2021-2022 season**.'
+[7/30] Q09  single_llm_rawdata   (2.7s) tools=[]
+        -> 'Based on the 2023-2024 player season data, the top goalscorer was:\n\n**Erling Haaland (Manchester Cit'
+[8/30] Q10  single_llm_rawdata   (4.0s) tools=[]
+        -> 'Based on the 2024-2025 player season data (ENG-PL):\n\n| Rank | Player | Team | Goals |\n|------|------'
+[9/30] Q11  single_llm_rawdata   (4.0s) tools=[]
+        -> 'Based on the 2023-2024 player-season data, **Ollie Watkins (Aston Villa)** provided the most assists'
+[10/30] Q12  single_llm_rawdata   (3.8s) tools=[]
+        -> 'Looking at the player_season data for 2023-2024:\n\n- Cole Palmer (Chelsea): 22 goals\n\nHe only appears'
+[11/30] Q16  single_llm_rawdata   (2.7s) tools=[]
+        -> 'Based on the home_away data for the 2024-2025 season:\n\n**Liverpool** earned the most home points wit'
+[12/30] Q18  single_llm_rawdata   (6.8s) tools=[]
+        -> "I'll analyze the 2023-2024 home vs away points from the home_away table.\n\nLet me calculate the diffe"
+[13/30] Q19  single_llm_rawdata   (3.3s) tools=[]
+        -> 'According to the home_away data, Arsenal earned **47 home points** in the 2023-2024 season.'
+[14/30] Q20  single_llm_rawdata   (3.2s) tools=[]
+        -> 'Looking at the home_away table for 2024-2025, filtering by `tshas_home_goals_for`:\n\n- **Liverpool: 4'
+[15/30] Q21  single_llm_rawdata   (2.2s) tools=[]
+        -> 'Based on the team_discipline data for 2023-2024, **Chelsea** received the most yellow cards with **1'
+[16/30] Q23  single_llm_rawdata   (2.3s) tools=[]
+        -> 'Looking at the team_discipline data for 2024-2025:\n\nThe team with the most red cards in **2024-2025*'
+[17/30] Q24  single_llm_rawdata   (5.3s) tools=[]
+        -> "Looking at the team_discipline table for 2023-2024, I'll sum the `tssf_red_cards` column (red cards "
+[18/30] Q25  single_llm_rawdata   (3.3s) tools=[]
+        -> 'The database does not contain the data needed to answer this question.\n\nThe inlined tables provided '
+[19/30] Q26  single_llm_rawdata   CACHED
+[20/30] Q27  single_llm_rawdata   (6.8s) tools=[]
+        -> "I'll look at players with ≥10 goals in 2023-2024 and calculate xG minus goals (positive = underperfo"
+[21/30] Q29  single_llm_rawdata   (8.9s) tools=[]
+        -> "I'll filter the 2024-2025 player-season data for players with xG ≥ 15, then compute goals/xG.\n\nPlaye"
+[22/30] Q32  single_llm_rawdata   (4.1s) tools=[]
+        -> 'I cannot answer this question from the provided data.\n\nThe inlined tables include standings, home/aw'
+[23/30] Q33  single_llm_rawdata   (7.7s) tools=[]
+        -> 'I cannot answer this from the inlined data.\n\nThe inlined tables cover standings, home/away splits, t'
+[24/30] Q37  single_llm_rawdata   (3.8s) tools=[]
+        -> "I don't have the data to answer this question.\n\nThe inlined dataset does not include the `player_inj"
+[25/30] Q39  single_llm_rawdata   (5.6s) tools=[]
+        -> 'The `player_injury_spells` table (and `vw_player_availability`) is **not included in the inlined dat'
+[26/30] Q41  single_llm_rawdata   (3.8s) tools=[]
+        -> 'I cannot answer this from the data provided.\n\nThe inlined `player_season` table gives **season total'
+[27/30] Q42  single_llm_rawdata   (3.4s) tools=[]
+        -> "I don't have that data available. The `player_season` table inlined here includes goals, assists, mi"
+[28/30] Q44  single_llm_rawdata   (3.7s) tools=[]
+        -> "I don't have the data to answer this precisely.\n\nThe inlined data only contains **season-aggregate**"
+[29/30] Q45  single_llm_rawdata   (2.2s) tools=[]
+        -> 'Norwich City did not play in the 2024-2025 Premier League season — they are not in the standings for'
+[30/30] Q46  single_llm_rawdata   (4.1s) tools=[]
+        -> 'Based on the data available to me, I cannot answer this question.\n\nThe inlined data includes standin'
+
+Done extended_da: 30 cells, 0 errors.
+[1/30] P01  single_llm_rawdata   CACHED
+[2/30] P02  single_llm_rawdata   (5.8s) vec={'home_win': 0.8, 'draw': 0.13, 'away_win': 0.07}
+        -> 'Looking at recent form:\n\n**Arsenal:** Excellent form in their last 10 — 8 wins, 1 draw, 1 loss. Stro'
+[3/30] P03  single_llm_rawdata   (9.2s) vec={'home_win': 0.42, 'draw': 0.28, 'away_win': 0.3}
+        -> 'Looking at recent form:\n\n**Everton (home):** Mixed but solid at home late in the season. Won several'
+[4/30] P04  single_llm_rawdata   (5.9s) vec={'home_win': 0.37, 'draw': 0.29, 'away_win': 0.34}
+        -> 'Looking at the recent form (end of previous season, first game of new season):\n\n**Nottingham Forest*'
+[5/30] P05  single_llm_rawdata   (6.2s) vec={'home_win': 0.55, 'draw': 0.24, 'away_win': 0.21}
+        -> 'Form analysis:\n\n**Chelsea (home):** Strong end to last season (big wins over Everton 6-0, West Ham 5'
+[6/30] P06  single_llm_rawdata   (5.2s) vec={'home_win': 0.25, 'draw': 0.27, 'away_win': 0.48}
+        -> '**Form analysis:**\n\nSouthampton (newly promoted): lost all 3 opening 2024-25 matches, scoring just 1'
+[7/30] P07  single_llm_rawdata   (10.3s) vec={'home_win': 0.48, 'draw': 0.26, 'away_win': 0.26}
+        -> "**Form analysis:**\n\n**Brentford (home):** Recent record is mixed. They've won their home games this "
+[8/30] P08  single_llm_rawdata   (17.1s) vec={'home_win': 0.3, 'draw': 0.28, 'away_win': 0.42}
+        -> 'Looking at form this season (2024-2025):\n\n**Leicester City** (newly promoted): No wins in 6 matches '
+[9/30] P09  single_llm_rawdata   (8.0s) vec={'home_win': 0.33, 'draw': 0.28, 'away_win': 0.39}
+        -> '**Form analysis:**\n\nFulham (last 7 this season): W3 D2 L2 — solid form, only losses to Man City and '
+[10/30] P10  single_llm_rawdata   (6.4s) vec={'home_win': 0.06, 'draw': 0.15, 'away_win': 0.79}
+        -> "Looking at the form:\n\n**Wolves** are in dreadful form — they've lost 6 of their last 7 competitive m"
+[11/30] P11  single_llm_rawdata   (7.3s) vec={'home_win': 0.36, 'draw': 0.29, 'away_win': 0.35}
+        -> 'Both teams are newly promoted/struggling sides with poor form.\n\n**Ipswich Town:** No wins in their f'
+[12/30] P12  single_llm_rawdata   (9.9s) vec={'home_win': 0.55, 'draw': 0.25, 'away_win': 0.2}
+        -> 'Analyzing form:\n\n**Arsenal (home):** Recent form is mixed — winless in last 4 (D, L, D, L) before th'
+[13/30] P13  single_llm_rawdata   (6.3s) vec={'home_win': 0.55, 'draw': 0.25, 'away_win': 0.2}
+        -> 'Analyzing form:\n\n**Newcastle United (home):**\n- Last 10: W4 D4 L2 — solid, unbeaten in last 2 (win a'
+[14/30] P14  single_llm_rawdata   (9.1s) vec={'home_win': 0.27, 'draw': 0.25, 'away_win': 0.48}
+        -> '**Form analysis:**\n\n**Newcastle** — mixed and inconsistent form. Recent record: W3 D3 L4 in last 10.'
+[15/30] P15  single_llm_rawdata   (8.5s) vec={'home_win': 0.38, 'draw': 0.27, 'away_win': 0.35}
+        -> 'Looking at recent form:\n\n**Aston Villa (home):** Mixed form. Recent record W3 D2 L5 in last 10. They'
+[16/30] P16  single_llm_rawdata   (7.4s) vec={'home_win': 0.28, 'draw': 0.22, 'away_win': 0.5}
+        -> 'Analysis:\n\n**Tottenham form:** Very inconsistent. Capable of big away wins (5-0 Southampton, 4-0 Man'
+[17/30] P17  single_llm_rawdata   (8.0s) vec={'home_win': 0.45, 'draw': 0.28, 'away_win': 0.27}
+        -> 'Let me analyze the recent form of both teams.\n\n**Brighton (last 10):**\n- Record: 3W, 5D, 2L\n- Recent'
+[18/30] P18  single_llm_rawdata   (11.3s) vec={'home_win': 0.34, 'draw': 0.3, 'away_win': 0.36}
+        -> '**Form analysis:**\n\n**West Ham (home):** Mixed and inconsistent. Recent record: W3, D3, L4 in last 1'
+[19/30] P19  single_llm_rawdata   (7.7s) vec={'home_win': 0.3, 'draw': 0.31, 'away_win': 0.39}
+        -> 'Analysis:\n\n**Ipswich Town form:** Mixed. Recent form shows a solid draw at Fulham, a big home win vs'
+[20/30] P20  single_llm_rawdata   (9.0s) vec={'home_win': 0.5, 'draw': 0.26, 'away_win': 0.24}
+        -> "Let me analyze both teams' recent form.\n\n**Manchester City (last 10):**\n- Record: W4 D4 L2\n- Recent:"
+[21/30] P21  single_llm_rawdata   (7.8s) vec={'home_win': 0.45, 'draw': 0.3, 'away_win': 0.25}
+        -> "Looking at both teams' recent form:\n\n**Crystal Palace (home):**\n- Strong recent form: 4 wins, 2 draw"
+[22/30] P22  single_llm_rawdata   (5.2s) vec={'home_win': 0.45, 'draw': 0.28, 'away_win': 0.27}
+        -> 'Everton form: strong recently — unbeaten in last 5 (4W 1D), including wins over Brighton, Tottenham,'
+[23/30] P23  single_llm_rawdata   (7.9s) vec={'home_win': 0.3, 'draw': 0.24, 'away_win': 0.46}
+        -> "**Form Analysis:**\n\n**Nottingham Forest:** Strong season overall. In their last 10, they've had impr"
+[24/30] P24  single_llm_rawdata   (5.7s) vec={'home_win': 0.42, 'draw': 0.26, 'away_win': 0.32}
+        -> '**Form analysis:**\n\nFulham (last 10): W5 D2 L3 — solid form, good home base. Recent away loss at Bri'
+[25/30] P25  single_llm_rawdata   (5.7s) vec={'home_win': 0.17, 'draw': 0.23, 'away_win': 0.6}
+        -> 'Looking at the form:\n\n**Southampton** are in dreadful form — bottom of the table quality, with just '
+[26/30] P26  single_llm_rawdata   (4.8s) vec={'home_win': 0.13, 'draw': 0.2, 'away_win': 0.67}
+        -> "Southampton's form is dismal — bottom of the table, having lost 8 of their last 10, conceding heavil"
+[27/30] P27  single_llm_rawdata   (7.4s) vec={'home_win': 0.4, 'draw': 0.26, 'away_win': 0.34}
+        -> 'Looking at recent form:\n\n**Tottenham Hotspur:** Inconsistent. Last 10: 5 wins, 1 draw, 4 losses. Rec'
+[28/30] P28  single_llm_rawdata   (6.4s) vec={'home_win': 0.72, 'draw': 0.18, 'away_win': 0.1}
+        -> 'Form analysis:\n\n**Wolves (home):** Excellent recent form. Won 7 of last 10, including a strong run: '
+[29/30] P29  single_llm_rawdata   (7.1s) vec={'home_win': 0.48, 'draw': 0.24, 'away_win': 0.28}
+        -> 'Form analysis:\n\n**Newcastle (home):** Strong recent form with high scoring — 7 wins in last 10, incl'
+[30/30] P30  single_llm_rawdata   (6.8s) vec={'home_win': 0.3, 'draw': 0.28, 'away_win': 0.42}
+        -> 'Looking at recent form:\n\n**Ipswich Town:** Already relegated, poor form. In last 10: 1 win, 3 draws,'
+
+Done extended_pred: 30 cells, 0 errors.
+
+########## CONDITION COMPLETE: single_llm_rawdata ##########
+

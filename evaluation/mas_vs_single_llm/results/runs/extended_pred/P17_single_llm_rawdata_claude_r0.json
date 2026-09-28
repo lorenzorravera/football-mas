@@ -1,0 +1,26 @@
+{
+  "question_id": "P17",
+  "question": "Predict the outcome of Brighton vs Brentford on 2024-12-27 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Let me analyze the recent form of both teams.\n\n**Brighton (last 10):**\n- Record: 3W, 5D, 2L\n- Recent form (last 5): 1D, 1L, 1D, 1L, 1D \u2014 poor, winless in last 5\n- Mixed results, but strong earlier (beat Man City, Newcastle away)\n- Home form is a factor; they play at home here\n\n**Brentford (last 10):**\n- Record: 5W, 1D, 4L\n- Recent form (last 5): 1L, 1L, 1W, 1L, 1W \u2014 inconsistent\n- Notably strong at home (4-2 vs Newcastle, 4-1 vs Leicester, 3-2 vs Bournemouth) but poor away\n- Away record here is a concern: lost at Villa, Chelsea, Fulham, Man Utd\n\n**Key considerations:**\n- Brentford's away form is weak \u2014 most of their wins came at home.\n- Brighton at home tend to be solid, though they've drawn a lot recently.\n- Brighton's home advantage plus Brentford's away struggles favors the hosts slightly.\n\n**Assessment:**\nBrighton have home advantage and Brentford are notably weaker on the road. Brighton's winless streak tempers this, and both teams draw fairly often. I'll lean toward Brighton with a meaningful chance of a draw.\n\nPROBABILITIES: home=0.45, draw=0.28, away=0.27",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.45,
+    "draw": 0.28,
+    "away_win": 0.27
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P17|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 858,
+  "token_usage": {
+    "input": 812,
+    "output": 478,
+    "total": 1290,
+    "calls": 1
+  },
+  "latency_s": 7.95
+}

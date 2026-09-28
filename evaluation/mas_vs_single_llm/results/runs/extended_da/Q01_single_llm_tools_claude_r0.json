@@ -1,0 +1,31 @@
+{
+  "question_id": "Q01",
+  "question": "Which team won the Premier League in 2024-2025?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**Liverpool** won the Premier League in 2024-2025, finishing top with **84 points** (25 wins, 9 draws, 4 losses) and a goal difference of +45.",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tss_team, tss_points, tss_wins, tss_draws, tss_losses, tss_goal_difference\nFROM team_season_standings ts\nJOIN seasons s ON ts.season_id = s.season_id\nWHERE s.competition_id = 1 AND s.season = '2024-2025'\nORDER BY tss_rank\nLIMIT 1;"
+      },
+      "result": "1 rows, cols=['tss_team', 'tss_points', 'tss_wins', 'tss_draws', 'tss_losses', 'tss_goal_difference']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 5.52,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q01|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19253,
+    "output": 254,
+    "total": 19507,
+    "calls": 2
+  }
+}

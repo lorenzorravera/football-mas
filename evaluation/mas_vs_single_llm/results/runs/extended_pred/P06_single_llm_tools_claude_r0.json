@@ -1,0 +1,64 @@
+{
+  "question_id": "P06",
+  "question": "Predict the outcome of Southampton vs Manchester United on 2024-09-14 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "## Prediction: Southampton vs Manchester United (2024-09-14)\n\n| Outcome | Probability |\n|---|---|\n| **Southampton win (home)** | 21.4% |\n| **Draw** | 19.1% |\n| **Manchester United win (away)** | 59.5% |\n\nThe model favours **Manchester United** as away winners at ~59.5%, well ahead of a Southampton win (21.4%) or a draw (19.1%). Model confidence: **0.595**.",
+  "tool_sequence": [
+    "predict_match_outcome",
+    "run_sql",
+    "predict_match_outcome",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('Southampton','Manchester United');"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 2,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team_id": 22,
+        "away_team_id": 17,
+        "match_date": "2024-09-14"
+      },
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 3,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team": "Southampton",
+        "away_team": "Manchester United",
+        "match_date": "2024-09-14"
+      },
+      "result": "{'home_team': 'Southampton', 'away_team': 'Manchester United', 'home_win': 0.214, 'draw': 0.191, 'away_win': 0.595, 'con"
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.214,
+    "draw": 0.191,
+    "away_win": 0.595
+  },
+  "latency_s": 12.84,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P06|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 48875,
+    "output": 547,
+    "total": 49422,
+    "calls": 5
+  }
+}

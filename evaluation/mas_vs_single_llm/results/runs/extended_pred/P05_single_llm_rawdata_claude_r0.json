@@ -1,0 +1,26 @@
+{
+  "question_id": "P05",
+  "question": "Predict the outcome of Chelsea vs Crystal Palace on 2024-09-01 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Form analysis:\n\n**Chelsea (home):** Strong end to last season (big wins over Everton 6-0, West Ham 5-0). Started this season poorly against Man City (0-2) but bounced back emphatically at Wolves (6-2). Attacking output looks healthy; playing at home.\n\n**Crystal Palace (away):** Excellent late-season form (5-0 vs Villa, 4-0 vs Man Utd, 3-1 at Wolves), but have started this season poorly with two losses (0-2 vs West Ham at home, 2-1 at Brentford). Current momentum is negative.\n\n**Assessment:** Chelsea have home advantage, better recent momentum this season, and strong attacking numbers. Palace's superb spring form has cooled with two opening defeats. This favors Chelsea, though Palace's underlying quality prevents a lopsided estimate.\n\nPROBABILITIES: home=0.55, draw=0.24, away=0.21",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.55,
+    "draw": 0.24,
+    "away_win": 0.21
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P05|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 900,
+  "token_usage": {
+    "input": 863,
+    "output": 319,
+    "total": 1182,
+    "calls": 1
+  },
+  "latency_s": 6.2
+}

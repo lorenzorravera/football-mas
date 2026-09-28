@@ -1,0 +1,2424 @@
+{
+  "scores": [
+    {
+      "id": "Q01",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q01_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q01",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q01_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q01",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q01_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q01",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q01_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q01",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q01_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q01",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q01_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q02",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q02_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q02",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q02_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q02",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q02_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q02",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q02_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q02",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q02_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q02",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q02_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q03",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "partial",
+      "file": "Q03_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q03",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q03_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q03",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q03_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q03",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q03_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q03",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q03_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q03",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q03_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q04",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q04_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q04",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q04_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q04",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q04_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q04",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q04_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q04",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q04_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q04",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q04_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q05",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q05_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q05",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q05_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q05",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q05_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q05",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q05_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q05",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q05_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q05",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q05_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q06",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q06_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q06",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q06_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q06",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "wrong",
+      "file": "Q06_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q06",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "wrong",
+      "file": "Q06_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q06",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q06_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q06",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q06_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q07",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q07_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q07",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q07_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q07",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "wrong",
+      "file": "Q07_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q07",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "wrong",
+      "file": "Q07_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q07",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q07_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q07",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q07_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q08",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q08_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q08",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "wrong",
+      "file": "Q08_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q08",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q08_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q08",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q08_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q08",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q08_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q08",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q08_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q09",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q09_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q09",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q09_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q09",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q09_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q09",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q09_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q09",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q09_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q09",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q09_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q10",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q10_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q10",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q10_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q10",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q10_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q10",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q10_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q10",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q10_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q10",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "ranking",
+      "verdict": "correct",
+      "file": "Q10_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q11",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q11_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q11",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q11_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q11",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q11_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q11",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q11_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q11",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q11_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q11",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q11_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q12",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q12_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q12",
+      "mode": "autonomous",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q12_dof_autonomous_gpt_r0.json"
+    },
+    {
+      "id": "Q12",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q12_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q12",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q12_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q12",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q12_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q12",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q12_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q13",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "partial",
+      "file": "Q13_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q13",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q13_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q13",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q13_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q13",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q13_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q13",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q13_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q14",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q14_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q14",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q14_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q14",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q14_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q14",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q14_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q14",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q14_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q15",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q15_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q15",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q15_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q15",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q15_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q15",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q15_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q15",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q15_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q16",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q16_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q16",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q16_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q16",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q16_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q16",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q16_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q16",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q16_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q17",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q17_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q17",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q17_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q17",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q17_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q17",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q17_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q17",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q17_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q18",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q18_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q18",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q18_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q18",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q18_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q18",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q18_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q18",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q18_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q19",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q19_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q19",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q19_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q19",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q19_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q19",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q19_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q19",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q19_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q20",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q20_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q20",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q20_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q20",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q20_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q20",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q20_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q20",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q20_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q21",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q21_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q21",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q21_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q21",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q21_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q21",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q21_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q21",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q21_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q22",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q22_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q22",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q22_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q22",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q22_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q22",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q22_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q22",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q22_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q23",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q23_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q23",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q23_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q23",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q23_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q23",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q23_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q23",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q23_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q24",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q24_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q24",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q24_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q24",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q24_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q24",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q24_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q24",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q24_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q25",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q25_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q25",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q25_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q25",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q25_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q25",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q25_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q25",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q25_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q26",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q26_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q26",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q26_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q26",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q26_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q26",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q26_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q26",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q26_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q27",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q27_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q27",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q27_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q27",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q27_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q27",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q27_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q27",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q27_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q28",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q28_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q28",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "wrong",
+      "file": "Q28_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q28",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "wrong",
+      "file": "Q28_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q28",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q28_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q28",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q28_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q29",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q29_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q29",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "partial",
+      "file": "Q29_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q29",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q29_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q29",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q29_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q29",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q29_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q30",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q30_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q30",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q30_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q30",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "partial",
+      "file": "Q30_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q30",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q30_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q30",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q30_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q31",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q31_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q31",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q31_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q31",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q31_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q31",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q31_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q31",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q31_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q32",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q32_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q32",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q32_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q32",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q32_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q32",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q32_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q32",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q32_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q33",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q33_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q33",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q33_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q33",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q33_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q33",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q33_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q33",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q33_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q34",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q34_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q34",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q34_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q34",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q34_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q34",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q34_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q34",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q34_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q35",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "partial",
+      "file": "Q35_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q35",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q35_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q35",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q35_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q35",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q35_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q35",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q35_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q36",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q36_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q36",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q36_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q36",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q36_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q36",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q36_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q36",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q36_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q37",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q37_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q37",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q37_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q37",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q37_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q37",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q37_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q37",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q37_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q38",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q38_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q38",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q38_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q38",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q38_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q38",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q38_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q38",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q38_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q39",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q39_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q39",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q39_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q39",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q39_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q39",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q39_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q39",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q39_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q40",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "partial",
+      "file": "Q40_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q40",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q40_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q40",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q40_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q40",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q40_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q40",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q40_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q41",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "wrong",
+      "file": "Q41_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q41",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "wrong",
+      "file": "Q41_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q41",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q41_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q41",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q41_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q41",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q41_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q42",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q42_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q42",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q42_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q42",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q42_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q42",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q42_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q42",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q42_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q43",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q43_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q43",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q43_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q43",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q43_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q43",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q43_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q43",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q43_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q44",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q44_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q44",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q44_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q44",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q44_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q44",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q44_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q44",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "table",
+      "verdict": "correct",
+      "file": "Q44_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q45",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q45_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q45",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q45_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q45",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q45_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q45",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q45_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q45",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "in_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q45_dof_semi_gpt_r0.json"
+    },
+    {
+      "id": "Q46",
+      "mode": "autonomous",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q46_dof_autonomous_claude_r0.json"
+    },
+    {
+      "id": "Q46",
+      "mode": "controlled",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q46_dof_controlled_claude_r0.json"
+    },
+    {
+      "id": "Q46",
+      "mode": "controlled",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "wrong",
+      "file": "Q46_dof_controlled_gpt_r0.json"
+    },
+    {
+      "id": "Q46",
+      "mode": "semi",
+      "model": "claude",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q46_dof_semi_claude_r0.json"
+    },
+    {
+      "id": "Q46",
+      "mode": "semi",
+      "model": "gpt",
+      "repeat": 0,
+      "coverage": "out_of_coverage",
+      "answer_type": "scalar",
+      "verdict": "correct",
+      "file": "Q46_dof_semi_gpt_r0.json"
+    }
+  ]
+}

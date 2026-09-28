@@ -1,0 +1,31 @@
+{
+  "question_id": "Q37",
+  "question": "Which player missed the most total days to injury across all spells in 2023-2024?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "In the 2023-2024 Premier League season, **Jamaal Lascelles** (Newcastle United) missed the most total days to injury \u2014 **1,132 days** across **4 spells**.\n\nFor context, the next most affected players were Josh Dasilva (Brentford, 834 days) and Aaron Hickey (Brentford, 753 days).\n\n*Note: these day totals span calendar time across spells and can overlap/extend beyond a single season, so they reflect the total duration attributed to injuries recorded within the 2023-2024 season.*",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT player_id, player_name, team, SUM(days_missed) AS total_days_missed, COUNT(*) AS spells\nFROM player_injury_spells\nWHERE season = '2023-2024' AND league_code = 'ENG-PL'\nGROUP BY player_id, player_name, team\nORDER BY total_days_missed DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['player_id', 'player_name', 'team', 'total_days_missed', 'spells']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 7.56,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q37|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19372,
+    "output": 377,
+    "total": 19749,
+    "calls": 2
+  }
+}

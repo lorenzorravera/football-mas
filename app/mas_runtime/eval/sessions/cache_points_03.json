@@ -1,0 +1,20 @@
+{
+  "session_id": "cache_points_03",
+  "sub_experiment": "cache",
+  "variant": "no_control",
+  "description": "Near-repeat (tss_points), reworded. Accuracy unchanged; win is cache reuse.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "How many points did Liverpool finish with in the 2021-2022 Premier League season?",
+      "ground_truth_sql": "SELECT tss_points FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND tss_team = 'Liverpool';"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "What was Liverpool's final points tally in the 2021-2022 Premier League?",
+      "ground_truth_sql": "SELECT tss_points FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND tss_team = 'Liverpool';"
+    }
+  ]
+}

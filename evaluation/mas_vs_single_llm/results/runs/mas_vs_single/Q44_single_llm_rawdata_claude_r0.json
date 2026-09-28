@@ -1,0 +1,26 @@
+{
+  "question_id": "Q44",
+  "question": "What was the biggest home win (by goal margin) in 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "I don't have the data to answer this precisely.\n\nThe inlined data includes season standings, home/away splits, team discipline, and player-season stats \u2014 but it does **not** include the match-level table (`matches` / `vw_match_summary`) with individual game scores. Determining the single biggest home win by goal margin requires per-match home_score/away_score data, which isn't present in what I've been given.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q44|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229572,
+    "output": 122,
+    "total": 229694,
+    "calls": 1
+  },
+  "latency_s": 6.56,
+  "experiment": "mas_vs_single"
+}

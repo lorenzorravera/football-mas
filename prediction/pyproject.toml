@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prediction-agent"
+version = "0.1.0"
+description = "MA-FDSS prediction agent: training pipeline and inference wrappers"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.3.0",
+    "joblib>=1.3.0",
+    "psycopg2-binary>=2.9.0",
+]
+
+[project.optional-dependencies]
+training = [
+    "xgboost>=2.0.0",
+    "lightgbm>=4.0.0",
+    "matplotlib>=3.7.0",
+    "requests>=2.31.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["prediction_agent*"]

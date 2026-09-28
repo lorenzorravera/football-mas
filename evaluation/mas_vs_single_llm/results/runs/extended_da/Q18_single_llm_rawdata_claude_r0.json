@@ -1,0 +1,26 @@
+{
+  "question_id": "Q18",
+  "question": "Which team had the biggest gap between home points and away points in 2023-2024?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "I'll analyze the 2023-2024 home vs away points from the home_away table.\n\nLet me calculate the differences (home_points \u2212 away_points) for each team:\n\nLooking at the notable gaps in 2023-2024:\n- **Aston Villa**: 40 home \u2212 28 away = **12**\n- **Newcastle United**: 40 home \u2212 20 away = **20**\n- **Nottingham Forest**: 20 \u2212 16 = 4\n- **Liverpool**: 48 \u2212 34 = 14\n- **Brighton**: 30 \u2212 18 = 12\n- **Tottenham**: 39 \u2212 27 = 12\n- **Chelsea**: 37 \u2212 26 = 11\n- **Crystal Palace**: 28 \u2212 21 = 7\n- **Fulham**: 29 \u2212 18 = 11\n- **Everton**: 28 \u2212 20 = 8\n\n**Answer: Newcastle United** had the biggest gap, with **40 home points vs 20 away points \u2014 a difference of 20 points** \u2014 the largest home/away disparity in the 2023-2024 Premier League season.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q18|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 171528,
+  "token_usage": {
+    "input": 121527,
+    "output": 348,
+    "total": 121875,
+    "calls": 1
+  },
+  "latency_s": 6.78,
+  "experiment": "extended_da"
+}

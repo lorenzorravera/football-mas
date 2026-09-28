@@ -1,0 +1,26 @@
+{
+  "question_id": "Q16",
+  "question": "Which team earned the most home points in 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Based on the home_away data for the 2024-2025 season:\n\n**Liverpool** earned the most home points with **46**.\n\nThe top home performers were:\n1. Liverpool \u2014 46\n2. Manchester City \u2014 42\n3. Chelsea \u2014 41\n4. Arsenal, Aston Villa \u2014 40 (tied)",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q16|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 171528,
+  "token_usage": {
+    "input": 121520,
+    "output": 104,
+    "total": 121624,
+    "calls": 1
+  },
+  "latency_s": 2.64,
+  "experiment": "extended_da"
+}

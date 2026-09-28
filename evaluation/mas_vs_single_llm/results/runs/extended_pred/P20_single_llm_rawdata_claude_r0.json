@@ -1,0 +1,26 @@
+{
+  "question_id": "P20",
+  "question": "Predict the outcome of Manchester City vs Chelsea on 2025-01-25 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Let me analyze both teams' recent form.\n\n**Manchester City (last 10):**\n- Record: W4 D4 L2\n- Recent: strong 6-0 win at Ipswich, but plenty of draws (Brentford, Everton, Crystal Palace) and losses to Aston Villa, Man United, Liverpool\n- Mixed form \u2014 a patchy spell by City's standards, but signs of recovery with the Ipswich thrashing and solid home wins over West Ham (4-1) and Forest (3-0).\n- Home advantage matters here.\n\n**Chelsea (last 10):**\n- Record: W5 D4 L2 (roughly)\n- Recent: 3-1 win vs Wolves, but slipping with draws (Bournemouth, Palace, Everton) and losses to Ipswich and Fulham.\n- Strong attacking output earlier (5-1, 4-3, 3-0) but recent momentum has cooled.\n\n**Assessment:**\n- City at home is a meaningful edge, especially with the emphatic Ipswich result suggesting form is returning.\n- Chelsea remain dangerous going forward but have been inconsistent and lost at Ipswich.\n- City's home venue plus slightly better underlying quality tilts this toward the hosts, though Chelsea's attack keeps a draw or upset plausible.\n\nLeaning to a moderate City favorite, with a fairly high draw probability given both sides' recent tendency to draw.\n\nPROBABILITIES: home=0.50, draw=0.26, away=0.24",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.5,
+    "draw": 0.26,
+    "away_win": 0.24
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P20|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 907,
+  "token_usage": {
+    "input": 842,
+    "output": 506,
+    "total": 1348,
+    "calls": 1
+  },
+  "latency_s": 8.99
+}

@@ -1,0 +1,26 @@
+{
+  "question_id": "Q20",
+  "question": "Which team scored the most home goals in 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Based on the home_away data for 2024-2025, looking at `tshas_home_goals_for`:\n\n**Bayern Munich** scored the most home goals in 2024-2025 with **53** home goals.\n\nNote: Among English Premier League teams specifically, **Liverpool** led with **42** home goals (tied with Manchester City and Atl\u00e9tico Madrid at 42). The overall leader across all leagues in the data is Bayern Munich (53), with Barcelona close behind at 52.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q20|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229567,
+    "output": 158,
+    "total": 229725,
+    "calls": 1
+  },
+  "latency_s": 4.19,
+  "experiment": "mas_vs_single"
+}

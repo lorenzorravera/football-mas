@@ -1,0 +1,31 @@
+{
+  "question_id": "Q29",
+  "question": "Among players with at least 15 xG in 2024-2025, who had the highest goals-to-xG ratio?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "Among Premier League players with at least 15 xG in 2024-2025, **Chris Wood (Nottingham Forest)** had the highest goals-to-xG ratio.\n\n| Player | Team | Goals | xG | Goals/xG |\n|--------|------|-------|-----|----------|\n| **Chris Wood** | Nottingham Forest | 20 | 15.64 | **1.28** |\n| Mohamed Salah | Liverpool | 29 | 27.71 | 1.05 |\n| Alexander Isak | Newcastle United | 23 | 22.36 | 1.03 |\n| Cole Palmer | Chelsea | 15 | 15.77 | 0.95 |\n| Erling Haaland | Manchester City | 22 | 23.96 | 0.92 |\n\nChris Wood dramatically overperformed his expected goals \u2014 scoring 20 goals from just 15.6 xG, a ratio of **1.28** (about 28% more goals than expected). Salah and Isak also overperformed, while Haaland and Palmer slightly underperformed their xG.",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT player_name, team, goals_pss, xg_pss, ROUND((goals_pss/xg_pss)::numeric, 3) AS goals_to_xg\nFROM vw_player_season_summary\nWHERE season='2024-2025' AND league_code='ENG-PL' AND xg_pss>=15\nORDER BY goals_to_xg DESC;"
+      },
+      "result": "8 rows, cols=['player_name', 'team', 'goals_pss', 'xg_pss', 'goals_to_xg']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 8.11,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q29|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19529,
+    "output": 572,
+    "total": 20101,
+    "calls": 2
+  }
+}

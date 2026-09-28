@@ -1,0 +1,40 @@
+{
+  "question_id": "Q18",
+  "question": "Which team had the biggest gap between home points and away points in 2023-2024?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**Newcastle United** had the biggest gap between home and away points in the 2023-2024 Premier League season.\n\n- **Home points:** 40\n- **Away points:** 20\n- **Gap:** **20 points**\n\nNewcastle were dominant at St James' Park but won only half as many points on the road. The next closest were Liverpool (48 home vs 34 away, a 14-point gap), followed by Aston Villa, Tottenham, and Brighton (all with a 12-point gap).",
+  "tool_sequence": [
+    "run_sql",
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tshas_team, tshas_home_points, tshas_away_points,\n       (tshas_home_points - tshas_away_points) AS gap\nFROM team_season_home_away_standings t\nJOIN seasons s ON t.season_id = s.season_id\nWHERE s.season = '2023-2024'\nORDER BY gap DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['tshas_team', 'tshas_home_points', 'tshas_away_points', 'gap']"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT t.tshas_team, t.tshas_home_points, t.tshas_away_points,\n       (t.tshas_home_points - t.tshas_away_points) AS gap\nFROM team_season_home_away_standings t\nJOIN seasons s ON t.season_id = s.season_id\nJOIN competitions c ON s.competition_id = c.competition_id\nWHERE s.season = '2023-2024' AND c.league_code = 'ENG-PL'\nORDER BY gap DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['tshas_team', 'tshas_home_points', 'tshas_away_points', 'gap']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 10.8,
+  "experiment": "mas_vs_single",
+  "langfuse_trace_id": "mas_vs_single|single_llm_tools|claude|Q18|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 26089,
+    "output": 610,
+    "total": 26699,
+    "calls": 3
+  }
+}

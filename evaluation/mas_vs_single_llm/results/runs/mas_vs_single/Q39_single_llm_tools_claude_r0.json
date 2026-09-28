@@ -1,0 +1,31 @@
+{
+  "question_id": "Q39",
+  "question": "How many injury spells were recorded for Brentford players in 2023-2024?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "There were **34 injury spells** recorded for Brentford players in the 2023-2024 season.",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT COUNT(*) FROM player_injury_spells WHERE season='2023-2024' AND team='Brentford';"
+      },
+      "result": "1 rows, cols=['count']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 4.61,
+  "experiment": "mas_vs_single",
+  "langfuse_trace_id": "mas_vs_single|single_llm_tools|claude|Q39|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 16775,
+    "output": 122,
+    "total": 16897,
+    "calls": 2
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "question_id": "P19",
+  "question": "Predict the outcome of Ipswich Town vs Brighton on 2025-01-16 \u2014 give the home win, draw and away win probabilities.",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**Prediction: Ipswich Town vs Brighton \u2014 16 Jan 2025**\n\n| Outcome | Probability |\n|---|---|\n| Ipswich Town win (home) | **25.7%** |\n| Draw | **24.3%** |\n| Brighton win (away) | **50.0%** |\n\nThe model favours **Brighton** as the most likely winner (50%), with an Ipswich home win (25.7%) and a draw (24.3%) roughly level as the less likely outcomes. Model confidence: 0.5.",
+  "tool_sequence": [
+    "predict_match_outcome",
+    "run_sql",
+    "predict_match_outcome",
+    "predict_match_outcome"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "predict_match_outcome",
+      "args": {},
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT team_id, team_name FROM teams WHERE team_name IN ('Ipswich Town','Brighton');"
+      },
+      "result": "2 rows, cols=['team_id', 'team_name']"
+    },
+    {
+      "step": 2,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team_id": 11,
+        "away_team_id": 5,
+        "match_date": "2025-01-16"
+      },
+      "result": "error: could not resolve team(s): home=None->None, away=None->None"
+    },
+    {
+      "step": 3,
+      "tool": "predict_match_outcome",
+      "args": {
+        "home_team": "Ipswich Town",
+        "away_team": "Brighton",
+        "match_date": "2025-01-16"
+      },
+      "result": "{'home_team': 'Ipswich Town', 'away_team': 'Brighton', 'home_win': 0.257, 'draw': 0.243, 'away_win': 0.5, 'confidence': "
+    }
+  ],
+  "prediction_vector": {
+    "home_win": 0.257,
+    "draw": 0.243,
+    "away_win": 0.5
+  },
+  "latency_s": 15.57,
+  "experiment": "extended_pred",
+  "langfuse_trace_id": "extended_pred|single_llm_tools|claude|P19|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 48879,
+    "output": 556,
+    "total": 49435,
+    "calls": 5
+  }
+}

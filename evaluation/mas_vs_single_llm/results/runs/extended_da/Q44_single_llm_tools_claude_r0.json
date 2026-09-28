@@ -1,0 +1,31 @@
+{
+  "question_id": "Q44",
+  "question": "What was the biggest home win (by goal margin) in 2024-2025?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "The biggest home win of the 2024-2025 Premier League season was **Nottingham Forest 7\u20130 Brighton** on **1 February 2025** \u2014 a **7-goal margin**.\n\nThe next-biggest home wins were both 5\u20130: Newcastle United vs Crystal Palace (16 Apr 2025) and Bournemouth vs Nottingham Forest (25 Jan 2025).",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT match_date, home_team, away_team, home_score, away_score, (home_score - away_score) AS margin\nFROM vw_match_summary\nWHERE league_code = 'ENG-PL' AND season = '2024-2025'\nORDER BY margin DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['match_date', 'home_team', 'away_team', 'home_score', 'away_score', 'margin']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 6.11,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q44|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19380,
+    "output": 308,
+    "total": 19688,
+    "calls": 2
+  }
+}

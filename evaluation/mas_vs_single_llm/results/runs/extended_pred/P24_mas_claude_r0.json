@@ -1,0 +1,79 @@
+{
+  "question_id": "P24",
+  "question": "Predict the outcome of Fulham vs Tottenham Hotspur on 2025-03-16 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "mas",
+  "analyst_mode": "autonomous",
+  "model": "claude",
+  "repeat": 0,
+  "memory_enabled": false,
+  "langfuse_enabled": true,
+  "langfuse_trace_id": "extended_pred|mas|claude|P24|r0",
+  "answer": "**Match Prediction: Fulham vs Tottenham Hotspur \u2014 2025-03-16**\n\nBased on the match-outcome model (v1):\n\n- **Home win (Fulham): 55.5%**\n- **Draw: 21.9%**\n- **Away win (Tottenham Hotspur): 22.6%**\n\n**Most likely outcome:** A **Fulham home win**, at 55.5% probability \u2014 comfortably ahead of both a draw (21.9%) and a Tottenham away win (22.6%).\n\nModel confidence: 0.555.",
+  "tool_sequence": [
+    "predict_match_outcome"
+  ],
+  "sql": null,
+  "template": null,
+  "low_confidence": false,
+  "intent": "prediction_match",
+  "prediction_vector": {
+    "home_win": 0.555,
+    "draw": 0.219,
+    "away_win": 0.226
+  },
+  "result_columns": null,
+  "result_rows": null,
+  "result_row_count": null,
+  "trace": [
+    {
+      "node": "manager",
+      "out": {
+        "intent": "prediction_match",
+        "seasons": [
+          "2024-2025"
+        ],
+        "teams": [
+          "Fulham",
+          "Tottenham Hotspur"
+        ],
+        "metrics": [
+          "home_win_probability",
+          "draw_probability",
+          "away_win_probability"
+        ],
+        "home_team": "Fulham",
+        "away_team": "Tottenham Hotspur",
+        "match_date": "2025-03-16"
+      }
+    },
+    {
+      "node": "prediction_agent",
+      "fixture": [
+        "Fulham",
+        "Tottenham Hotspur",
+        "2025-03-16"
+      ],
+      "prediction": {
+        "home_team": "Fulham",
+        "away_team": "Tottenham Hotspur",
+        "home_win": 0.555,
+        "draw": 0.219,
+        "away_win": 0.226,
+        "confidence": 0.555,
+        "model_version": "v1"
+      }
+    },
+    {
+      "node": "synthesizer",
+      "answer": "**Match Prediction: Fulham vs Tottenham Hotspur \u2014 2025-03-16**\n\nBased on the match-outcome model (v1):\n\n- **Home win (Fulham): 55.5%**\n- **Draw: 21.9%**\n- **Awa"
+    }
+  ],
+  "token_usage": {
+    "input": 722,
+    "output": 304,
+    "total": 1026,
+    "calls": 2
+  },
+  "latency_s": 5.52
+}

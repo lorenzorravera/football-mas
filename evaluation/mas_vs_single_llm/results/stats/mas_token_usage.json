@@ -1,0 +1,278 @@
+{
+  "mas_vs_single|mas|claude|Q01|r0": {
+    "input": 24071,
+    "output": 367,
+    "total": 24438,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q02|r0": {
+    "input": 24052,
+    "output": 387,
+    "total": 24439,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q03|r0": {
+    "input": 40778,
+    "output": 1097,
+    "total": 41875,
+    "calls": 7
+  },
+  "mas_vs_single|mas|claude|Q04|r0": {
+    "input": 24124,
+    "output": 497,
+    "total": 24621,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q05|r0": {
+    "input": 24045,
+    "output": 367,
+    "total": 24412,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q06|r0": {
+    "input": 40639,
+    "output": 750,
+    "total": 41389,
+    "calls": 7
+  },
+  "mas_vs_single|mas|claude|Q07|r0": {
+    "input": 24223,
+    "output": 442,
+    "total": 24665,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q08|r0": {
+    "input": 24163,
+    "output": 452,
+    "total": 24615,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q09|r0": {
+    "input": 24304,
+    "output": 531,
+    "total": 24835,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q10|r0": {
+    "input": 24287,
+    "output": 605,
+    "total": 24892,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q11|r0": {
+    "input": 57087,
+    "output": 1186,
+    "total": 58273,
+    "calls": 9
+  },
+  "mas_vs_single|mas|claude|Q12|r0": {
+    "input": 24235,
+    "output": 485,
+    "total": 24720,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q13|r0": {
+    "input": 40541,
+    "output": 817,
+    "total": 41358,
+    "calls": 7
+  },
+  "mas_vs_single|mas|claude|Q14|r0": {
+    "input": 24290,
+    "output": 531,
+    "total": 24821,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q15|r0": {
+    "input": 24353,
+    "output": 724,
+    "total": 25077,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q16|r0": {
+    "input": 24094,
+    "output": 451,
+    "total": 24545,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q17|r0": {
+    "input": 24052,
+    "output": 399,
+    "total": 24451,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q18|r0": {
+    "input": 24248,
+    "output": 573,
+    "total": 24821,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q19|r0": {
+    "input": 24054,
+    "output": 412,
+    "total": 24466,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q20|r0": {
+    "input": 24081,
+    "output": 444,
+    "total": 24525,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q21|r0": {
+    "input": 24206,
+    "output": 472,
+    "total": 24678,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q22|r0": {
+    "input": 40631,
+    "output": 873,
+    "total": 41504,
+    "calls": 7
+  },
+  "mas_vs_single|mas|claude|Q23|r0": {
+    "input": 24144,
+    "output": 453,
+    "total": 24597,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q24|r0": {
+    "input": 24198,
+    "output": 433,
+    "total": 24631,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q25|r0": {
+    "input": 24088,
+    "output": 452,
+    "total": 24540,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q26|r0": {
+    "input": 25099,
+    "output": 795,
+    "total": 25894,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q27|r0": {
+    "input": 25145,
+    "output": 827,
+    "total": 25972,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q28|r0": {
+    "input": 57636,
+    "output": 1266,
+    "total": 58902,
+    "calls": 9
+  },
+  "mas_vs_single|mas|claude|Q29|r0": {
+    "input": 41486,
+    "output": 1338,
+    "total": 42824,
+    "calls": 7
+  },
+  "mas_vs_single|mas|claude|Q30|r0": {
+    "input": 24208,
+    "output": 548,
+    "total": 24756,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q31|r0": {
+    "input": 24186,
+    "output": 624,
+    "total": 24810,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q32|r0": {
+    "input": 24469,
+    "output": 884,
+    "total": 25353,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q33|r0": {
+    "input": 57828,
+    "output": 1662,
+    "total": 59490,
+    "calls": 9
+  },
+  "mas_vs_single|mas|claude|Q34|r0": {
+    "input": 24199,
+    "output": 401,
+    "total": 24600,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q35|r0": {
+    "input": 24158,
+    "output": 603,
+    "total": 24761,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q36|r0": {
+    "input": 40368,
+    "output": 688,
+    "total": 41056,
+    "calls": 7
+  },
+  "mas_vs_single|mas|claude|Q37|r0": {
+    "input": 24160,
+    "output": 474,
+    "total": 24634,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q38|r0": {
+    "input": 56959,
+    "output": 985,
+    "total": 57944,
+    "calls": 9
+  },
+  "mas_vs_single|mas|claude|Q39|r0": {
+    "input": 24076,
+    "output": 345,
+    "total": 24421,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q40|r0": {
+    "input": 24158,
+    "output": 506,
+    "total": 24664,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q41|r0": {
+    "input": 24250,
+    "output": 514,
+    "total": 24764,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q42|r0": {
+    "input": 40988,
+    "output": 908,
+    "total": 41896,
+    "calls": 7
+  },
+  "mas_vs_single|mas|claude|Q43|r0": {
+    "input": 24122,
+    "output": 387,
+    "total": 24509,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q44|r0": {
+    "input": 40704,
+    "output": 927,
+    "total": 41631,
+    "calls": 7
+  },
+  "mas_vs_single|mas|claude|Q45|r0": {
+    "input": 24142,
+    "output": 462,
+    "total": 24604,
+    "calls": 5
+  },
+  "mas_vs_single|mas|claude|Q46|r0": {
+    "input": 24120,
+    "output": 413,
+    "total": 24533,
+    "calls": 5
+  }
+}

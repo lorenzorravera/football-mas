@@ -1,0 +1,26 @@
+{
+  "session_id": "conversation_thirdplace_01",
+  "sub_experiment": "conversation",
+  "variant": "no_control",
+  "description": "Reference carry: rank 3 team named in turn 0; follow-ups say 'they'.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "Who finished third in the 2024-2025 Premier League?",
+      "ground_truth_sql": "SELECT tss_team FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND tss_rank = 3;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "What goal difference did they finish with?",
+      "ground_truth_sql": "SELECT tss_goal_difference FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND tss_rank = 3;"
+    },
+    {
+      "turn_index": 2,
+      "role": "beneficiary",
+      "query": "How many goals did they score across the season?",
+      "ground_truth_sql": "SELECT tss_goals_for FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND tss_rank = 3;"
+    }
+  ]
+}

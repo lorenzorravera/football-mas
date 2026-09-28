@@ -1,0 +1,73 @@
+{
+  "question_id": "P20",
+  "question": "Predict the outcome of Manchester City vs Chelsea on 2025-01-25 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "mas",
+  "analyst_mode": "autonomous",
+  "model": "claude",
+  "repeat": 0,
+  "memory_enabled": false,
+  "langfuse_enabled": true,
+  "langfuse_trace_id": "extended_pred|mas|claude|P20|r0",
+  "answer": "**Manchester City vs Chelsea \u2014 2025-01-25**\n\nPredicted probabilities:\n\n- **Home win (Manchester City): 60.5%**\n- **Draw: 21.1%**\n- **Away win (Chelsea): 18.4%**\n\n**Most likely outcome:** A **Manchester City home win** (60.5%), which is the clear favorite over a draw (21.1%) or a Chelsea away win (18.4%).\n\n*(Model version: v1; confidence: 0.605)*",
+  "tool_sequence": [
+    "predict_match_outcome"
+  ],
+  "sql": null,
+  "template": null,
+  "low_confidence": false,
+  "intent": "prediction_match",
+  "prediction_vector": {
+    "home_win": 0.605,
+    "draw": 0.211,
+    "away_win": 0.184
+  },
+  "result_columns": null,
+  "result_rows": null,
+  "result_row_count": null,
+  "trace": [
+    {
+      "node": "manager",
+      "out": {
+        "intent": "prediction_match",
+        "seasons": [],
+        "teams": [
+          "Manchester City",
+          "Chelsea"
+        ],
+        "metrics": [],
+        "home_team": "Manchester City",
+        "away_team": "Chelsea",
+        "match_date": "2025-01-25"
+      }
+    },
+    {
+      "node": "prediction_agent",
+      "fixture": [
+        "Manchester City",
+        "Chelsea",
+        "2025-01-25"
+      ],
+      "prediction": {
+        "home_team": "Manchester City",
+        "away_team": "Chelsea",
+        "home_win": 0.605,
+        "draw": 0.211,
+        "away_win": 0.184,
+        "confidence": 0.605,
+        "model_version": "v1"
+      }
+    },
+    {
+      "node": "synthesizer",
+      "answer": "**Manchester City vs Chelsea \u2014 2025-01-25**\n\nPredicted probabilities:\n\n- **Home win (Manchester City): 60.5%**\n- **Draw: 21.1%**\n- **Away win (Chelsea): 18.4%**"
+    }
+  ],
+  "token_usage": {
+    "input": 710,
+    "output": 251,
+    "total": 961,
+    "calls": 2
+  },
+  "latency_s": 7.31
+}

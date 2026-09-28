@@ -1,0 +1,21 @@
+{
+  "session_id": "correction_referee_04",
+  "sub_experiment": "correction",
+  "variant": "no_control",
+  "correction_lesson": "Referee names in the matches table are stored with a NON-BREAKING SPACE (Unicode chr(160)) between first and last name, not a normal space. A filter like WHERE m.referee = 'First Last' (normal space) matches 0 rows and silently returns NULL/0. Always normalize first: WHERE REPLACE(m.referee, chr(160), chr(32)) = 'First Last'.",
+  "description": "Referee nbsp pitfall (scaled): trigger then a different ref/season/metric beneficiary.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "How many fouls were committed in total in matches refereed by Michael Oliver in the 2020-2021 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(m.home_fouls + m.away_fouls) AS total FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2020-2021' AND REPLACE(m.referee, chr(160), chr(32)) = 'Michael Oliver';"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "How many yellow cards were shown in total in matches refereed by Anthony Taylor in the 2021-2022 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(m.home_yellow_cards + m.away_yellow_cards) AS total FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND REPLACE(m.referee, chr(160), chr(32)) = 'Anthony Taylor';"
+    }
+  ]
+}

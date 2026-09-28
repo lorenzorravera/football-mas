@@ -1,0 +1,21 @@
+{
+  "session_id": "correction_playerjoin_03",
+  "sub_experiment": "correction",
+  "variant": "no_control",
+  "correction_lesson": "Player names are NOT in player_season_stats (it keys on player_id). Join players p ON pss.player_id = p.player_id for the name, SUM goals_pss per player, and PL-scope via seasons -> competitions league_code='ENG-PL'.",
+  "description": "Player-name join pitfall (scaled).",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "Who was Liverpool's top scorer in the 2021-2022 Premier League season, and how many league goals did they score?",
+      "ground_truth_sql": "SELECT p.player_name, SUM(pss.goals_pss) AS goals FROM player_season_stats pss JOIN players p ON pss.player_id = p.player_id JOIN seasons s ON pss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON pss.team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND t.team_name = 'Liverpool' GROUP BY p.player_name ORDER BY goals DESC LIMIT 1;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "Who top-scored for Nottingham Forest in the 2024-2025 Premier League season and with how many goals?",
+      "ground_truth_sql": "SELECT p.player_name, SUM(pss.goals_pss) AS goals FROM player_season_stats pss JOIN players p ON pss.player_id = p.player_id JOIN seasons s ON pss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON pss.team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND t.team_name = 'Nottingham Forest' GROUP BY p.player_name ORDER BY goals DESC LIMIT 1;"
+    }
+  ]
+}

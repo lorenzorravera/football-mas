@@ -1,0 +1,20 @@
+{
+  "session_id": "cache_topscorer_03",
+  "sub_experiment": "cache",
+  "variant": "no_control",
+  "description": "Near-repeat (rank 1 tss_top_scorer_name, tss_top_scorer_goals), reworded.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "Who finished as the 2022-2023 Premier League's leading scorer, and with how many goals?",
+      "ground_truth_sql": "SELECT tss_top_scorer_name, tss_top_scorer_goals FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_rank = 1;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "Which player topped the 2022-2023 Premier League scoring charts, and on how many goals?",
+      "ground_truth_sql": "SELECT tss_top_scorer_name, tss_top_scorer_goals FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_rank = 1;"
+    }
+  ]
+}

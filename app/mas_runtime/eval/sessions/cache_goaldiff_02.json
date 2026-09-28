@@ -1,0 +1,20 @@
+{
+  "session_id": "cache_goaldiff_02",
+  "sub_experiment": "cache",
+  "variant": "no_control",
+  "description": "Near-repeat (tss_goal_difference), reworded. Accuracy unchanged; win is cache reuse.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "What goal difference did Manchester City end the 2022-2023 Premier League season with?",
+      "ground_truth_sql": "SELECT tss_goal_difference FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_team = 'Manchester City';"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "What was Manchester City's goal difference at the end of the 2022-2023 Premier League campaign?",
+      "ground_truth_sql": "SELECT tss_goal_difference FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND tss_team = 'Manchester City';"
+    }
+  ]
+}

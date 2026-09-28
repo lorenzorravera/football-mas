@@ -1,0 +1,1384 @@
+{
+  "scores": [
+    {
+      "id": "Q01",
+      "condition": "mas",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 11.39,
+      "error": null
+    },
+    {
+      "id": "Q01",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 7.21,
+      "error": null
+    },
+    {
+      "id": "Q01",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 10.45,
+      "error": null
+    },
+    {
+      "id": "Q02",
+      "condition": "mas",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 10.55,
+      "error": null
+    },
+    {
+      "id": "Q02",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 5.07,
+      "error": null
+    },
+    {
+      "id": "Q02",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 4.81,
+      "error": null
+    },
+    {
+      "id": "Q03",
+      "condition": "mas",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 20.15,
+      "error": null
+    },
+    {
+      "id": "Q03",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 7.54,
+      "error": null
+    },
+    {
+      "id": "Q03",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 18.24,
+      "error": null
+    },
+    {
+      "id": "Q04",
+      "condition": "mas",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 11.15,
+      "error": null
+    },
+    {
+      "id": "Q04",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 3.05,
+      "error": null
+    },
+    {
+      "id": "Q04",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 10.83,
+      "error": null
+    },
+    {
+      "id": "Q05",
+      "condition": "mas",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 9.61,
+      "error": null
+    },
+    {
+      "id": "Q05",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 3.63,
+      "error": null
+    },
+    {
+      "id": "Q05",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 15.66,
+      "error": null
+    },
+    {
+      "id": "Q06",
+      "condition": "mas",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 20.88,
+      "error": null
+    },
+    {
+      "id": "Q06",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 4.83,
+      "error": null
+    },
+    {
+      "id": "Q06",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 7.79,
+      "error": null
+    },
+    {
+      "id": "Q07",
+      "condition": "mas",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 11.37,
+      "error": null
+    },
+    {
+      "id": "Q07",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 5.72,
+      "error": null
+    },
+    {
+      "id": "Q07",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 14.55,
+      "error": null
+    },
+    {
+      "id": "Q08",
+      "condition": "mas",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 11.26,
+      "error": null
+    },
+    {
+      "id": "Q08",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 5.91,
+      "error": null
+    },
+    {
+      "id": "Q08",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "team_league_outcomes",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 11.76,
+      "error": null
+    },
+    {
+      "id": "Q09",
+      "condition": "mas",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 12.38,
+      "error": null
+    },
+    {
+      "id": "Q09",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 5.91,
+      "error": null
+    },
+    {
+      "id": "Q09",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 5.78,
+      "error": null
+    },
+    {
+      "id": "Q10",
+      "condition": "mas",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 44.49,
+      "error": null
+    },
+    {
+      "id": "Q10",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 4.8,
+      "error": null
+    },
+    {
+      "id": "Q10",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 14.41,
+      "error": null
+    },
+    {
+      "id": "Q11",
+      "condition": "mas",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 26.76,
+      "error": null
+    },
+    {
+      "id": "Q11",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.34,
+      "error": null
+    },
+    {
+      "id": "Q11",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 7.32,
+      "error": null
+    },
+    {
+      "id": "Q12",
+      "condition": "mas",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 49.65,
+      "error": null
+    },
+    {
+      "id": "Q12",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 5.1,
+      "error": null
+    },
+    {
+      "id": "Q12",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 6.09,
+      "error": null
+    },
+    {
+      "id": "Q13",
+      "condition": "mas",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 18.31,
+      "error": null
+    },
+    {
+      "id": "Q13",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.35,
+      "error": null
+    },
+    {
+      "id": "Q13",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 11.05,
+      "error": null
+    },
+    {
+      "id": "Q14",
+      "condition": "mas",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 12.14,
+      "error": null
+    },
+    {
+      "id": "Q14",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 2.84,
+      "error": null
+    },
+    {
+      "id": "Q14",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 4.87,
+      "error": null
+    },
+    {
+      "id": "Q15",
+      "condition": "mas",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 20.3,
+      "error": null
+    },
+    {
+      "id": "Q15",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 5.45,
+      "error": null
+    },
+    {
+      "id": "Q15",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "player_season_aggregates",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 6.22,
+      "error": null
+    },
+    {
+      "id": "Q16",
+      "condition": "mas",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 43.01,
+      "error": null
+    },
+    {
+      "id": "Q16",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 2.82,
+      "error": null
+    },
+    {
+      "id": "Q16",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 10.83,
+      "error": null
+    },
+    {
+      "id": "Q17",
+      "condition": "mas",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 10.33,
+      "error": null
+    },
+    {
+      "id": "Q17",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 5.13,
+      "error": null
+    },
+    {
+      "id": "Q17",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 10.01,
+      "error": null
+    },
+    {
+      "id": "Q18",
+      "condition": "mas",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 13.07,
+      "error": null
+    },
+    {
+      "id": "Q18",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 8.55,
+      "error": null
+    },
+    {
+      "id": "Q18",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 10.8,
+      "error": null
+    },
+    {
+      "id": "Q19",
+      "condition": "mas",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 12.4,
+      "error": null
+    },
+    {
+      "id": "Q19",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 2.71,
+      "error": null
+    },
+    {
+      "id": "Q19",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 4.53,
+      "error": null
+    },
+    {
+      "id": "Q20",
+      "condition": "mas",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 13.12,
+      "error": null
+    },
+    {
+      "id": "Q20",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 4.19,
+      "error": null
+    },
+    {
+      "id": "Q20",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "home_away_splits",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 18.22,
+      "error": null
+    },
+    {
+      "id": "Q21",
+      "condition": "mas",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 11.48,
+      "error": null
+    },
+    {
+      "id": "Q21",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 3.37,
+      "error": null
+    },
+    {
+      "id": "Q21",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 6.34,
+      "error": null
+    },
+    {
+      "id": "Q22",
+      "condition": "mas",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 21.42,
+      "error": null
+    },
+    {
+      "id": "Q22",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.83,
+      "error": null
+    },
+    {
+      "id": "Q22",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 6.53,
+      "error": null
+    },
+    {
+      "id": "Q23",
+      "condition": "mas",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 12.63,
+      "error": null
+    },
+    {
+      "id": "Q23",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 3.82,
+      "error": null
+    },
+    {
+      "id": "Q23",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 16.53,
+      "error": null
+    },
+    {
+      "id": "Q24",
+      "condition": "mas",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 12.23,
+      "error": null
+    },
+    {
+      "id": "Q24",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 8.07,
+      "error": null
+    },
+    {
+      "id": "Q24",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 21.46,
+      "error": null
+    },
+    {
+      "id": "Q25",
+      "condition": "mas",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 11.6,
+      "error": null
+    },
+    {
+      "id": "Q25",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.87,
+      "error": null
+    },
+    {
+      "id": "Q25",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "disciplinary",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 8.8,
+      "error": null
+    },
+    {
+      "id": "Q26",
+      "condition": "mas",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 17.56,
+      "error": null
+    },
+    {
+      "id": "Q26",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.14,
+      "error": null
+    },
+    {
+      "id": "Q26",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 12.36,
+      "error": null
+    },
+    {
+      "id": "Q27",
+      "condition": "mas",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 15.29,
+      "error": null
+    },
+    {
+      "id": "Q27",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.47,
+      "error": null
+    },
+    {
+      "id": "Q27",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 15.72,
+      "error": null
+    },
+    {
+      "id": "Q28",
+      "condition": "mas",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 24.28,
+      "error": null
+    },
+    {
+      "id": "Q28",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 5.53,
+      "error": null
+    },
+    {
+      "id": "Q28",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 7.83,
+      "error": null
+    },
+    {
+      "id": "Q29",
+      "condition": "mas",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 28.85,
+      "error": null
+    },
+    {
+      "id": "Q29",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.44,
+      "error": null
+    },
+    {
+      "id": "Q29",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 13.36,
+      "error": null
+    },
+    {
+      "id": "Q30",
+      "condition": "mas",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 12.48,
+      "error": null
+    },
+    {
+      "id": "Q30",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 4.37,
+      "error": null
+    },
+    {
+      "id": "Q30",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "xg_performance",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 13.53,
+      "error": null
+    },
+    {
+      "id": "Q31",
+      "condition": "mas",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 16.59,
+      "error": null
+    },
+    {
+      "id": "Q31",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 6.23,
+      "error": null
+    },
+    {
+      "id": "Q31",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 7.24,
+      "error": null
+    },
+    {
+      "id": "Q32",
+      "condition": "mas",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 20.74,
+      "error": null
+    },
+    {
+      "id": "Q32",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.32,
+      "error": null
+    },
+    {
+      "id": "Q32",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 16.88,
+      "error": null
+    },
+    {
+      "id": "Q33",
+      "condition": "mas",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 38.06,
+      "error": null
+    },
+    {
+      "id": "Q33",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 4.13,
+      "error": null
+    },
+    {
+      "id": "Q33",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 10.62,
+      "error": null
+    },
+    {
+      "id": "Q34",
+      "condition": "mas",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 11.72,
+      "error": null
+    },
+    {
+      "id": "Q34",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 4.36,
+      "error": null
+    },
+    {
+      "id": "Q34",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 9.25,
+      "error": null
+    },
+    {
+      "id": "Q35",
+      "condition": "mas",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "partial",
+      "latency_s": 17.68,
+      "error": null
+    },
+    {
+      "id": "Q35",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.52,
+      "error": null
+    },
+    {
+      "id": "Q35",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "market_transfers",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 11.08,
+      "error": null
+    },
+    {
+      "id": "Q36",
+      "condition": "mas",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 16.68,
+      "error": null
+    },
+    {
+      "id": "Q36",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.27,
+      "error": null
+    },
+    {
+      "id": "Q36",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 10.28,
+      "error": null
+    },
+    {
+      "id": "Q37",
+      "condition": "mas",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 10.86,
+      "error": null
+    },
+    {
+      "id": "Q37",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.96,
+      "error": null
+    },
+    {
+      "id": "Q37",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 11.93,
+      "error": null
+    },
+    {
+      "id": "Q38",
+      "condition": "mas",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 22.17,
+      "error": null
+    },
+    {
+      "id": "Q38",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.49,
+      "error": null
+    },
+    {
+      "id": "Q38",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 17.23,
+      "error": null
+    },
+    {
+      "id": "Q39",
+      "condition": "mas",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 12.91,
+      "error": null
+    },
+    {
+      "id": "Q39",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 4.56,
+      "error": null
+    },
+    {
+      "id": "Q39",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "availability",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 4.61,
+      "error": null
+    },
+    {
+      "id": "Q40",
+      "condition": "mas",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 12.6,
+      "error": null
+    },
+    {
+      "id": "Q40",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 5.0,
+      "error": null
+    },
+    {
+      "id": "Q40",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 9.98,
+      "error": null
+    },
+    {
+      "id": "Q41",
+      "condition": "mas",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 14.32,
+      "error": null
+    },
+    {
+      "id": "Q41",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 4.89,
+      "error": null
+    },
+    {
+      "id": "Q41",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 9.48,
+      "error": null
+    },
+    {
+      "id": "Q42",
+      "condition": "mas",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 20.7,
+      "error": null
+    },
+    {
+      "id": "Q42",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.26,
+      "error": null
+    },
+    {
+      "id": "Q42",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 11.41,
+      "error": null
+    },
+    {
+      "id": "Q43",
+      "condition": "mas",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 10.6,
+      "error": null
+    },
+    {
+      "id": "Q43",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 3.42,
+      "error": null
+    },
+    {
+      "id": "Q43",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 5.2,
+      "error": null
+    },
+    {
+      "id": "Q44",
+      "condition": "mas",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 21.37,
+      "error": null
+    },
+    {
+      "id": "Q44",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "in_coverage",
+      "verdict": "wrong",
+      "latency_s": 6.56,
+      "error": null
+    },
+    {
+      "id": "Q44",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "event_player_match",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 9.17,
+      "error": null
+    },
+    {
+      "id": "Q45",
+      "condition": "mas",
+      "model": "claude",
+      "category": "edge_case",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 13.92,
+      "error": null
+    },
+    {
+      "id": "Q45",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "edge_case",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 4.3,
+      "error": null
+    },
+    {
+      "id": "Q45",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "edge_case",
+      "coverage": "in_coverage",
+      "verdict": "correct",
+      "latency_s": 7.29,
+      "error": null
+    },
+    {
+      "id": "Q46",
+      "condition": "mas",
+      "model": "claude",
+      "category": "edge_case",
+      "coverage": "out_of_coverage",
+      "verdict": "correct",
+      "latency_s": 9.79,
+      "error": null
+    },
+    {
+      "id": "Q46",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "category": "edge_case",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 4.26,
+      "error": null
+    },
+    {
+      "id": "Q46",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "category": "edge_case",
+      "coverage": "out_of_coverage",
+      "verdict": "wrong",
+      "latency_s": 5.15,
+      "error": null
+    }
+  ]
+}

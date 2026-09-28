@@ -1,0 +1,60 @@
+{
+  "project": "agent_v5",
+  "memory_enabled_for_scored_runs": false,
+  "phases": {
+    "phase2_golden_set": {
+      "frozen_at": "2026-06-03T11:55:09+00:00",
+      "git_commit": "f2a44e5a3c3e175acb5bab38856646d75862e26e",
+      "git_dirty": true,
+      "scope": "ENG-PL, seasons 2020-2021..2024-2025",
+      "memory_enabled": false,
+      "files": {
+        "golden_set.json": {
+          "sha256": "681b42697690d4311036f29fd6fe10035b75660bdfbc595c0ba4d4ebba64c862",
+          "n_items": 46
+        },
+        "ground_truth.json": {
+          "sha256": "8119364ef44bf60abb45aa7315513c2a2f2be1957b8f7a836a5b472f756c4f5e",
+          "n_items": 46
+        }
+      },
+      "note": "canonical_sql drafted by Claude, approved by Till (delegated). Ground truth = result of running canonical_sql."
+    },
+    "phase3_coverage_labels": {
+      "frozen_at": "2026-06-03T13:56:34+00:00",
+      "git_commit": "bc4f1de0bc55968324503ecc05d69052f0e85ada",
+      "git_dirty": true,
+      "in_coverage": 28,
+      "out_of_coverage": 18,
+      "files": {
+        "coverage_labels.json": {
+          "sha256": "161137614f09a950734270d0f47b681868df11031bacd374b8e32587c42f1b4b",
+          "n_items": 46
+        }
+      },
+      "note": "Coverage decided by template-vs-ground-truth matching, generated before any DoF runs. 12 templates in templates/library.py."
+    },
+    "phase2b_extended_golden_set": {
+      "frozen_at": "2026-07-24T11:58:57+00:00",
+      "git_commit": "b000fb5eaab1e1af5de8da1ca367466a287917bc",
+      "git_dirty": true,
+      "scope": "ENG-PL (competition_id=1), seasons 2020-2021..2024-2025",
+      "memory_enabled": false,
+      "files": {
+        "golden_set_v2.json": {
+          "sha256": "1ceb52a24b715e339f81c4e33b9c204fdf2ce5363d5e6681789f3df921aac498",
+          "n_items": 30
+        },
+        "ground_truth_v2.json": {
+          "sha256": "ea0e26fe736ce2935a9e94695d462040a32e99630ec50ed191eec859518eabf8",
+          "n_items": 30
+        },
+        "prediction_golden_v2.json": {
+          "sha256": "9bf47dc47ada427606f555b044a807b82e4b73b2b2b357c30cc7e284cedbb2bf",
+          "n_items": 30
+        }
+      },
+      "note": "Extended set. DA canonical_sql re-scoped to ENG-PL on the multi-league DB; ground truth = result of executing it. Prediction model_gt = predict_match_outcome vector."
+    }
+  }
+}

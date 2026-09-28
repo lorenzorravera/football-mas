@@ -1,0 +1,87 @@
+{
+  "question_id": "Q19",
+  "question": "How many home points did Arsenal earn in 2023-2024?",
+  "experiment": "extended_da",
+  "condition": "mas",
+  "analyst_mode": "autonomous",
+  "model": "claude",
+  "repeat": 0,
+  "memory_enabled": false,
+  "langfuse_enabled": true,
+  "langfuse_trace_id": "extended_da|mas|claude|Q19|r0",
+  "answer": "Arsenal earned **47 home points** in the 2023-2024 season.",
+  "tool_sequence": [
+    "run_sql",
+    "run_sql"
+  ],
+  "sql": "SELECT tshas.tshas_home_points\nFROM team_season_home_away_standings tshas\nJOIN teams t ON t.team_id = tshas.team_id\nJOIN seasons s ON s.season_id = tshas.season_id\nWHERE t.team_name = 'Arsenal'\n  AND s.season = '2023-2024'\n  AND s.competition_id = 1;",
+  "template": null,
+  "low_confidence": false,
+  "intent": "data_request",
+  "prediction_vector": null,
+  "result_columns": [
+    "tshas_home_points"
+  ],
+  "result_rows": [
+    [
+      47
+    ]
+  ],
+  "result_row_count": 1,
+  "trace": [
+    {
+      "node": "manager",
+      "out": {
+        "intent": "data_request",
+        "seasons": [
+          "2023-2024"
+        ],
+        "teams": [
+          "Arsenal"
+        ],
+        "metrics": [
+          "home points"
+        ],
+        "home_team": "",
+        "away_team": "",
+        "match_date": ""
+      }
+    },
+    {
+      "node": "data_discovery",
+      "out": {
+        "relevant_tables": [
+          "team_season_home_away_standings",
+          "teams",
+          "seasons",
+          "competitions"
+        ],
+        "notes": "Join teams (team_name='Arsenal') and seasons (season='2023-2024') to team_season_home_away_standings on (team_id, season_id). Filter seasons.competition_id=1 (ENG-PL). Return tshas_home_points. Grain: one row per team-season."
+      }
+    },
+    {
+      "step": "self_debate[0]",
+      "agreed": true,
+      "sql_a": "SELECT tshas.tshas_home_points\nFROM team_season_home_away_standings tshas\nJOIN teams t ON t.team_id = tshas.team_id\nJOIN seasons s ON s.season_id = tshas.season_id\nWHERE t.team_name = 'Arsenal'\n  AND ",
+      "sql_b": "SELECT h.tshas_home_points\nFROM team_season_home_away_standings h\nWHERE h.team_id = (SELECT team_id FROM teams WHERE team_name = 'Arsenal')\n  AND h.season_id = (\n    SELECT s.season_id FROM seasons s\n"
+    },
+    {
+      "node": "data_analyst",
+      "mode": "autonomous",
+      "sql": "SELECT tshas.tshas_home_points\nFROM team_season_home_away_standings tshas\nJOIN teams t ON t.team_id = tshas.team_id\nJOIN seasons s ON s.season_id = tshas.season_id\nWHERE t.team_name = 'Arsenal'\n  AND ",
+      "template": null,
+      "low_confidence": false
+    },
+    {
+      "node": "synthesizer",
+      "answer": "Arsenal earned **47 home points** in the 2023-2024 season."
+    }
+  ],
+  "token_usage": {
+    "input": 27713,
+    "output": 499,
+    "total": 28212,
+    "calls": 5
+  },
+  "latency_s": 12.9
+}

@@ -1,0 +1,26 @@
+{
+  "question_id": "Q26",
+  "question": "Among players with at least 10 goals in 2023-2024, who overperformed their xG by the most (goals minus xG)?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "I can't answer this from the data provided.\n\nThe inlined `player_season` table only contains rows for the **2020-2021** and **2021-2022** seasons (the data cuts off mid-2021-2022). There are no 2023-2024 player-season rows in the provided data, so I cannot identify any players with \u226510 goals in 2023-2024 or compute their goals-minus-xG overperformance.",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q26|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229588,
+    "output": 129,
+    "total": 229717,
+    "calls": 1
+  },
+  "latency_s": 3.14,
+  "experiment": "mas_vs_single"
+}

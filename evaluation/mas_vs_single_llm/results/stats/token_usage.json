@@ -1,0 +1,149 @@
+{
+  "dof|dof_autonomous|claude|Q01|r0": {
+    "input": 40309,
+    "output": 627,
+    "total": 40936,
+    "calls": 7
+  },
+  "dof|dof_autonomous|claude|Q02|r0": {
+    "input": 24058,
+    "output": 390,
+    "total": 24448,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q03|r0": {
+    "input": 24365,
+    "output": 771,
+    "total": 25136,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q04|r0": {
+    "input": 24233,
+    "output": 544,
+    "total": 24777,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q05|r0": {
+    "input": 24049,
+    "output": 369,
+    "total": 24418,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q06|r0": {
+    "input": 24372,
+    "output": 632,
+    "total": 25004,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q07|r0": {
+    "input": 24283,
+    "output": 421,
+    "total": 24704,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q08|r0": {
+    "input": 40552,
+    "output": 859,
+    "total": 41411,
+    "calls": 7
+  },
+  "dof|dof_autonomous|claude|Q09|r0": {
+    "input": 24300,
+    "output": 587,
+    "total": 24887,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q10|r0": {
+    "input": 24281,
+    "output": 596,
+    "total": 24877,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q11|r0": {
+    "input": 40525,
+    "output": 855,
+    "total": 41380,
+    "calls": 7
+  },
+  "dof|dof_autonomous|claude|Q12|r0": {
+    "input": 24227,
+    "output": 483,
+    "total": 24710,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q13|r0": {
+    "input": 40741,
+    "output": 937,
+    "total": 41678,
+    "calls": 7
+  },
+  "dof|dof_autonomous|claude|Q14|r0": {
+    "input": 24230,
+    "output": 457,
+    "total": 24687,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q15|r0": {
+    "input": 40870,
+    "output": 1002,
+    "total": 41872,
+    "calls": 7
+  },
+  "dof|dof_autonomous|claude|Q16|r0": {
+    "input": 24146,
+    "output": 403,
+    "total": 24549,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q17|r0": {
+    "input": 24138,
+    "output": 417,
+    "total": 24555,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q18|r0": {
+    "error": "status_code: 502, body: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<bo"
+  },
+  "dof|dof_autonomous|claude|Q19|r0": {
+    "input": 24197,
+    "output": 401,
+    "total": 24598,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q20|r0": {
+    "input": 24175,
+    "output": 450,
+    "total": 24625,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q21|r0": {
+    "input": 24268,
+    "output": 556,
+    "total": 24824,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q22|r0": {
+    "input": 24217,
+    "output": 586,
+    "total": 24803,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q23|r0": {
+    "input": 24150,
+    "output": 473,
+    "total": 24623,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q24|r0": {
+    "input": 24160,
+    "output": 459,
+    "total": 24619,
+    "calls": 5
+  },
+  "dof|dof_autonomous|claude|Q25|r0": {
+    "input": 24119,
+    "output": 401,
+    "total": 24520,
+    "calls": 5
+  }
+}

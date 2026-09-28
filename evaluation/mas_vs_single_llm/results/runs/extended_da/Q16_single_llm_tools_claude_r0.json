@@ -1,0 +1,31 @@
+{
+  "question_id": "Q16",
+  "question": "Which team earned the most home points in 2024-2025?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "**Liverpool** earned the most home points in 2024-2025 with **46 points** (14 wins, 4 draws, 1 loss at Anfield).\n\nFor context, the next closest were Manchester City (42) and Chelsea (41).",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT t.tshas_team, t.tshas_home_points, t.tshas_home_wins, t.tshas_home_draws, t.tshas_home_losses\nFROM team_season_home_away_standings t\nJOIN seasons s ON t.season_id = s.season_id\nWHERE s.competition_id = 1 AND s.season = '2024-2025'\nORDER BY t.tshas_home_points DESC\nLIMIT 5;"
+      },
+      "result": "5 rows, cols=['tshas_team', 'tshas_home_points', 'tshas_home_wins', 'tshas_home_draws', 'tshas_home_losses']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 5.58,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q16|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19360,
+    "output": 297,
+    "total": 19657,
+    "calls": 2
+  }
+}

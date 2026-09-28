@@ -1,0 +1,26 @@
+{
+  "question_id": "P07",
+  "question": "Predict the outcome of Brentford vs West Ham United on 2024-09-28 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "**Form analysis:**\n\n**Brentford (home):** Recent record is mixed. They've won their home games this season (beat Southampton 3-1, Crystal Palace 2-1) but lost away to strong sides (Tottenham, Man City, Liverpool). Their home form is a key strength \u2014 2 wins from 2 at home this season, scoring freely.\n\n**West Ham (away):** Struggling for consistency. Recent results are poor: heavy defeats to Chelsea (0-3) and Man City (1-3), a draw at Fulham. Their only bright spot was a 2-0 win at Crystal Palace. Defensively leaky, conceding multiple goals in several matches.\n\n**Assessment:**\n- Brentford's strong home form is a significant factor.\n- West Ham are shaky, especially defensively, though they can score.\n- Brentford's home advantage plus West Ham's inconsistency favors the hosts, but West Ham are capable of goals on the road.\n\nLeaning towards a Brentford win with meaningful chances for a draw or West Ham away result.\n\nPROBABILITIES: home=0.48, draw=0.26, away=0.26",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.48,
+    "draw": 0.26,
+    "away_win": 0.26
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P07|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 924,
+  "token_usage": {
+    "input": 828,
+    "output": 377,
+    "total": 1205,
+    "calls": 1
+  },
+  "latency_s": 10.34
+}

@@ -1,0 +1,120 @@
+{
+  "_about": "End-to-end MAS prediction eval fixtures. One block per registered capability (14). Each query is run through the FULL agent (run_agent) so manager routing + dispatch + handler + model are all exercised. score_mode drives which check the runner applies. Realised-label ACCURACY is NOT scored here (the deployed artefacts are refit on all rows and the agent forecasts the latest season -> next, whose label is unavailable/leaked); leakage-free accuracy lives in the model-level holdout (PREDICTION_ROBUSTNESS.md / eval_tasks.py). This family scores ROUTING correctness + output PLAUSIBILITY for all 14 capabilities. Entities are real 2024-25 PL clubs/players.",
+  "experiment": "prediction_eval",
+  "tasks": [
+    {
+      "task": "match_outcome",
+      "expected_prediction_type": "match_outcome",
+      "score_mode": "probs_hda",
+      "questions": [
+        {"query": "Predict the result if Liverpool play Aston Villa — will Liverpool beat them?"},
+        {"query": "Arsenal vs Chelsea — who wins?"}
+      ]
+    },
+    {
+      "task": "season_class",
+      "expected_prediction_type": "season_class",
+      "score_mode": "probs_class",
+      "questions": [
+        {"query": "Will Aston Villa finish in the top four next season?"},
+        {"query": "Which teams are most likely to be relegated next season?"}
+      ]
+    },
+    {
+      "task": "position_movement",
+      "expected_prediction_type": "position_movement",
+      "score_mode": "probs_class",
+      "questions": [
+        {"query": "Will Manchester United climb the table next season?"}
+      ]
+    },
+    {
+      "task": "turnaround",
+      "expected_prediction_type": "turnaround",
+      "score_mode": "point_estimate",
+      "questions": [
+        {"query": "Will Tottenham bounce back with more points next season?"}
+      ]
+    },
+    {
+      "task": "player_decline",
+      "expected_prediction_type": "player_decline",
+      "score_mode": "nonempty",
+      "questions": [
+        {"query": "Which players are most likely to decline next season?"}
+      ]
+    },
+    {
+      "task": "cross_league_translation",
+      "expected_prediction_type": "cross_league_translation",
+      "score_mode": "point_estimate",
+      "questions": [
+        {"query": "How would Jonathan David translate to the Premier League if he moved there?"}
+      ]
+    },
+    {
+      "task": "event_impact",
+      "expected_prediction_type": "event_impact",
+      "score_mode": "nonempty",
+      "questions": [
+        {"query": "How does conceding an early goal affect the match result?"}
+      ]
+    },
+    {
+      "task": "player_value",
+      "expected_prediction_type": "player_value",
+      "score_mode": "nonempty",
+      "questions": [
+        {"query": "Which Premier League players are the best value for money?"}
+      ]
+    },
+    {
+      "task": "player_team_impact",
+      "expected_prediction_type": "player_team_impact",
+      "score_mode": "nonempty",
+      "questions": [
+        {"query": "What is Mohamed Salah's contribution to Liverpool this season?"}
+      ]
+    },
+    {
+      "task": "transfer_fit",
+      "expected_prediction_type": "transfer_fit",
+      "score_mode": "nonempty",
+      "questions": [
+        {"query": "Would Jonathan David fit at Arsenal?"}
+      ]
+    },
+    {
+      "task": "squad_availability",
+      "expected_prediction_type": "squad_availability",
+      "score_mode": "nonempty",
+      "questions": [
+        {"query": "How much do injuries cost Newcastle in points?"}
+      ]
+    },
+    {
+      "task": "stakeholder_value",
+      "expected_prediction_type": "stakeholder_value",
+      "score_mode": "nonempty",
+      "questions": [
+        {"query": "Which is the most valuable club in the Premier League?"}
+      ]
+    },
+    {
+      "task": "home_away_dependency",
+      "expected_prediction_type": "home_away_dependency",
+      "score_mode": "index",
+      "questions": [
+        {"query": "Is Aston Villa too reliant on home form?"}
+      ]
+    },
+    {
+      "task": "explain",
+      "expected_prediction_type": "season_class",
+      "score_mode": "explain",
+      "questions": [
+        {"query": "Why will Aston Villa finish where you predict next season — what factors are driving it?"}
+      ]
+    }
+  ]
+}

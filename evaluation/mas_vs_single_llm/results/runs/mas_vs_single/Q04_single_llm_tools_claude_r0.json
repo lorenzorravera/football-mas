@@ -1,0 +1,40 @@
+{
+  "question_id": "Q04",
+  "question": "Which three teams were relegated from the Premier League in 2023-2024?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "The three teams relegated from the Premier League in **2023-2024** (finishing in the bottom three) were:\n\n| Rank | Team | Points | GD |\n|------|------|--------|-----|\n| 18 | Luton Town | 26 | \u221233 |\n| 19 | Burnley | 24 | \u221237 |\n| 20 | Sheffield United | 16 | \u221269 |\n\nSo **Luton Town, Burnley, and Sheffield United** were relegated.",
+  "tool_sequence": [
+    "run_sql",
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tss_team, tss_rank, tss_points, tss_goal_difference\nFROM team_season_standings tss\nJOIN seasons s ON s.season_id = tss.season_id\nWHERE s.season = '2023-2024'\nORDER BY tss_rank DESC\nLIMIT 3;"
+      },
+      "result": "3 rows, cols=['tss_team', 'tss_rank', 'tss_points', 'tss_goal_difference']"
+    },
+    {
+      "step": 1,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT tss_team, tss_rank, tss_points, tss_goal_difference\nFROM team_season_standings tss\nJOIN seasons s ON s.season_id = tss.season_id\nJOIN competitions c ON c.competition_id = s.competition_id\nWHERE s.season = '2023-2024' AND c.league_code = 'ENG-PL'\nORDER BY tss_rank DESC\nLIMIT 3;"
+      },
+      "result": "3 rows, cols=['tss_team', 'tss_rank', 'tss_points', 'tss_goal_difference']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 10.83,
+  "experiment": "mas_vs_single",
+  "langfuse_trace_id": "mas_vs_single|single_llm_tools|claude|Q04|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 25890,
+    "output": 559,
+    "total": 26449,
+    "calls": 3
+  }
+}

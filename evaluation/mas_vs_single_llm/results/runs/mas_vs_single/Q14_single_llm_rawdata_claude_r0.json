@@ -1,0 +1,26 @@
+{
+  "question_id": "Q14",
+  "question": "Who was Liverpool's top scorer in 2024-2025?",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "answer": "Based on the player_season data for Liverpool in 2024-2025, **Mohamed Salah** was Liverpool's top scorer with **29 goals** (and 18 assists in 3372 minutes).",
+  "tool_sequence": [],
+  "trace": [],
+  "langfuse_trace_id": "mas_vs_single|single_llm_rawdata|claude|Q14|r0",
+  "repeat": 0,
+  "raw_dump_tables": [
+    "standings",
+    "home_away",
+    "team_discipline",
+    "player_season"
+  ],
+  "raw_dump_chars": 325131,
+  "token_usage": {
+    "input": 229570,
+    "output": 68,
+    "total": 229638,
+    "calls": 1
+  },
+  "latency_s": 2.84,
+  "experiment": "mas_vs_single"
+}

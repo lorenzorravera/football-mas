@@ -1,0 +1,26 @@
+{
+  "question_id": "P29",
+  "question": "Predict the outcome of Newcastle United vs Chelsea on 2025-05-11 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Form analysis:\n\n**Newcastle (home):** Strong recent form with high scoring \u2014 7 wins in last 10, including big home wins (5-0, 4-1, 3-0). Only losses to Aston Villa and Liverpool away. At home they've been prolific and dominant. One draw at Brighton most recently.\n\n**Chelsea (away):** Solid form, winning 6 of last 10, but many tight results (several 1-0 wins, low-scoring). Just beat Liverpool 3-1 impressively. Away record decent (won at Fulham, drew at Brentford), but lost at Arsenal and Villa away.\n\n**Assessment:** Newcastle's home attacking strength is notable, and this is a high-stakes top-four clash. Newcastle are clear favorites at home given their scoring output, but Chelsea are defensively resilient and capable of nicking results. This slightly favors Newcastle with meaningful chances for Chelsea.\n\nPROBABILITIES: home=0.48, draw=0.24, away=0.28",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.48,
+    "draw": 0.24,
+    "away_win": 0.28
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P29|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 918,
+  "token_usage": {
+    "input": 854,
+    "output": 340,
+    "total": 1194,
+    "calls": 1
+  },
+  "latency_s": 7.08
+}

@@ -1,0 +1,26 @@
+{
+  "question_id": "P13",
+  "question": "Predict the outcome of Newcastle United vs West Ham United on 2024-11-25 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Analyzing form:\n\n**Newcastle United (home):**\n- Last 10: W4 D4 L2 \u2014 solid, unbeaten in last 2 (win at Forest, win vs Arsenal)\n- Strong home performances (beat Arsenal, Tottenham; draws vs Man City, Brighton loss)\n- Good defensive record recently\n\n**West Ham United (away):**\n- Last 10: W3 D3 L4 \u2014 inconsistent\n- Recent form poor: heavy losses (0-3 Forest, 1-4 Tottenham, 0-3 Chelsea)\n- Away form patchy, defensively fragile in big losses\n\n**Assessment:**\nNewcastle are in better form, at home, and West Ham have shown defensive vulnerability away. Newcastle clear favorites, though West Ham can score. Home advantage is significant here.\n\nPROBABILITIES: home=0.55, draw=0.25, away=0.20",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.55,
+    "draw": 0.25,
+    "away_win": 0.2
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P13|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 999,
+  "token_usage": {
+    "input": 857,
+    "output": 309,
+    "total": 1166,
+    "calls": 1
+  },
+  "latency_s": 6.33
+}

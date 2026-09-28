@@ -1,0 +1,31 @@
+{
+  "question_id": "Q27",
+  "question": "Among players with at least 10 goals in 2023-2024, who underperformed their xG by the most (xG minus goals)?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "Among players with at least 10 goals in the 2023-2024 Premier League season, **Darwin N\u00fa\u00f1ez (Liverpool)** underperformed his xG by the most.\n\n**Biggest xG underperformers (xG \u2212 goals):**\n\n| Player | Team | Goals | xG | xG \u2212 Goals |\n|--------|------|-------|-----|-----------|\n| **Darwin N\u00fa\u00f1ez** | Liverpool | 11 | 19.19 | **+8.19** |\n| Nicolas Jackson | Chelsea | 14 | 19.86 | +5.86 |\n| Erling Haaland | Man City | 27 | 31.65 | +4.65 |\n| Mohamed Salah | Liverpool | 18 | 21.94 | +3.94 |\n| Juli\u00e1n \u00c1lvarez | Man City | 11 | 14.37 | +3.37 |\n\nN\u00fa\u00f1ez racked up over 19 xG but converted only 11 goals \u2014 a shortfall of roughly 8.2 goals, by far the biggest gap of any double-figure scorer that season. Nicolas Jackson was next (\u22125.9), with even Erling Haaland notably under his lofty xG (\u22124.7) despite scoring 27.",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT p.player_name, ps.team, ps.goals_pss, ps.xg_pss,\n       (ps.xg_pss - ps.goals_pss) AS xg_minus_goals\nFROM vw_player_season_summary ps\nJOIN players p ON p.player_id = ps.player_id\nWHERE ps.season = '2023-2024' AND ps.league_code = 'ENG-PL'\n  AND ps.goals_pss >= 10\nORDER BY xg_minus_goals DESC\nLIMIT 10;"
+      },
+      "result": "10 rows, cols=['player_name', 'team', 'goals_pss', 'xg_pss', 'xg_minus_goals']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 9.99,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q27|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19669,
+    "output": 658,
+    "total": 20327,
+    "calls": 2
+  }
+}

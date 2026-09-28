@@ -1,0 +1,184 @@
+{
+  "scores": [
+    {
+      "id": "P01",
+      "condition": "mas",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.557,
+        "draw": 0.178,
+        "away_win": 0.265
+      },
+      "error": null,
+      "brier": 0.0994,
+      "fidelity": true,
+      "tokens": 961,
+      "latency_s": 10.87
+    },
+    {
+      "id": "P01",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.5,
+        "draw": 0.27,
+        "away_win": 0.23
+      },
+      "error": null,
+      "brier": 0.1253,
+      "fidelity": null,
+      "tokens": 1130,
+      "latency_s": 6.21
+    },
+    {
+      "id": "P01",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.557,
+        "draw": 0.178,
+        "away_win": 0.265
+      },
+      "error": null,
+      "brier": 0.0994,
+      "fidelity": true,
+      "tokens": 43569,
+      "latency_s": 13.83
+    },
+    {
+      "id": "P02",
+      "condition": "mas",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.8,
+        "draw": 0.184,
+        "away_win": 0.016
+      },
+      "error": null,
+      "brier": 0.0247,
+      "fidelity": true,
+      "tokens": 1044,
+      "latency_s": 5.72
+    },
+    {
+      "id": "P02",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.78,
+        "draw": 0.14,
+        "away_win": 0.08
+      },
+      "error": null,
+      "brier": 0.0248,
+      "fidelity": null,
+      "tokens": 1189,
+      "latency_s": 6.86
+    },
+    {
+      "id": "P02",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.8,
+        "draw": 0.184,
+        "away_win": 0.016
+      },
+      "error": null,
+      "brier": 0.0247,
+      "fidelity": true,
+      "tokens": 26399,
+      "latency_s": 11.66
+    },
+    {
+      "id": "P03",
+      "condition": "mas",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.239,
+        "draw": 0.224,
+        "away_win": 0.538
+      },
+      "error": null,
+      "brier": 0.1069,
+      "fidelity": true,
+      "tokens": 1001,
+      "latency_s": 6.14
+    },
+    {
+      "id": "P03",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.42,
+        "draw": 0.29,
+        "away_win": 0.29
+      },
+      "error": null,
+      "brier": 0.2549,
+      "fidelity": null,
+      "tokens": 1091,
+      "latency_s": 6.01
+    },
+    {
+      "id": "P03",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.239,
+        "draw": 0.224,
+        "away_win": 0.538
+      },
+      "error": null,
+      "brier": 0.1069,
+      "fidelity": true,
+      "tokens": 26329,
+      "latency_s": 9.4
+    },
+    {
+      "id": "P04",
+      "condition": "mas",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.322,
+        "draw": 0.249,
+        "away_win": 0.429
+      },
+      "error": null,
+      "brier": 0.2839,
+      "fidelity": true,
+      "tokens": 963,
+      "latency_s": 11.25
+    },
+    {
+      "id": "P04",
+      "condition": "single_llm_rawdata",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.37,
+        "draw": 0.28,
+        "away_win": 0.35
+      },
+      "error": null,
+      "brier": 0.2593,
+      "fidelity": null,
+      "tokens": 1214,
+      "latency_s": 6.67
+    },
+    {
+      "id": "P04",
+      "condition": "single_llm_tools",
+      "model": "claude",
+      "prediction_vector": {
+        "home_win": 0.322,
+        "draw": 0.249,
+        "away_win": 0.429
+      },
+      "error": null,
+      "brier": 0.2839,
+      "fidelity": true,
+      "tokens": 43490,
+      "latency_s": 13.93
+    }
+  ]
+}

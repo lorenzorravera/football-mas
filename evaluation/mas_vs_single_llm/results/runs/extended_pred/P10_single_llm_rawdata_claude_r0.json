@@ -1,0 +1,26 @@
+{
+  "question_id": "P10",
+  "question": "Predict the outcome of Wolves vs Manchester City on 2024-10-20 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Looking at the form:\n\n**Wolves** are in dreadful form \u2014 they've lost 6 of their last 7 competitive matches, conceding heavily (5, 6, 3 goals in several games). Their defense is leaking badly, and they've only managed one draw (Forest) recently. Last season they were also thumped 5-1 by City.\n\n**Manchester City** are unbeaten in their last 10, winning 7 and drawing 3. They dropped points only against strong sides (Arsenal, Newcastle) and have been ruthless against weaker teams (4-1 Ipswich, 3-1 West Ham, 4-0 Fulham, 2-0 Chelsea).\n\nGiven City's dominance, Wolves' porous defense, and City's history against them, an away win is heavily favored. A draw is possible but unlikely; a Wolves win is very improbable.\n\nPROBABILITIES: home=0.06, draw=0.15, away=0.79",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.06,
+    "draw": 0.15,
+    "away_win": 0.79
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P10|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 891,
+  "token_usage": {
+    "input": 830,
+    "output": 308,
+    "total": 1138,
+    "calls": 1
+  },
+  "latency_s": 6.39
+}

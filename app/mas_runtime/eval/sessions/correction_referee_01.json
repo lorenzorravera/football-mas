@@ -1,0 +1,21 @@
+{
+  "session_id": "correction_referee_01",
+  "sub_experiment": "correction",
+  "variant": "no_control",
+  "correction_lesson": "Referee names in the matches table are stored with a NON-BREAKING SPACE (Unicode chr(160)) between first and last name, not a normal space. A filter like WHERE m.referee = 'First Last' (normal space) matches 0 rows and silently returns NULL/0. Always normalize first: WHERE REPLACE(m.referee, chr(160), chr(32)) = 'First Last'.",
+  "description": "Referee-name matching pattern (non-breaking space / exact-name pitfall). Trigger tends to mis-handle the referee name; beneficiary is the same pattern for a different referee/metric and should reuse the stored correction.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "How many total corners were there across all matches refereed by Anthony Taylor in the 2023-2024 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(m.home_corners + m.away_corners) AS total_corners FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2023-2024' AND REPLACE(m.referee, chr(160), chr(32)) = 'Anthony Taylor';"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "And how many total fouls were committed in matches refereed by Michael Oliver in the 2024-2025 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(m.home_fouls + m.away_fouls) AS total_fouls FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND REPLACE(m.referee, chr(160), chr(32)) = 'Michael Oliver';"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "session_id": "correction_wins_02",
+  "sub_experiment": "correction",
+  "variant": "no_control",
+  "correction_lesson": "A team's total wins = home wins (ft_result='H' where it is home_team_id) PLUS away wins (ft_result='A' where it is away_team_id). ft_result is from the HOME team's perspective, so counting only one side undercounts.",
+  "description": "Total-wins pitfall (scaled): home wins + away wins.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "How many matches did Liverpool win in total in the 2021-2022 Premier League season?",
+      "ground_truth_sql": "SELECT COUNT(*) AS wins FROM (SELECT 1 FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.home_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND t.team_name = 'Liverpool' AND m.ft_result = 'H' UNION ALL SELECT 1 FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.away_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND t.team_name = 'Liverpool' AND m.ft_result = 'A') x;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "How many games did Arsenal win across the whole 2022-2023 Premier League season?",
+      "ground_truth_sql": "SELECT COUNT(*) AS wins FROM (SELECT 1 FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.home_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND t.team_name = 'Arsenal' AND m.ft_result = 'H' UNION ALL SELECT 1 FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.away_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND t.team_name = 'Arsenal' AND m.ft_result = 'A') x;"
+    }
+  ]
+}

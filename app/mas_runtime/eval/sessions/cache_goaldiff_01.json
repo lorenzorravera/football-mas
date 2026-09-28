@@ -1,0 +1,20 @@
+{
+  "session_id": "cache_goaldiff_01",
+  "sub_experiment": "cache",
+  "variant": "no_control",
+  "description": "Near-repeat: champion's goal difference, reworded.",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "What goal difference did Liverpool end the 2024-2025 Premier League season with?",
+      "ground_truth_sql": "SELECT tss_goal_difference FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND tss_team = 'Liverpool';"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "What was Liverpool's goal difference at the end of the 2024-2025 Premier League campaign?",
+      "ground_truth_sql": "SELECT tss_goal_difference FROM team_season_standings tss JOIN seasons s ON tss.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id WHERE c.league_code = 'ENG-PL' AND s.season = '2024-2025' AND tss_team = 'Liverpool';"
+    }
+  ]
+}

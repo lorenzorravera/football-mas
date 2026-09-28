@@ -1,0 +1,26 @@
+{
+  "question_id": "P11",
+  "question": "Predict the outcome of Ipswich Town vs Leicester City on 2024-11-02 \u2014 give the home win, draw and away win probabilities.",
+  "experiment": "extended_pred",
+  "condition": "single_llm_rawdata",
+  "model": "claude",
+  "repeat": 0,
+  "answer": "Both teams are newly promoted/struggling sides with poor form.\n\n**Ipswich Town:** No wins in their first 9 matches (0W 5D 4L). They've drawn several games but leaked goals heavily (conceding 4 twice recently). Defensively fragile, but decent at home in draws.\n\n**Leicester City:** Slightly better with 1 win (vs Bournemouth), but also winless-heavy form. Their away results are mixed: a win at Southampton, but losses at Arsenal and Fulham, and draw at Crystal Palace. They've been leaking goals too.\n\n**Assessment:** Two evenly-matched poor defensive teams. Ipswich have home advantage but no wins yet. Leicester slightly more attacking threat and one recent away win. This is a close, high-draw-probability fixture. Home advantage nudges Ipswich marginally ahead of a road win probability.\n\nPROBABILITIES: home=0.36, draw=0.29, away=0.35",
+  "tool_sequence": [],
+  "trace": [],
+  "prediction_vector": {
+    "home_win": 0.36,
+    "draw": 0.29,
+    "away_win": 0.35
+  },
+  "langfuse_trace_id": "extended_pred|single_llm_rawdata|claude|P11|r0",
+  "langfuse_enabled": true,
+  "raw_dump_chars": 898,
+  "token_usage": {
+    "input": 836,
+    "output": 324,
+    "total": 1160,
+    "calls": 1
+  },
+  "latency_s": 7.25
+}

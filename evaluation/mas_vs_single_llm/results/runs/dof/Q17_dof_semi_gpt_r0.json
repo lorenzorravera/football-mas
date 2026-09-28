@@ -1,0 +1,157 @@
+{
+  "question_id": "Q17",
+  "question": "Which team recorded the most away wins in 2023-2024?",
+  "experiment": "dof",
+  "condition": "dof_semi",
+  "analyst_mode": "semi",
+  "model": "gpt",
+  "repeat": 0,
+  "memory_enabled": false,
+  "langfuse_enabled": true,
+  "langfuse_trace_id": "dof|dof_semi|gpt|Q17|r0",
+  "answer": "Manchester City recorded the most away wins in 2023-2024, with 14 away wins.",
+  "tool_sequence": [
+    "use_template"
+  ],
+  "sql": null,
+  "template": "home_away_table",
+  "low_confidence": false,
+  "intent": "data_request",
+  "result_columns": [
+    "team_name",
+    "metric"
+  ],
+  "result_rows": [
+    [
+      "Manchester City",
+      14
+    ],
+    [
+      "Arsenal",
+      13
+    ],
+    [
+      "Liverpool",
+      9
+    ],
+    [
+      "Aston Villa",
+      8
+    ],
+    [
+      "Manchester United",
+      8
+    ],
+    [
+      "Chelsea",
+      7
+    ],
+    [
+      "Tottenham Hotspur",
+      7
+    ],
+    [
+      "West Ham United",
+      7
+    ],
+    [
+      "Bournemouth",
+      6
+    ],
+    [
+      "Newcastle United",
+      6
+    ],
+    [
+      "Brentford",
+      5
+    ],
+    [
+      "Crystal Palace",
+      5
+    ],
+    [
+      "Everton",
+      5
+    ],
+    [
+      "Wolves",
+      5
+    ],
+    [
+      "Brighton",
+      4
+    ],
+    [
+      "Fulham",
+      4
+    ],
+    [
+      "Nottingham Forest",
+      4
+    ],
+    [
+      "Burnley",
+      3
+    ],
+    [
+      "Luton Town",
+      2
+    ],
+    [
+      "Sheffield United",
+      1
+    ]
+  ],
+  "result_row_count": 20,
+  "trace": [
+    {
+      "node": "manager",
+      "out": {
+        "intent": "data_request",
+        "seasons": [
+          "2023-2024"
+        ],
+        "teams": [],
+        "metrics": [
+          "away wins"
+        ]
+      }
+    },
+    {
+      "node": "data_discovery",
+      "out": {
+        "relevant_tables": [
+          "team_season_home_away_standings",
+          "seasons",
+          "teams"
+        ],
+        "notes": "Grain is one row per team-season. Filter seasons.season = '2023-2024', join on season_id and team_id, then order tshas_away_wins DESC and take the top team. Use teams.team_name for canonical display."
+      }
+    },
+    {
+      "node": "data_analyst",
+      "mode": "semi",
+      "route": {
+        "approach": "template",
+        "template_name": "home_away_table",
+        "params": {
+          "season": "2023-2024",
+          "metric": "away_wins"
+        }
+      }
+    },
+    {
+      "node": "data_analyst",
+      "mode": "semi",
+      "sql": "",
+      "template": "home_away_table",
+      "low_confidence": false
+    },
+    {
+      "node": "synthesizer",
+      "answer": "Manchester City recorded the most away wins in 2023-2024, with 14 away wins."
+    }
+  ],
+  "latency_s": 17.41
+}

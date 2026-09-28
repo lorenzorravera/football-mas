@@ -1,0 +1,227 @@
+{
+  "generated_at": "2026-06-03T11:22:53+00:00",
+  "database_host": "capstone-2-pl-agent.h.aivencloud.com:14390",
+  "pg_version": "17.10",
+  "completeness": {
+    "logical_base_table_count": 17,
+    "row_counts": {
+      "competitions": 1,
+      "computed_metrics": 0,
+      "match_events": 2969929,
+      "matches": 1900,
+      "player_injury_spells": 3776,
+      "player_market_values": 25404,
+      "player_match_performance": 53903,
+      "player_season_splits": 35155,
+      "player_season_stats": 2800,
+      "player_transfers": 10327,
+      "players": 1265,
+      "seasons": 5,
+      "team_season_home_away_standings": 100,
+      "team_season_standings": 100,
+      "team_season_stats_against": 100,
+      "team_season_stats_for": 100,
+      "teams": 27
+    },
+    "partition_children": {
+      "player_match_performance": [
+        "player_match_performance_eng_pl",
+        "player_match_performance_eng_pl_2020_2021",
+        "player_match_performance_eng_pl_2021_2022",
+        "player_match_performance_eng_pl_2022_2023",
+        "player_match_performance_eng_pl_2023_2024",
+        "player_match_performance_eng_pl_2024_2025"
+      ],
+      "match_events": [
+        "match_events_eng_pl",
+        "match_events_eng_pl_2020_2021",
+        "match_events_eng_pl_2021_2022",
+        "match_events_eng_pl_2022_2023",
+        "match_events_eng_pl_2023_2024",
+        "match_events_eng_pl_2024_2025"
+      ]
+    },
+    "partition_child_counts": {
+      "player_match_performance_eng_pl": 53903,
+      "player_match_performance_eng_pl_2020_2021": 10256,
+      "player_match_performance_eng_pl_2021_2022": 10259,
+      "player_match_performance_eng_pl_2022_2023": 11082,
+      "player_match_performance_eng_pl_2023_2024": 10973,
+      "player_match_performance_eng_pl_2024_2025": 11333,
+      "match_events_eng_pl": 2969929,
+      "match_events_eng_pl_2020_2021": 606814,
+      "match_events_eng_pl_2021_2022": 589102,
+      "match_events_eng_pl_2022_2023": 590145,
+      "match_events_eng_pl_2023_2024": 604425,
+      "match_events_eng_pl_2024_2025": 579443
+    },
+    "materialized_view_counts": {
+      "vw_match_summary": 1900,
+      "vw_player_availability": 3776,
+      "vw_player_match_summary": 53903,
+      "vw_player_season_summary": 2800,
+      "vw_player_shooting_profile": 48898,
+      "vw_team_season_summary": 100
+    },
+    "missing_expected_tables": [],
+    "unexpected_extra_tables": [],
+    "missing_materialized_views": [],
+    "empty_logical_tables": [
+      "computed_metrics"
+    ],
+    "empty_partition_children": [],
+    "present_seasons": [
+      "2020-2021",
+      "2021-2022",
+      "2022-2023",
+      "2023-2024",
+      "2024-2025"
+    ],
+    "missing_seasons": [],
+    "season_id_has_gaps": false,
+    "_pass": true
+  },
+  "integrity": {
+    "orphan_counts": {
+      "orphan_pmp_game_id": 0,
+      "orphan_match_events_game_id": 0,
+      "orphan_player_season_stats_player_id": 0,
+      "orphan_player_match_performance_player_id": 0,
+      "orphan_player_market_values_player_id": 0,
+      "orphan_player_transfers_player_id": 0,
+      "orphan_player_injury_spells_player_id": 0,
+      "orphan_team_season_standings_team_id": 0,
+      "orphan_team_season_home_away_standings_team_id": 0,
+      "orphan_team_season_stats_for_team_id": 0,
+      "orphan_team_season_stats_against_team_id": 0,
+      "orphan_player_season_stats_team_id": 0,
+      "orphan_matches_home_team_id": 0,
+      "orphan_matches_away_team_id": 0,
+      "orphan_matches_season_id": 0,
+      "orphan_team_season_standings_season_id": 0,
+      "orphan_player_season_stats_season_id": 0,
+      "orphan_pmp_season_string": 0,
+      "orphan_match_events_season_string": 0
+    },
+    "_pass": true
+  },
+  "landmines": {
+    "points_deductions_2023_2024": [
+      {
+        "team": "Everton",
+        "wins": 13,
+        "draws": 9,
+        "points": 40,
+        "implied_deduction": 8
+      },
+      {
+        "team": "Nottingham Forest",
+        "wins": 9,
+        "draws": 9,
+        "points": 32,
+        "implied_deduction": 4
+      }
+    ],
+    "all_implied_point_adjustments": [
+      {
+        "season": "2023-2024",
+        "team": "Everton",
+        "implied_deduction": 8
+      },
+      {
+        "season": "2023-2024",
+        "team": "Nottingham Forest",
+        "implied_deduction": 4
+      }
+    ],
+    "everton_deduction_ok": true,
+    "forest_deduction_ok": true,
+    "market_value_date_unix_min": 1096761600,
+    "market_value_date_unix_max": 1757548800,
+    "date_unix_looks_like_seconds": true,
+    "duplicate_team_names": [],
+    "team_count": 27,
+    "alias_target_names_present": [
+      "Brighton",
+      "Manchester City",
+      "Manchester United",
+      "Newcastle United",
+      "Nottingham Forest",
+      "Tottenham Hotspur",
+      "West Ham United",
+      "Wolves"
+    ],
+    "match_events_total": 2969929,
+    "player_match_performance_total": 53903,
+    "partitions_nonempty": true,
+    "season_string_sample": [
+      "2020-2021",
+      "2021-2022",
+      "2022-2023",
+      "2023-2024",
+      "2024-2025"
+    ],
+    "uses_hyphen_season_format": true,
+    "latest_season": "2024-2025",
+    "_pass": true
+  },
+  "matview_freshness": {
+    "vw_team_season_summary_count": 100,
+    "team_season_standings_count": 100,
+    "vw_match_summary_count": 1900,
+    "matches_count": 1900,
+    "vw_player_season_summary_count": 2800,
+    "player_season_stats_count": 2800,
+    "vwtss_points_mismatches": [],
+    "_pass": true
+  },
+  "eda": {
+    "null_rates": {
+      "matches": {
+        "home_score": 0.0,
+        "away_score": 0.0,
+        "ft_result": 0.0,
+        "referee": 0.0026,
+        "attendance_m": 0.1863,
+        "avg_home_odds": 0.0,
+        "home_shots": 0.0,
+        "home_formation": 0.0042
+      },
+      "player_season_stats": {
+        "minutes_pss": 0.0,
+        "goals_pss": 0.0,
+        "xg_pss": 0.0664,
+        "age": 0.0004
+      },
+      "team_season_stats_for": {
+        "tssf_possession_percentage": 0.0,
+        "tssf_goals": 0.0,
+        "tssf_shots": 0.0
+      },
+      "player_market_values": {
+        "market_value": 0.0
+      },
+      "player_match_performance": {
+        "minutes_played": 0.0017,
+        "match_goals": 0.0,
+        "xg_pmp": 0.0,
+        "position": 0.0
+      }
+    },
+    "value_range_violations": {
+      "possession_for_out_of_range": 0,
+      "odds_le_1": 0,
+      "negative_minutes_pss": 0,
+      "negative_minutes_pmp": 0,
+      "negative_scores": 0
+    },
+    "duplicate_conflict_keys": {
+      "matches_game_id": 0,
+      "player_season_stats_key": 0,
+      "team_season_standings_key": 0,
+      "player_market_values_key": 0
+    },
+    "_pass": true
+  },
+  "overall_pass": true
+}

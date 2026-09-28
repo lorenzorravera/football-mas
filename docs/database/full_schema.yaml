@@ -1,0 +1,1590 @@
+schema_version: current_aiven_context_from_corrected_sql_completedb
+source_files:
+  sql_definition: Block_updated_with_suffixes_CORRECTED.sql
+  prior_yaml_reference: schema_context.yaml
+database:
+  platform: Aiven PostgreSQL
+  domain: football analytics
+  design_status:
+    current_live_scope: Premier League only
+    future_target_scope: 10 leagues
+    notes:
+    - Current live database contains only Premier League data.
+    - Current SQL seed data and partitions are also Premier League only.
+    - Schema structure is intended to be updated later for all target leagues.
+    - Current SQL excludes pg_cron scheduling and excludes vw_team_season_summary because its source tables are not present.
+  normalization: Mostly normalized analytical warehouse schema with summary views
+  refresh_strategy: Manual materialized view refresh. pg_cron scheduling is not present in the current Aiven SQL structure.
+  partitioning_strategy:
+    player_match_performance:
+      partitioned_by:
+      - league_code
+      - season
+      current_partition_scope:
+      - ENG-PL
+      - 2020-2021
+      - 2021-2022
+      - 2022-2023
+      - 2023-2024
+      - 2024-2025
+    match_events:
+      partitioned_by:
+      - league_code
+      - season
+      current_partition_scope:
+      - ENG-PL
+      - 2020-2021
+      - 2021-2022
+      - 2022-2023
+      - 2023-2024
+      - 2024-2025
+league_roadmap:
+  current_loaded_leagues:
+  - league_code: ENG-PL
+    league_name: Premier League
+    country: England
+    loaded_in_live_db: true
+    seeded_in_current_sql: true
+  future_supported_leagues:
+  - league_code: ENG-PL
+    league_name: Premier League
+    country: England
+    status: current
+  - league_code: GER-BL
+    league_name: Bundesliga
+    country: Germany
+    status: planned
+  - league_code: ITA-SA
+    league_name: Serie A
+    country: Italy
+    status: planned
+  - league_code: ESP-LL
+    league_name: La Liga
+    country: Spain
+    status: planned
+  - league_code: FRA-L1
+    league_name: Ligue 1
+    country: France
+    status: planned
+  - league_code: NED-ED
+    league_name: Eredivisie
+    country: Netherlands
+    status: planned
+  - league_code: BEL-PL
+    league_name: Jupiler Pro League
+    country: Belgium
+    status: planned
+  - league_code: POR-PL
+    league_name: Primeira Liga
+    country: Portugal
+    status: planned
+  - league_code: TUR-SL
+    league_name: Super Lig
+    country: Turkey
+    status: planned
+  - league_code: SCO-PL
+    league_name: Premiership
+    country: Scotland
+    status: planned
+seasons_context:
+  current_seeded_seasons:
+  - 2020-2021
+  - 2021-2022
+  - 2022-2023
+  - 2023-2024
+  - 2024-2025
+  future_target_seasons_note: Planned expansion may extend both season range and league coverage.
+naming_suffixes:
+  pss: player_season_stats
+  pssp: player_season_splits
+  pmp: player_match_performance
+  m: matches
+  notes:
+  - Only duplicated analytical metric names were suffixed.
+  - Identifiers such as player_id, season, team, game_id remain unsuffixed where used as join keys.
+tables:
+  competitions:
+    description: Dimension table for competitions / leagues.
+    grain: One row per competition.
+    primary_key: competition_id
+    current_seeded_rows:
+    - league_code: ENG-PL
+      league_name: Premier League
+      country: England
+      tier: 1
+    future_expected_rows: All 10 target leagues.
+    columns:
+      competition_id:
+        type: SERIAL
+        nullable: false
+        description: Surrogate primary key.
+      league_code:
+        type: VARCHAR(10)
+        nullable: false
+        description: Canonical competition code such as ENG-PL.
+      league_name:
+        type: VARCHAR(100)
+        nullable: false
+        description: Display competition name.
+      country:
+        type: VARCHAR(50)
+        nullable: false
+        description: Competition country.
+      tier:
+        type: SMALLINT
+        nullable: true
+        default: 1
+        description: Competition tier; top-flight leagues use 1.
+  seasons:
+    description: Season dimension table. Each row belongs to one competition.
+    grain: One row per competition-season.
+    primary_key: season_id
+    foreign_keys:
+      competition_id: competitions.competition_id
+    unique_constraints:
+    - - competition_id
+      - season
+    columns:
+      season_id:
+        type: SERIAL
+        nullable: false
+        description: Surrogate season key.
+      competition_id:
+        type: INT
+        nullable: false
+        description: FK to competitions.
+      season:
+        type: VARCHAR(9)
+        nullable: false
+        description: Season label in format YYYY-YYYY.
+      start_date:
+        type: DATE
+        nullable: true
+        description: Season start date.
+      end_date:
+        type: DATE
+        nullable: true
+        description: Season end date.
+  players:
+    description: Master player dimension.
+    grain: One row per player.
+    primary_key: player_id
+    columns:
+      player_id:
+        type: INT
+        nullable: false
+        description: Canonical player identifier used across player-level fact tables.
+      player_name:
+        type: VARCHAR(100)
+        nullable: false
+        description: Canonical player display name.
+      nationality:
+        type: VARCHAR(50)
+        nullable: true
+        description: Nationality string.
+      birth_year:
+        type: SMALLINT
+        nullable: true
+        description: Birth year.
+      height:
+        type: SMALLINT
+        nullable: true
+        description: Height, expected in centimeters if populated.
+      foot:
+        type: VARCHAR(5)
+        nullable: true
+        description: Preferred foot, e.g. left/right.
+  teams:
+    description: Master team dimension.
+    grain: One row per team.
+    primary_key: team_id
+    unique_constraints:
+    - - team_name
+    current_scope_note: Currently seeded with Premier League-era clubs appearing in the current data.
+    columns:
+      team_id:
+        type: SERIAL
+        nullable: false
+        description: Surrogate team key.
+      team_name:
+        type: VARCHAR(100)
+        nullable: false
+        description: Canonical team name.
+  matches:
+    description: 'Core match fact table. One row per match. Includes match metadata, match result, match-level team box score
+      variables, selected betting averages, and operational fields used to link downstream tables.
+
+      '
+    grain: One row per match.
+    primary_key: match_id
+    foreign_keys:
+      season_id: seasons.season_id
+      home_team_id: teams.team_id
+      away_team_id: teams.team_id
+    unique_constraints:
+    - - game_id
+    columns:
+      match_id:
+        type: VARCHAR(20)
+        nullable: false
+        description: Canonical match identifier used across warehouse tables.
+      game_id:
+        type: INT
+        nullable: true
+        description: External match identifier, used especially with event-level feeds.
+      season_id:
+        type: INT
+        nullable: false
+        description: FK to seasons.
+      matchweek:
+        type: SMALLINT
+        nullable: true
+        description: Matchweek / round number.
+      match_date:
+        type: DATE
+        nullable: true
+        description: Date of the match.
+      kickoff_time:
+        type: TIME
+        nullable: true
+        description: Scheduled or recorded kickoff time.
+      home_team_id:
+        type: INT
+        nullable: true
+        description: FK to teams for home team.
+      away_team_id:
+        type: INT
+        nullable: true
+        description: FK to teams for away team.
+      home_score:
+        type: SMALLINT
+        nullable: true
+        description: Full-time home goals.
+      away_score:
+        type: SMALLINT
+        nullable: true
+        description: Full-time away goals.
+      ft_result:
+        type: CHAR(1)
+        nullable: true
+        description: Full-time result, typically H/D/A.
+      ht_home_score:
+        type: SMALLINT
+        nullable: true
+        description: Half-time home goals.
+      ht_away_score:
+        type: SMALLINT
+        nullable: true
+        description: Half-time away goals.
+      ht_result:
+        type: CHAR(1)
+        nullable: true
+        description: Half-time result, typically H/D/A.
+      home_formation:
+        type: VARCHAR(10)
+        nullable: true
+        description: Home team formation string.
+      away_formation:
+        type: VARCHAR(10)
+        nullable: true
+        description: Away team formation string.
+      venue:
+        type: VARCHAR(100)
+        nullable: true
+        description: Venue / stadium name.
+      attendance_m:
+        type: INT
+        nullable: true
+        description: Attendance; suffixed to avoid duplicate measure name collisions.
+      referee:
+        type: VARCHAR(100)
+        nullable: true
+        description: Main referee name.
+      home_shots:
+        type: SMALLINT
+        nullable: true
+        description: Home team total shots.
+      away_shots:
+        type: SMALLINT
+        nullable: true
+        description: Away team total shots.
+      home_shots_on_target:
+        type: SMALLINT
+        nullable: true
+        description: Home shots on target.
+      away_shots_on_target:
+        type: SMALLINT
+        nullable: true
+        description: Away shots on target.
+      home_corners:
+        type: SMALLINT
+        nullable: true
+        description: Home corners.
+      away_corners:
+        type: SMALLINT
+        nullable: true
+        description: Away corners.
+      home_fouls:
+        type: SMALLINT
+        nullable: true
+        description: Home fouls committed.
+      away_fouls:
+        type: SMALLINT
+        nullable: true
+        description: Away fouls committed.
+      home_yellow_cards:
+        type: SMALLINT
+        nullable: true
+        description: Home yellow cards.
+      away_yellow_cards:
+        type: SMALLINT
+        nullable: true
+        description: Away yellow cards.
+      home_red_cards:
+        type: SMALLINT
+        nullable: true
+        description: Home red cards.
+      away_red_cards:
+        type: SMALLINT
+        nullable: true
+        description: Away red cards.
+      home_touches:
+        type: SMALLINT
+        nullable: true
+        description: Home touches.
+      away_touches:
+        type: SMALLINT
+        nullable: true
+        description: Away touches.
+      home_tackles:
+        type: SMALLINT
+        nullable: true
+        description: Home tackles.
+      away_tackles:
+        type: SMALLINT
+        nullable: true
+        description: Away tackles.
+      home_interceptions:
+        type: SMALLINT
+        nullable: true
+        description: Home interceptions.
+      away_interceptions:
+        type: SMALLINT
+        nullable: true
+        description: Away interceptions.
+      home_clearances:
+        type: SMALLINT
+        nullable: true
+        description: Home clearances.
+      away_clearances:
+        type: SMALLINT
+        nullable: true
+        description: Away clearances.
+      home_aerials_won:
+        type: SMALLINT
+        nullable: true
+        description: Home aerial duels won.
+      away_aerials_won:
+        type: SMALLINT
+        nullable: true
+        description: Away aerial duels won.
+      home_long_balls:
+        type: SMALLINT
+        nullable: true
+        description: Home long balls.
+      away_long_balls:
+        type: SMALLINT
+        nullable: true
+        description: Away long balls.
+      home_crosses:
+        type: SMALLINT
+        nullable: true
+        description: Home crosses.
+      away_crosses:
+        type: SMALLINT
+        nullable: true
+        description: Away crosses.
+      home_goal_kicks:
+        type: SMALLINT
+        nullable: true
+        description: Home goal kicks.
+      away_goal_kicks:
+        type: SMALLINT
+        nullable: true
+        description: Away goal kicks.
+      home_throw_ins:
+        type: SMALLINT
+        nullable: true
+        description: Home throw-ins.
+      away_throw_ins:
+        type: SMALLINT
+        nullable: true
+        description: Away throw-ins.
+      avg_home_odds:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Average home-win odds.
+      avg_draw_odds:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Average draw odds.
+      avg_away_odds:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Average away-win odds.
+      avg_over25_odds:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Average over-2.5 goals odds.
+      avg_under25_odds:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Average under-2.5 goals odds.
+  player_season_stats:
+    description: 'Season-level player fact table. Mixes outfield and goalkeeper metrics in one table; goalkeeper-only metrics
+      are NULL for outfield players.
+
+      '
+    grain: One row per player-season-team.
+    primary_key: id
+    foreign_keys:
+      player_id: players.player_id
+      season_id: seasons.season_id
+      team_id: teams.team_id
+    unique_constraints:
+    - - player_id
+      - season_id
+      - team_id
+    naming_note: Duplicated analytical metrics are suffixed with _pss.
+    columns:
+      id:
+        type: SERIAL
+        nullable: false
+        description: Surrogate row id.
+      player_id:
+        type: INT
+        nullable: false
+        description: FK to players.
+      season_id:
+        type: INT
+        nullable: false
+        description: FK to seasons.
+      team_id:
+        type: INT
+        nullable: true
+        description: FK to teams.
+      age:
+        type: SMALLINT
+        nullable: true
+        description: Player age in that season.
+      position:
+        type: VARCHAR(10)
+        nullable: true
+        description: Position label.
+      matches_played_pss:
+        type: SMALLINT
+        nullable: true
+        description: Season appearances.
+      starts:
+        type: SMALLINT
+        nullable: true
+        description: Season starts.
+      minutes_pss:
+        type: INT
+        nullable: true
+        description: Minutes played.
+      goals_pss:
+        type: SMALLINT
+        nullable: true
+        description: Goals.
+      assists_pss:
+        type: SMALLINT
+        nullable: true
+        description: Assists.
+      yellow_cards_pss:
+        type: SMALLINT
+        nullable: true
+        description: Yellow cards.
+      red_cards_pss:
+        type: SMALLINT
+        nullable: true
+        description: Red cards.
+      shots_pss:
+        type: SMALLINT
+        nullable: true
+        description: Shots.
+      shots_on_target_pss:
+        type: SMALLINT
+        nullable: true
+        description: Shots on target.
+      xg_pss:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: Expected goals.
+      xa_pss:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: Expected assists.
+      npxg_pss:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: Non-penalty expected goals.
+      xgchain_pss:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: xGChain.
+      xgbuildup_pss:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: xGBuildup.
+      key_passes_pss:
+        type: SMALLINT
+        nullable: true
+        description: Key passes.
+      non_penalty_goals_pss:
+        type: SMALLINT
+        nullable: true
+        description: Non-penalty goals.
+      fouls_committed:
+        type: SMALLINT
+        nullable: true
+        description: Fouls committed.
+      fouls_drawn_pss:
+        type: SMALLINT
+        nullable: true
+        description: Fouls drawn.
+      interceptions_pss:
+        type: SMALLINT
+        nullable: true
+        description: Interceptions.
+      tackles_won:
+        type: SMALLINT
+        nullable: true
+        description: Tackles won.
+      offsides_pss:
+        type: SMALLINT
+        nullable: true
+        description: Offsides.
+      crosses:
+        type: SMALLINT
+        nullable: true
+        description: Crosses.
+      saves_pss:
+        type: SMALLINT
+        nullable: true
+        description: Goalkeeper saves.
+      clean_sheets:
+        type: SMALLINT
+        nullable: true
+        description: Goalkeeper clean sheets.
+      shots_on_tgt_against:
+        type: SMALLINT
+        nullable: true
+        description: Goalkeeper shots on target faced.
+      save_pct_pss:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Save percentage.
+      penalties_faced:
+        type: SMALLINT
+        nullable: true
+        description: Penalties faced.
+      penalty_saves:
+        type: SMALLINT
+        nullable: true
+        description: Penalty saves.
+  player_season_splits:
+    description: 'Season-level player split table for grouped contexts such as position, situation, shot zone, or shot type.
+      Exact group semantics depend on upstream Understat-derived extraction.
+
+      '
+    grain: One row per player-season-group_type-group_name.
+    primary_key: id
+    foreign_keys:
+      player_id: players.player_id
+      season_id: seasons.season_id
+    unique_constraints:
+    - - player_id
+      - season_id
+      - group_type
+      - group_name
+    naming_note: Duplicated analytical metrics are suffixed with _pssp.
+    columns:
+      id:
+        type: SERIAL
+        nullable: false
+        description: Surrogate row id.
+      player_id:
+        type: INT
+        nullable: false
+        description: FK to players.
+      season_id:
+        type: INT
+        nullable: false
+        description: FK to seasons.
+      group_type:
+        type: VARCHAR(50)
+        nullable: false
+        description: Grouping dimension, e.g. situation / shot zone / position.
+      group_name:
+        type: VARCHAR(50)
+        nullable: false
+        description: Group label within group_type.
+      matches_played_pssp:
+        type: SMALLINT
+        nullable: true
+        description: Matches played in this split.
+      minutes_pssp:
+        type: INT
+        nullable: true
+        description: Minutes in this split.
+      goals_pssp:
+        type: SMALLINT
+        nullable: true
+        description: Goals in this split.
+      assists_pssp:
+        type: SMALLINT
+        nullable: true
+        description: Assists in this split.
+      yellow_cards_pssp:
+        type: SMALLINT
+        nullable: true
+        description: Yellow cards in this split.
+      red_cards_pssp:
+        type: SMALLINT
+        nullable: true
+        description: Red cards in this split.
+      shots_pssp:
+        type: SMALLINT
+        nullable: true
+        description: Shots in this split.
+      xg_pssp:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: Expected goals in this split.
+      xa_pssp:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: Expected assists in this split.
+      npxg_pssp:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: Non-penalty xG in this split.
+      xgchain_pssp:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: xGChain in this split.
+      xgbuildup_pssp:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: xGBuildup in this split.
+      key_passes_pssp:
+        type: SMALLINT
+        nullable: true
+        description: Key passes in this split.
+      non_penalty_goals_pssp:
+        type: SMALLINT
+        nullable: true
+        description: Non-penalty goals in this split.
+  player_match_performance:
+    description: 'Match-level player fact table combining Understat / FBref-style player match metrics. Partitioned by league_code
+      then season.
+
+      '
+    grain: One row per player-match-league-season.
+    partitioning:
+      level_1: LIST(league_code)
+      level_2: LIST(season)
+    primary_key:
+    - player_id
+    - match_id
+    - season
+    - league_code
+    current_partitions:
+      league_partitions:
+      - player_match_performance_eng_pl
+      season_partitions:
+      - player_match_performance_eng_pl_2020_2021
+      - player_match_performance_eng_pl_2021_2022
+      - player_match_performance_eng_pl_2022_2023
+      - player_match_performance_eng_pl_2023_2024
+      - player_match_performance_eng_pl_2024_2025
+    columns:
+      player_id:
+        type: INT
+        nullable: false
+        description: Player identifier.
+      match_id:
+        type: VARCHAR(20)
+        nullable: false
+        description: Warehouse match identifier.
+      season:
+        type: VARCHAR(9)
+        nullable: false
+        description: Season label (stored directly for partitioning).
+      league_code:
+        type: VARCHAR(10)
+        nullable: false
+        description: League code (stored directly for partitioning).
+      position:
+        type: VARCHAR(10)
+        nullable: true
+        description: Player position in that match.
+      minutes_played:
+        type: SMALLINT
+        nullable: true
+        description: Minutes played.
+      match_goals:
+        type: SMALLINT
+        nullable: true
+        description: Goals scored in the match.
+      match_assists:
+        type: SMALLINT
+        nullable: true
+        description: Assists in the match.
+      match_shots:
+        type: SMALLINT
+        nullable: true
+        description: Shots in the match.
+      shots_on_target_pmp:
+        type: SMALLINT
+        nullable: true
+        description: Shots on target.
+      xg_pmp:
+        type: NUMERIC(5,3)
+        nullable: true
+        description: Expected goals.
+      xa_pmp:
+        type: NUMERIC(5,3)
+        nullable: true
+        description: Expected assists.
+      npxg_pmp:
+        type: NUMERIC(5,3)
+        nullable: true
+        description: Non-penalty xG.
+      xgchain_pmp:
+        type: NUMERIC(5,3)
+        nullable: true
+        description: xGChain.
+      xgbuildup_pmp:
+        type: NUMERIC(5,3)
+        nullable: true
+        description: xGBuildup.
+      key_passes_pmp:
+        type: SMALLINT
+        nullable: true
+        description: Key passes.
+      non_penalty_goals_pmp:
+        type: SMALLINT
+        nullable: true
+        description: Non-penalty goals.
+      yellow_cards_pmp:
+        type: SMALLINT
+        nullable: true
+        description: Yellow cards.
+      red_cards_pmp:
+        type: SMALLINT
+        nullable: true
+        description: Red cards.
+      fouls:
+        type: SMALLINT
+        nullable: true
+        description: Fouls committed.
+      fouls_drawn_pmp:
+        type: SMALLINT
+        nullable: true
+        description: Fouls drawn.
+      tackles_won:
+        type: SMALLINT
+        nullable: true
+        description: Tackles won.
+      interceptions_pmp:
+        type: SMALLINT
+        nullable: true
+        description: Interceptions.
+      crosses:
+        type: SMALLINT
+        nullable: true
+        description: Crosses.
+      offsides_pmp:
+        type: SMALLINT
+        nullable: true
+        description: Offsides.
+      own_goals:
+        type: SMALLINT
+        nullable: true
+        description: Own goals.
+      pens_made:
+        type: SMALLINT
+        nullable: true
+        description: Penalties made.
+      pens_att:
+        type: SMALLINT
+        nullable: true
+        description: Penalty attempts.
+      pens_won:
+        type: SMALLINT
+        nullable: true
+        description: Penalties won.
+      pens_conceded:
+        type: SMALLINT
+        nullable: true
+        description: Penalties conceded.
+      progressive_passes:
+        type: SMALLINT
+        nullable: true
+        description: Progressive passes.
+      box_touches:
+        type: SMALLINT
+        nullable: true
+        description: Touches in the box.
+      gk_saves:
+        type: SMALLINT
+        nullable: true
+        description: Goalkeeper saves.
+      gk_goals_against:
+        type: SMALLINT
+        nullable: true
+        description: Goalkeeper goals conceded.
+      gk_save_pct:
+        type: NUMERIC(4,1)
+        nullable: true
+        description: Goalkeeper save percentage.
+      gk_shots_on_tgt_against:
+        type: SMALLINT
+        nullable: true
+        description: Goalkeeper shots on target faced.
+  match_events:
+    description: 'Event-level fact table for detailed on-ball actions. Partitioned by league_code then season. Designed primarily
+      around WhoScored-style event schema with extensive categorical qualifiers.
+
+      '
+    grain: One row per event.
+    partitioning:
+      level_1: LIST(league_code)
+      level_2: LIST(season)
+    primary_key:
+    - event_id
+    - season
+    - league_code
+    current_partitions:
+      league_partitions:
+      - match_events_eng_pl
+      season_partitions:
+      - match_events_eng_pl_2020_2021
+      - match_events_eng_pl_2021_2022
+      - match_events_eng_pl_2022_2023
+      - match_events_eng_pl_2023_2024
+      - match_events_eng_pl_2024_2025
+    columns:
+      event_id:
+        type: BIGSERIAL
+        nullable: false
+        description: Event identifier, unique only together with season and league_code.
+      season:
+        type: VARCHAR(9)
+        nullable: false
+        description: Season label for partitioning.
+      league_code:
+        type: VARCHAR(10)
+        nullable: false
+        description: League code for partitioning.
+      game_id:
+        type: INT
+        nullable: true
+        description: External match id linking to match feed.
+      period:
+        type: VARCHAR(20)
+        nullable: true
+        description: Match period.
+      minute:
+        type: SMALLINT
+        nullable: true
+        description: Minute of event.
+      second:
+        type: SMALLINT
+        nullable: true
+        description: Second of event.
+      expanded_minute:
+        type: SMALLINT
+        nullable: true
+        description: Expanded / stoppage-time minute.
+      type:
+        type: VARCHAR(50)
+        nullable: true
+        description: Event type.
+      outcome_type:
+        type: VARCHAR(50)
+        nullable: true
+        description: Outcome label.
+      team_id:
+        type: INT
+        nullable: true
+        description: Source team id.
+      team:
+        type: VARCHAR(100)
+        nullable: true
+        description: Team name from event source.
+      player_id:
+        type: INT
+        nullable: true
+        description: Player id from mapped event source.
+      player_name:
+        type: VARCHAR(100)
+        nullable: true
+        description: Player display name.
+      x:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Start x coordinate.
+      y:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Start y coordinate.
+      end_x:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: End x coordinate.
+      end_y:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: End y coordinate.
+      goal_mouth_y:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Goal mouth y location for shots.
+      goal_mouth_z:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Goal mouth z location for shots.
+      blocked_x:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Blocked event x coordinate.
+      blocked_y:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Blocked event y coordinate.
+      is_touch:
+        type: BOOLEAN
+        nullable: true
+        description: Whether event is a touch.
+      is_shot:
+        type: BOOLEAN
+        nullable: true
+        description: Whether event is a shot.
+      is_goal:
+        type: BOOLEAN
+        nullable: true
+        description: Whether event resulted in a goal.
+      related_event_id:
+        type: BIGINT
+        nullable: true
+        description: Related event identifier.
+      related_player_id:
+        type: INT
+        nullable: true
+        description: Related player identifier.
+      pass_length:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Pass length.
+      pass_angle:
+        type: NUMERIC(6,3)
+        nullable: true
+        description: Pass angle.
+      pass_end_x:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Pass end x.
+      pass_end_y:
+        type: NUMERIC(5,2)
+        nullable: true
+        description: Pass end y.
+      zone:
+        type: VARCHAR(20)
+        nullable: true
+        description: Pitch zone.
+      player_caught_offside:
+        type: BOOLEAN
+        nullable: true
+        description: Offside flag.
+      blocked_cross:
+        type: BOOLEAN
+        nullable: true
+        description: Blocked cross flag.
+      body_part_1:
+        type: VARCHAR(30)
+        nullable: true
+        description: Primary body part qualifier.
+      body_part_2:
+        type: VARCHAR(30)
+        nullable: true
+        description: Secondary body part qualifier.
+      pass_type_1:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass type qualifier 1.
+      pass_type_2:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass type qualifier 2.
+      pass_type_3:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass type qualifier 3.
+      pass_type_4:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass type qualifier 4.
+      pass_type_5:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass type qualifier 5.
+      pass_quality_1:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass quality qualifier 1.
+      pass_quality_2:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass quality qualifier 2.
+      pass_quality_3:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass quality qualifier 3.
+      pass_quality_4:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass quality qualifier 4.
+      pass_quality_5:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass quality qualifier 5.
+      pass_quality_6:
+        type: VARCHAR(30)
+        nullable: true
+        description: Pass quality qualifier 6.
+      shot_zone_1:
+        type: VARCHAR(30)
+        nullable: true
+        description: Shot zone qualifier.
+      shot_direction_1:
+        type: VARCHAR(30)
+        nullable: true
+        description: Shot direction qualifier.
+      shot_qualifier_1:
+        type: VARCHAR(30)
+        nullable: true
+        description: Shot qualifier 1.
+      shot_qualifier_2:
+        type: VARCHAR(30)
+        nullable: true
+        description: Shot qualifier 2.
+      shot_qualifier_3:
+        type: VARCHAR(30)
+        nullable: true
+        description: Shot qualifier 3.
+      shot_qualifier_4:
+        type: VARCHAR(30)
+        nullable: true
+        description: Shot qualifier 4.
+      shot_qualifier_5:
+        type: VARCHAR(30)
+        nullable: true
+        description: Shot qualifier 5.
+      keeper_save_type_1:
+        type: VARCHAR(30)
+        nullable: true
+        description: Keeper save qualifier 1.
+      keeper_save_type_2:
+        type: VARCHAR(30)
+        nullable: true
+        description: Keeper save qualifier 2.
+      keeper_save_type_3:
+        type: VARCHAR(30)
+        nullable: true
+        description: Keeper save qualifier 3.
+      keeper_save_type_4:
+        type: VARCHAR(30)
+        nullable: true
+        description: Keeper save qualifier 4.
+      foul_type_1:
+        type: VARCHAR(30)
+        nullable: true
+        description: Foul type qualifier.
+      situation:
+        type: VARCHAR(50)
+        nullable: true
+        description: Shot / event situation.
+      shot_type:
+        type: VARCHAR(50)
+        nullable: true
+        description: Shot type.
+      player_assisted:
+        type: VARCHAR(100)
+        nullable: true
+        description: Assist provider name if present.
+      last_action:
+        type: VARCHAR(50)
+        nullable: true
+        description: Preceding action label.
+  player_market_values:
+    description: Historical player market values.
+    grain: One row per player-date.
+    primary_key:
+    - player_id
+    - date_unix
+    foreign_keys:
+      player_id: players.player_id
+    columns:
+      player_id:
+        type: INT
+        nullable: false
+        description: FK to players.
+      date_unix:
+        type: BIGINT
+        nullable: false
+        description: Unix timestamp associated with market value snapshot.
+      market_value:
+        type: NUMERIC(12,2)
+        nullable: true
+        description: Market value snapshot.
+  player_transfers:
+    description: Player transfer history.
+    grain: One row per player transfer event.
+    primary_key: transfer_id
+    foreign_keys:
+      player_id: players.player_id
+    unique_constraints:
+    - - player_id
+      - transfer_date
+      - from_team
+      - to_team
+    columns:
+      transfer_id:
+        type: SERIAL
+        nullable: false
+        description: Surrogate transfer id.
+      player_id:
+        type: INT
+        nullable: true
+        description: FK to players.
+      season:
+        type: VARCHAR(9)
+        nullable: true
+        description: Season label if available.
+      transfer_date:
+        type: DATE
+        nullable: true
+        description: Transfer date.
+      from_team:
+        type: VARCHAR(100)
+        nullable: true
+        description: Origin club.
+      to_team:
+        type: VARCHAR(100)
+        nullable: true
+        description: Destination club.
+      transfer_type:
+        type: VARCHAR(50)
+        nullable: true
+        description: Transfer type label.
+      transfer_fee:
+        type: NUMERIC(12,2)
+        nullable: true
+        description: Transfer fee.
+  player_injury_spells:
+    description: Player injury / absence spells inferred or loaded from source injury data.
+    grain: One row per player injury spell.
+    primary_key: spell_id
+    foreign_keys:
+      player_id: players.player_id
+    unique_constraints:
+    - - player_id
+      - season
+      - from_matchweek
+      - league_code
+    columns:
+      spell_id:
+        type: SERIAL
+        nullable: false
+        description: Surrogate spell id.
+      player_id:
+        type: INT
+        nullable: true
+        description: FK to players.
+      player_name:
+        type: VARCHAR(100)
+        nullable: true
+        description: Player name.
+      season:
+        type: VARCHAR(9)
+        nullable: true
+        description: Season label.
+      league_code:
+        type: VARCHAR(10)
+        nullable: true
+        description: League code.
+      team:
+        type: VARCHAR(100)
+        nullable: true
+        description: Team name.
+      from_matchweek:
+        type: SMALLINT
+        nullable: true
+        description: Start matchweek of spell.
+      to_matchweek:
+        type: SMALLINT
+        nullable: true
+        description: End matchweek of spell.
+      from_date:
+        type: DATE
+        nullable: true
+        description: Spell start date.
+      end_date:
+        type: DATE
+        nullable: true
+        description: Spell end date.
+      games_missed:
+        type: SMALLINT
+        nullable: true
+        description: Games missed in spell.
+      days_missed:
+        type: SMALLINT
+        nullable: true
+        description: Days missed in spell.
+      injury_reason:
+        type: VARCHAR(200)
+        nullable: true
+        description: Injury / absence reason.
+  computed_metrics:
+    description: 'Generic metrics store for derived metrics not natively materialized into warehouse tables. Intended for
+      caching computed analytics keyed by entity.
+
+      '
+    grain: One row per entity_type + entity_id + metric_name + parameters.
+    primary_key: metric_id
+    unique_constraints:
+    - - entity_type
+      - entity_id
+      - metric_name
+      - parameters
+    columns:
+      metric_id:
+        type: UUID
+        nullable: false
+        description: Metric row UUID.
+        default: gen_random_uuid()
+      entity_type:
+        type: VARCHAR(20)
+        nullable: false
+        description: Entity domain, e.g. player / team / match.
+      entity_id:
+        type: INT
+        nullable: false
+        description: Entity identifier inside entity_type domain.
+      metric_name:
+        type: VARCHAR(100)
+        nullable: false
+        description: Metric name.
+      metric_value:
+        type: JSONB
+        nullable: false
+        description: Computed metric payload.
+      parameters:
+        type: JSONB
+        nullable: true
+        description: JSON parameterization for metric computation.
+      computed_at:
+        type: TIMESTAMPTZ
+        nullable: true
+        description: Computation timestamp.
+        default: now()
+      source_query:
+        type: TEXT
+        nullable: true
+        description: Optional source SQL / provenance info.
+materialized_views:
+  vw_player_season_summary:
+    description: 'Player-season summary view joining player metadata, season context, competition context, team, player season
+      stats, and latest market value.
+
+      '
+    grain: One row per player-season-league.
+    unique_index:
+    - player_id
+    - season
+    - league_code
+    source_tables:
+    - player_season_stats
+    - players
+    - seasons
+    - competitions
+    - teams
+    - player_market_values
+    key_fields:
+    - player_id
+    - player_name
+    - season
+    - league_code
+    - team
+    selected_metrics:
+    - matches_played_pss
+    - minutes_pss
+    - goals_pss
+    - assists_pss
+    - yellow_cards_pss
+    - red_cards_pss
+    - shots_pss
+    - shots_on_target_pss
+    - xg_pss
+    - xa_pss
+    - npxg_pss
+    - xgchain_pss
+    - xgbuildup_pss
+    - key_passes_pss
+    - non_penalty_goals_pss
+    - fouls_committed
+    - fouls_drawn_pss
+    - interceptions_pss
+    - tackles_won
+    - saves_pss
+    - clean_sheets
+    - save_pct_pss
+    - market_value
+  vw_player_match_summary:
+    description: 'Player-match summary view joining match metadata with match-level player performance.
+
+      '
+    grain: One row per player-match-league.
+    unique_index:
+    - player_id
+    - match_id
+    - league_code
+    source_tables:
+    - player_match_performance
+    - players
+    - matches
+    - teams
+    key_fields:
+    - player_id
+    - player_name
+    - season
+    - league_code
+    - match_id
+    - game_id
+    - home_team
+    - away_team
+    selected_metrics:
+    - minutes_played
+    - match_goals
+    - match_assists
+    - match_shots
+    - shots_on_target_pmp
+    - xg_pmp
+    - xa_pmp
+    - npxg_pmp
+    - xgchain_pmp
+    - xgbuildup_pmp
+    - key_passes_pmp
+    - yellow_cards_pmp
+    - red_cards_pmp
+    - fouls
+    - fouls_drawn_pmp
+    - tackles_won
+    - interceptions_pmp
+    - crosses
+    - progressive_passes
+    - box_touches
+    - gk_saves
+    - gk_goals_against
+    - gk_save_pct
+  vw_player_shooting_profile:
+    description: 'Shot-only projection of event data with match and team context.
+
+      '
+    grain: One row per shot event.
+    source_tables:
+    - match_events
+    - matches
+    - seasons
+    - competitions
+    - teams
+    filter: WHERE is_shot = TRUE
+    key_fields:
+    - player_id
+    - player_name
+    - season
+    - league_code
+    - game_id
+    - minute
+    - team
+    - home_team
+    - away_team
+    selected_metrics:
+    - x
+    - y
+    - end_x
+    - end_y
+    - is_goal
+    - situation
+    - shot_type
+    - body_part
+    - shot_zone
+    - shot_direction
+    - player_assisted
+    - last_action
+    - goal_mouth_y
+    - goal_mouth_z
+  vw_player_availability:
+    description: Player injury / absence summary view.
+    grain: One row per player injury spell.
+    source_tables:
+    - player_injury_spells
+    - players
+    key_fields:
+    - player_id
+    - player_name
+    - season
+    - league_code
+    - team
+    - from_matchweek
+    - to_matchweek
+    - from_date
+    - end_date
+    - games_missed
+    - days_missed
+    - injury_reason
+  vw_match_summary:
+    description: 'Match summary view joining matches to season, competition, and team context. Intended as analyst-friendly
+      match table.
+
+      '
+    grain: One row per match.
+    unique_index:
+    - match_id
+    source_tables:
+    - matches
+    - seasons
+    - competitions
+    - teams
+    key_fields:
+    - match_id
+    - game_id
+    - season
+    - league_name
+    - league_code
+    - matchweek
+    - match_date
+    - kickoff_time
+    - home_team
+    - away_team
+    selected_metrics:
+    - home_score
+    - away_score
+    - ft_result
+    - ht_home_score
+    - ht_away_score
+    - ht_result
+    - home_formation
+    - away_formation
+    - home_shots
+    - away_shots
+    - home_shots_on_target
+    - away_shots_on_target
+    - home_corners
+    - away_corners
+    - home_fouls
+    - away_fouls
+    - home_yellow_cards
+    - away_yellow_cards
+    - home_red_cards
+    - away_red_cards
+    - home_touches
+    - away_touches
+    - home_tackles
+    - away_tackles
+    - home_interceptions
+    - away_interceptions
+    - home_clearances
+    - away_clearances
+    - home_aerials_won
+    - away_aerials_won
+    - home_long_balls
+    - away_long_balls
+    - attendance_m
+    - venue
+    - referee
+    - avg_home_odds
+    - avg_draw_odds
+    - avg_away_odds
+    - avg_over25_odds
+    - avg_under25_odds
+operational_jobs:
+  materialized_view_refresh:
+    enabled: false
+    reason: pg_cron / cron schema is not enabled in the current Aiven service and the corrected SQL file does not create cron
+      jobs.
+    manual_refresh_examples:
+    - REFRESH MATERIALIZED VIEW vw_player_season_summary;
+    - REFRESH MATERIALIZED VIEW vw_player_match_summary;
+    - REFRESH MATERIALIZED VIEW vw_player_shooting_profile;
+    - REFRESH MATERIALIZED VIEW vw_player_availability;
+    - REFRESH MATERIALIZED VIEW vw_match_summary;
+relationships:
+  high_level:
+  - competitions 1-to-many seasons
+  - seasons 1-to-many matches
+  - teams referenced by matches as home_team_id and away_team_id
+  - players 1-to-many player_season_stats
+  - players 1-to-many player_season_splits
+  - players 1-to-many player_match_performance
+  - players 1-to-many player_market_values
+  - players 1-to-many player_transfers
+  - players 1-to-many player_injury_spells
+  - matches 1-to-many player_match_performance via match_id
+  - matches 1-to-many match_events via game_id/season/league context in views
+query_guidance:
+  general:
+  - Use materialized views for analyst-facing queries whenever possible.
+  - Use base tables when precise load diagnostics or row-level debugging is needed.
+  - The current live DB is Premier League only; do not assume multi-league coverage in current query results.
+  - league_code is the canonical cross-table league identifier.
+  - season uses format YYYY-YYYY.
+  join_keys:
+  - Match-level joins should prefer match_id where available.
+  - Event-level joins often rely on game_id plus season/league context.
+  - Season-level joins often require seasons.season_id internally, but views expose season labels.
+  partition_notes:
+  - player_match_performance and match_events are partitioned by league_code then season.
+  - Queries filtered by league_code and season will benefit most from partition pruning.
+  naming_notes:
+  - Suffixed metrics (_pss, _pssp, _pmp, _m) exist to avoid ambiguous duplicate column names.
+  - Do not assume unsuffixed analytical metrics are present in all tables.
+known_limitations:
+  current_sql_scope:
+  - Current SQL seed data only inserts ENG-PL into competitions.
+  - Current SQL only creates seasons 2020-2021 through 2024-2025.
+  - Current partitions exist only for ENG-PL.
+  - Corrected SQL does not create vw_team_season_summary because team_season_standings and related source tables are not present.
+  - Corrected SQL does not create pg_cron jobs because the cron schema is not enabled in the current Aiven service.
+  - competitions.league_code is logically unique but not enforced with a UNIQUE constraint in the current SQL.
+  future_migration_requirements:
+  - To support all 10 leagues, competitions seed data must be extended.
+  - To support all 10 leagues, seasons seed data must be extended for each competition.
+  - To support all 10 leagues, partition creation must be generalized for player_match_performance and match_events.
+  consistency_notes:
+  - This YAML reflects the uploaded SQL definition, even where that SQL is not yet fully generalized.
+  - If the SQL file changes, this YAML should be regenerated to stay aligned.
+recommended_updates_for_full_10_league_rollout:
+  competitions:
+    action: Insert all 10 league rows.
+  seasons:
+    action: Generate or insert all intended season rows for all competitions.
+  partitions:
+    action: Create partition trees for every league_code and season combination.
+  teams:
+    action: Expand seed data or rely on loader-driven upserts from canonical transformed datasets.
+  yaml:
+    action: Update current_loaded_leagues and partition scope once non-EPL leagues are live.

@@ -1,0 +1,21 @@
+{
+  "session_id": "correction_teamsum_04",
+  "sub_experiment": "correction",
+  "variant": "no_control",
+  "correction_lesson": "A team's per-match stat lives in EITHER the home_* column (when it played at home) OR the away_* column (when away) of the wide matches table. Summing only one side undercounts. Union both: SUM of home_<metric> WHERE home_team_id=team plus away_<metric> WHERE away_team_id=team.",
+  "description": "Team home+away summation pitfall (scaled).",
+  "turns": [
+    {
+      "turn_index": 0,
+      "role": "trigger",
+      "query": "How many shots did Tottenham Hotspur take in total during the 2021-2022 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(v) AS total FROM (SELECT m.home_shots AS v FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.home_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND t.team_name = 'Tottenham Hotspur' UNION ALL SELECT m.away_shots AS v FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.away_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2021-2022' AND t.team_name = 'Tottenham Hotspur') x;"
+    },
+    {
+      "turn_index": 1,
+      "role": "beneficiary",
+      "query": "How many corners did Newcastle United win in total during the 2022-2023 Premier League season?",
+      "ground_truth_sql": "SELECT SUM(v) AS total FROM (SELECT m.home_corners AS v FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.home_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND t.team_name = 'Newcastle United' UNION ALL SELECT m.away_corners AS v FROM matches m JOIN seasons s ON m.season_id = s.season_id JOIN competitions c ON s.competition_id = c.competition_id JOIN teams t ON m.away_team_id = t.team_id WHERE c.league_code = 'ENG-PL' AND s.season = '2022-2023' AND t.team_name = 'Newcastle United') x;"
+    }
+  ]
+}

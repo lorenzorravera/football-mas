@@ -1,0 +1,31 @@
+{
+  "question_id": "Q46",
+  "question": "How many matches in the 2020-2021 season have a recorded attendance figure?",
+  "condition": "single_llm_tools",
+  "model": "claude",
+  "answer": "In the 2020-2021 Premier League season, **32 matches** have a recorded attendance figure. (This aligns with that COVID-affected season, when most games were played behind closed doors and only a limited number allowed spectators.)",
+  "tool_sequence": [
+    "run_sql"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "tool": "run_sql",
+      "args": {
+        "sql": "SELECT COUNT(*) AS matches_with_attendance\nFROM matches m\nJOIN seasons s ON m.season_id = s.season_id\nWHERE s.competition_id = 1\n  AND s.season = '2020-2021'\n  AND m.attendance_m IS NOT NULL;"
+      },
+      "result": "1 rows, cols=['matches_with_attendance']"
+    }
+  ],
+  "prediction_vector": null,
+  "latency_s": 5.88,
+  "experiment": "extended_da",
+  "langfuse_trace_id": "extended_da|single_llm_tools|claude|Q46|r0",
+  "repeat": 0,
+  "token_usage": {
+    "input": 19207,
+    "output": 257,
+    "total": 19464,
+    "calls": 2
+  }
+}
