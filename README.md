@@ -1,6 +1,6 @@
 # Football Analytics Multi-Agent System — Capstone Repository
 
-This is a reorganized snapshot of the LSE × Sky capstone repository. The original repository grew organically around individual contributor folders and multiple prototype generations; this version groups files by **function** instead.
+This is a reorganized snapshot of the LSE × Sky capstone repository.
 
 ## Repository map
 
