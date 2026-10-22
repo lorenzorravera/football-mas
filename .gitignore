@@ -1,18 +1,16 @@
-.idea/
 .venv/
-
-# Added by Till
-till/.env
+.env
+.env.*
+!.env.example
 __pycache__/
-.claude/
-.naoignore
-
-# agent_v5 secrets (Till)
-till/agent_v5/.env
-*.env
-
-# OS / editor / build junk
-.DS_Store
+*.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 *.egg-info/
-*.pyc
+build/
+dist/
+.DS_Store
+.idea/
+.vscode/
+.chainlit/session*
